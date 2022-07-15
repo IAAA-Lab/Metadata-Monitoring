@@ -10,7 +10,7 @@ export class AppComponent {
 
 
   getForm(mqa: HTMLInputElement, iso19157: HTMLInputElement, sparql: HTMLInputElement, ckan: HTMLInputElement,
-          nti: HTMLInputElement, dcat_ap: HTMLInputElement, direct: HTMLInputElement, local: HTMLInputElement): void {
+          nti: HTMLInputElement, dcat_ap: HTMLInputElement, direct: HTMLInputElement, local: HTMLInputElement, texto: HTMLInputElement): void {
     console.log("mqa: " + mqa.checked)
     console.log("iso19157: " + iso19157.checked)
     console.log("sparql: " + sparql.checked)
@@ -19,5 +19,6 @@ export class AppComponent {
     console.log("dcat_ap: " + dcat_ap.checked)
     console.log("direct: " + direct.checked)
     console.log("local: " + local.checked)
+    console.log("TEXTO: " + texto.value)
   }
 }
