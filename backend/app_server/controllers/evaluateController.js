@@ -5,6 +5,7 @@ const ejecutarPython = function (req, res) {
     console.log("first: " + req.query.firstname)
     console.log("last: " + req.query.lastname)
     var options = {
+        pythonPath: "./app_server/pythonPrograms/my-environment/bin/python3",
         args: [req.query.firstname, req.query.lastname]
     };
 
@@ -13,6 +14,7 @@ const ejecutarPython = function (req, res) {
             throw err;
         // Results is an array consisting of messages collected during execution
         console.log('results: %j', results);
+        res.send(results.toString())
     });
 
     console.log("terminadoooo")

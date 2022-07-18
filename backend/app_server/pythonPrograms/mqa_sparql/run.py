@@ -8,18 +8,15 @@ Main program to test MQA evaluation: Evaluation of catalog RDF DCAT-AP metadata 
 
 from MQAevaluate import MQAevaluate
 import os, ssl
-import sys
+
 
 
 if __name__ == '__main__':
+    # Change the working directory to the file location
+    abspath = os.path.abspath(__file__)
+    dname = os.path.dirname(abspath)
+    os.chdir(dname)
 
-    args = sys.argv[1:]
-    first_name = sys.argv[1]
-    print("hola desde python")
-    print(args, "args: ")
-    print("first_name: " + first_name)
-    sys.stdout.flush()
-    exit(0)
     if (not os.environ.get('PYTHONHTTPSVERIFY', '') and
             getattr(ssl, '_create_unverified_context', None)):
         ssl._create_default_https_context = ssl._create_unverified_context
@@ -32,7 +29,6 @@ if __name__ == '__main__':
     #
     # exit(0)
 
-#     mqaCurrent = MQAevaluate('http://datos.gob.es/virtuoso/sparql')
-#     mqaCurrent.evaluate()
+    mqaCurrent = MQAevaluate('http://datos.gob.es/virtuoso/sparql')
+    mqaCurrent.evaluate()
     print("\nFin de la evaluación")
-    exit(0)
