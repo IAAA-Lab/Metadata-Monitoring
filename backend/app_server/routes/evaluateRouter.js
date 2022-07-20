@@ -4,6 +4,6 @@ const evaluateController = require('../controllers/evaluateController')
 
 
 /* GET users listing. */
-router.get('/', evaluateController.ejecutarPython);
+router.get('/', evaluateController.executePython);
 
 module.exports = router;

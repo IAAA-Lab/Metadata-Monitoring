@@ -7,7 +7,7 @@ Main program to test MQA evaluation: Evaluation of catalog RDF DCAT-AP metadata 
 """
 
 from MQAevaluate import MQAevaluate
-import os, ssl
+import os, ssl, sys
 
 
 
@@ -16,6 +16,7 @@ if __name__ == '__main__':
     abspath = os.path.abspath(__file__)
     dname = os.path.dirname(abspath)
     os.chdir(dname)
+    print("argumento pasado: " + sys.argv[1])
 
     if (not os.environ.get('PYTHONHTTPSVERIFY', '') and
             getattr(ssl, '_create_unverified_context', None)):

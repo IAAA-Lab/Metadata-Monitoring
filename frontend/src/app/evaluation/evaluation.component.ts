@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient, HttpParams} from "@angular/common/http";
+import {apiPaths, environment} from "../../environments/environment";
+import { tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-evaluation',
@@ -6,22 +9,37 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./evaluation.component.css']
 })
 export class EvaluationComponent implements OnInit {
-
-  constructor() { }
+  baseUrl = environment.baseUrl;
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
   }
 
   getForm(mqa: HTMLInputElement, iso19157: HTMLInputElement, sparql: HTMLInputElement, ckan: HTMLInputElement,
           nti: HTMLInputElement, dcat_ap: HTMLInputElement, direct: HTMLInputElement, local: HTMLInputElement, url: HTMLInputElement): void {
-    console.log("mqa: " + mqa.checked)
-    console.log("iso19157: " + iso19157.checked)
-    console.log("sparql: " + sparql.checked)
-    console.log("ckan: " + ckan.checked)
-    console.log("nti: " + nti.checked)
-    console.log("dcat_ap: " + dcat_ap.checked)
-    console.log("direct: " + direct.checked)
-    console.log("local: " + local.checked)
-    console.log("URL: " + url.value)
+    // console.log("mqa: " + mqa.checked)
+    // console.log("iso19157: " + iso19157.checked)
+    // console.log("sparql: " + sparql.checked)
+    // console.log("ckan: " + ckan.checked)
+    // console.log("nti: " + nti.checked)
+    // console.log("dcat_ap: " + dcat_ap.checked)
+    // console.log("direct: " + direct.checked)
+    // console.log("local: " + local.checked)
+    // console.log("URL: " + url.value)
+    this.evaluate()
+  }
+  evaluate() {
+
+    const parameters = new HttpParams()
+      .set("firstname", "valor1")
+      .set("lastname","valor2");
+    console.log("iniciado")
+    this.http.get(this.baseUrl + apiPaths.evaluate, {params: parameters, responseType: "text"}).subscribe(
+      (resp: string) => {
+        console.log(resp)
+      }
+    )
+
+    console.log("FIN")
   }
 }

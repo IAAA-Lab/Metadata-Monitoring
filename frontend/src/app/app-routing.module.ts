@@ -5,9 +5,9 @@ import { ResultsComponent } from './results/results.component';
 import {EvaluationComponent} from "./evaluation/evaluation.component";
 
 const routes: Routes = [
-  { path: 'results', component: ResultsComponent },
   { path: 'evaluation', component: EvaluationComponent },
-  { path: '**', redirectTo: '/evaluation'},
+  { path: 'results', component: ResultsComponent },
+  { path: '**', redirectTo: "/evaluation"}
 ];
 
 @NgModule({

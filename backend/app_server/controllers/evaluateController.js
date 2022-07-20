@@ -1,10 +1,7 @@
-const ejecutarPython = function (req, res) {
+const executePython = function (req, res) {
     const PythonShell = require('python-shell').PythonShell;
 
-    // E.g : localhost:3000/evaluate?firstname=primero&lastname=segundoo
-    console.log("first: " + req.query.firstname)
-    console.log("last: " + req.query.lastname)
-    var options = {
+    const options = {
         pythonPath: "./app_server/pythonPrograms/my-environment/bin/python3",
         args: [req.query.firstname, req.query.lastname]
     };
@@ -16,10 +13,8 @@ const ejecutarPython = function (req, res) {
         console.log('results: %j', results);
         res.send(results.toString())
     });
-
-    console.log("terminadoooo")
 }
 
 module.exports = {
-    ejecutarPython
+    executePython
 }
