@@ -5,11 +5,11 @@
   <h1 class="text-center">Metadata evaluation</h1>
   <div class="row">
     <div class="col-3" style="background: red">
-      <a class="btn btn-secondary" routerLink="/results">First Component</a>
+      <a class="btn btn-secondary" routerLink="/results">Results</a>
     </div>
     <div class="col-6" style="background: green"><h2>Methods</h2>
       <input type="text" style="width: 75%" #url>
-      <button type="button" class="btn btn-primary" (click)="getForm(mqa, iso19157, sparql, ckan, nti, dcat_ap, direct, local, url)">Evaluate</button>
+      <button type="button" class="btn btn-primary" (click)="getForm(mqa, iso19157, sparql, ckan, nti, dcat_ap, direct, local, url, days)">Evaluate</button>
 
       <br>
       <input class="form-check-input" type="checkbox" name="methods" id="MQA" #mqa>
@@ -41,6 +41,17 @@
       <label class="form-check-label" for="local">local</label>
       <br></div>
     <div class="col-3" style="background: purple">
+      <br>
+      <label for="days">Days:</label>
+      <input type="number" min="1" step="1" id="days" [disabled]="periodicityIsDisabled" style="width: 75%" #days>
+      <br>
+      <input class="form-check-input" type="checkbox" name="periodicity" id="periodicity" (click)="togglePeriodicity()">
+      <label class="form-check-label" for="periodicity">Run periodically</label><br>
+
+      <br>
+      <label *ngIf="periodicityIsNotANumber" class="text-danger">This field must contain only numbers greater than 0</label>
+      <br>
+
       <button *ngIf="localEvaluationIsChecked" type="button" class="btn btn-primary"
         (click)="openFilters()">Filters</button>
       <div *ngIf="displayFilters" id="myForm">

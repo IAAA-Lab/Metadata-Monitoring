@@ -17,6 +17,8 @@ export class EvaluationComponent implements OnInit {
   forceUncheckDirectEvaluation = false
 
   displayFilters = false
+  periodicityIsNotANumber = false
+  periodicityIsDisabled = true
 
   constructor(private http: HttpClient) { }
 
@@ -24,7 +26,8 @@ export class EvaluationComponent implements OnInit {
   }
 
   getForm(mqa: HTMLInputElement, iso19157: HTMLInputElement, sparql: HTMLInputElement, ckan: HTMLInputElement,
-          nti: HTMLInputElement, dcat_ap: HTMLInputElement, direct: HTMLInputElement, local: HTMLInputElement, url: HTMLInputElement): void {
+          nti: HTMLInputElement, dcat_ap: HTMLInputElement, direct: HTMLInputElement, local: HTMLInputElement,
+          url: HTMLInputElement, days: HTMLInputElement): void {
     console.log("mqa: " + mqa.checked)
     console.log("iso19157: " + iso19157.checked)
     console.log("sparql: " + sparql.checked)
@@ -34,13 +37,19 @@ export class EvaluationComponent implements OnInit {
     console.log("direct: " + direct.checked)
     console.log("local: " + local.checked)
     console.log("URL: " + url.value)
-    this.evaluate()
+    console.log("Days: " + days.valueAsNumber)
+    if (!this.periodicityIsDisabled && (isNaN(days.valueAsNumber) || days.valueAsNumber <= 0)) {
+      this.periodicityIsNotANumber = true
+    } else {
+      this.periodicityIsNotANumber = false
+      this.evaluate(url)
+    }
   }
-  evaluate() {
+
+  evaluate(url: HTMLInputElement) {
 
     const parameters = new HttpParams()
-      .set("firstname", "valor1")
-      .set("lastname","valor2");
+      .set("url", url.value)
 
     //TODO: comprobar si hay error sacar ventanita y si no lo hay, diciendo que todo correcto que ya aparecerá en los resultados
     this.http.get(this.baseUrl + apiPaths.evaluate, {params: parameters, responseType: "text"}).subscribe(
@@ -77,5 +86,9 @@ export class EvaluationComponent implements OnInit {
 
   closeFilters() {
     this.displayFilters = false
+  }
+
+  togglePeriodicity() {
+    this.periodicityIsDisabled = !this.periodicityIsDisabled
   }
 }
