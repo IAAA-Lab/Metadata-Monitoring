@@ -1,4 +1,6 @@
-#!/home/sergio/Escritorio/cuarto/TFG/metadatos/metadata-monitoring/backend/app_server/pythonPrograms/my-environment/bin/python
+#!/bin/sh
+'''exec' /home/sergio/Escritorio/cuarto/TFG/metadatos/metadata-monitoring/backend/app_server/pythonPrograms/my-environment/bin/python3.7 "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys

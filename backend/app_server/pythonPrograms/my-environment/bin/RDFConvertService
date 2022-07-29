@@ -1,4 +1,4 @@
-#!/home/sergio/Escritorio/cuarto/TFG/metadatos/metadata-monitoring/backend/app_server/pythonPrograms/my-environment/bin/python
+#!/home/sergio/Escritorio/cuarto/TFG/metadatos/metadata-monitoring/backend/app_server/pythonPrograms/my-environment/bin/python3.7
 # -*- coding: utf-8 -*-
 """
 Possible CGI entry point for the owl package.
