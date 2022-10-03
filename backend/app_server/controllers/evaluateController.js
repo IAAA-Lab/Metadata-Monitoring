@@ -1,3 +1,5 @@
+const { Result } = require('./schema')
+
 const executePython = function (req, res) {
     const PythonShell = require('python-shell').PythonShell;
 
@@ -6,14 +8,16 @@ const executePython = function (req, res) {
         args: [req.query.url]
     };
 
+    console.log("entra!!")
+
     PythonShell.run('./app_server/pythonPrograms/mqa_sparql/run.py', options, function (err, results) {
         if (err)
             throw err;
         // Results is an array consisting of messages collected during execution
         console.log('results: %j', results);
-        res.send(results.toString())
+        Result.create({text:  results[results.length - 1]})
+        console.log("guardado")
     });
-
 
     // console.log("entrado: " + req.query.url)
     // const CronJob = require('cron').CronJob;
@@ -22,7 +26,8 @@ const executePython = function (req, res) {
     // },
     //     null,
     //     true);
-    // res.send("vale ya")
+
+    res.send("vale ya")
 }
 
 module.exports = {
