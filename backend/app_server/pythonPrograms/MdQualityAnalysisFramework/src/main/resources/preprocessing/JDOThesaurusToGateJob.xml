@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:batch="http://www.springframework.org/schema/batch"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+		http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch.xsd">
+
+	<!-- ############################################################# -->
+	<!-- definicion del lanzador y repositorio de trabajos -->
+	<beans:import resource="../applicationContext.xml" />
+
+	<!-- ############################################################# -->
+	<!-- procesa el tesauro de uniades administrativas para generar un gazeter de gate -->
+	<batch:job id="JDOThesaurusToGateJob">
+		<batch:step id="ldJdoGenerator" next="adminGazeetterGeneration">
+			<batch:tasklet ref="jdoLinDataTasklet"/>
+		</batch:step>
+		<batch:step id="adminGazeetterGeneration">
+			<batch:tasklet ref="adminGazeetterGenerator"/>
+		</batch:step>
+	</batch:job>
+	
+	<!-- ############################################################# -->
+	<!-- convierte las uris del agrovoc en locales (para nuestro servicio ld) -->
+	<beans:bean id="jdoLinDataTasklet" 
+        class="preprocessing.Tasklet_ConceptUris_To_ProxyUris">
+        <beans:property name="sourThesFile" value="data/input/thesauri/src_location/spainJdoAdminComp.owl" />  
+        <beans:property name="destThesFile" value="data/temporal/thesauri/gen_linkedData/ldJdo.rdf" />  
+        <beans:property name="sourBaseUri" value="http://www.jurisdictionalDomain.org" />  
+        <beans:property name="destBaseUri" value="http://iaaa.cps.unizar.es/location" />  
+	</beans:bean>
+	
+	<!-- ############################################################# -->
+	<!-- procesa la ontología de unidades administrativas para generar un gazeter de gate 
+	     entre otras cosas -->
+	<beans:bean id="adminGazeetterGenerator" class="preprocessing.Tasklet_SkosToGateGazeetter">
+   		<beans:property name="rdfSource" value="data/temporal/thesauri/gen_linkedData/ldJdo.rdf" /> 
+   		<beans:property name="exceptionsFile" value="data/input/thesauri/src_location/spainJdoAdminExclusionList.txt" />    		
+   		<beans:property name="destFile" value="plugins/ANNIE/resources/gazetteer/administrativeUnits.lst" />
+   		<beans:property name="destHashFile" value="data/temporal/thesauri/gen_gateGazzetterHash/administrativeUnits.hsh" />	    	
+	</beans:bean>
+</beans:beans>

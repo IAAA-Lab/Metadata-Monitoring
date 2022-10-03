@@ -1,0 +1,3 @@
+http://datos.gob.es/recurso/sector-publico/territorio/Pais/España
+http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Andalucia
+http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Aragon

@@ -1,0 +1,493 @@
+Validation Report
+Conforms: False
+Results (70):
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2016/resource/d7d046b4-82f6-4480-aa79-2ceaee4d5137>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2016/resource/d7d046b4-82f6-4480-aa79-2ceaee4d5137/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2021/resource/ce372e66-4ff2-4996-a476-8b7386e6160f>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2021/resource/ce372e66-4ff2-4996-a476-8b7386e6160f/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2021/resource/38415ebb-9aa3-418b-8f8e-fc050d1c3594>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2021/resource/38415ebb-9aa3-418b-8f8e-fc050d1c3594/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2017/resource/162c4107-14a9-47b3-8461-67eca6a398c4>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2017/resource/162c4107-14a9-47b3-8461-67eca6a398c4/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2013/resource/c1cfa954-36ff-4eaf-bdc0-403dceff486f>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2013/resource/c1cfa954-36ff-4eaf-bdc0-403dceff486f/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015/resource/d7417acd-04f6-4ad4-b24a-a560a5264dbe>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015/resource/d7417acd-04f6-4ad4-b24a-a560a5264dbe/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20101/resource/7a56a7d3-a7d1-455d-b308-6a2b8dce958d>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20101/resource/7a56a7d3-a7d1-455d-b308-6a2b8dce958d/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015/resource/9cc0c558-1a36-4629-9f22-a8426a700717>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015/resource/9cc0c558-1a36-4629-9f22-a8426a700717/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2018/resource/933f6ed5-ffbb-4599-8238-d4efa359f6a1>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2018/resource/933f6ed5-ffbb-4599-8238-d4efa359f6a1/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2013/resource/cb5504c2-238e-4b36-8a85-5c70be74be1f>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2013/resource/cb5504c2-238e-4b36-8a85-5c70be74be1f/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2014/resource/e4c7735f-b30b-4fac-9765-8a687e83c1ac>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2014/resource/e4c7735f-b30b-4fac-9765-8a687e83c1ac/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20081/resource/5881bdce-17fe-4168-b6a3-b12104fdae1d>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20081/resource/5881bdce-17fe-4168-b6a3-b12104fdae1d/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2012/resource/0fa22140-70aa-47a5-ba51-5f9d9712be8f>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2012/resource/0fa22140-70aa-47a5-ba51-5f9d9712be8f/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2022/resource/3d469895-e716-49b6-be47-d7f87744512a>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2022/resource/3d469895-e716-49b6-be47-d7f87744512a/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2020/resource/f472e937-f51c-40a4-bbdb-adeb8f8cced6>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2020/resource/f472e937-f51c-40a4-bbdb-adeb8f8cced6/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20141/resource/ec75bc59-b5de-4e42-821c-651f8e80283e>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20141/resource/ec75bc59-b5de-4e42-821c-651f8e80283e/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2012/resource/296ec77f-9e28-47a4-b2cd-0cc6f319bdce>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2012/resource/296ec77f-9e28-47a4-b2cd-0cc6f319bdce/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2019/resource/a9d8efb0-9d73-4e99-92a5-a25b374cb8b8>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2019/resource/a9d8efb0-9d73-4e99-92a5-a25b374cb8b8/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20111/resource/683154ce-9098-4ea4-a214-6806fc85b450>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20111/resource/683154ce-9098-4ea4-a214-6806fc85b450/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2017/resource/3477148f-39da-4607-82d1-32c558f11c44>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2017/resource/3477148f-39da-4607-82d1-32c558f11c44/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2015/resource/e9499520-cf65-4026-98c6-6d78bace0517>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2015/resource/e9499520-cf65-4026-98c6-6d78bace0517/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20091/resource/f0a67b41-02d4-4a1a-8ce3-308f86918893>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20091/resource/f0a67b41-02d4-4a1a-8ce3-308f86918893/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2020/resource/fbd58a49-23c3-4ec2-8859-e8cb0d8ee460>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2020/resource/fbd58a49-23c3-4ec2-8859-e8cb0d8ee460/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20121/resource/3b0faafd-e5e1-4311-9acf-632591b04983>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20121/resource/3b0faafd-e5e1-4311-9acf-632591b04983/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015/resource/326b4b2e-8da6-43aa-a233-c2c6249513d7>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015/resource/326b4b2e-8da6-43aa-a233-c2c6249513d7/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015/resource/681847ff-84ed-407f-98f5-b4f6e0403a34>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015/resource/681847ff-84ed-407f-98f5-b4f6e0403a34/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2020/resource/74cd40cd-41b2-46c9-8e88-c2a12035f2ba>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2020/resource/74cd40cd-41b2-46c9-8e88-c2a12035f2ba/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2019/resource/1da51767-7223-4c69-b52f-8ba4d900e940>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2019/resource/1da51767-7223-4c69-b52f-8ba4d900e940/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2017/resource/a9a0fd50-314c-4ff7-be9c-9f60f711f4b3>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2017/resource/a9a0fd50-314c-4ff7-be9c-9f60f711f4b3/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2016/resource/3b5b8570-0811-4202-89cb-5388aa33a1c4>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2016/resource/3b5b8570-0811-4202-89cb-5388aa33a1c4/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2014/resource/20a5e3d5-a985-4fdd-8cd3-f8703d5ddffe>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2014/resource/20a5e3d5-a985-4fdd-8cd3-f8703d5ddffe/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20131/resource/7b0aca17-f763-4dc4-ba93-8ad35f32cb71>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20131/resource/7b0aca17-f763-4dc4-ba93-8ad35f32cb71/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2022/resource/096f14f4-f8df-4bdf-8af9-49c81b44c9a6>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2022/resource/096f14f4-f8df-4bdf-8af9-49c81b44c9a6/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2019/resource/0f63bde1-4805-4de3-9344-b85edf7d2d20>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2019/resource/0f63bde1-4805-4de3-9344-b85edf7d2d20/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2016/resource/9701278b-3a97-43f9-969a-218e856ad391>
+	Value Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2016/resource/9701278b-3a97-43f9-969a-218e856ad391/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2016/resource/d7d046b4-82f6-4480-aa79-2ceaee4d5137>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_gastos_2016.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2021/resource/ce372e66-4ff2-4996-a476-8b7386e6160f>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_gastos_2021.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2021/resource/38415ebb-9aa3-418b-8f8e-fc050d1c3594>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_ingresos_2021.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2017/resource/162c4107-14a9-47b3-8461-67eca6a398c4>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2017.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2013/resource/c1cfa954-36ff-4eaf-bdc0-403dceff486f>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/presupuesto_ingresos_2013.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015/resource/d7417acd-04f6-4ad4-b24a-a560a5264dbe>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_gastos_2015.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20101/resource/7a56a7d3-a7d1-455d-b308-6a2b8dce958d>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2010.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015/resource/9cc0c558-1a36-4629-9f22-a8426a700717>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_ingresos_2015.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2018/resource/933f6ed5-ffbb-4599-8238-d4efa359f6a1>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2018.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2013/resource/cb5504c2-238e-4b36-8a85-5c70be74be1f>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/presupuesto_gastos_2013.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2014/resource/e4c7735f-b30b-4fac-9765-8a687e83c1ac>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/presupuesto_ingresos_2014.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20081/resource/5881bdce-17fe-4168-b6a3-b12104fdae1d>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2008.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2012/resource/0fa22140-70aa-47a5-ba51-5f9d9712be8f>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/presupuesto_gastos_2012.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2022/resource/3d469895-e716-49b6-be47-d7f87744512a>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_gastos_2022.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2020/resource/f472e937-f51c-40a4-bbdb-adeb8f8cced6>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2020.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20141/resource/ec75bc59-b5de-4e42-821c-651f8e80283e>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2014.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2012/resource/296ec77f-9e28-47a4-b2cd-0cc6f319bdce>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/presupuesto_ingresos_2012.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2019/resource/a9d8efb0-9d73-4e99-92a5-a25b374cb8b8>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_ingresos_2019.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20111/resource/683154ce-9098-4ea4-a214-6806fc85b450>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2011.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2017/resource/3477148f-39da-4607-82d1-32c558f11c44>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_ingresos_2017.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2015/resource/e9499520-cf65-4026-98c6-6d78bace0517>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2015.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20091/resource/f0a67b41-02d4-4a1a-8ce3-308f86918893>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2009.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2020/resource/fbd58a49-23c3-4ec2-8859-e8cb0d8ee460>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_ingresos_2020.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20121/resource/3b0faafd-e5e1-4311-9acf-632591b04983>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2012.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015/resource/326b4b2e-8da6-43aa-a233-c2c6249513d7>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/presupuesto_gastos_2015.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015/resource/681847ff-84ed-407f-98f5-b4f6e0403a34>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/presupuesto_ingresos_2015.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2020/resource/74cd40cd-41b2-46c9-8e88-c2a12035f2ba>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_gastos_2020.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2019/resource/1da51767-7223-4c69-b52f-8ba4d900e940>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2019.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2017/resource/a9a0fd50-314c-4ff7-be9c-9f60f711f4b3>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_gastos_2017.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2016/resource/3b5b8570-0811-4202-89cb-5388aa33a1c4>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2016.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2014/resource/20a5e3d5-a985-4fdd-8cd3-f8703d5ddffe>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/presupuesto_gastos_2014.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20131/resource/7b0aca17-f763-4dc4-ba93-8ad35f32cb71>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2013.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2022/resource/096f14f4-f8df-4bdf-8af9-49c81b44c9a6>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_ingresos_2022.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2019/resource/0f63bde1-4805-4de3-9344-b85edf7d2d20>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_gastos_2019.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2016/resource/9701278b-3a97-43f9-969a-218e856ad391>
+	Value Node: Literal("https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_ingresos_2016.csv")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI

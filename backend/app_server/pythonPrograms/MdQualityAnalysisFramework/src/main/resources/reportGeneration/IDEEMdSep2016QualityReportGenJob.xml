@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:batch="http://www.springframework.org/schema/batch"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+		http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch.xsd">
+ 
+ 	<!-- ############################################################# -->
+	<!-- definicion del lanzador y repositorio de trabajos -->
+	<beans:import resource="../applicationContext.xml" />
+ 
+	<!-- ############################################################# -->
+    <!-- Genera en una excel un resumen de los resultados obtenidos en el analisis-->
+ 	
+	<batch:job id="qualityReportGenerationJob">
+		<batch:step id="reportGenerationFromRDF" >
+			<batch:tasklet ref="reportGenerationTasklet"/>
+		</batch:step>
+	</batch:job>
+	
+	<!-- ############################################################# -->
+	<!-- Genera en una excel un resumen de los resultados obtenidos en el analisis -->
+	<beans:bean id="reportGenerationTasklet" class="reportGeneration.Tasklet_QualityReportGenerator">
+		<beans:property name="qualityResultRDFFile" value="data/output/sep2016IdeeQualityAnalysisReport.rdf" /> 
+		<beans:property name="qualityReportOutputFile" value="data/output/sep2016IdeeQualityAnalysisReport.xlsx" /> 
+	</beans:bean>
+</beans:beans>
+
+

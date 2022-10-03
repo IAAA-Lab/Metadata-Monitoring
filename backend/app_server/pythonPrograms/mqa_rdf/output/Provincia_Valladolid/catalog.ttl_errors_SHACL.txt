@@ -1,0 +1,45 @@
+Validation Report
+Conforms: False
+Results (6):
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01471868-liquidacion-presupuesto-de-ingresos-2019/resource/38d9eeef-43bb-4dde-bad1-3950276710ff>
+	Value Node: <https://datos.gob.es/catalogo/l01471868-liquidacion-presupuesto-de-ingresos-2019/resource/38d9eeef-43bb-4dde-bad1-3950276710ff/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01471868-estado-de-ejecucion-presupuesto-de-gastos/resource/1dc93f04-fcfb-4d11-9c74-baee5da9ea0c>
+	Value Node: <https://datos.gob.es/catalogo/l01471868-estado-de-ejecucion-presupuesto-de-gastos/resource/1dc93f04-fcfb-4d11-9c74-baee5da9ea0c/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in ClassConstraintComponent (http://www.w3.org/ns/shacl#ClassConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:class dct:MediaTypeOrExtent ; sh:maxCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dct:format ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01471868-liquidacion-presupuesto-de-gastos-2019/resource/196d012f-cb58-4b3b-a029-884ca166c8ab>
+	Value Node: <https://datos.gob.es/catalogo/l01471868-liquidacion-presupuesto-de-gastos-2019/resource/196d012f-cb58-4b3b-a029-884ca166c8ab/format>
+	Result Path: dct:format
+	Message: Value does not have class dct:MediaTypeOrExtent
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01471868-liquidacion-presupuesto-de-ingresos-2019/resource/38d9eeef-43bb-4dde-bad1-3950276710ff>
+	Value Node: Literal("https://www.valladolid.es/es/temas/hacemos/ejecucion-presupuesto-municipal/ejecucion-presupuesto-2019/ayuntamiento-valladolid/ayuntamiento-valladolid-liquidacion.ficheros/588748-Ingresos%20Ayto%202019%20%28liquidaci%C3%B3n%29.xlsx")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01471868-estado-de-ejecucion-presupuesto-de-gastos/resource/1dc93f04-fcfb-4d11-9c74-baee5da9ea0c>
+	Value Node: Literal("https://www.valladolid.es/es/temas/hacemos/ejecucion-presupuesto-municipal/ejecucion-presupuesto-2020/ayuntamiento-valladolid.ficheros/647725-Gastos%2031%20diciembre%20Ayto%202020.xlsx")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI
+Constraint Violation in NodeKindConstraintComponent (http://www.w3.org/ns/shacl#NodeKindConstraintComponent):
+	Severity: sh:Violation
+	Source Shape: [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:nodeKind sh:IRI ; sh:path dcat:accessURL ; sh:severity sh:Violation ]
+	Focus Node: <https://datos.gob.es/catalogo/l01471868-liquidacion-presupuesto-de-gastos-2019/resource/196d012f-cb58-4b3b-a029-884ca166c8ab>
+	Value Node: Literal("https://www.valladolid.es/es/temas/hacemos/ejecucion-presupuesto-municipal/ejecucion-presupuesto-2019/ayuntamiento-valladolid/ayuntamiento-valladolid-liquidacion.ficheros/589425-Gastos%20Ayto%202019%20%28liquidaci%C3%B3n%29.xlsx")
+	Result Path: dcat:accessURL
+	Message: Value is not of Node Kind sh:IRI

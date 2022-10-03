@@ -1,0 +1,22 @@
+Dimension	Indicator/property	Count	Population	Percentage	Points	Weight
+Findability	dcat:keyword	30	30	1.0	30.0	30
+Findability	dcat:theme	30	30	1.0	30.0	30
+Findability	dct:spatial	30	30	1.0	20.0	20
+Findability	dct:temporal	30	30	1.0	20.0	20
+Interoperability	dct:format	64	64	1.0	20.0	20
+Interoperability	dcat:mediaType	0	64	0.0	0	10
+Interoperability	dct:format from vocabulary	64	64	1.0	10.0	10
+Interoperability	dct:format non-proprietary	0	64	0.0	0	20
+Interoperability	dct:format machine-readable	0	64	0.0	0	20
+Interoperability	DCAT-AP compliance	0	30	0.0	0	30
+Reusability	dct:license	0	64	0.0	0	20
+Reusability	dct:license from vocabulary	0	64	0.0	0	10
+Reusability	dct:accessRights	0	30	0.0	0	10
+Reusability	dct:accessRights from vocabulary	0	30	0.0	0	5
+Reusability	dcat:contactPoint	0	30	0.0	0	20
+Reusability	dct:publisher	30	30	1.0	10.0	10
+Contextuality	dct:rights	0	64	0.0	0	5
+Contextuality	dcat:byteSize	0	64	0.0	0	5
+Contextuality	dct:issued	30	30	1.0	5.0	5
+Contextuality	dct:modified	17	30	0.5666666666666667	2.833333333333333	5
+Total points	147.83333333333334

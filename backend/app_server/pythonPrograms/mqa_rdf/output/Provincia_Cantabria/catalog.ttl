@@ -1,0 +1,1736 @@
+@prefix api: <http://purl.org/linked-data/api/vocab#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix ns2: <http://a9.com/-/spec/opensearch/1.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema1: <http://schema.org/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pas> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pas/Frequency> ;
+    dct:description "Resumen de las dotaciones para la plantilla de Personal de Administración y Servicios de la UC prevista para el ejercicio. Se presentan dos tablas: una para el PAS Funcionario y otra para el PAS contratado."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/dotaciones-y-costes-pas" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:modified "2022-02-22T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pas/PeriodOfTime-1> ;
+    dct:title "Dotaciones y costes PAS"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pas/resource/33ab32b7-21d2-47e6-b950-9b918d649e01>,
+        <https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pas/resource/82e54ebf-319e-44f7-adc6-c52c241be80f> ;
+    dcat:keyword "Plantilla"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/empleo>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pas/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pas/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pas/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pas/PeriodOfTime-1> schema1:endDate "2022-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2022-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pas/resource/33ab32b7-21d2-47e6-b950-9b918d649e01> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pas/resource/33ab32b7-21d2-47e6-b950-9b918d649e01/format> ;
+    dct:title "Dotaciones y costes PAS XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/47/dotaciones-y-costes-PAS.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pas/resource/33ab32b7-21d2-47e6-b950-9b918d649e01/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pas/resource/82e54ebf-319e-44f7-adc6-c52c241be80f> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pas/resource/82e54ebf-319e-44f7-adc6-c52c241be80f/format> ;
+    dct:title "Dotaciones y costes PAS PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/47/dotaciones-y-costes-PAS.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pas/resource/82e54ebf-319e-44f7-adc6-c52c241be80f/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pdi> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pdi/Frequency> ;
+    dct:description "Resumen de las dotaciones para la plantilla de Personal Docente e Investigador de la UC prevista para el ejercicio. Se presentan tres tablas: una para el PDI Funcionario, otra para el PDI contratado y otra relativa a los cargos docentes y asimilados."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/dotaciones-y-costes-pdi" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:modified "2022-02-22T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pdi/PeriodOfTime-1> ;
+    dct:title "Dotaciones y costes PDI"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pdi/resource/1323275a-b229-4b67-bf1f-1526f2564ddb>,
+        <https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pdi/resource/ba804af1-ea0a-42c8-a0ba-357c3d340bc7> ;
+    dcat:keyword "Plantilla"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/empleo>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pdi/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pdi/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pdi/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pdi/PeriodOfTime-1> schema1:endDate "2022-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2022-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pdi/resource/1323275a-b229-4b67-bf1f-1526f2564ddb> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pdi/resource/1323275a-b229-4b67-bf1f-1526f2564ddb/format> ;
+    dct:title "Dotaciones y costes PDI XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/46/dotaciones-y-costes-PDI.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pdi/resource/1323275a-b229-4b67-bf1f-1526f2564ddb/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pdi/resource/ba804af1-ea0a-42c8-a0ba-357c3d340bc7> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pdi/resource/ba804af1-ea0a-42c8-a0ba-357c3d340bc7/format> ;
+    dct:title "Dotaciones y costes PDI PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/46/dotaciones-y-costes-PDI.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pdi/resource/ba804af1-ea0a-42c8-a0ba-357c3d340bc7/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-estado-de-gastos/Frequency> ;
+    dct:description "Presupuesto inicial de gastos desagregado a nivel de subconcepto de su clasificación económica con desgloses explicativos de lo que componen algunos subconceptos."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/estado-de-gastos" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:modified "2022-02-16T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/estado-de-gastos-2019>,
+        <https://web.unican.es/opendata/gobierno/estado-de-gastos-2021> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-estado-de-gastos/PeriodOfTime-1> ;
+    dct:title "Estado de gastos"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-estado-de-gastos/resource/776eca90-789f-422d-b445-ccff65224f3c>,
+        <https://datos.gob.es/catalogo/u01600001-estado-de-gastos/resource/891dccd6-bef2-481a-84e0-98fd676d9d57> ;
+    dcat:keyword "Gastos"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2019> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2019/Frequency> ;
+    dct:description "Presupuesto inicial de gastos 2019 desagregado a nivel de subconcepto de su clasificación económica con desgloses explicativos de lo que componen algunos subconceptos."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/estado-de-gastos-2019" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/estado-de-gastos>,
+        <https://web.unican.es/opendata/gobierno/estado-de-gastos-2021> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2019/PeriodOfTime-1> ;
+    dct:title "Estado de gastos 2019"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2019/resource/63e09c05-6a14-4e1e-ae9b-ee897090d681>,
+        <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2019/resource/ec037e1f-7b3c-4cfc-8616-e1c5f4f4ee8c> ;
+    dcat:keyword "Gastos"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2019/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2019/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2019/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2019/PeriodOfTime-1> schema1:endDate "2019-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2019-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2019/resource/63e09c05-6a14-4e1e-ae9b-ee897090d681> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2019/resource/63e09c05-6a14-4e1e-ae9b-ee897090d681/format> ;
+    dct:title "Estado de gastos 2019 PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3185/estado-de-gastos-2019.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2019/resource/63e09c05-6a14-4e1e-ae9b-ee897090d681/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2019/resource/ec037e1f-7b3c-4cfc-8616-e1c5f4f4ee8c> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2019/resource/ec037e1f-7b3c-4cfc-8616-e1c5f4f4ee8c/format> ;
+    dct:title "Estado de gastos 2019 XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3185/estado-de-gastos-2019.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2019/resource/ec037e1f-7b3c-4cfc-8616-e1c5f4f4ee8c/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2021> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2021/Frequency> ;
+    dct:description "Presupuesto inicial de gastos 2021 desagregado a nivel de subconcepto de su clasificación económica con desgloses explicativos de lo que componen algunos subconceptos."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/estado-de-gastos-2021" ;
+    dct:issued "2022-02-16T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/estado-de-gastos>,
+        <https://web.unican.es/opendata/gobierno/estado-de-gastos-2019> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2021/PeriodOfTime-1> ;
+    dct:title "Estado de gastos 2021"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2021/resource/a45b4f38-d811-4eab-9574-cd0b584bd6e7>,
+        <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2021/resource/b909ebd2-e8b6-43dd-abcd-b90c8f95ebe1> ;
+    dcat:keyword "Gastos"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2021/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2021/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2021/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2021/PeriodOfTime-1> schema1:endDate "2021-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2021-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2021/resource/a45b4f38-d811-4eab-9574-cd0b584bd6e7> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2021/resource/a45b4f38-d811-4eab-9574-cd0b584bd6e7/format> ;
+    dct:title "Estado de gastos 2021 XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3215/estado-de-gastos.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2021/resource/a45b4f38-d811-4eab-9574-cd0b584bd6e7/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2021/resource/b909ebd2-e8b6-43dd-abcd-b90c8f95ebe1> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2021/resource/b909ebd2-e8b6-43dd-abcd-b90c8f95ebe1/format> ;
+    dct:title "Estado de gastos 2021 PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3215/estado-de-gastos.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2021/resource/b909ebd2-e8b6-43dd-abcd-b90c8f95ebe1/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos/Frequency> ;
+    dct:description "Presupuesto inicial de gastos desagregado a nivel de capítulo y artículo de su clasificación económica y presentado comparando con el presupuesto inicial del ejercicio anterior (2018/2019)."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/estado-de-gastos-comparacion-2020-2021-por-capitulos-y-articulos>,
+        <https://web.unican.es/opendata/gobierno/estado-de-gastos-comparacion-por-capitulos-y-articulos> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos/PeriodOfTime-1> ;
+    dct:title "Estado de gastos: comparación 2018/2019 por capítulos y artículos"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos/resource/18969b99-756d-4395-97d7-0c720db46347>,
+        <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos/resource/f02476e5-b98b-430e-abb5-b74452ec020e> ;
+    dcat:keyword "Gastos"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos/PeriodOfTime-1> schema1:endDate "2019-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2018-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos/resource/18969b99-756d-4395-97d7-0c720db46347> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos/resource/18969b99-756d-4395-97d7-0c720db46347/format> ;
+    dct:title "Estado de gastos: comparación 2018/2019 por capítulos y artículos PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3190/estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos/resource/18969b99-756d-4395-97d7-0c720db46347/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos/resource/f02476e5-b98b-430e-abb5-b74452ec020e> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos/resource/f02476e5-b98b-430e-abb5-b74452ec020e/format> ;
+    dct:title "Estado de gastos: comparación 2018/2019 por capítulos y artículos XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3190/estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos/resource/f02476e5-b98b-430e-abb5-b74452ec020e/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-conceptos> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-conceptos/Frequency> ;
+    dct:description "Presupuesto inicial de gastos desagregado a nivel de concepto de su clasificación económica y presentado comparando con el presupuesto inicial del ejercicio anterior (2018/2019)."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/estado-de-gastos-comparacion-2018-2019-por-conceptos" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/estado-de-gastos-comparacion-por-conceptos> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-conceptos/PeriodOfTime-1> ;
+    dct:title "Estado de gastos: comparación 2018/2019 por conceptos"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-conceptos/resource/9d093d79-d921-46d3-85d9-d8431e0dfc59>,
+        <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-conceptos/resource/e461d129-a66b-47e2-bab2-ffd72162daec> ;
+    dcat:keyword "Gastos"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-conceptos/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-conceptos/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-conceptos/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-conceptos/PeriodOfTime-1> schema1:endDate "2019-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2018-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-conceptos/resource/9d093d79-d921-46d3-85d9-d8431e0dfc59> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-conceptos/resource/9d093d79-d921-46d3-85d9-d8431e0dfc59/format> ;
+    dct:title "Estado de gastos: comparación 2018/2019 por conceptos PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3189/estado-de-gastos-comparacion-2018-2019-por-conceptos.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-conceptos/resource/9d093d79-d921-46d3-85d9-d8431e0dfc59/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-conceptos/resource/e461d129-a66b-47e2-bab2-ffd72162daec> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-conceptos/resource/e461d129-a66b-47e2-bab2-ffd72162daec/format> ;
+    dct:title "Estado de gastos: comparación 2018/2019 por conceptos XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3189/estado-de-gastos-comparacion-2018-2019-por-conceptos.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-conceptos/resource/e461d129-a66b-47e2-bab2-ffd72162daec/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg/Frequency> ;
+    dct:description "Presupuesto inicial de gastos desagregado para las Unidades Funcionales de Gasto en que se articula la Universidad y presentado comparando con el presupuesto inicial del ejercicio anterior (2018/2019)."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/estado-de-gastos-comparacion-2018-2019-por-ufg" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/estado-de-gastos-comparacion-por-ufg> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg/PeriodOfTime-1> ;
+    dct:title "Estado de gastos: comparación 2018/2019 por UFG"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg/resource/3c2c6b60-cec4-4d51-a95b-9bf72d2a8a09>,
+        <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg/resource/536abaec-4c90-4f41-bf32-95ce31aafb0f>,
+        <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg/resource/5a69a273-a505-458e-9ba5-be3a571d4158>,
+        <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg/resource/b3f0e2b9-482d-4a8a-8e17-f94b60df7b37> ;
+    dcat:keyword "Gastos"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg/PeriodOfTime-1> schema1:endDate "2019-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2018-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg/resource/3c2c6b60-cec4-4d51-a95b-9bf72d2a8a09> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg/resource/3c2c6b60-cec4-4d51-a95b-9bf72d2a8a09/format> ;
+    dct:title "Estado de gastos: comparación 2018/2019 por UFG PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3192/estado-de-gastos-comparacion-2018-2019-por-UFG.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg/resource/3c2c6b60-cec4-4d51-a95b-9bf72d2a8a09/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg/resource/536abaec-4c90-4f41-bf32-95ce31aafb0f> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg/resource/536abaec-4c90-4f41-bf32-95ce31aafb0f/format> ;
+    dct:title "Estado de gastos: comparación 2018/2019 por UFG JSON"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3192/estado-de-gastos-comparacion-2018-2019-por-UFG.json" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg/resource/536abaec-4c90-4f41-bf32-95ce31aafb0f/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg/resource/5a69a273-a505-458e-9ba5-be3a571d4158> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg/resource/5a69a273-a505-458e-9ba5-be3a571d4158/format> ;
+    dct:title "Estado de gastos: comparación 2018/2019 por UFG XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3192/estado-de-gastos-comparacion-2018-2019-por-UFG.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg/resource/5a69a273-a505-458e-9ba5-be3a571d4158/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg/resource/b3f0e2b9-482d-4a8a-8e17-f94b60df7b37> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg/resource/b3f0e2b9-482d-4a8a-8e17-f94b60df7b37/format> ;
+    dct:title "Estado de gastos: comparación 2018/2019 por UFG CSV"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3192/estado-de-gastos-comparacion-2018-2019-por-UFG.csv" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg/resource/b3f0e2b9-482d-4a8a-8e17-f94b60df7b37/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2020-2021-por-capitulos-y-articulos> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2020-2021-por-capitulos-y-articulos/Frequency> ;
+    dct:description "Presupuesto inicial de gastos desagregado a nivel de capítulo y artículo de su clasificación económica y presentado comparando con el presupuesto inicial del ejercicio anterior."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/estado-de-gastos-comparacion-2020-2021-por-capitulos-y-articulos" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:modified "2021-06-10T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos>,
+        <https://web.unican.es/opendata/gobierno/estado-de-gastos-comparacion-por-capitulos-y-articulos> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2020-2021-por-capitulos-y-articulos/PeriodOfTime-1> ;
+    dct:title "Estado de gastos: comparación 2020/2021 por capítulos y artículos"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2020-2021-por-capitulos-y-articulos/resource/16463f04-ac3f-4652-a24b-033e7fbd0adc>,
+        <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2020-2021-por-capitulos-y-articulos/resource/4353ec28-9a87-4c40-a6b9-d7d5c62daf52> ;
+    dcat:keyword "Gastos"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2020-2021-por-capitulos-y-articulos/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2020-2021-por-capitulos-y-articulos/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2020-2021-por-capitulos-y-articulos/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2020-2021-por-capitulos-y-articulos/PeriodOfTime-1> schema1:endDate "2021-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2020-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2020-2021-por-capitulos-y-articulos/resource/16463f04-ac3f-4652-a24b-033e7fbd0adc> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2020-2021-por-capitulos-y-articulos/resource/16463f04-ac3f-4652-a24b-033e7fbd0adc/format> ;
+    dct:title "Estado de gastos: comparación 2020/2021 por capítulos y artículos XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3217/estado-de-gastos-comparacion-por-capitulos-y-articulos.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2020-2021-por-capitulos-y-articulos/resource/16463f04-ac3f-4652-a24b-033e7fbd0adc/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2020-2021-por-capitulos-y-articulos/resource/4353ec28-9a87-4c40-a6b9-d7d5c62daf52> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2020-2021-por-capitulos-y-articulos/resource/4353ec28-9a87-4c40-a6b9-d7d5c62daf52/format> ;
+    dct:title "Estado de gastos: comparación 2020/2021 por capítulos y artículos PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3217/estado-de-gastos-comparacion-por-capitulos-y-articulos.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2020-2021-por-capitulos-y-articulos/resource/4353ec28-9a87-4c40-a6b9-d7d5c62daf52/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/Frequency> ;
+    dct:description "Presupuesto inicial de gastos desagregado a nivel de capítulo y artículo de su clasificación económica y presentado comparando con el presupuesto inicial del ejercicio anterior."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/estado-de-gastos-comparacion-por-capitulos-y-articulos" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:modified "2021-06-10T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos>,
+        <https://web.unican.es/opendata/gobierno/estado-de-gastos-comparacion-2020-2021-por-capitulos-y-articulos> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/PeriodOfTime-1> ;
+    dct:title "Estado de gastos: comparación con el ejercicio anterior por capítulos y artículos"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/resource/05200513-6360-4300-a957-91a65340ea77>,
+        <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/resource/a1ade26f-0805-4f58-bba9-f2e404de6632> ;
+    dcat:keyword "Gastos"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/PeriodOfTime-1> schema1:endDate "2021-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2020-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/resource/05200513-6360-4300-a957-91a65340ea77> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/resource/05200513-6360-4300-a957-91a65340ea77/format> ;
+    dct:title "Estado de gastos: comparación con el ejercicio anterior por capítulos y artículos PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/22/estado-de-gastos-comparacion-por-capitulos-y-articulos.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/resource/05200513-6360-4300-a957-91a65340ea77/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/resource/a1ade26f-0805-4f58-bba9-f2e404de6632> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/resource/a1ade26f-0805-4f58-bba9-f2e404de6632/format> ;
+    dct:title "Estado de gastos: comparación con el ejercicio anterior por capítulos y artículos XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/22/estado-de-gastos-comparacion-por-capitulos-y-articulos.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/resource/a1ade26f-0805-4f58-bba9-f2e404de6632/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-conceptos> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-conceptos/Frequency> ;
+    dct:description "Presupuesto inicial de gastos desagregado a nivel de concepto de su clasificación económica y presentado comparando con el presupuesto inicial del ejercicio anterior."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/estado-de-gastos-comparacion-por-conceptos" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:modified "2021-06-10T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/estado-de-gastos-comparacion-2018-2019-por-conceptos> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-conceptos/PeriodOfTime-1> ;
+    dct:title "Estado de gastos: comparación con el ejercicio anterior por conceptos"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-conceptos/resource/e27cee87-08eb-4b2b-ba7f-c341914e37ce>,
+        <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-conceptos/resource/f7939a46-c787-41cf-838e-3aa687f5b71a> ;
+    dcat:keyword "Gastos"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-conceptos/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-conceptos/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-conceptos/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-conceptos/PeriodOfTime-1> schema1:endDate "2021-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2020-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-conceptos/resource/e27cee87-08eb-4b2b-ba7f-c341914e37ce> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-conceptos/resource/e27cee87-08eb-4b2b-ba7f-c341914e37ce/format> ;
+    dct:title "Estado de gastos: comparación con el ejercicio anterior por conceptos PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/23/estado-de-gastos-comparacion-por-conceptos.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-conceptos/resource/e27cee87-08eb-4b2b-ba7f-c341914e37ce/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-conceptos/resource/f7939a46-c787-41cf-838e-3aa687f5b71a> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-conceptos/resource/f7939a46-c787-41cf-838e-3aa687f5b71a/format> ;
+    dct:title "Estado de gastos: comparación con el ejercicio anterior por conceptos XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/23/estado-de-gastos-comparacion-por-conceptos.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-conceptos/resource/f7939a46-c787-41cf-838e-3aa687f5b71a/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg/Frequency> ;
+    dct:description "Presupuesto inicial de gastos desagregado para las Unidades Funcionales de Gasto en que se articula la Universidad y presentado comparando con el presupuesto inicial del ejercicio anterior."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/estado-de-gastos-comparacion-por-ufg" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:modified "2021-06-10T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/estado-de-gastos-comparacion-2018-2019-por-ufg> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg/PeriodOfTime-1> ;
+    dct:title "Estado de gastos: comparación con el ejercicio anterior por UFG"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg/resource/3b094d75-e2d2-4be5-845f-f5ab12d3a411>,
+        <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg/resource/94929266-1fce-44fd-9340-b70f9e5660db>,
+        <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg/resource/9a41b861-4fbe-4bce-be58-ddac61aba78a>,
+        <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg/resource/ba6d32f8-d510-437a-86be-c422b8fee705> ;
+    dcat:keyword "Gastos"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg/PeriodOfTime-1> schema1:endDate "2021-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2020-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg/resource/3b094d75-e2d2-4be5-845f-f5ab12d3a411> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg/resource/3b094d75-e2d2-4be5-845f-f5ab12d3a411/format> ;
+    dct:title "Estado de gastos: comparación con el ejercicio anterior por UFG XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/24/estado-de-gastos-comparacion-por-UFG.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg/resource/3b094d75-e2d2-4be5-845f-f5ab12d3a411/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg/resource/94929266-1fce-44fd-9340-b70f9e5660db> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg/resource/94929266-1fce-44fd-9340-b70f9e5660db/format> ;
+    dct:title "Estado de gastos: comparación con el ejercicio anterior por UFG PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/24/estado-de-gastos-comparacion-por-UFG.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg/resource/94929266-1fce-44fd-9340-b70f9e5660db/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg/resource/9a41b861-4fbe-4bce-be58-ddac61aba78a> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg/resource/9a41b861-4fbe-4bce-be58-ddac61aba78a/format> ;
+    dct:title "Estado de gastos: comparación con el ejercicio anterior por UFG CSV"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/24/estado-de-gastos-comparacion-por-UFG.csv" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg/resource/9a41b861-4fbe-4bce-be58-ddac61aba78a/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg/resource/ba6d32f8-d510-437a-86be-c422b8fee705> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg/resource/ba6d32f8-d510-437a-86be-c422b8fee705/format> ;
+    dct:title "Estado de gastos: comparación con el ejercicio anterior por UFG JSON"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/24/estado-de-gastos-comparacion-por-UFG.json" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg/resource/ba6d32f8-d510-437a-86be-c422b8fee705/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-estado-de-gastos/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos/PeriodOfTime-1> schema1:endDate "2022-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2022-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos/resource/776eca90-789f-422d-b445-ccff65224f3c> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-gastos/resource/776eca90-789f-422d-b445-ccff65224f3c/format> ;
+    dct:title "Estado de gastos PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/10/estado-de-gastos.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos/resource/776eca90-789f-422d-b445-ccff65224f3c/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos/resource/891dccd6-bef2-481a-84e0-98fd676d9d57> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-gastos/resource/891dccd6-bef2-481a-84e0-98fd676d9d57/format> ;
+    dct:title "Estado de gastos XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/10/estado-de-gastos.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-gastos/resource/891dccd6-bef2-481a-84e0-98fd676d9d57/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos/Frequency> ;
+    dct:description "Presupuesto inicial de ingresos desagregado a nivel de subconcepto de su clasificación económica con desgloses explicativos de lo que componen algunos subconceptos."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/estado-de-ingresos" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:modified "2022-02-16T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/estado-de-ingresos-2019>,
+        <https://web.unican.es/opendata/gobierno/estado-de-ingresos-2021> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos/PeriodOfTime-1> ;
+    dct:title "Estado de ingresos"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos/resource/48ae5873-24b8-489f-bb1e-98d3d2abe652>,
+        <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos/resource/a784def4-f8b9-4c4e-b5bc-43898eb9fde2> ;
+    dcat:keyword "Ingresos"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2019> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2019/Frequency> ;
+    dct:description "Presupuesto inicial de ingresos 2019 desagregado a nivel de subconcepto de su clasificación económica con desgloses explicativos de lo que componen algunos subconceptos."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/estado-de-ingresos-2019" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/estado-de-ingresos>,
+        <https://web.unican.es/opendata/gobierno/estado-de-ingresos-2021> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2019/PeriodOfTime-1> ;
+    dct:title "Estado de ingresos 2019"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2019/resource/2ac249a4-d4c8-42f9-9547-c7aac1a1faf9>,
+        <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2019/resource/4a5ddf4d-f9c5-4cf6-a56f-0f2ae0029ec1> ;
+    dcat:keyword "Ingresos"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2019/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2019/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2019/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2019/PeriodOfTime-1> schema1:endDate "2019-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2019-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2019/resource/2ac249a4-d4c8-42f9-9547-c7aac1a1faf9> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2019/resource/2ac249a4-d4c8-42f9-9547-c7aac1a1faf9/format> ;
+    dct:title "Estado de ingresos 2019 PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3184/estado-de-ingresos-2019.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2019/resource/2ac249a4-d4c8-42f9-9547-c7aac1a1faf9/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2019/resource/4a5ddf4d-f9c5-4cf6-a56f-0f2ae0029ec1> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2019/resource/4a5ddf4d-f9c5-4cf6-a56f-0f2ae0029ec1/format> ;
+    dct:title "Estado de ingresos 2019 XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3184/estado-de-ingresos-2019.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2019/resource/4a5ddf4d-f9c5-4cf6-a56f-0f2ae0029ec1/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2021> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2021/Frequency> ;
+    dct:description "Presupuesto inicial de ingresos 2021 desagregado a nivel de subconcepto de su clasificación económica con desgloses explicativos de lo que componen algunos subconceptos."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/estado-de-ingresos-2021" ;
+    dct:issued "2022-02-16T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/estado-de-ingresos>,
+        <https://web.unican.es/opendata/gobierno/estado-de-ingresos-2019> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2021/PeriodOfTime-1> ;
+    dct:title "Estado de ingresos 2021"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2021/resource/cfed54e3-3f12-4a3a-8538-9c7786c3c423>,
+        <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2021/resource/e18c7671-4f95-4b03-a949-e44795e66485> ;
+    dcat:keyword "Ingresos"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2021/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2021/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2021/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2021/PeriodOfTime-1> schema1:endDate "2021-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2021-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2021/resource/cfed54e3-3f12-4a3a-8538-9c7786c3c423> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2021/resource/cfed54e3-3f12-4a3a-8538-9c7786c3c423/format> ;
+    dct:title "Estado de ingresos 2021 PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3214/estado-de-ingresos.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2021/resource/cfed54e3-3f12-4a3a-8538-9c7786c3c423/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2021/resource/e18c7671-4f95-4b03-a949-e44795e66485> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2021/resource/e18c7671-4f95-4b03-a949-e44795e66485/format> ;
+    dct:title "Estado de ingresos 2021 XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3214/estado-de-ingresos.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2021/resource/e18c7671-4f95-4b03-a949-e44795e66485/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-capitulos-y-articulos> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-capitulos-y-articulos/Frequency> ;
+    dct:description "Presupuesto inicial de ingresos desagregado a nivel de capítulo y artículo de su clasificación económica y presentado comparando con el presupuesto inicial del ejercicio anterior (2018/2019)."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/estado-de-ingresos-2018-2019-por-capitulos-y-articulos" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/estado-de-ingresos-2020-2021-por-capitulos-y-articulos>,
+        <https://web.unican.es/opendata/gobierno/estado-de-ingresos-por-capitulos-y-articulos> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-capitulos-y-articulos/PeriodOfTime-1> ;
+    dct:title "Estado de ingresos: comparación 2018/2019 por capítulos y artículos"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-capitulos-y-articulos/resource/6ee8ecfa-656c-4eb2-9b4b-05e0628f705a>,
+        <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-capitulos-y-articulos/resource/e5deeb92-fa46-4ab8-b29d-95dea556f489> ;
+    dcat:keyword "Ingresos"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-capitulos-y-articulos/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-capitulos-y-articulos/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-capitulos-y-articulos/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-capitulos-y-articulos/PeriodOfTime-1> schema1:endDate "2019-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2018-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-capitulos-y-articulos/resource/6ee8ecfa-656c-4eb2-9b4b-05e0628f705a> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-capitulos-y-articulos/resource/6ee8ecfa-656c-4eb2-9b4b-05e0628f705a/format> ;
+    dct:title "Estado de ingresos: comparación 2018/2019 por capítulos y artículos XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3193/estado-de-ingresos-comparacion-2018-2019-por-capitulos-y-articulos.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-capitulos-y-articulos/resource/6ee8ecfa-656c-4eb2-9b4b-05e0628f705a/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-capitulos-y-articulos/resource/e5deeb92-fa46-4ab8-b29d-95dea556f489> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-capitulos-y-articulos/resource/e5deeb92-fa46-4ab8-b29d-95dea556f489/format> ;
+    dct:title "Estado de ingresos: comparación 2018/2019 por capítulos y artículos PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3193/estado-de-ingresos-comparacion-2018-2019-por-capitulos-y-articulos.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-capitulos-y-articulos/resource/e5deeb92-fa46-4ab8-b29d-95dea556f489/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-conceptos> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-conceptos/Frequency> ;
+    dct:description "Presupuesto inicial de ingresos desagregado a nivel de concepto de su clasificación económica y presentado comparando con el presupuesto inicial del ejercicio anterior (2018/2019)."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/estado-de-ingresos-2018-2019-comparacion-por-conceptos" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/estado-de-ingresos-comparacion-por-conceptos> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-conceptos/PeriodOfTime-1> ;
+    dct:title "Estado de ingresos: comparación 2018/2019 por conceptos"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-conceptos/resource/6c3b467c-f471-4ef4-8d29-8b2f3ea1bad7>,
+        <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-conceptos/resource/da7b0d9a-1e71-4dd1-8683-36d5f4a4863f> ;
+    dcat:keyword "Ingresos"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-conceptos/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-conceptos/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-conceptos/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-conceptos/PeriodOfTime-1> schema1:endDate "2019-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2018-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-conceptos/resource/6c3b467c-f471-4ef4-8d29-8b2f3ea1bad7> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-conceptos/resource/6c3b467c-f471-4ef4-8d29-8b2f3ea1bad7/format> ;
+    dct:title "Estado de ingresos: comparación 2018/2019 por conceptos XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3195/estado-de-ingresos-comparacion-2018-2019-por-conceptos.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-conceptos/resource/6c3b467c-f471-4ef4-8d29-8b2f3ea1bad7/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-conceptos/resource/da7b0d9a-1e71-4dd1-8683-36d5f4a4863f> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-conceptos/resource/da7b0d9a-1e71-4dd1-8683-36d5f4a4863f/format> ;
+    dct:title "Estado de ingresos: comparación 2018/2019 por conceptos PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3195/estado-de-ingresos-comparacion-2018-2019-por-conceptos.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-conceptos/resource/da7b0d9a-1e71-4dd1-8683-36d5f4a4863f/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2020-2021-por-capitulos-y-articulos> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2020-2021-por-capitulos-y-articulos/Frequency> ;
+    dct:description "Presupuesto inicial de ingresos desagregado a nivel de capítulo y artículo de su clasificación económica y presentado comparando con el presupuesto inicial del ejercicio anterior."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/estado-de-ingresos-2020-2021-por-capitulos-y-articulos" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:modified "2021-06-10T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/estado-de-ingresos-2018-2019-por-capitulos-y-articulos>,
+        <https://web.unican.es/opendata/gobierno/estado-de-ingresos-por-capitulos-y-articulos> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2020-2021-por-capitulos-y-articulos/PeriodOfTime-1> ;
+    dct:title "Estado de ingresos: comparación 2020/2021 por capítulos y artículos"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2020-2021-por-capitulos-y-articulos/resource/32c26a11-a0a4-47f3-9090-0f048d69fcb8>,
+        <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2020-2021-por-capitulos-y-articulos/resource/d5120bed-c8e0-4d29-bf50-759d5d05cad5> ;
+    dcat:keyword "Ingresos"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2020-2021-por-capitulos-y-articulos/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2020-2021-por-capitulos-y-articulos/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2020-2021-por-capitulos-y-articulos/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2020-2021-por-capitulos-y-articulos/PeriodOfTime-1> schema1:endDate "2021-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2020-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2020-2021-por-capitulos-y-articulos/resource/32c26a11-a0a4-47f3-9090-0f048d69fcb8> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2020-2021-por-capitulos-y-articulos/resource/32c26a11-a0a4-47f3-9090-0f048d69fcb8/format> ;
+    dct:title "Estado de ingresos: comparación 2020/2021 por capítulos y artículos PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3216/estado-de-ingresos-comparacion-por-capitulos-y-articulos.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2020-2021-por-capitulos-y-articulos/resource/32c26a11-a0a4-47f3-9090-0f048d69fcb8/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2020-2021-por-capitulos-y-articulos/resource/d5120bed-c8e0-4d29-bf50-759d5d05cad5> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2020-2021-por-capitulos-y-articulos/resource/d5120bed-c8e0-4d29-bf50-759d5d05cad5/format> ;
+    dct:title "Estado de ingresos: comparación 2020/2021 por capítulos y artículos XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3216/estado-de-ingresos-comparacion-por-capitulos-y-articulos.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2020-2021-por-capitulos-y-articulos/resource/d5120bed-c8e0-4d29-bf50-759d5d05cad5/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/Frequency> ;
+    dct:description "Presupuesto inicial de ingresos desagregado a nivel de capítulo y artículo de su clasificación económica y presentado comparando con el presupuesto inicial del ejercicio anterior."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/estado-de-ingresos-por-capitulos-y-articulos" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:modified "2021-06-10T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/estado-de-ingresos-2018-2019-por-capitulos-y-articulos>,
+        <https://web.unican.es/opendata/gobierno/estado-de-ingresos-2020-2021-por-capitulos-y-articulos> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/PeriodOfTime-1> ;
+    dct:title "Estado de ingresos: comparación con el ejercicio anterior por capítulos y artículos"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/resource/41d81f25-00a5-4ca3-9186-4fab9d4e2306>,
+        <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/resource/9e7d132b-8800-418b-817c-7bdedd48237c> ;
+    dcat:keyword "Ingresos"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/PeriodOfTime-1> schema1:endDate "2021-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2020-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/resource/41d81f25-00a5-4ca3-9186-4fab9d4e2306> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/resource/41d81f25-00a5-4ca3-9186-4fab9d4e2306/format> ;
+    dct:title "Estado de ingresos: comparación con el ejercicio anterior por capítulos y artículos XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/11/estado-de-ingresos-comparacion-por-capitulos-y-articulos.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/resource/41d81f25-00a5-4ca3-9186-4fab9d4e2306/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/resource/9e7d132b-8800-418b-817c-7bdedd48237c> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/resource/9e7d132b-8800-418b-817c-7bdedd48237c/format> ;
+    dct:title "Estado de ingresos: comparación con el ejercicio anterior por capítulos y artículos PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/11/estado-de-ingresos-comparacion-por-capitulos-y-articulos.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos/resource/9e7d132b-8800-418b-817c-7bdedd48237c/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-conceptos> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-conceptos/Frequency> ;
+    dct:description "Presupuesto inicial de ingresos desagregado a nivel de concepto de su clasificación económica y presentado comparando con el presupuesto inicial del ejercicio anterior."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/estado-de-ingresos-comparacion-por-conceptos" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:modified "2021-06-10T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/estado-de-ingresos-2018-2019-comparacion-por-conceptos> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-conceptos/PeriodOfTime-1> ;
+    dct:title "Estado de ingresos: comparación con el ejercicio anterior por conceptos"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-conceptos/resource/e45b9b5a-0c7f-47e5-8015-afc80ad29e7e>,
+        <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-conceptos/resource/fba8720e-1687-47e6-a915-e4377030554a> ;
+    dcat:keyword "Ingresos"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-conceptos/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-conceptos/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-conceptos/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-conceptos/PeriodOfTime-1> schema1:endDate "2021-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2020-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-conceptos/resource/e45b9b5a-0c7f-47e5-8015-afc80ad29e7e> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-conceptos/resource/e45b9b5a-0c7f-47e5-8015-afc80ad29e7e/format> ;
+    dct:title "Estado de ingresos: comparación con el ejercicio anterior por conceptos XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/20/estado-de-ingresos-comparacion-por-conceptos.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-conceptos/resource/e45b9b5a-0c7f-47e5-8015-afc80ad29e7e/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-conceptos/resource/fba8720e-1687-47e6-a915-e4377030554a> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-conceptos/resource/fba8720e-1687-47e6-a915-e4377030554a/format> ;
+    dct:title "Estado de ingresos: comparación con el ejercicio anterior por conceptos PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/20/estado-de-ingresos-comparacion-por-conceptos.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-conceptos/resource/fba8720e-1687-47e6-a915-e4377030554a/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos/PeriodOfTime-1> schema1:endDate "2022-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2022-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos/resource/48ae5873-24b8-489f-bb1e-98d3d2abe652> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos/resource/48ae5873-24b8-489f-bb1e-98d3d2abe652/format> ;
+    dct:title "Estado de ingresos PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/9/estado-de-ingresos.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos/resource/48ae5873-24b8-489f-bb1e-98d3d2abe652/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos/resource/a784def4-f8b9-4c4e-b5bc-43898eb9fde2> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos/resource/a784def4-f8b9-4c4e-b5bc-43898eb9fde2/format> ;
+    dct:title "Estado de ingresos XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/9/estado-de-ingresos.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-de-ingresos/resource/a784def4-f8b9-4c4e-b5bc-43898eb9fde2/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario/Frequency> ;
+    dct:description "Estado de liquidación del presupuesto de la Universidad para el ejercicio anterior."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/estado-del-resultado-presupuestario" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:modified "2021-07-09T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/estado-del-resultado-presupuestario-2017> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario/PeriodOfTime-1> ;
+    dct:title "Estado del resultado presupuestario"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario/resource/d12f9640-371b-45dd-8a61-cb1ae943de5e>,
+        <https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario/resource/d1afa6bd-4dc7-47d4-a34c-8bfb0663696b> ;
+    dcat:keyword "Liquidación"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario-del-ejercicio-2017> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario-del-ejercicio-2017/Frequency> ;
+    dct:description "Estado de liquidación del presupuesto de la Universidad para el ejercicio 2017."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/estado-del-resultado-presupuestario-2017" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/estado-del-resultado-presupuestario> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario-del-ejercicio-2017/PeriodOfTime-1> ;
+    dct:title "Estado del resultado presupuestario del ejercicio 2017"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario-del-ejercicio-2017/resource/688f7fe9-add1-4fde-a2e5-c976ab8d7120>,
+        <https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario-del-ejercicio-2017/resource/bbe38d41-9ba7-436f-91de-f74867f6659c> ;
+    dcat:keyword "Liquidación"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario-del-ejercicio-2017/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario-del-ejercicio-2017/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario-del-ejercicio-2017/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario-del-ejercicio-2017/PeriodOfTime-1> schema1:endDate "2017-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2017-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario-del-ejercicio-2017/resource/688f7fe9-add1-4fde-a2e5-c976ab8d7120> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario-del-ejercicio-2017/resource/688f7fe9-add1-4fde-a2e5-c976ab8d7120/format> ;
+    dct:title "Estado del resultado presupuestario del ejercicio 2017 XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3197/estado-del-resultado-presupuestario-2017.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario-del-ejercicio-2017/resource/688f7fe9-add1-4fde-a2e5-c976ab8d7120/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario-del-ejercicio-2017/resource/bbe38d41-9ba7-436f-91de-f74867f6659c> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario-del-ejercicio-2017/resource/bbe38d41-9ba7-436f-91de-f74867f6659c/format> ;
+    dct:title "Estado del resultado presupuestario del ejercicio 2017 PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3197/estado-del-resultado-presupuestario-2017.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario-del-ejercicio-2017/resource/bbe38d41-9ba7-436f-91de-f74867f6659c/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario/PeriodOfTime-1> schema1:endDate "2020-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2020-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario/resource/d12f9640-371b-45dd-8a61-cb1ae943de5e> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario/resource/d12f9640-371b-45dd-8a61-cb1ae943de5e/format> ;
+    dct:title "Estado del resultado presupuestario XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/44/estado-del-resultado-presupuestario.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario/resource/d12f9640-371b-45dd-8a61-cb1ae943de5e/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario/resource/d1afa6bd-4dc7-47d4-a34c-8bfb0663696b> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario/resource/d1afa6bd-4dc7-47d4-a34c-8bfb0663696b/format> ;
+    dct:title "Estado del resultado presupuestario PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/44/estado-del-resultado-presupuestario.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario/resource/d1afa6bd-4dc7-47d4-a34c-8bfb0663696b/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2017> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2017/Frequency> ;
+    dct:description "Presupuesto liquidado de gastos de la Universidad para el ejercicio 2017, presentado según la clasificación económica a nivel de capítulo."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/estado-liquidacion-del-presupuesto-de-gastos-2017" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/estado-liquidacion-del-presupuesto-de-gastos> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2017/PeriodOfTime-1> ;
+    dct:title "Estado liquidación del presupuesto de gastos del ejercicio 2017"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2017/resource/39b1d04f-0ef1-4fe6-8a9c-54bb7f0beaa7>,
+        <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2017/resource/69ff59ff-60b0-4c7f-8d96-2062b3e9ea70> ;
+    dcat:keyword "Gastos"@es,
+        "Liquidación"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2017/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2017/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2017/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2017/PeriodOfTime-1> schema1:endDate "2017-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2017-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2017/resource/39b1d04f-0ef1-4fe6-8a9c-54bb7f0beaa7> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2017/resource/39b1d04f-0ef1-4fe6-8a9c-54bb7f0beaa7/format> ;
+    dct:title "Estado liquidación del presupuesto de gastos del ejercicio 2017 PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3203/estado-liquidacion-del-presupuesto-de-gastos-2017.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2017/resource/39b1d04f-0ef1-4fe6-8a9c-54bb7f0beaa7/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2017/resource/69ff59ff-60b0-4c7f-8d96-2062b3e9ea70> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2017/resource/69ff59ff-60b0-4c7f-8d96-2062b3e9ea70/format> ;
+    dct:title "Estado liquidación del presupuesto de gastos del ejercicio 2017 XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3203/estado-liquidacion-del-presupuesto-de-gastos-2017.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2017/resource/69ff59ff-60b0-4c7f-8d96-2062b3e9ea70/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2020> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2020/Frequency> ;
+    dct:description "Presupuesto liquidado de gastos de la Universidad para el ejercicio 2020, presentado según la clasificación económica a nivel de capítulo."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/estado-liquidacion-del-presupuesto-de-gastos" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:modified "2021-07-19T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/estado-liquidacion-del-presupuesto-de-gastos-2017> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2020/PeriodOfTime-1> ;
+    dct:title "Estado liquidación del presupuesto de gastos del ejercicio 2020"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2020/resource/25083142-2511-4221-abdd-c38277bfd86f>,
+        <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2020/resource/f3342c2b-7563-4ace-9bb7-d2a65a7bc6e2> ;
+    dcat:keyword "Gastos"@es,
+        "Liquidación"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2020/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2020/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2020/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2020/PeriodOfTime-1> schema1:endDate "2020-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2020-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2020/resource/25083142-2511-4221-abdd-c38277bfd86f> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2020/resource/25083142-2511-4221-abdd-c38277bfd86f/format> ;
+    dct:title "Estado liquidación del presupuesto de gastos del ejercicio 2020 XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/43/estado-liquidacion-del-presupuesto-de-gastos.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2020/resource/25083142-2511-4221-abdd-c38277bfd86f/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2020/resource/f3342c2b-7563-4ace-9bb7-d2a65a7bc6e2> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2020/resource/f3342c2b-7563-4ace-9bb7-d2a65a7bc6e2/format> ;
+    dct:title "Estado liquidación del presupuesto de gastos del ejercicio 2020 PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/43/estado-liquidacion-del-presupuesto-de-gastos.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2020/resource/f3342c2b-7563-4ace-9bb7-d2a65a7bc6e2/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2017> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2017/Frequency> ;
+    dct:description "Presupuesto liquidado de ingresos de la Universidad para el ejercicio 2017, presentado según la clasificación económica a nivel de capítulo."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/estado-liquidacion-del-presupuesto-de-ingresos-2017" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/estado-liquidacion-del-presupuesto-de-ingresos> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2017/PeriodOfTime-1> ;
+    dct:title "Estado liquidación del presupuesto de ingresos del ejercicio 2017"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2017/resource/2a7832f4-d816-4d82-9922-2b9b99424b89>,
+        <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2017/resource/4ba65f38-f47e-44b9-9ddf-36c5800ad548> ;
+    dcat:keyword "Ingresos"@es,
+        "Liquidación"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2017/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2017/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2017/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2017/PeriodOfTime-1> schema1:endDate "2017-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2017-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2017/resource/2a7832f4-d816-4d82-9922-2b9b99424b89> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2017/resource/2a7832f4-d816-4d82-9922-2b9b99424b89/format> ;
+    dct:title "Estado liquidación del presupuesto de ingresos del ejercicio 2017 PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3204/estado-liquidacion-del-presupuesto-de-ingresos-2017.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2017/resource/2a7832f4-d816-4d82-9922-2b9b99424b89/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2017/resource/4ba65f38-f47e-44b9-9ddf-36c5800ad548> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2017/resource/4ba65f38-f47e-44b9-9ddf-36c5800ad548/format> ;
+    dct:title "Estado liquidación del presupuesto de ingresos del ejercicio 2017 XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3204/estado-liquidacion-del-presupuesto-de-ingresos-2017.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2017/resource/4ba65f38-f47e-44b9-9ddf-36c5800ad548/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2020> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2020/Frequency> ;
+    dct:description "Presupuesto liquidado de ingresos de la Universidad para el ejercicio 2020, presentado según la clasificación económica a nivel de capítulo."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/estado-liquidacion-del-presupuesto-de-ingresos" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:modified "2021-07-19T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/estado-liquidacion-del-presupuesto-de-ingresos-2017> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2020/PeriodOfTime-1> ;
+    dct:title "Estado liquidación del presupuesto de ingresos del ejercicio 2020"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2020/resource/542db67e-46bb-4bb1-af21-cd09e83258ee>,
+        <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2020/resource/cce199f0-fd5f-4d74-8402-39767c60d3b2> ;
+    dcat:keyword "Ingresos"@es,
+        "Liquidación"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2020/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2020/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2020/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2020/PeriodOfTime-1> schema1:endDate "2020-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2020-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2020/resource/542db67e-46bb-4bb1-af21-cd09e83258ee> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2020/resource/542db67e-46bb-4bb1-af21-cd09e83258ee/format> ;
+    dct:title "Estado liquidación del presupuesto de ingresos del ejercicio 2020 PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/41/estado-liquidacion-del-presupuesto-de-ingresos.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2020/resource/542db67e-46bb-4bb1-af21-cd09e83258ee/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2020/resource/cce199f0-fd5f-4d74-8402-39767c60d3b2> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2020/resource/cce199f0-fd5f-4d74-8402-39767c60d3b2/format> ;
+    dct:title "Estado liquidación del presupuesto de ingresos del ejercicio 2020 XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/41/estado-liquidacion-del-presupuesto-de-ingresos.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2020/resource/cce199f0-fd5f-4d74-8402-39767c60d3b2/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion/Frequency> ;
+    dct:description "Se presenta la evolución de las principales magnitudes del balance de situación en los últimos 5 ejercicios, tanto para el activo como para el pasivo."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/evolucion-balance-de-situacion" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:modified "2021-07-19T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/evolucion-balance-de-situacion-2013-2017> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion/PeriodOfTime-1> ;
+    dct:title "Evolución balance de situación"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion/resource/633b5568-548d-4571-b75c-bf539ffd33d2>,
+        <https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion/resource/c8277183-3fc2-4bba-8f0e-0081cf1e6bc9> ;
+    dcat:keyword "Liquidación"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion-2013-2017> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion-2013-2017/Frequency> ;
+    dct:description "Se presenta la evolución de las principales magnitudes del balance de situación en los ejercicios 2013-2017, tanto para el activo como para el pasivo."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/evolucion-balance-de-situacion-2013-2017" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:references <https://web.unican.es/opendata/gobierno/evolucion-balance-de-situacion> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion-2013-2017/PeriodOfTime-1> ;
+    dct:title "Evolución balance de situación 2013-2017"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion-2013-2017/resource/bf67118c-7a58-4fb2-881b-f561b37a6781>,
+        <https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion-2013-2017/resource/d7f00390-8430-4d28-9e87-494b21bb5a34> ;
+    dcat:keyword "Liquidación"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion-2013-2017/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion-2013-2017/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion-2013-2017/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion-2013-2017/PeriodOfTime-1> schema1:endDate "2017-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2013-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion-2013-2017/resource/bf67118c-7a58-4fb2-881b-f561b37a6781> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion-2013-2017/resource/bf67118c-7a58-4fb2-881b-f561b37a6781/format> ;
+    dct:title "Evolución balance de situación 2013-2017 PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3201/evolucion-balance-de-situacion-2013-2017.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion-2013-2017/resource/bf67118c-7a58-4fb2-881b-f561b37a6781/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion-2013-2017/resource/d7f00390-8430-4d28-9e87-494b21bb5a34> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion-2013-2017/resource/d7f00390-8430-4d28-9e87-494b21bb5a34/format> ;
+    dct:title "Evolución balance de situación 2013-2017 XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/3201/evolucion-balance-de-situacion-2013-2017.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion-2013-2017/resource/d7f00390-8430-4d28-9e87-494b21bb5a34/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion/PeriodOfTime-1> schema1:endDate "2020-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2016-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion/resource/633b5568-548d-4571-b75c-bf539ffd33d2> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion/resource/633b5568-548d-4571-b75c-bf539ffd33d2/format> ;
+    dct:title "Evolución balance de situación XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/36/evolucion-balance-de-situacion.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion/resource/633b5568-548d-4571-b75c-bf539ffd33d2/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion/resource/c8277183-3fc2-4bba-8f0e-0081cf1e6bc9> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion/resource/c8277183-3fc2-4bba-8f0e-0081cf1e6bc9/format> ;
+    dct:title "Evolución balance de situación PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/36/evolucion-balance-de-situacion.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion/resource/c8277183-3fc2-4bba-8f0e-0081cf1e6bc9/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-ingresos-y-gastos-afectados> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-ingresos-y-gastos-afectados/Frequency> ;
+    dct:description "Desglose de los ingresos del presupuesto inicial procedentes del Contrato Programa con el Gobierno de Cantabria, vinculándolos a los distintos gastos a los que están afectados, es decir, que están destinados a financiar."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/ingresos-y-gastos-afectados" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:modified "2022-02-22T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-ingresos-y-gastos-afectados/PeriodOfTime-1> ;
+    dct:title "Ingresos y gastos afectados"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-ingresos-y-gastos-afectados/resource/4347efab-0b11-455a-9949-7cdf05234c8b>,
+        <https://datos.gob.es/catalogo/u01600001-ingresos-y-gastos-afectados/resource/4eb7f16a-89a2-4b46-aa43-f59d930e4069> ;
+    dcat:keyword "Gastos"@es,
+        "Ingresos"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-ingresos-y-gastos-afectados/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-ingresos-y-gastos-afectados/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-ingresos-y-gastos-afectados/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-ingresos-y-gastos-afectados/PeriodOfTime-1> schema1:endDate "2022-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2022-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-ingresos-y-gastos-afectados/resource/4347efab-0b11-455a-9949-7cdf05234c8b> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-ingresos-y-gastos-afectados/resource/4347efab-0b11-455a-9949-7cdf05234c8b/format> ;
+    dct:title "Ingresos y gastos afectados PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/25/ingresos-y-gastos-afectados.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-ingresos-y-gastos-afectados/resource/4347efab-0b11-455a-9949-7cdf05234c8b/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-ingresos-y-gastos-afectados/resource/4eb7f16a-89a2-4b46-aa43-f59d930e4069> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-ingresos-y-gastos-afectados/resource/4eb7f16a-89a2-4b46-aa43-f59d930e4069/format> ;
+    dct:title "Ingresos y gastos afectados XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/25/ingresos-y-gastos-afectados.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-ingresos-y-gastos-afectados/resource/4eb7f16a-89a2-4b46-aa43-f59d930e4069/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<https://datos.gob.es/catalogo/u01600001-presupuesto-por-ufg> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/u01600001-presupuesto-por-ufg/Frequency> ;
+    dct:description "Presupuesto inicial de gastos individualizado para cada una de las Unidades Funcionales de Gasto en que se articula la Universidad y presentado según su clasificación económica a nivel de subconcepto. En el caso de las asignaciones a departamentos, centros y delegaciones y consejo de estudiantes y Servicios de Reprografía se presenta la información agrupada en tablas y desglosada para cada código de la clasificación orgánica."@es ;
+    dct:identifier "https://web.unican.es/opendata/gobierno/presupuesto-por-ufg" ;
+    dct:issued "2018-11-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://web.unican.es/opendata/Paginas/Sobre-UC-Open-Data.aspx> ;
+    dct:modified "2022-02-22T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/U01600001> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Cantabria>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Cantabria> ;
+    dct:temporal <https://datos.gob.es/catalogo/u01600001-presupuesto-por-ufg/PeriodOfTime-1> ;
+    dct:title "Presupuesto por UFG"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/u01600001-presupuesto-por-ufg/resource/3c0a5dce-a1e3-4941-9ba4-236f79a56120>,
+        <https://datos.gob.es/catalogo/u01600001-presupuesto-por-ufg/resource/f423fa98-5168-4cb4-ad9f-c8c00489510a> ;
+    dcat:keyword "Gastos"@es,
+        "Presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/u01600001-presupuesto-por-ufg/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/u01600001-presupuesto-por-ufg/Frequency> rdf:value <https://datos.gob.es/catalogo/u01600001-presupuesto-por-ufg/DurationDescription> .
+
+<https://datos.gob.es/catalogo/u01600001-presupuesto-por-ufg/PeriodOfTime-1> schema1:endDate "2022-12-31T00:00:00+01:00"^^xsd:dateTime ;
+    schema1:startDate "2022-01-01T00:00:00+01:00"^^xsd:dateTime .
+
+<https://datos.gob.es/catalogo/u01600001-presupuesto-por-ufg/resource/3c0a5dce-a1e3-4941-9ba4-236f79a56120> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-presupuesto-por-ufg/resource/3c0a5dce-a1e3-4941-9ba4-236f79a56120/format> ;
+    dct:title "Presupuesto por UFG PDF"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/26/presupuesto-por-UFG.pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-presupuesto-por-ufg/resource/3c0a5dce-a1e3-4941-9ba4-236f79a56120/format> a dct:IMT ;
+    rdf:value "application/pdf" .
+
+<https://datos.gob.es/catalogo/u01600001-presupuesto-por-ufg/resource/f423fa98-5168-4cb4-ad9f-c8c00489510a> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/u01600001-presupuesto-por-ufg/resource/f423fa98-5168-4cb4-ad9f-c8c00489510a/format> ;
+    dct:title "Presupuesto por UFG XLSX"@es ;
+    dcat:accessURL "https://datos.unican.es/gobierno/26/presupuesto-por-UFG.xlsx" .
+
+<https://datos.gob.es/catalogo/u01600001-presupuesto-por-ufg/resource/f423fa98-5168-4cb4-ad9f-c8c00489510a/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-dotaciones-y-costes-pas.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-dotaciones-y-costes-pas.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-dotaciones-y-costes-pas.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-dotaciones-y-costes-pas.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pas> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-dotaciones-y-costes-pas.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-dotaciones-y-costes-pdi.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-dotaciones-y-costes-pdi.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-dotaciones-y-costes-pdi.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-dotaciones-y-costes-pdi.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-dotaciones-y-costes-pdi> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-dotaciones-y-costes-pdi.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-2019.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-2019.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-2019.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-2019.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2019> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-2019.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-2021.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-2021.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-2021.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-2021.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-2021> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-2021.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-2018-2019-por-capitulos-y-articulos.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-2018-2019-por-conceptos.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-2018-2019-por-conceptos.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-2018-2019-por-conceptos.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-2018-2019-por-conceptos.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-conceptos> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-2018-2019-por-conceptos.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-2018-2019-por-ufg.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-2020-2021-por-capitulos-y-articulos.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-2020-2021-por-capitulos-y-articulos.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-2020-2021-por-capitulos-y-articulos.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-2020-2021-por-capitulos-y-articulos.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-2020-2021-por-capitulos-y-articulos> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-2020-2021-por-capitulos-y-articulos.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-conceptos.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-conceptos.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-conceptos.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-conceptos.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-conceptos> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-conceptos.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos-comparacion-con-el-ejercicio-anterior-por-ufg.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-estado-de-gastos> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-gastos.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-2019.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-2019.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-2019.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-2019.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2019> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-2019.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-2021.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-2021.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-2021.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-2021.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-2021> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-2021.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-comparacion-2018-2019-por-capitulos-y-articulos.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-comparacion-2018-2019-por-capitulos-y-articulos.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-comparacion-2018-2019-por-capitulos-y-articulos.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-comparacion-2018-2019-por-capitulos-y-articulos.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-capitulos-y-articulos> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-comparacion-2018-2019-por-capitulos-y-articulos.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-comparacion-2018-2019-por-conceptos.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-comparacion-2018-2019-por-conceptos.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-comparacion-2018-2019-por-conceptos.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-comparacion-2018-2019-por-conceptos.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2018-2019-por-conceptos> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-comparacion-2018-2019-por-conceptos.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-comparacion-2020-2021-por-capitulos-y-articulos.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-comparacion-2020-2021-por-capitulos-y-articulos.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-comparacion-2020-2021-por-capitulos-y-articulos.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-comparacion-2020-2021-por-capitulos-y-articulos.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-2020-2021-por-capitulos-y-articulos> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-comparacion-2020-2021-por-capitulos-y-articulos.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-capitulos-y-articulos.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-conceptos.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-conceptos.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-conceptos.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-conceptos.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-conceptos> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos-comparacion-con-el-ejercicio-anterior-por-conceptos.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-estado-de-ingresos> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-de-ingresos.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-del-resultado-presupuestario-del-ejercicio-2017.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-del-resultado-presupuestario-del-ejercicio-2017.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-del-resultado-presupuestario-del-ejercicio-2017.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-del-resultado-presupuestario-del-ejercicio-2017.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario-del-ejercicio-2017> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-del-resultado-presupuestario-del-ejercicio-2017.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-del-resultado-presupuestario.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-del-resultado-presupuestario.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-del-resultado-presupuestario.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-del-resultado-presupuestario.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-estado-del-resultado-presupuestario> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-del-resultado-presupuestario.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2017.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2017.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2017.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2017.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2017> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2017.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2020.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2020.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2020.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2020.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2020> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-liquidacion-del-presupuesto-de-gastos-del-ejercicio-2020.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2017.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2017.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2017.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2017.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2017> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2017.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2020.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2020.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2020.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2020.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2020> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-estado-liquidacion-del-presupuesto-de-ingresos-del-ejercicio-2020.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-evolucion-balance-de-situacion-2013-2017.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-evolucion-balance-de-situacion-2013-2017.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-evolucion-balance-de-situacion-2013-2017.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-evolucion-balance-de-situacion-2013-2017.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion-2013-2017> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-evolucion-balance-de-situacion-2013-2017.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-evolucion-balance-de-situacion.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-evolucion-balance-de-situacion.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-evolucion-balance-de-situacion.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-evolucion-balance-de-situacion.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-evolucion-balance-de-situacion> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-evolucion-balance-de-situacion.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-ingresos-y-gastos-afectados.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-ingresos-y-gastos-afectados.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-ingresos-y-gastos-afectados.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-ingresos-y-gastos-afectados.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-ingresos-y-gastos-afectados> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-ingresos-y-gastos-afectados.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/u01600001-presupuesto-por-ufg.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/u01600001-presupuesto-por-ufg.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/u01600001-presupuesto-por-ufg.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/u01600001-presupuesto-por-ufg.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/u01600001-presupuesto-por-ufg> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/u01600001-presupuesto-por-ufg.ttl?_page=0> .
+

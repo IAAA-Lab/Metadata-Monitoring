@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:batch="http://www.springframework.org/schema/batch"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+		http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch.xsd">
+ 
+ 	<!-- ############################################################# -->
+	<!-- definicion del lanzador y repositorio de trabajos -->
+	<beans:import resource="../applicationContext.xml" />
+	
+	<!-- ############################################################# -->
+    <!-- analiza la calidad de los campos espaciales de los metadatos de septiembre de 2016 los 4800-->
+	<batch:job id="spatialQualityAnalysisJob">
+		<batch:step id="spatialQualityAnalysisStep">
+		    <!-- (1) analiza la calidad de los campos espaciales de los metadatos-->
+			<batch:tasklet>
+				<batch:listeners>
+					<batch:listener ref="qualityAnalysis_processor" />
+				</batch:listeners>
+				<batch:chunk reader="metadata_reader" processor="qualityAnalysis_processor"
+					writer="report_writter" commit-interval="1" />
+			</batch:tasklet>
+		</batch:step>
+	</batch:job>
+	
+	<!-- ############################################################# -->
+	<!-- ############################################################# -->
+	<!-- (1) analiza la calidad de los campos espaciales de los metadatos-->
+	<!-- lector de RDF, extrae los recursos y los proporciona a otras clases -->
+	<beans:bean id="metadata_reader" class="rdfProcessing.ItemReader_RDF_To_Resource">
+	<!--	<beans:property name="sourceRDF" value="data/temporal/sep2016IdeeExtractedMetadata.rdf" /> -->
+		<beans:property name="sourceRDF" value="data/temporal/sep2016IdeeValidatedMetadata.rdf" />
+	</beans:bean>
+	<!-- guarda el resultado del procesamiento en un fichero rdf -->
+	<beans:bean id="report_writter" class="rdfProcessing.ItemWriter_JenaModel_To_TDB">
+		<beans:property name="destRDFFile" value="data/output/sep2016IdeeQualityAnalysisReport.rdf" />
+	</beans:bean>
+	<!-- porcesa cada metadato de inspire y determina su calidad espacial -->
+	<beans:bean id="qualityAnalysis_processor" class="org.springframework.batch.item.support.CompositeItemProcessor">
+		<beans:property name="delegates">
+			<beans:list>
+				<!-- 1. trasnformamos cada recurso + props en un modelo -->
+				<beans:ref bean="resourceToModel_itemProcessor" />
+				<!-- 2. valida que el bounding box cumple todos los requisitos sintacticos -->
+				<beans:ref bean="boundingBoxAnalysis_itemProcessor" />
+				<!-- 3. extraemos de geonames (as gate) las ocurrencias de lugar en el metadato y sus coordenadas -->
+				<beans:ref bean="textualPlaceKeywordExtraction_itemProcessor" />
+				<!-- 4. valida que existen palabras clave de lugar en el metadato. Aquellas que existen mira a ver si están en un tesauro  -->
+				<!--    de momento no usa la salida del paso 3, pero en el futuro debería usar tambien el gazetter para ampliar las etiquetas de lugar que reconoce -->
+				<beans:ref bean="placeKeywordAnalysis_itemProcessor" />
+				<!-- 5. determina la calidadDeLos camposEspaciales -->
+				<beans:ref bean="CorrelationyAnalysis_itemProcessor" />		
+			</beans:list>
+		</beans:property>
+	</beans:bean> 
+	
+	<!-- ############################################################# -->
+    <!-- 1. convierte un recurso en un modelo. Resource -> Model -->          
+    <beans:bean id="resourceToModel_itemProcessor" class="rdfProcessing.ItemProcessor_RDFResource_To_JenaModel" />
+ 
+ 	<!-- ############################################################# -->
+    <!-- 2. valida que el bounding box cumple todos los requisitos sintacticos. Model -> Model -->          
+    <beans:bean id="boundingBoxAnalysis_itemProcessor" class="spatialQualityAnalysis.ItemProcessor_BoundingBoxAnalysis"/>
+    
+     <!-- ############################################################# -->
+    <!-- 3. extraemos de geonames (as gate) las ocurrencias de lugar en el metadato y sus coordenadas  Model -> Model -->          
+    <beans:bean id="textualPlaceKeywordExtraction_itemProcessor" class="spatialQualityAnalysis.ItemProcessor_PlaceTextDetection">
+    	<beans:property name="LocationHashFile" value="data\temporal\gazeteer\geonamesGate.hsh" />
+    </beans:bean>
+    
+    <!-- ############################################################# -->
+    <!-- 4. valida que existen palabras clave de lugar en el metadato. Aquellas que existen mira a ver si están en un tesauro . Model -> Model -->          
+    <beans:bean id="placeKeywordAnalysis_itemProcessor" class="spatialQualityAnalysis.ItemProcessor_PlaceKeywordAnalysis">
+    	<beans:property name="locationSourceHashFile" value="data\temporal\thesauri\gen_gateGazzetterHash\administrativeUnits.hsh" />
+    </beans:bean>
+    
+ 	<!-- ############################################################# -->
+    <!-- 5. examina la calidadDeLos camposEspaciales. Model -> Model -->          
+    <beans:bean id="CorrelationyAnalysis_itemProcessor" class="spatialQualityAnalysis.ItemProcessor_BBandPlaceCorrelationAnalysis">
+    	<beans:property name="dbname" value="inverseGeocoder" /> 
+		<beans:property name="dbuser" value="postgres" /> 
+		<beans:property name="dbpass" value="yuraku10" /> 
+		<beans:property name="dbhost" value="localhost" /> 
+		<beans:property name="dbport" value="5432" /> 
+		<beans:property name="locationSourceHashFile" value="data\temporal\thesauri\gen_gateGazzetterHash\administrativeUnits.hsh" />
+    </beans:bean>
+</beans:beans>
+
+

@@ -1,0 +1,5 @@
+/data
+/pythonvenv
+/.idea
+*.whl
+/qualityChecker/__pycache__

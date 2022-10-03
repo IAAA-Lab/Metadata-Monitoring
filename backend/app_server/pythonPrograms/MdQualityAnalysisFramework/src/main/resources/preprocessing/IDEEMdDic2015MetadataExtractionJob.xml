@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:batch="http://www.springframework.org/schema/batch"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+		http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch.xsd">
+ 
+ 	<!-- ############################################################# -->
+	<!-- definicion del lanzador y repositorio de trabajos -->
+	<beans:import resource="../applicationContext.xml" />
+ 
+	<!-- ############################################################# -->
+    <!-- extraemos de la base de datos postgres los metadatos a procesar los 100000 dic 2015-->
+ 	
+	<batch:job id="metadataExtractionJob">
+		<batch:step id="metadataExtractionFromPostGres" >
+			<batch:tasklet ref="metadataExtractionFromPostGresTasklet"/>
+		</batch:step>
+	</batch:job>
+	
+	<!-- ############################################################# -->
+	<!-- tarea que extrae de la base de datos postgres los metadatos a procesar -->
+	<beans:bean id="metadataExtractionFromPostGresTasklet" class="preprocessing.Tasklet_PostGresMdExtractor">
+		<beans:property name="dbname" value="postgres" /> 
+		<beans:property name="dbuser" value="postgres" /> 
+		<beans:property name="dbpass" value="yuraku10" /> 
+		<beans:property name="dbhost" value="localhost" /> 
+		<beans:property name="dbport" value="5432" /> 
+		<beans:property name="destinationFile" value="data/temporal/extractedMetadata.rdf" /> 
+	</beans:bean>
+</beans:beans>
+
+

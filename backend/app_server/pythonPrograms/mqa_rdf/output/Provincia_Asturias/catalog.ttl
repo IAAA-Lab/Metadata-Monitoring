@@ -1,0 +1,76 @@
+@prefix api: <http://purl.org/linked-data/api/vocab#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://a9.com/-/spec/opensearch/1.1/> .
+@prefix ns2: <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://datos.gob.es/catalogo/a03002951-evolucion-presupuestos-asturias> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/a03002951-evolucion-presupuestos-asturias/Frequency> ;
+    dct:description "Evolución de los Presupuestos Generales del Principado de Asturias desde el 2003. "@es ;
+    dct:issued "2003-01-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://creativecommons.org/licenses/by/4.0/deed.es_ES> ;
+    dct:modified "2022-01-17T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/A03002951> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Principado-Asturias>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Asturias> ;
+    dct:title "Evolución de los presupuestos generales del Principado de Asturias"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/a03002951-evolucion-presupuestos-asturias/resource/6862647e-81e2-44a0-9304-e26c604ff354>,
+        <https://datos.gob.es/catalogo/a03002951-evolucion-presupuestos-asturias/resource/a082fd64-e871-4228-99d5-71063aa4b41d>,
+        <https://datos.gob.es/catalogo/a03002951-evolucion-presupuestos-asturias/resource/a886171d-626f-45b4-99ac-ef2a83da6038>,
+        <https://datos.gob.es/catalogo/a03002951-evolucion-presupuestos-asturias/resource/f6b1894d-70cf-4a47-a6f7-5951e3dc3e32> ;
+    dcat:keyword "Presupuestos"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/a03002951-evolucion-presupuestos-asturias/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/a03002951-evolucion-presupuestos-asturias/Frequency> rdf:value <https://datos.gob.es/catalogo/a03002951-evolucion-presupuestos-asturias/DurationDescription> .
+
+<https://datos.gob.es/catalogo/a03002951-evolucion-presupuestos-asturias/resource/6862647e-81e2-44a0-9304-e26c604ff354> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/a03002951-evolucion-presupuestos-asturias/resource/6862647e-81e2-44a0-9304-e26c604ff354/format> ;
+    dct:title "Evolución de los presupuestos en Asturias: gastos"@es ;
+    dcat:accessURL "https://transparencia.asturias.es/documents/291579/1391638/dataset-evolucion-presupuestos-gastos.csv" .
+
+<https://datos.gob.es/catalogo/a03002951-evolucion-presupuestos-asturias/resource/6862647e-81e2-44a0-9304-e26c604ff354/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/a03002951-evolucion-presupuestos-asturias/resource/a082fd64-e871-4228-99d5-71063aa4b41d> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/a03002951-evolucion-presupuestos-asturias/resource/a082fd64-e871-4228-99d5-71063aa4b41d/format> ;
+    dct:title "Evolución de los presupuestos en Asturias: ingresos"@es ;
+    dcat:accessURL "https://transparencia.asturias.es/documents/291579/1391638/dataset-evolucion-presupuestos_ingresos.csv" .
+
+<https://datos.gob.es/catalogo/a03002951-evolucion-presupuestos-asturias/resource/a082fd64-e871-4228-99d5-71063aa4b41d/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/a03002951-evolucion-presupuestos-asturias/resource/a886171d-626f-45b4-99ac-ef2a83da6038> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/a03002951-evolucion-presupuestos-asturias/resource/a886171d-626f-45b4-99ac-ef2a83da6038/format> ;
+    dct:title "Gráficos interactivos presupuestos Asturias"@es ;
+    dcat:accessURL "https://app.powerbi.com/view?r=eyJrIjoiYmVjZTAwNDctNzI2My00NmViLTgyMmItZTdkM2VkY2Y1ODFjIiwidCI6IjI4ZmI0NmYwLTU0OWYtNDI5Ny1iOTZmLWFjNjJhZTkxY2YwYyIsImMiOjl9" .
+
+<https://datos.gob.es/catalogo/a03002951-evolucion-presupuestos-asturias/resource/a886171d-626f-45b4-99ac-ef2a83da6038/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/a03002951-evolucion-presupuestos-asturias/resource/f6b1894d-70cf-4a47-a6f7-5951e3dc3e32> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/a03002951-evolucion-presupuestos-asturias/resource/f6b1894d-70cf-4a47-a6f7-5951e3dc3e32/format> ;
+    dct:title "Evolución de los presupuestos en Asturias: ingresos y gastos"@es ;
+    dcat:accessURL "https://transparencia.asturias.es/documents/291579/1391638/dataset-evolucion-presupuestos.xlsx" .
+
+<https://datos.gob.es/catalogo/a03002951-evolucion-presupuestos-asturias/resource/f6b1894d-70cf-4a47-a6f7-5951e3dc3e32/format> a dct:IMT ;
+    rdf:value "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" .
+
+<http://datos.gob.es/apidata/catalog/dataset/a03002951-evolucion-presupuestos-asturias.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/a03002951-evolucion-presupuestos-asturias.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/a03002951-evolucion-presupuestos-asturias.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/a03002951-evolucion-presupuestos-asturias.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/a03002951-evolucion-presupuestos-asturias> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/a03002951-evolucion-presupuestos-asturias.ttl?_page=0> .
+

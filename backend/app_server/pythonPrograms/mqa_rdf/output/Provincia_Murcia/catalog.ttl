@@ -1,0 +1,2102 @@
+@prefix api: <http://purl.org/linked-data/api/vocab#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://a9.com/-/spec/opensearch/1.1/> .
+@prefix ns2: <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018/Frequency> ;
+    dct:description "Ejecución del presupuesto de gastos para el 1er trimestre de 2018"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-1-2018/" ;
+    dct:issued "2019-07-17T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2019-07-17T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Ejecución del presupuesto de gastos para el 1er trimestre de 2018"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018/resource/0fcbc43f-3e82-4a96-b449-97b912c29734>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018/resource/2cae7f8c-325d-4947-993b-54a0763ba7de>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018/resource/41a7aa4c-cb94-48f2-b4e5-b364c4944605>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018/resource/421282ae-6fdd-4361-bdbe-6379d8c9b762>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018/resource/89720437-3111-4891-a103-91d12631f4c4> ;
+    dcat:keyword "gastos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018/DurationDescription> time:years 99.0 .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018/resource/0fcbc43f-3e82-4a96-b449-97b912c29734> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018/resource/0fcbc43f-3e82-4a96-b449-97b912c29734/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-1-2018/XML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-1-2018/ejecucion-pre-gasto-1-2018.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018/resource/0fcbc43f-3e82-4a96-b449-97b912c29734/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018/resource/2cae7f8c-325d-4947-993b-54a0763ba7de> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018/resource/2cae7f8c-325d-4947-993b-54a0763ba7de/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-1-2018/CSV" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-1-2018/ejecucion-pre-gasto-1-2018.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018/resource/2cae7f8c-325d-4947-993b-54a0763ba7de/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018/resource/41a7aa4c-cb94-48f2-b4e5-b364c4944605> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018/resource/41a7aa4c-cb94-48f2-b4e5-b364c4944605/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-1-2018/HTML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-1-2018/ejecucion-pre-gasto-1-2018.html" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018/resource/41a7aa4c-cb94-48f2-b4e5-b364c4944605/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018/resource/421282ae-6fdd-4361-bdbe-6379d8c9b762> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018/resource/421282ae-6fdd-4361-bdbe-6379d8c9b762/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-1-2018/JSON" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-1-2018/ejecucion-pre-gasto-1-2018.json" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018/resource/421282ae-6fdd-4361-bdbe-6379d8c9b762/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018/resource/89720437-3111-4891-a103-91d12631f4c4> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018/resource/89720437-3111-4891-a103-91d12631f4c4/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-1-2018/Excel" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-1-2018/ejecucion-pre-gasto-1-2018.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018/resource/89720437-3111-4891-a103-91d12631f4c4/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019/Frequency> ;
+    dct:description "Ejecución del presupuesto de gastos para el 1er trimestre de 2019"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-1-2019/" ;
+    dct:issued "2019-07-19T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2019-07-19T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Ejecución del presupuesto de gastos para el 1er trimestre de 2019"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019/resource/38436bbd-9056-4ae6-966b-35ff25420770>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019/resource/38e8d779-2711-4285-bb55-4e23c5758982>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019/resource/49d95934-8229-437b-b545-d821373a65ba>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019/resource/8357bc50-7141-4083-a81e-f92ffb767243>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019/resource/c9c34576-7e2b-4903-acc8-190cad148e64> ;
+    dcat:keyword "gastos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019/DurationDescription> time:years 99.0 .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019/resource/38436bbd-9056-4ae6-966b-35ff25420770> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019/resource/38436bbd-9056-4ae6-966b-35ff25420770/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-1-2019/CSV" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-1-2019/ejecucion-pre-gasto-1-2019.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019/resource/38436bbd-9056-4ae6-966b-35ff25420770/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019/resource/38e8d779-2711-4285-bb55-4e23c5758982> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019/resource/38e8d779-2711-4285-bb55-4e23c5758982/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-1-2019/XML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-1-2019/ejecucion-pre-gasto-1-2019.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019/resource/38e8d779-2711-4285-bb55-4e23c5758982/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019/resource/49d95934-8229-437b-b545-d821373a65ba> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019/resource/49d95934-8229-437b-b545-d821373a65ba/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-1-2019/HTML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-1-2019/ejecucion-pre-gasto-1-2019.html" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019/resource/49d95934-8229-437b-b545-d821373a65ba/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019/resource/8357bc50-7141-4083-a81e-f92ffb767243> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019/resource/8357bc50-7141-4083-a81e-f92ffb767243/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-1-2019/Excel" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-1-2019/ejecucion-pre-gasto-1-2019.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019/resource/8357bc50-7141-4083-a81e-f92ffb767243/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019/resource/c9c34576-7e2b-4903-acc8-190cad148e64> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019/resource/c9c34576-7e2b-4903-acc8-190cad148e64/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-1-2019/JSON" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-1-2019/ejecucion-pre-gasto-1-2019.json" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019/resource/c9c34576-7e2b-4903-acc8-190cad148e64/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018/Frequency> ;
+    dct:description "Ejecución del presupuesto de gastos para el 2º trimestre de 2018"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-2-2018/" ;
+    dct:issued "2019-07-17T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2019-07-17T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Ejecución del presupuesto de gastos para el 2º trimestre de 2018"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018/resource/2c6508ce-4bfd-427b-983c-c40ed76cf822>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018/resource/3e6a48b4-5179-4cd9-b512-e8b6ca96dcce>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018/resource/c12b211a-ed8a-4425-9849-0b1d79edcadf>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018/resource/ec475827-06ad-4a65-b867-08f20fc66773>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018/resource/f78c12e7-6b13-4081-9f49-0fa46d117fe6> ;
+    dcat:keyword "gastos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018/DurationDescription> time:years 99.0 .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018/resource/2c6508ce-4bfd-427b-983c-c40ed76cf822> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018/resource/2c6508ce-4bfd-427b-983c-c40ed76cf822/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-2-2018/Excel" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-2-2018/ejecucion-pre-gasto-2-2018.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018/resource/2c6508ce-4bfd-427b-983c-c40ed76cf822/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018/resource/3e6a48b4-5179-4cd9-b512-e8b6ca96dcce> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018/resource/3e6a48b4-5179-4cd9-b512-e8b6ca96dcce/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-2-2018/HTML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-2-2018/ejecucion-pre-gasto-2-2018.html" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018/resource/3e6a48b4-5179-4cd9-b512-e8b6ca96dcce/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018/resource/c12b211a-ed8a-4425-9849-0b1d79edcadf> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018/resource/c12b211a-ed8a-4425-9849-0b1d79edcadf/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-2-2018/JSON" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-2-2018/ejecucion-pre-gasto-2-2018.json" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018/resource/c12b211a-ed8a-4425-9849-0b1d79edcadf/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018/resource/ec475827-06ad-4a65-b867-08f20fc66773> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018/resource/ec475827-06ad-4a65-b867-08f20fc66773/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-2-2018/XML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-2-2018/ejecucion-pre-gasto-2-2018.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018/resource/ec475827-06ad-4a65-b867-08f20fc66773/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018/resource/f78c12e7-6b13-4081-9f49-0fa46d117fe6> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018/resource/f78c12e7-6b13-4081-9f49-0fa46d117fe6/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-2-2018/CSV" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-2-2018/ejecucion-pre-gasto-2-2018.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018/resource/f78c12e7-6b13-4081-9f49-0fa46d117fe6/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019/Frequency> ;
+    dct:description "Ejecución del presupuesto de gastos para el 2º trimestre de 2019"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-2-2019/" ;
+    dct:issued "2019-07-17T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2019-07-17T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Ejecución del presupuesto de gastos para el 2º trimestre de 2019"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019/resource/085e636c-a3e3-4ce3-aee4-3a8f04c78d0d>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019/resource/3c20b920-2319-4a42-89f4-470e4354abc5>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019/resource/cbed9136-8218-43fa-aa74-eaac1f3e4369>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019/resource/de973f62-788f-4bc8-97d9-57c25b46e4ef>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019/resource/eee3c755-b248-42a5-a45e-45b9acdd9f89> ;
+    dcat:keyword "gastos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019/DurationDescription> time:years 99.0 .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019/resource/085e636c-a3e3-4ce3-aee4-3a8f04c78d0d> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019/resource/085e636c-a3e3-4ce3-aee4-3a8f04c78d0d/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-2-2019/Excel" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-2-2019/ejecucion-pre-gasto-2-2019.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019/resource/085e636c-a3e3-4ce3-aee4-3a8f04c78d0d/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019/resource/3c20b920-2319-4a42-89f4-470e4354abc5> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019/resource/3c20b920-2319-4a42-89f4-470e4354abc5/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-2-2019/JSON" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-2-2019/ejecucion-pre-gasto-2-2019.json" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019/resource/3c20b920-2319-4a42-89f4-470e4354abc5/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019/resource/cbed9136-8218-43fa-aa74-eaac1f3e4369> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019/resource/cbed9136-8218-43fa-aa74-eaac1f3e4369/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-2-2019/CSV" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-2-2019/ejecucion-pre-gasto-2-2019.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019/resource/cbed9136-8218-43fa-aa74-eaac1f3e4369/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019/resource/de973f62-788f-4bc8-97d9-57c25b46e4ef> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019/resource/de973f62-788f-4bc8-97d9-57c25b46e4ef/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-2-2019/XML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-2-2019/ejecucion-pre-gasto-2-2019.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019/resource/de973f62-788f-4bc8-97d9-57c25b46e4ef/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019/resource/eee3c755-b248-42a5-a45e-45b9acdd9f89> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019/resource/eee3c755-b248-42a5-a45e-45b9acdd9f89/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-2-2019/HTML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-2-2019/ejecucion-pre-gasto-2-2019.html" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019/resource/eee3c755-b248-42a5-a45e-45b9acdd9f89/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018/Frequency> ;
+    dct:description "Ejecución del presupuesto de gastos para el 3º trimestre de 2018"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-3-2018/" ;
+    dct:issued "2019-07-17T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2019-07-17T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Ejecución del presupuesto de gastos para el 3º trimestre de 2018"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018/resource/2013c097-ced7-4aba-b53b-7b92f92efdab>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018/resource/3279ced6-e50b-4a20-9fc2-33c024440352>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018/resource/99212bf7-ee06-438a-b852-3e42fd52f74a>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018/resource/cdb100ca-a8f8-4f04-9e41-60b44b79dff2>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018/resource/f6cbdeea-6e60-4f9d-a614-f4bcc59431ed> ;
+    dcat:keyword "gastos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018/DurationDescription> time:years 99.0 .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018/resource/2013c097-ced7-4aba-b53b-7b92f92efdab> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018/resource/2013c097-ced7-4aba-b53b-7b92f92efdab/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-3-2018/XML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-3-2018/ejecucion-pre-gasto-3-2018.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018/resource/2013c097-ced7-4aba-b53b-7b92f92efdab/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018/resource/3279ced6-e50b-4a20-9fc2-33c024440352> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018/resource/3279ced6-e50b-4a20-9fc2-33c024440352/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-3-2018/CSV" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-3-2018/ejecucion-pre-gasto-3-2018.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018/resource/3279ced6-e50b-4a20-9fc2-33c024440352/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018/resource/99212bf7-ee06-438a-b852-3e42fd52f74a> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018/resource/99212bf7-ee06-438a-b852-3e42fd52f74a/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-3-2018/JSON" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-3-2018/ejecucion-pre-gasto-3-2018.json" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018/resource/99212bf7-ee06-438a-b852-3e42fd52f74a/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018/resource/cdb100ca-a8f8-4f04-9e41-60b44b79dff2> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018/resource/cdb100ca-a8f8-4f04-9e41-60b44b79dff2/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-3-2018/HTML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-3-2018/ejecucion-pre-gasto-3-2018.html" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018/resource/cdb100ca-a8f8-4f04-9e41-60b44b79dff2/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018/resource/f6cbdeea-6e60-4f9d-a614-f4bcc59431ed> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018/resource/f6cbdeea-6e60-4f9d-a614-f4bcc59431ed/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-3-2018/Excel" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-3-2018/ejecucion-pre-gasto-3-2018.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018/resource/f6cbdeea-6e60-4f9d-a614-f4bcc59431ed/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018/Frequency> ;
+    dct:description "Ejecución del presupuesto de gastos para el 4º trimestre de 2018"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-4-2018/" ;
+    dct:issued "2019-07-19T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2019-07-19T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Ejecución del presupuesto de gastos para el 4º trimestre de 2018"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018/resource/1b1054f5-8864-4276-b8ad-a825fb8b2df2>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018/resource/38d72dde-2b20-4532-afcd-dad8d0e1bd04>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018/resource/5311e147-5b81-4e87-83bf-272a3f533206>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018/resource/9112f6a8-d4f1-4942-9aa9-18fb9f670a7c>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018/resource/be9ed25b-6075-4f24-a772-244b8d9c78b8> ;
+    dcat:keyword "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018/DurationDescription> time:years 99.0 .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018/resource/1b1054f5-8864-4276-b8ad-a825fb8b2df2> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018/resource/1b1054f5-8864-4276-b8ad-a825fb8b2df2/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-4-2018/XML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-4-2018/ejecucion-pre-gasto-4-2018.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018/resource/1b1054f5-8864-4276-b8ad-a825fb8b2df2/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018/resource/38d72dde-2b20-4532-afcd-dad8d0e1bd04> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018/resource/38d72dde-2b20-4532-afcd-dad8d0e1bd04/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-4-2018/Excel" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-4-2018/ejecucion-pre-gasto-4-2018.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018/resource/38d72dde-2b20-4532-afcd-dad8d0e1bd04/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018/resource/5311e147-5b81-4e87-83bf-272a3f533206> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018/resource/5311e147-5b81-4e87-83bf-272a3f533206/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-4-2018/JSON" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-4-2018/ejecucion-pre-gasto-4-2018.json" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018/resource/5311e147-5b81-4e87-83bf-272a3f533206/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018/resource/9112f6a8-d4f1-4942-9aa9-18fb9f670a7c> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018/resource/9112f6a8-d4f1-4942-9aa9-18fb9f670a7c/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-4-2018/HTML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-4-2018/ejecucion-pre-gasto-4-2018.html" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018/resource/9112f6a8-d4f1-4942-9aa9-18fb9f670a7c/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018/resource/be9ed25b-6075-4f24-a772-244b8d9c78b8> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018/resource/be9ed25b-6075-4f24-a772-244b8d9c78b8/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-4-2018/CSV" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-gasto-4-2018/ejecucion-pre-gasto-4-2018.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018/resource/be9ed25b-6075-4f24-a772-244b8d9c78b8/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018/Frequency> ;
+    dct:description "Ejecución del presupuesto de ingresos para el 1er trimestre de 2018"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-1-2018/" ;
+    dct:issued "2019-07-17T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2019-07-17T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Ejecución del presupuesto de ingresos para el 1er trimestre de 2018"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018/resource/26e5c161-6737-4c8e-af0e-536ddf38ed67>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018/resource/34213b58-ba6c-4194-bf29-9b94fc3de535>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018/resource/6167f00a-c270-4be2-b917-8edff5385f5c>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018/resource/e64c9a1f-6815-4502-ab16-def76c73edae>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018/resource/f8fe197c-238c-4ea8-a809-747bf598638a> ;
+    dcat:keyword "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018/DurationDescription> time:years 99.0 .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018/resource/26e5c161-6737-4c8e-af0e-536ddf38ed67> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018/resource/26e5c161-6737-4c8e-af0e-536ddf38ed67/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-1-2018/HTML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-1-2018/ejecucion-pre-ingre-1-2018.html" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018/resource/26e5c161-6737-4c8e-af0e-536ddf38ed67/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018/resource/34213b58-ba6c-4194-bf29-9b94fc3de535> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018/resource/34213b58-ba6c-4194-bf29-9b94fc3de535/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-1-2018/CSV" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-1-2018/ejecucion-pre-ingre-1-2018.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018/resource/34213b58-ba6c-4194-bf29-9b94fc3de535/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018/resource/6167f00a-c270-4be2-b917-8edff5385f5c> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018/resource/6167f00a-c270-4be2-b917-8edff5385f5c/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-1-2018/XML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-1-2018/ejecucion-pre-ingre-1-2018.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018/resource/6167f00a-c270-4be2-b917-8edff5385f5c/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018/resource/e64c9a1f-6815-4502-ab16-def76c73edae> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018/resource/e64c9a1f-6815-4502-ab16-def76c73edae/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-1-2018/JSON" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-1-2018/ejecucion-pre-ingre-1-2018.json" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018/resource/e64c9a1f-6815-4502-ab16-def76c73edae/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018/resource/f8fe197c-238c-4ea8-a809-747bf598638a> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018/resource/f8fe197c-238c-4ea8-a809-747bf598638a/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-1-2018/Excel" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-1-2018/ejecucion-pre-ingre-1-2018.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018/resource/f8fe197c-238c-4ea8-a809-747bf598638a/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019/Frequency> ;
+    dct:description "Ejecución del presupuesto de ingresos para el 1er trimestre de 2019"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-1-2019/" ;
+    dct:issued "2019-07-19T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2019-07-19T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Ejecución del presupuesto de ingresos para el 1er trimestre de 2019"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019/resource/30212841-0f99-4af7-8d6a-bae83b47dd1c>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019/resource/40fd2d03-0d46-4257-9405-3b88c9f02ee5>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019/resource/50d855ee-797b-4e1a-b2ed-d69a6c548b23>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019/resource/c64655a3-5f0e-4004-a6da-bd557f4d984e>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019/resource/d27e18bf-8330-426f-a07d-9290dbb46f59> ;
+    dcat:keyword "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019/DurationDescription> time:years 99.0 .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019/resource/30212841-0f99-4af7-8d6a-bae83b47dd1c> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019/resource/30212841-0f99-4af7-8d6a-bae83b47dd1c/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-1-2019/Excel" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-1-2019/ejecucion-pre-ingre-1-2019.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019/resource/30212841-0f99-4af7-8d6a-bae83b47dd1c/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019/resource/40fd2d03-0d46-4257-9405-3b88c9f02ee5> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019/resource/40fd2d03-0d46-4257-9405-3b88c9f02ee5/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-1-2019/HTML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-1-2019/ejecucion-pre-ingre-1-2019.html" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019/resource/40fd2d03-0d46-4257-9405-3b88c9f02ee5/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019/resource/50d855ee-797b-4e1a-b2ed-d69a6c548b23> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019/resource/50d855ee-797b-4e1a-b2ed-d69a6c548b23/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-1-2019/JSON" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-1-2019/ejecucion-pre-ingre-1-2019.json" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019/resource/50d855ee-797b-4e1a-b2ed-d69a6c548b23/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019/resource/c64655a3-5f0e-4004-a6da-bd557f4d984e> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019/resource/c64655a3-5f0e-4004-a6da-bd557f4d984e/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-1-2019/CSV" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-1-2019/ejecucion-pre-ingre-1-2019.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019/resource/c64655a3-5f0e-4004-a6da-bd557f4d984e/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019/resource/d27e18bf-8330-426f-a07d-9290dbb46f59> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019/resource/d27e18bf-8330-426f-a07d-9290dbb46f59/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-1-2019/XML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-1-2019/ejecucion-pre-ingre-1-2019.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019/resource/d27e18bf-8330-426f-a07d-9290dbb46f59/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018/Frequency> ;
+    dct:description "Ejecución del presupuesto de ingresos para el 2º trimestre de 2018"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-2-2018/" ;
+    dct:issued "2019-07-17T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2019-07-17T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Ejecución del presupuesto de ingresos para el 2º trimestre de 2018"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018/resource/21aed6ee-f743-408a-b58f-a98447b7ce02>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018/resource/406b58a3-ad0d-4eba-b8b6-51c24a7ef37b>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018/resource/6454f1b8-6f9e-4e94-b91b-e741ccea1550>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018/resource/aec54da4-9cd5-4c2f-94cb-70401541a3c4>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018/resource/d89ab88b-1427-4c2d-aafd-6d3c9c6c2b36> ;
+    dcat:keyword "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018/DurationDescription> time:years 99.0 .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018/resource/21aed6ee-f743-408a-b58f-a98447b7ce02> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018/resource/21aed6ee-f743-408a-b58f-a98447b7ce02/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-2-2018/Excel" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-2-2018/ejecucion-pre-ingre-2-2018.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018/resource/21aed6ee-f743-408a-b58f-a98447b7ce02/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018/resource/406b58a3-ad0d-4eba-b8b6-51c24a7ef37b> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018/resource/406b58a3-ad0d-4eba-b8b6-51c24a7ef37b/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-2-2018/JSON" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-2-2018/ejecucion-pre-ingre-2-2018.json" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018/resource/406b58a3-ad0d-4eba-b8b6-51c24a7ef37b/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018/resource/6454f1b8-6f9e-4e94-b91b-e741ccea1550> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018/resource/6454f1b8-6f9e-4e94-b91b-e741ccea1550/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-2-2018/HTML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-2-2018/ejecucion-pre-ingre-2-2018.html" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018/resource/6454f1b8-6f9e-4e94-b91b-e741ccea1550/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018/resource/aec54da4-9cd5-4c2f-94cb-70401541a3c4> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018/resource/aec54da4-9cd5-4c2f-94cb-70401541a3c4/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-2-2018/XML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-2-2018/ejecucion-pre-ingre-2-2018.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018/resource/aec54da4-9cd5-4c2f-94cb-70401541a3c4/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018/resource/d89ab88b-1427-4c2d-aafd-6d3c9c6c2b36> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018/resource/d89ab88b-1427-4c2d-aafd-6d3c9c6c2b36/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-2-2018/CSV" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-2-2018/ejecucion-pre-ingre-2-2018.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018/resource/d89ab88b-1427-4c2d-aafd-6d3c9c6c2b36/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019/Frequency> ;
+    dct:description "Ejecución del presupuesto de ingresos para el 2º trimestre de 2019"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-2-2019/" ;
+    dct:issued "2019-07-17T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2019-07-17T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Ejecución del presupuesto de ingresos para el 2º trimestre de 2019"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019/resource/05921956-eb78-4596-8576-a6a59c415cb6>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019/resource/12ab2f29-0b65-4580-8395-a2f90e8a82be>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019/resource/3a0ba6c2-add4-4a6b-a1b4-b8482f196045>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019/resource/4d362a96-a2c7-4786-8515-30f7bb7a801b>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019/resource/5f23d290-440c-4851-a34b-3094898864e9> ;
+    dcat:keyword "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019/DurationDescription> time:years 99.0 .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019/resource/05921956-eb78-4596-8576-a6a59c415cb6> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019/resource/05921956-eb78-4596-8576-a6a59c415cb6/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-2-2019/XML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-2-2019/ejecucion-pre-ingre-2-2019.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019/resource/05921956-eb78-4596-8576-a6a59c415cb6/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019/resource/12ab2f29-0b65-4580-8395-a2f90e8a82be> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019/resource/12ab2f29-0b65-4580-8395-a2f90e8a82be/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-2-2019/HTML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-2-2019/ejecucion-pre-ingre-2-2019.html" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019/resource/12ab2f29-0b65-4580-8395-a2f90e8a82be/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019/resource/3a0ba6c2-add4-4a6b-a1b4-b8482f196045> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019/resource/3a0ba6c2-add4-4a6b-a1b4-b8482f196045/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-2-2019/Excel" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-2-2019/ejecucion-pre-ingre-2-2019.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019/resource/3a0ba6c2-add4-4a6b-a1b4-b8482f196045/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019/resource/4d362a96-a2c7-4786-8515-30f7bb7a801b> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019/resource/4d362a96-a2c7-4786-8515-30f7bb7a801b/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-2-2019/CSV" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-2-2019/ejecucion-pre-ingre-2-2019.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019/resource/4d362a96-a2c7-4786-8515-30f7bb7a801b/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019/resource/5f23d290-440c-4851-a34b-3094898864e9> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019/resource/5f23d290-440c-4851-a34b-3094898864e9/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-2-2019/JSON" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-2-2019/ejecucion-pre-ingre-2-2019.json" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019/resource/5f23d290-440c-4851-a34b-3094898864e9/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018/Frequency> ;
+    dct:description "Ejecución del presupuesto de ingresos para el 3er trimestre de 2018"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-3-2018/" ;
+    dct:issued "2019-07-17T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2019-07-17T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Ejecución del presupuesto de ingresos para el 3er trimestre de 2018"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018/resource/203c8911-f526-4c44-a465-1942d0495d63>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018/resource/79da516e-e3c4-4150-8553-bec637418e99>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018/resource/84e7040b-ba0d-4fe0-8907-ae89c79b86d3>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018/resource/944361ec-bb06-4df0-8d98-d24f81774683>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018/resource/ce4d9049-017e-4ab1-9c5d-88e1ab661031> ;
+    dcat:keyword "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018/DurationDescription> time:years 99.0 .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018/resource/203c8911-f526-4c44-a465-1942d0495d63> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018/resource/203c8911-f526-4c44-a465-1942d0495d63/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-3-2018/HTML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-3-2018/ejecucion-pre-ingre-3-2018.html" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018/resource/203c8911-f526-4c44-a465-1942d0495d63/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018/resource/79da516e-e3c4-4150-8553-bec637418e99> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018/resource/79da516e-e3c4-4150-8553-bec637418e99/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-3-2018/JSON" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-3-2018/ejecucion-pre-ingre-3-2018.json" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018/resource/79da516e-e3c4-4150-8553-bec637418e99/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018/resource/84e7040b-ba0d-4fe0-8907-ae89c79b86d3> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018/resource/84e7040b-ba0d-4fe0-8907-ae89c79b86d3/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-3-2018/CSV" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-3-2018/ejecucion-pre-ingre-3-2018.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018/resource/84e7040b-ba0d-4fe0-8907-ae89c79b86d3/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018/resource/944361ec-bb06-4df0-8d98-d24f81774683> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018/resource/944361ec-bb06-4df0-8d98-d24f81774683/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-3-2018/XML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-3-2018/ejecucion-pre-ingre-3-2018.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018/resource/944361ec-bb06-4df0-8d98-d24f81774683/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018/resource/ce4d9049-017e-4ab1-9c5d-88e1ab661031> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018/resource/ce4d9049-017e-4ab1-9c5d-88e1ab661031/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-3-2018/Excel" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-3-2018/ejecucion-pre-ingre-3-2018.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018/resource/ce4d9049-017e-4ab1-9c5d-88e1ab661031/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018/Frequency> ;
+    dct:description "Ejecución del presupuesto de ingresos para el 4º trimestre de 2018"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-4-2018/" ;
+    dct:issued "2019-07-19T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2019-07-19T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Ejecución del presupuesto de ingresos para el 4º trimestre de 2018"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018/resource/2e08e1e9-3383-4517-aff3-f7e7c49baadb>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018/resource/6fc30d66-75bc-4b87-a548-88f8213d28d0>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018/resource/821feda7-5be2-460d-bde7-171102fae6a3>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018/resource/922f066a-8b0e-468e-a89d-81c372351e33>,
+        <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018/resource/998d3976-9f2a-48e5-a3fb-7ca01cfc25ba> ;
+    dcat:keyword "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018/DurationDescription> time:years 99.0 .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018/resource/2e08e1e9-3383-4517-aff3-f7e7c49baadb> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018/resource/2e08e1e9-3383-4517-aff3-f7e7c49baadb/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-4-2018/JSON" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-4-2018/ejecucion-pre-ingre-4-2018.json" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018/resource/2e08e1e9-3383-4517-aff3-f7e7c49baadb/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018/resource/6fc30d66-75bc-4b87-a548-88f8213d28d0> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018/resource/6fc30d66-75bc-4b87-a548-88f8213d28d0/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-4-2018/XML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-4-2018/ejecucion-pre-ingre-4-2018.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018/resource/6fc30d66-75bc-4b87-a548-88f8213d28d0/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018/resource/821feda7-5be2-460d-bde7-171102fae6a3> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018/resource/821feda7-5be2-460d-bde7-171102fae6a3/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-4-2018/CSV" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-4-2018/ejecucion-pre-ingre-4-2018.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018/resource/821feda7-5be2-460d-bde7-171102fae6a3/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018/resource/922f066a-8b0e-468e-a89d-81c372351e33> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018/resource/922f066a-8b0e-468e-a89d-81c372351e33/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-4-2018/Excel" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-4-2018/ejecucion-pre-ingre-4-2018.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018/resource/922f066a-8b0e-468e-a89d-81c372351e33/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018/resource/998d3976-9f2a-48e5-a3fb-7ca01cfc25ba> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018/resource/998d3976-9f2a-48e5-a3fb-7ca01cfc25ba/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-4-2018/HTML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/ejecucion-pre-ingre-4-2018/ejecucion-pre-ingre-4-2018.html" .
+
+<https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018/resource/998d3976-9f2a-48e5-a3fb-7ca01cfc25ba/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013/Frequency> ;
+    dct:description "Presupuesto de gastos del año 2013 del Ayuntamiento de Lorca"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2013/" ;
+    dct:issued "2015-12-10T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2022-01-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Presupuesto gastos 2013"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013/resource/74fd4398-bb6f-411a-aa9b-2367f7e412ad>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013/resource/817af2e1-a30a-42d4-8442-e1d95a01b4ed>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013/resource/8e2d9f4c-8640-4ed5-b744-f110d837f053>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013/resource/9f70bc68-71fd-40f9-b857-74d9cbfe2d32>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013/resource/ca282fd3-4c24-460a-aa57-7af80d0e614e> ;
+    dcat:keyword "gastos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013/resource/74fd4398-bb6f-411a-aa9b-2367f7e412ad> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013/resource/74fd4398-bb6f-411a-aa9b-2367f7e412ad/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2013/HTML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2013/presupuesto-gastos-2013.html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013/resource/74fd4398-bb6f-411a-aa9b-2367f7e412ad/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013/resource/817af2e1-a30a-42d4-8442-e1d95a01b4ed> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013/resource/817af2e1-a30a-42d4-8442-e1d95a01b4ed/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2013/XML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2013/presupuesto-gastos-2013.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013/resource/817af2e1-a30a-42d4-8442-e1d95a01b4ed/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013/resource/8e2d9f4c-8640-4ed5-b744-f110d837f053> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013/resource/8e2d9f4c-8640-4ed5-b744-f110d837f053/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2013/CSV" ;
+    dct:title "formato csv separado por comas"@es ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2013/presupuesto-gastos-2013.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013/resource/8e2d9f4c-8640-4ed5-b744-f110d837f053/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013/resource/9f70bc68-71fd-40f9-b857-74d9cbfe2d32> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013/resource/9f70bc68-71fd-40f9-b857-74d9cbfe2d32/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2013/JSON" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2013/presupuesto-gastos-2013.json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013/resource/9f70bc68-71fd-40f9-b857-74d9cbfe2d32/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013/resource/ca282fd3-4c24-460a-aa57-7af80d0e614e> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013/resource/ca282fd3-4c24-460a-aa57-7af80d0e614e/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2013/Excel" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2013/presupuesto-gastos-2013.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013/resource/ca282fd3-4c24-460a-aa57-7af80d0e614e/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014/Frequency> ;
+    dct:description "Presupuesto de gastos del año 2014 del Ayuntamiento de Lorca"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2014/" ;
+    dct:issued "2015-12-10T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2022-01-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Presupuesto gastos 2014"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014/resource/0af2825a-add3-4b5d-bd07-945101392cf8>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014/resource/152d4870-da2e-4dc6-8434-58a9399b85e1>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014/resource/671fe0b8-b255-4a1c-88b2-59fb002258b2>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014/resource/884e5861-5d9e-4429-a62b-58aef0efe7fd>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014/resource/898e2e62-8927-44df-898d-92ff2b311fb9> ;
+    dcat:keyword "gastos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014/resource/0af2825a-add3-4b5d-bd07-945101392cf8> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014/resource/0af2825a-add3-4b5d-bd07-945101392cf8/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2014/JSON" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2014/presupuesto-gastos-2014.json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014/resource/0af2825a-add3-4b5d-bd07-945101392cf8/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014/resource/152d4870-da2e-4dc6-8434-58a9399b85e1> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014/resource/152d4870-da2e-4dc6-8434-58a9399b85e1/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2014/Excel" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2014/presupuesto-gastos-2014.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014/resource/152d4870-da2e-4dc6-8434-58a9399b85e1/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014/resource/671fe0b8-b255-4a1c-88b2-59fb002258b2> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014/resource/671fe0b8-b255-4a1c-88b2-59fb002258b2/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2014/CSV" ;
+    dct:title "Formato csv separado por comas"@es ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2014/presupuesto-gastos-2014.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014/resource/671fe0b8-b255-4a1c-88b2-59fb002258b2/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014/resource/884e5861-5d9e-4429-a62b-58aef0efe7fd> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014/resource/884e5861-5d9e-4429-a62b-58aef0efe7fd/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2014/XML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2014/presupuesto-gastos-2014.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014/resource/884e5861-5d9e-4429-a62b-58aef0efe7fd/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014/resource/898e2e62-8927-44df-898d-92ff2b311fb9> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014/resource/898e2e62-8927-44df-898d-92ff2b311fb9/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2014/HTML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2014/presupuesto-gastos-2014.html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014/resource/898e2e62-8927-44df-898d-92ff2b311fb9/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015/Frequency> ;
+    dct:description "Presupuesto de gastos del año 2015 del Ayuntamiento de Lorca"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2015/" ;
+    dct:issued "2015-01-19T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2022-01-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Presupuesto gastos 2015"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015/resource/3c4ca894-09d3-41ab-9341-573b39bd6cf5>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015/resource/4f990a08-c0b6-4806-b312-c1b4ef8be33d>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015/resource/9ab48b63-b755-4a70-a96c-f4ed781dd7c5>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015/resource/ba3f0dd6-5396-4775-83ef-d120c5638612>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015/resource/cfdcc8c5-7573-49ce-8ed6-1799cab159f0> ;
+    dcat:keyword "gastos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015/resource/3c4ca894-09d3-41ab-9341-573b39bd6cf5> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015/resource/3c4ca894-09d3-41ab-9341-573b39bd6cf5/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2015/JSON" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2015/presupuesto-gastos-2015.json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015/resource/3c4ca894-09d3-41ab-9341-573b39bd6cf5/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015/resource/4f990a08-c0b6-4806-b312-c1b4ef8be33d> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015/resource/4f990a08-c0b6-4806-b312-c1b4ef8be33d/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2015/XML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2015/presupuesto-gastos-2015.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015/resource/4f990a08-c0b6-4806-b312-c1b4ef8be33d/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015/resource/9ab48b63-b755-4a70-a96c-f4ed781dd7c5> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015/resource/9ab48b63-b755-4a70-a96c-f4ed781dd7c5/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2015/CSV" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2015/presupuesto-gastos-2015.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015/resource/9ab48b63-b755-4a70-a96c-f4ed781dd7c5/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015/resource/ba3f0dd6-5396-4775-83ef-d120c5638612> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015/resource/ba3f0dd6-5396-4775-83ef-d120c5638612/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2015/HTML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2015/presupuesto-gastos-2015.html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015/resource/ba3f0dd6-5396-4775-83ef-d120c5638612/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015/resource/cfdcc8c5-7573-49ce-8ed6-1799cab159f0> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015/resource/cfdcc8c5-7573-49ce-8ed6-1799cab159f0/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2015/Excel" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2015/presupuesto-gastos-2015.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015/resource/cfdcc8c5-7573-49ce-8ed6-1799cab159f0/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016/Frequency> ;
+    dct:description "Presupuesto de gastos del año 2016 del Ayuntamiento de Lorca"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2016/" ;
+    dct:issued "2016-02-16T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2022-01-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Presupuesto gastos 2016"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016/resource/0457904f-10f7-4084-8de5-828bc2ebe64a>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016/resource/1ccb272b-2985-4f7f-b07d-f682010fe469>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016/resource/50bea19b-95d2-41c8-9036-251229f56eb4>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016/resource/a10eb7c9-666d-4e2b-bf39-30e11b0325fe>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016/resource/d25e1011-5257-4f6d-8296-2c75455cb987> ;
+    dcat:keyword "gastos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016/resource/0457904f-10f7-4084-8de5-828bc2ebe64a> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016/resource/0457904f-10f7-4084-8de5-828bc2ebe64a/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2016/Excel" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2016/presupuesto-gastos-2016.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016/resource/0457904f-10f7-4084-8de5-828bc2ebe64a/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016/resource/1ccb272b-2985-4f7f-b07d-f682010fe469> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016/resource/1ccb272b-2985-4f7f-b07d-f682010fe469/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2016/HTML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2016/presupuesto-gastos-2016.html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016/resource/1ccb272b-2985-4f7f-b07d-f682010fe469/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016/resource/50bea19b-95d2-41c8-9036-251229f56eb4> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016/resource/50bea19b-95d2-41c8-9036-251229f56eb4/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2016/JSON" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2016/presupuesto-gastos-2016.json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016/resource/50bea19b-95d2-41c8-9036-251229f56eb4/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016/resource/a10eb7c9-666d-4e2b-bf39-30e11b0325fe> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016/resource/a10eb7c9-666d-4e2b-bf39-30e11b0325fe/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2016/CSV" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2016/presupuesto-gastos-2016.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016/resource/a10eb7c9-666d-4e2b-bf39-30e11b0325fe/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016/resource/d25e1011-5257-4f6d-8296-2c75455cb987> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016/resource/d25e1011-5257-4f6d-8296-2c75455cb987/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2016/XML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2016/presupuesto-gastos-2016.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016/resource/d25e1011-5257-4f6d-8296-2c75455cb987/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017/Frequency> ;
+    dct:description "Presupuesto de gastos del año 2017 del Ayuntamiento de Lorca"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2017/" ;
+    dct:issued "2017-03-24T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2022-01-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Presupuesto gastos 2017"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017/resource/2e3f7b06-7992-4746-a7f3-389092f8874d>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017/resource/4630baab-e071-4a60-8add-95b9603db281>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017/resource/4e9d5fbd-3862-4818-8175-7b6de8aa0e66>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017/resource/8332ff14-9dbb-4d74-8908-5b40e062f510>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017/resource/bff5dae4-6d2e-475c-8116-39e742f7c3fe> ;
+    dcat:keyword "gastos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017/resource/2e3f7b06-7992-4746-a7f3-389092f8874d> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017/resource/2e3f7b06-7992-4746-a7f3-389092f8874d/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2017/Excel" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2017/presupuesto-gastos-2017.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017/resource/2e3f7b06-7992-4746-a7f3-389092f8874d/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017/resource/4630baab-e071-4a60-8add-95b9603db281> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017/resource/4630baab-e071-4a60-8add-95b9603db281/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2017/XML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2017/presupuesto-gastos-2017.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017/resource/4630baab-e071-4a60-8add-95b9603db281/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017/resource/4e9d5fbd-3862-4818-8175-7b6de8aa0e66> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017/resource/4e9d5fbd-3862-4818-8175-7b6de8aa0e66/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2017/JSON" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2017/presupuesto-gastos-2017.json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017/resource/4e9d5fbd-3862-4818-8175-7b6de8aa0e66/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017/resource/8332ff14-9dbb-4d74-8908-5b40e062f510> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017/resource/8332ff14-9dbb-4d74-8908-5b40e062f510/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2017/CSV" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2017/presupuesto-gastos-2017.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017/resource/8332ff14-9dbb-4d74-8908-5b40e062f510/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017/resource/bff5dae4-6d2e-475c-8116-39e742f7c3fe> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017/resource/bff5dae4-6d2e-475c-8116-39e742f7c3fe/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2017/HTML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2017/presupuesto-gastos-2017.html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017/resource/bff5dae4-6d2e-475c-8116-39e742f7c3fe/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018/Frequency> ;
+    dct:description "Presupuesto gastos 2018"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2018/" ;
+    dct:issued "2018-04-11T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2022-01-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Presupuesto gastos 2018"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018/resource/3e4ca99f-4a19-4b66-9a12-3ea0c3575d82>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018/resource/42e8401a-b1cc-4a4b-be0c-63b289d06a94>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018/resource/77c94057-44cd-4eec-a291-409538350299>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018/resource/860c1c26-6d1e-439f-aeb2-ea90627fad59>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018/resource/dba04724-ead1-4fcb-9325-3ef918d37102> ;
+    dcat:keyword "gasto"@es,
+        "presupuesto"@es,
+        "transparencia"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico>,
+        <http://datos.gob.es/kos/sector-publico/sector/sociedad-bienestar> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018/resource/3e4ca99f-4a19-4b66-9a12-3ea0c3575d82> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018/resource/3e4ca99f-4a19-4b66-9a12-3ea0c3575d82/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2018/HTML" ;
+    dct:title "Formato HTML"@es ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2018/presupuesto-gastos-2018.html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018/resource/3e4ca99f-4a19-4b66-9a12-3ea0c3575d82/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018/resource/42e8401a-b1cc-4a4b-be0c-63b289d06a94> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018/resource/42e8401a-b1cc-4a4b-be0c-63b289d06a94/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2018/XML" ;
+    dct:title "Formato XML"@es ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2018/presupuesto-gastos-2018.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018/resource/42e8401a-b1cc-4a4b-be0c-63b289d06a94/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018/resource/77c94057-44cd-4eec-a291-409538350299> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018/resource/77c94057-44cd-4eec-a291-409538350299/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2018/CSV" ;
+    dct:title "Formato csv separado por ;"@es ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2018/presupuesto-gastos-2018.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018/resource/77c94057-44cd-4eec-a291-409538350299/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018/resource/860c1c26-6d1e-439f-aeb2-ea90627fad59> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018/resource/860c1c26-6d1e-439f-aeb2-ea90627fad59/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2018/Excel" ;
+    dct:title "Formato excel"@es ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2018/presupuesto-gastos-2018.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018/resource/860c1c26-6d1e-439f-aeb2-ea90627fad59/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018/resource/dba04724-ead1-4fcb-9325-3ef918d37102> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018/resource/dba04724-ead1-4fcb-9325-3ef918d37102/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2018/JSON" ;
+    dct:title "Formato JSON"@es ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2018/presupuesto-gastos-2018.json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018/resource/dba04724-ead1-4fcb-9325-3ef918d37102/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019/Frequency> ;
+    dct:description "Presupuesto gastos 2019"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2019/" ;
+    dct:issued "2019-02-13T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2022-01-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Presupuesto gastos 2019"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019/resource/03bca1a2-e287-4607-ab3b-000e620224d3>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019/resource/29b2ec7c-19f2-4bcb-961e-898d98ce977e>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019/resource/524fcd20-c44b-45c4-b3d4-3a714bf3b98a>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019/resource/f31ff1cd-be8d-437f-a215-3aece7267610>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019/resource/f4b80449-c7db-429f-801e-a73b6c327ae7> ;
+    dcat:keyword "gasto"@es,
+        "presupuesto"@es,
+        "transparencia"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico>,
+        <http://datos.gob.es/kos/sector-publico/sector/sociedad-bienestar> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019/resource/03bca1a2-e287-4607-ab3b-000e620224d3> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019/resource/03bca1a2-e287-4607-ab3b-000e620224d3/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2019/HTML" ;
+    dct:title "Formato HTML"@es ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2019/presupuesto-gastos-2019.html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019/resource/03bca1a2-e287-4607-ab3b-000e620224d3/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019/resource/29b2ec7c-19f2-4bcb-961e-898d98ce977e> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019/resource/29b2ec7c-19f2-4bcb-961e-898d98ce977e/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2019/JSON" ;
+    dct:title "Formato JSON"@es ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2019/presupuesto-gastos-2019.json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019/resource/29b2ec7c-19f2-4bcb-961e-898d98ce977e/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019/resource/524fcd20-c44b-45c4-b3d4-3a714bf3b98a> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019/resource/524fcd20-c44b-45c4-b3d4-3a714bf3b98a/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2019/CSV" ;
+    dct:title "Formato csv separado por ;"@es ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2019/presupuesto-gastos-2019.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019/resource/524fcd20-c44b-45c4-b3d4-3a714bf3b98a/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019/resource/f31ff1cd-be8d-437f-a215-3aece7267610> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019/resource/f31ff1cd-be8d-437f-a215-3aece7267610/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2019/Excel" ;
+    dct:title "Formato excel"@es ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2019/presupuesto-gastos-2019.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019/resource/f31ff1cd-be8d-437f-a215-3aece7267610/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019/resource/f4b80449-c7db-429f-801e-a73b6c327ae7> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019/resource/f4b80449-c7db-429f-801e-a73b6c327ae7/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-gastos-2019/XML" ;
+    dct:title "Formato XML"@es ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-gastos-2019/presupuesto-gastos-2019.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019/resource/f4b80449-c7db-429f-801e-a73b6c327ae7/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013/Frequency> ;
+    dct:description "Presupuesto de ingresos del año 2013 del Ayuntamiento de Lorca"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2013/" ;
+    dct:issued "2015-12-10T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2022-01-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Presupuesto ingresos 2013"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013/resource/01cc775d-17d2-45eb-9f2f-08d88d266354>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013/resource/2c2e5a25-4ec3-4d25-8b03-aeff9049144c>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013/resource/2e00b3bb-0143-490a-b93a-f045a8586aa4>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013/resource/77d966d8-ba2f-45d2-b3a2-0c12a895b6cd>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013/resource/d5574d09-f1c5-4121-ad44-3dba75750665> ;
+    dcat:keyword "gastos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013/resource/01cc775d-17d2-45eb-9f2f-08d88d266354> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013/resource/01cc775d-17d2-45eb-9f2f-08d88d266354/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2013/CSV" ;
+    dct:title "Formato csv separado por comas"@es ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2013/presupuesto-ingresos-2013.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013/resource/01cc775d-17d2-45eb-9f2f-08d88d266354/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013/resource/2c2e5a25-4ec3-4d25-8b03-aeff9049144c> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013/resource/2c2e5a25-4ec3-4d25-8b03-aeff9049144c/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2013/Excel" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2013/presupuesto-ingresos-2013.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013/resource/2c2e5a25-4ec3-4d25-8b03-aeff9049144c/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013/resource/2e00b3bb-0143-490a-b93a-f045a8586aa4> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013/resource/2e00b3bb-0143-490a-b93a-f045a8586aa4/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2013/HTML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2013/presupuesto-ingresos-2013.html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013/resource/2e00b3bb-0143-490a-b93a-f045a8586aa4/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013/resource/77d966d8-ba2f-45d2-b3a2-0c12a895b6cd> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013/resource/77d966d8-ba2f-45d2-b3a2-0c12a895b6cd/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2013/JSON" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2013/presupuesto-ingresos-2013.json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013/resource/77d966d8-ba2f-45d2-b3a2-0c12a895b6cd/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013/resource/d5574d09-f1c5-4121-ad44-3dba75750665> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013/resource/d5574d09-f1c5-4121-ad44-3dba75750665/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2013/XML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2013/presupuesto-ingresos-2013.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013/resource/d5574d09-f1c5-4121-ad44-3dba75750665/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014/Frequency> ;
+    dct:description "Presupuesto de ingresos del año 2014 del Ayuntamiento de Lorca"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2014/" ;
+    dct:issued "2015-12-10T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2022-01-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Presupuesto ingresos 2014"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014/resource/18dad670-d147-4154-b99d-c86594a39ae3>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014/resource/7973da27-3a88-4353-9cfb-207c76d29cb9>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014/resource/8900498f-8d8c-4f30-9129-c39f4c1628d9>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014/resource/bd9c898a-ecab-44a3-98de-27ba8b441dd2>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014/resource/cf2f24a5-aeb4-40f6-9253-f7d6f8bb4591> ;
+    dcat:keyword "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014/resource/18dad670-d147-4154-b99d-c86594a39ae3> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014/resource/18dad670-d147-4154-b99d-c86594a39ae3/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2014/XML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2014/presupuesto-ingresos-2014.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014/resource/18dad670-d147-4154-b99d-c86594a39ae3/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014/resource/7973da27-3a88-4353-9cfb-207c76d29cb9> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014/resource/7973da27-3a88-4353-9cfb-207c76d29cb9/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2014/HTML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2014/presupuesto-ingresos-2014.html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014/resource/7973da27-3a88-4353-9cfb-207c76d29cb9/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014/resource/8900498f-8d8c-4f30-9129-c39f4c1628d9> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014/resource/8900498f-8d8c-4f30-9129-c39f4c1628d9/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2014/Excel" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2014/presupuesto-ingresos-2014.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014/resource/8900498f-8d8c-4f30-9129-c39f4c1628d9/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014/resource/bd9c898a-ecab-44a3-98de-27ba8b441dd2> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014/resource/bd9c898a-ecab-44a3-98de-27ba8b441dd2/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2014/CSV" ;
+    dct:title "Formato csv separado por comas"@es ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2014/presupuesto-ingresos-2014.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014/resource/bd9c898a-ecab-44a3-98de-27ba8b441dd2/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014/resource/cf2f24a5-aeb4-40f6-9253-f7d6f8bb4591> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014/resource/cf2f24a5-aeb4-40f6-9253-f7d6f8bb4591/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2014/JSON" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2014/presupuesto-ingresos-2014.json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014/resource/cf2f24a5-aeb4-40f6-9253-f7d6f8bb4591/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2015> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2015/Frequency> ;
+    dct:description "Presupuesto de ingresos del año 2015 del Ayuntamiento de Lorca"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2015/" ;
+    dct:issued "2015-01-19T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2022-01-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Presupuesto ingresos 2015"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2015/resource/363030eb-724c-45f9-b9a3-a34702e2a586>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2015/resource/95fa429d-8bad-46c3-a948-5954b29ce477>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2015/resource/acaedf66-c4f7-469a-aeb6-d4d1fb36b682>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2015/resource/b8e093db-e1b5-4ec8-b52f-5aaa5ae45f04> ;
+    dcat:keyword "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2015/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2015/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2015/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2015/resource/363030eb-724c-45f9-b9a3-a34702e2a586> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2015/resource/363030eb-724c-45f9-b9a3-a34702e2a586/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2015/CSV" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2015/presupuesto-ingresos-2015.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2015/resource/363030eb-724c-45f9-b9a3-a34702e2a586/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2015/resource/95fa429d-8bad-46c3-a948-5954b29ce477> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2015/resource/95fa429d-8bad-46c3-a948-5954b29ce477/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2015/XML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2015/presupuesto-ingresos-2015.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2015/resource/95fa429d-8bad-46c3-a948-5954b29ce477/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2015/resource/acaedf66-c4f7-469a-aeb6-d4d1fb36b682> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2015/resource/acaedf66-c4f7-469a-aeb6-d4d1fb36b682/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2015/JSON" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2015/presupuesto-ingresos-2015.json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2015/resource/acaedf66-c4f7-469a-aeb6-d4d1fb36b682/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2015/resource/b8e093db-e1b5-4ec8-b52f-5aaa5ae45f04> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2015/resource/b8e093db-e1b5-4ec8-b52f-5aaa5ae45f04/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2015/Excel" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2015/presupuesto-ingresos-2015.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2015/resource/b8e093db-e1b5-4ec8-b52f-5aaa5ae45f04/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016/Frequency> ;
+    dct:description "Presupuesto de ingresos del año 2016 del Ayuntamiento de Lorca"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2016/" ;
+    dct:issued "2016-02-16T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2022-01-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Presupuesto ingresos 2016"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016/resource/514dccdd-62f8-4396-a3aa-7e3d7b457688>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016/resource/9aa844d0-0b71-4e78-87f5-b49b467fd7ea>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016/resource/9bcae600-bfd3-4a7f-b0f9-0aca89086c9b>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016/resource/9e46db55-f5d6-4882-a830-7795763ca65d>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016/resource/fd9af316-d5c0-4205-adc5-4b5d3a122263> ;
+    dcat:keyword "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016/resource/514dccdd-62f8-4396-a3aa-7e3d7b457688> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016/resource/514dccdd-62f8-4396-a3aa-7e3d7b457688/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2016/CSV" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2016/presupuesto-ingresos-2016.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016/resource/514dccdd-62f8-4396-a3aa-7e3d7b457688/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016/resource/9aa844d0-0b71-4e78-87f5-b49b467fd7ea> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016/resource/9aa844d0-0b71-4e78-87f5-b49b467fd7ea/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2016/Excel" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2016/presupuesto-ingresos-2016.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016/resource/9aa844d0-0b71-4e78-87f5-b49b467fd7ea/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016/resource/9bcae600-bfd3-4a7f-b0f9-0aca89086c9b> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016/resource/9bcae600-bfd3-4a7f-b0f9-0aca89086c9b/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2016/HTML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2016/presupuesto-ingresos-2016.html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016/resource/9bcae600-bfd3-4a7f-b0f9-0aca89086c9b/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016/resource/9e46db55-f5d6-4882-a830-7795763ca65d> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016/resource/9e46db55-f5d6-4882-a830-7795763ca65d/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2016/JSON" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2016/presupuesto-ingresos-2016.json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016/resource/9e46db55-f5d6-4882-a830-7795763ca65d/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016/resource/fd9af316-d5c0-4205-adc5-4b5d3a122263> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016/resource/fd9af316-d5c0-4205-adc5-4b5d3a122263/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2016/XML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2016/presupuesto-ingresos-2016.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016/resource/fd9af316-d5c0-4205-adc5-4b5d3a122263/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017/Frequency> ;
+    dct:description "Presupuesto de ingresos del año 2017 del Ayuntamiento de Lorca"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2017/" ;
+    dct:issued "2017-03-24T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2022-01-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Presupuesto ingresos 2017"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017/resource/10d8f25e-e493-4118-9568-ae73f8804654>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017/resource/7f4f788a-8d76-4e3c-9987-4804b740db8a>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017/resource/9c04875c-a4d9-4805-ba33-2efbc2fb98e7>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017/resource/a2cd28e8-b90f-40fe-b7d0-1b2a43126fb2>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017/resource/fd331859-4a91-42e3-8dae-9a1e3042f389> ;
+    dcat:keyword "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017/resource/10d8f25e-e493-4118-9568-ae73f8804654> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017/resource/10d8f25e-e493-4118-9568-ae73f8804654/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2017/CSV" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2017/presupuesto-ingresos-2017.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017/resource/10d8f25e-e493-4118-9568-ae73f8804654/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017/resource/7f4f788a-8d76-4e3c-9987-4804b740db8a> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017/resource/7f4f788a-8d76-4e3c-9987-4804b740db8a/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2017/XML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2017/presupuesto-ingresos-2017.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017/resource/7f4f788a-8d76-4e3c-9987-4804b740db8a/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017/resource/9c04875c-a4d9-4805-ba33-2efbc2fb98e7> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017/resource/9c04875c-a4d9-4805-ba33-2efbc2fb98e7/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2017/JSON" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2017/presupuesto-ingresos-2017.json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017/resource/9c04875c-a4d9-4805-ba33-2efbc2fb98e7/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017/resource/a2cd28e8-b90f-40fe-b7d0-1b2a43126fb2> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017/resource/a2cd28e8-b90f-40fe-b7d0-1b2a43126fb2/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2017/Excel" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2017/presupuesto-ingresos-2017.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017/resource/a2cd28e8-b90f-40fe-b7d0-1b2a43126fb2/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017/resource/fd331859-4a91-42e3-8dae-9a1e3042f389> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017/resource/fd331859-4a91-42e3-8dae-9a1e3042f389/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2017/HTML" ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2017/presupuesto-ingresos-2017.html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017/resource/fd331859-4a91-42e3-8dae-9a1e3042f389/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018/Frequency> ;
+    dct:description "Presupuesto ingresos 2018"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2018/" ;
+    dct:issued "2018-04-11T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2022-01-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Presupuesto ingresos 2018"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018/resource/15db810c-b946-4876-a0f7-b5e433a63c66>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018/resource/784dd6b0-4934-425c-b354-7ab27580dff0>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018/resource/7be19430-cb56-41c9-9915-0dba85759fd3>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018/resource/b958743c-d21b-4e99-9dc0-307eeb42429d>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018/resource/d3b88499-4b7f-4468-a34c-2136e08fbc74> ;
+    dcat:keyword "ingresos"@es,
+        "presupuesto"@es,
+        "trasnparencia"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico>,
+        <http://datos.gob.es/kos/sector-publico/sector/sociedad-bienestar> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018/resource/15db810c-b946-4876-a0f7-b5e433a63c66> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018/resource/15db810c-b946-4876-a0f7-b5e433a63c66/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2018/Excel" ;
+    dct:title "Formato excel"@es ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2018/presupuesto-ingresos-2018.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018/resource/15db810c-b946-4876-a0f7-b5e433a63c66/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018/resource/784dd6b0-4934-425c-b354-7ab27580dff0> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018/resource/784dd6b0-4934-425c-b354-7ab27580dff0/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2018/JSON" ;
+    dct:title "Formato JSON"@es ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2018/presupuesto-ingresos-2018.json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018/resource/784dd6b0-4934-425c-b354-7ab27580dff0/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018/resource/7be19430-cb56-41c9-9915-0dba85759fd3> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018/resource/7be19430-cb56-41c9-9915-0dba85759fd3/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2018/CSV" ;
+    dct:title "Formato csv separado por ;"@es ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2018/presupuesto-ingresos-2018.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018/resource/7be19430-cb56-41c9-9915-0dba85759fd3/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018/resource/b958743c-d21b-4e99-9dc0-307eeb42429d> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018/resource/b958743c-d21b-4e99-9dc0-307eeb42429d/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2018/HTML" ;
+    dct:title "Formato HTML"@es ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2018/presupuesto-ingresos-2018.html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018/resource/b958743c-d21b-4e99-9dc0-307eeb42429d/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018/resource/d3b88499-4b7f-4468-a34c-2136e08fbc74> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018/resource/d3b88499-4b7f-4468-a34c-2136e08fbc74/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2018/XML" ;
+    dct:title "Formato XML"@es ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2018/presupuesto-ingresos-2018.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018/resource/d3b88499-4b7f-4468-a34c-2136e08fbc74/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019/Frequency> ;
+    dct:description "Presupuesto ingresos 2019"@es ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2019/" ;
+    dct:issued "2019-02-13T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://datos.lorca.es/avisolegal> ;
+    dct:modified "2022-01-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01300243> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Region-Murcia>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Murcia> ;
+    dct:title "Presupuesto ingresos 2019"@es ;
+    dct:valid "2022-06-24T00:00:00+02:00"^^xsd:dateTime ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019/resource/2b71ce35-318d-4aca-8570-71408502deac>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019/resource/90cf8563-dbb0-4dcc-bbdb-42d95d9639e3>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019/resource/bff27ddc-1bcd-4dd4-bf33-4b24b92dcdab>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019/resource/de8e3f16-6ab4-43e6-9da1-22c977e81247>,
+        <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019/resource/e352ee8d-384d-403c-b94b-2ed29e58d7f5> ;
+    dcat:keyword "ingresos"@es,
+        "presupuesto"@es,
+        "trasnparencia"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico>,
+        <http://datos.gob.es/kos/sector-publico/sector/sociedad-bienestar> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019/Frequency> rdf:value <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019/resource/2b71ce35-318d-4aca-8570-71408502deac> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019/resource/2b71ce35-318d-4aca-8570-71408502deac/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2019/HTML" ;
+    dct:title "Formato HTML"@es ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2019/presupuesto-ingresos-2019.html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019/resource/2b71ce35-318d-4aca-8570-71408502deac/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019/resource/90cf8563-dbb0-4dcc-bbdb-42d95d9639e3> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019/resource/90cf8563-dbb0-4dcc-bbdb-42d95d9639e3/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2019/XML" ;
+    dct:title "Formato XML"@es ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2019/presupuesto-ingresos-2019.xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019/resource/90cf8563-dbb0-4dcc-bbdb-42d95d9639e3/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019/resource/bff27ddc-1bcd-4dd4-bf33-4b24b92dcdab> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019/resource/bff27ddc-1bcd-4dd4-bf33-4b24b92dcdab/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2019/JSON" ;
+    dct:title "Formato JSON"@es ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2019/presupuesto-ingresos-2019.json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019/resource/bff27ddc-1bcd-4dd4-bf33-4b24b92dcdab/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019/resource/de8e3f16-6ab4-43e6-9da1-22c977e81247> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019/resource/de8e3f16-6ab4-43e6-9da1-22c977e81247/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2019/Excel" ;
+    dct:title "Formato excel"@es ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2019/presupuesto-ingresos-2019.xls" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019/resource/de8e3f16-6ab4-43e6-9da1-22c977e81247/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019/resource/e352ee8d-384d-403c-b94b-2ed29e58d7f5> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019/resource/e352ee8d-384d-403c-b94b-2ed29e58d7f5/format> ;
+    dct:identifier "http://datos.lorca.es/catalogo/presupuesto-ingresos-2019/CSV" ;
+    dct:title "Formato csv separado por ;"@es ;
+    dcat:accessURL "http://datos.lorca.es/catalogo/presupuesto-ingresos-2019/presupuesto-ingresos-2019.csv" .
+
+<https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019/resource/e352ee8d-384d-403c-b94b-2ed29e58d7f5/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2018.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-1er-trimestre-de-2019.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2018.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-2-trimestre-de-2019.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-3-trimestre-de-2018.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-gastos-para-el-4-trimestre-de-2018.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2018.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-1er-trimestre-de-2019.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2018.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-2-trimestre-de-2019.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-3er-trimestre-de-2018.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-ejecucion-del-presupuesto-de-ingresos-para-el-4-trimestre-de-2018.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2013.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2013.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2013.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2013.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2013> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2013.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2014.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2014.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2014.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2014.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2014> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2014.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2015.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2015.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2015.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2015.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2015> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2015.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2016.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2016.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2016.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2016.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2016> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2016.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2017.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2017.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2017.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2017.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2017> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2017.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2018.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2018.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2018.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2018.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2018> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2018.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2019.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2019.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2019.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2019.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-presupuesto-gastos-2019> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-gastos-2019.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2013.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2013.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2013.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2013.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2013> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2013.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2014.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2014.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2014.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2014.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2014> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2014.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2015.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2015.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2015.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2015.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2015> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2015.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2016.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2016.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2016.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2016.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2016> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2016.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2017.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2017.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2017.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2017.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2017> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2017.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2018.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2018.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2018.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2018.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2018> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2018.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2019.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2019.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2019.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2019.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01300243-presupuesto-ingresos-2019> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01300243-presupuesto-ingresos-2019.ttl?_page=0> .
+

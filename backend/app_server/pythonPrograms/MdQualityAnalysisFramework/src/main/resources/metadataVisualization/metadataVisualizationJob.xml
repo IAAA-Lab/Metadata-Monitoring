@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:batch="http://www.springframework.org/schema/batch"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+		http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch.xsd">
+ 
+ 	<!-- ############################################################# -->
+	<!-- definicion del lanzador y repositorio de trabajos -->
+	<beans:import resource="../applicationContext.xml" />
+ 
+	<!-- ############################################################# -->
+    <!-- muestra un conjunto de metadatos de la base de datos-->
+ 	
+	<batch:job id="metadataVisualizationJob">
+		<batch:step id="metadataVisualizationFromPostGres" >
+			<batch:tasklet ref="metadataVisualizationFromPostGresTasklet"/>
+		</batch:step>
+	</batch:job>
+	
+	<!-- ############################################################# -->
+	<!-- muestra un conjunto de metadatos de la base de datos, se indican los identificadores en la lista de parametros -->
+	<beans:bean id="metadataVisualizationFromPostGresTasklet" class="metadataVisualization.Tasklet_PostGresMdVisualization">
+		<beans:property name="dbname" value="metadataQuality" /> 
+		<beans:property name="dbuser" value="postgres" /> 
+		<beans:property name="dbpass" value="yuraku10" /> 
+		<beans:property name="dbhost" value="localhost" /> 
+		<beans:property name="dbport" value="5432" /> 
+		<beans:property name="idOfmetadataToVisualize">
+			<beans:list>
+				<beans:value>GLG_SIOTUGA_PXOM_boborás_20110916</beans:value>
+			</beans:list>
+		 </beans:property>
+	</beans:bean>
+</beans:beans>
+
+

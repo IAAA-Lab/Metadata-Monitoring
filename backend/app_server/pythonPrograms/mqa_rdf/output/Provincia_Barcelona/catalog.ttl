@@ -1,0 +1,283 @@
+@prefix api: <http://purl.org/linked-data/api/vocab#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix ns2: <http://a9.com/-/spec/opensearch/1.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona> a dcat:Dataset ;
+    dct:description "Contingut complet publicat al Butlletí Oficial de la Província (BOPB) diari i també segmentat per emissor."@ca,
+        """Contenido completo publicado en el Boletín Oficial de la Provincia de Barcelona y también segmentado por emisor. Se trata de información pública de los anuncios referentes a notificaciones, ordenanzas, oposiciones, presupuesto, licitaciones, normativa, pliegos de cláusulas de la administración local y de justicia de la provincia de Barcelona.  Contenido diario del BOPB segmentado por tipo de emisor: 
+
+Administración general del Estado
+Generalitat de Catalunya
+administración local
+administración de justicia
+otras comunidades autónomas
+administración electoral
+entidades varias
+"""@es ;
+    dct:language "ca" ;
+    dct:license <https://creativecommons.org/licenses/by/4.0/deed.ca> ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L02000008> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Barcelona> ;
+    dct:title "BOPB (Butlletí Oficial de la Província de Barcelona)"@ca,
+        "BOPB (Boletín Oficial de la Provincia de Barcelona)"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/1cd5f315-edcb-45e2-be81-ccb200b37c64>,
+        <https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/24df1cc1-f548-40b9-8821-b63323e40045>,
+        <https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/31e9f46b-8150-4176-991c-3f1d506df8a0>,
+        <https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/3e29836a-40dd-4309-a282-3b2d335e9f19>,
+        <https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/5b3b776d-ee38-4c1d-94f4-a4205e720f45>,
+        <https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/94ca3a35-9eaf-4034-b5d6-e1702727d496>,
+        <https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/95278efd-5ccf-4d1f-acd5-e65cb354fda9>,
+        <https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/ca348060-dc23-49c1-8bbb-d57dcf2b5a71> ;
+    dcat:keyword "anuncios oficiales"@es,
+        "fiscal"@es,
+        "licitaciones"@es,
+        "normativa local"@es,
+        "notificaciones"@es,
+        "oposiciones"@es,
+        "ordenanza"@es,
+        "presupuestos"@es,
+        "urbanismo"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/legislacion-justicia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico>,
+        <http://datos.gob.es/kos/sector-publico/sector/urbanismo-infraestructuras> .
+
+<https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/1cd5f315-edcb-45e2-be81-ccb200b37c64> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/1cd5f315-edcb-45e2-be81-ccb200b37c64/format> ;
+    dct:title "Contingut complet del butlletí del dia (BOPB)"@ca,
+        "Contenido completo del boletín del día (BOPB)"@es ;
+    dcat:accessURL "http://www.diba.cat/cido/rss/bopbdiari.xml" .
+
+<https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/1cd5f315-edcb-45e2-be81-ccb200b37c64/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/24df1cc1-f548-40b9-8821-b63323e40045> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/24df1cc1-f548-40b9-8821-b63323e40045/format> ;
+    dct:title "Butlletí del dia (Entitats diverses)"@ca,
+        "Boletín del día (Entidades varias)"@es ;
+    dcat:accessURL "http://www.diba.cat/cido/rss/bopbdiari_altres.xml" .
+
+<https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/24df1cc1-f548-40b9-8821-b63323e40045/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/31e9f46b-8150-4176-991c-3f1d506df8a0> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/31e9f46b-8150-4176-991c-3f1d506df8a0/format> ;
+    dct:title "Butlletí del dia (Administració general de l’Estat)"@ca,
+        "Boletín del día (Administración general del estado)"@es ;
+    dcat:accessURL "http://www.diba.cat/cido/rss/bopbdiari_gral.xml" .
+
+<https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/31e9f46b-8150-4176-991c-3f1d506df8a0/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/3e29836a-40dd-4309-a282-3b2d335e9f19> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/3e29836a-40dd-4309-a282-3b2d335e9f19/format> ;
+    dct:title "Butlletí del dia (Administració local)"@ca,
+        "Boletín del día (Administración local)"@es ;
+    dcat:accessURL "http://www.diba.cat/cido/rss/bopbdiari_alocal.xml" .
+
+<https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/3e29836a-40dd-4309-a282-3b2d335e9f19/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/5b3b776d-ee38-4c1d-94f4-a4205e720f45> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/5b3b776d-ee38-4c1d-94f4-a4205e720f45/format> ;
+    dct:title "Butlletí del dia (Altres comunitats autònomes)"@ca,
+        "Boletín del día (Otras comunidades autónomas)"@es ;
+    dcat:accessURL "http://www.diba.cat/cido/rss/bopbdiari_ccaa.xml" .
+
+<https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/5b3b776d-ee38-4c1d-94f4-a4205e720f45/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/94ca3a35-9eaf-4034-b5d6-e1702727d496> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/94ca3a35-9eaf-4034-b5d6-e1702727d496/format> ;
+    dct:title "Butlletí del dia (Administració de justícia)"@ca,
+        "Boletín del día (Administración de justicia)"@es ;
+    dcat:accessURL "http://www.diba.cat/cido/rss/bopbdiari_just.xml" .
+
+<https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/94ca3a35-9eaf-4034-b5d6-e1702727d496/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/95278efd-5ccf-4d1f-acd5-e65cb354fda9> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/95278efd-5ccf-4d1f-acd5-e65cb354fda9/format> ;
+    dct:title "Butlletí del dia (Administració electoral)"@ca,
+        "Boletín del día (Administración electoral)"@es ;
+    dcat:accessURL "http://www.diba.cat/cido/rss/bopbdiari_elec.xml" .
+
+<https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/95278efd-5ccf-4d1f-acd5-e65cb354fda9/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/ca348060-dc23-49c1-8bbb-d57dcf2b5a71> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/ca348060-dc23-49c1-8bbb-d57dcf2b5a71/format> ;
+    dct:title "Butlletí del dia (Generalitat de Catalunya)"@ca,
+        "Boletín del día (Generalitat de Catalunya)"@es ;
+    dcat:accessURL "http://www.diba.cat/cido/rss/bopbdiari_gencat.xml" .
+
+<https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona/resource/ca348060-dc23-49c1-8bbb-d57dcf2b5a71/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l02000008-cido-normativa-local> a dcat:Dataset ;
+    dct:description "Ordenances reguladores i reglaments de l'Administració local catalana; ordenances fiscals; calendaris i padrons fiscals; pressupostos i plantilles. Cercador d'informació de diaris oficials (CIDO)."@ca,
+        "Ordenanzas reguladoras y reglamentos de la Administración local catalana; ordenanzas fiscales; calendarios y padrones fiscales; presupuestos y plantillas. Buscador de información de diarios oficiales (CIDO)."@es ;
+    dct:language "ca" ;
+    dct:license <https://creativecommons.org/licenses/by/4.0/deed.ca> ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L02000008> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Barcelona> ;
+    dct:title "CIDO - Normativa local"@ca,
+        "CIDO - Normativa local"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/03eafdc0-2c7c-457f-98d8-a23c094d070b>,
+        <https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/09d4c223-02e2-4b5d-81a6-75d07aec12d5>,
+        <https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/1ff2180b-f4cf-4aee-b899-ef0c9f15ce49>,
+        <https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/202d27b6-26f4-4970-866d-d33798b2ec58>,
+        <https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/2cef1504-a12b-49fc-b4dd-143d84851506>,
+        <https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/3941d28b-abe8-4409-b1e7-0a5a08823ee2>,
+        <https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/3ead94ec-f3bc-4502-a881-feb97bded586>,
+        <https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/7727e71b-0ce5-4b06-b4ee-c09c5c5a099c>,
+        <https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/87854972-7e9d-4b95-a6d9-13b29d944c31>,
+        <https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/ba6e69e3-2856-4457-8189-76b4df44810a>,
+        <https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/fc80967a-f124-449c-ab60-2cbcbf66493d>,
+        <https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/fe3d68e1-8589-4730-8699-e75e5d6f6180> ;
+    dcat:keyword "calendarios"@es,
+        "cido"@es,
+        "estatutos"@es,
+        "fiscales"@es,
+        "ordenanzas"@es,
+        "padrones"@es,
+        "presupuestos"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/empleo>,
+        <http://datos.gob.es/kos/sector-publico/sector/legislacion-justicia> .
+
+<https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/03eafdc0-2c7c-457f-98d8-a23c094d070b> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/03eafdc0-2c7c-457f-98d8-a23c094d070b/format> ;
+    dct:title "Ordenances reguladores i reglaments"@ca,
+        "Ordenanzas reguladoras y reglamentos"@es ;
+    dcat:accessURL "http://www.diba.cat/cido/cidoXml.asp?r=reglaments" .
+
+<https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/03eafdc0-2c7c-457f-98d8-a23c094d070b/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/09d4c223-02e2-4b5d-81a6-75d07aec12d5> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/09d4c223-02e2-4b5d-81a6-75d07aec12d5/format> ;
+    dct:title "Pressupostos i plantilles"@ca,
+        "Presupuestos y plantillas"@es ;
+    dcat:accessURL "http://www.diba.cat/cido/cidoXml.asp?r=pressupostos" .
+
+<https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/09d4c223-02e2-4b5d-81a6-75d07aec12d5/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/1ff2180b-f4cf-4aee-b899-ef0c9f15ce49> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/1ff2180b-f4cf-4aee-b899-ef0c9f15ce49/format> ;
+    dct:title "Calendari i padrons fiscals"@ca,
+        "Calendario y padrones fiscales"@es ;
+    dcat:accessURL "http://www.diba.cat/cido/cidoXml.asp?r=padrons" .
+
+<https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/1ff2180b-f4cf-4aee-b899-ef0c9f15ce49/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/202d27b6-26f4-4970-866d-d33798b2ec58> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/202d27b6-26f4-4970-866d-d33798b2ec58/format> ;
+    dct:title "Ordenances i convenis tipus"@ca,
+        "Ordenanzas y convenios tipos"@es ;
+    dcat:accessURL "http://www.diba.cat/cido/cidoXml.asp?r=ordenances" .
+
+<https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/202d27b6-26f4-4970-866d-d33798b2ec58/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/2cef1504-a12b-49fc-b4dd-143d84851506> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/2cef1504-a12b-49fc-b4dd-143d84851506/format> ;
+    dct:title "Ordenances fiscals"@ca,
+        "Ordenanzas fiscales"@es ;
+    dcat:accessURL "http://cido.diba.cat/rss/normativa_local/ordenances-fiscals" .
+
+<https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/2cef1504-a12b-49fc-b4dd-143d84851506/format> a dct:IMT ;
+    rdf:value "application/rss+xml" .
+
+<https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/3941d28b-abe8-4409-b1e7-0a5a08823ee2> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/3941d28b-abe8-4409-b1e7-0a5a08823ee2/format> ;
+    dct:title "Ordenances fiscals"@ca,
+        "Ordenanzas fiscales"@es ;
+    dcat:accessURL "http://www.diba.cat/cido/cidoXml.asp?r=fiscals" .
+
+<https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/3941d28b-abe8-4409-b1e7-0a5a08823ee2/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/3ead94ec-f3bc-4502-a881-feb97bded586> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/3ead94ec-f3bc-4502-a881-feb97bded586/format> ;
+    dct:title "Ordenances reguladores i reglaments"@ca,
+        "Ordenanzas reguladoras y reglamentos"@es ;
+    dcat:accessURL "http://cido.diba.cat/rss/normativa_local/ordenances-reglaments" .
+
+<https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/3ead94ec-f3bc-4502-a881-feb97bded586/format> a dct:IMT ;
+    rdf:value "application/rss+xml" .
+
+<https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/7727e71b-0ce5-4b06-b4ee-c09c5c5a099c> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/7727e71b-0ce5-4b06-b4ee-c09c5c5a099c/format> ;
+    dct:title "Ordenances i convenis tipus"@ca,
+        "Ordenanzas y convenios tipos"@es ;
+    dcat:accessURL "http://cido.diba.cat/rss/normativa_local/models-tipus" .
+
+<https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/7727e71b-0ce5-4b06-b4ee-c09c5c5a099c/format> a dct:IMT ;
+    rdf:value "application/rss+xml" .
+
+<https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/87854972-7e9d-4b95-a6d9-13b29d944c31> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/87854972-7e9d-4b95-a6d9-13b29d944c31/format> ;
+    dct:title "Estatuts d'organismes"@ca,
+        "Estatutos de organismos"@es ;
+    dcat:accessURL "http://cido.diba.cat/rss/normativa_local/estatuts-organismes" .
+
+<https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/87854972-7e9d-4b95-a6d9-13b29d944c31/format> a dct:IMT ;
+    rdf:value "application/rss+xml" .
+
+<https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/ba6e69e3-2856-4457-8189-76b4df44810a> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/ba6e69e3-2856-4457-8189-76b4df44810a/format> ;
+    dct:title "Estatuts d'organismes"@ca,
+        "Estatutos de organismos"@es ;
+    dcat:accessURL "http://www.diba.cat/cido/cidoXml.asp?r=estatuts" .
+
+<https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/ba6e69e3-2856-4457-8189-76b4df44810a/format> a dct:IMT ;
+    rdf:value "text/xml" .
+
+<https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/fc80967a-f124-449c-ab60-2cbcbf66493d> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/fc80967a-f124-449c-ab60-2cbcbf66493d/format> ;
+    dct:title "Pressupostos i plantilles"@ca,
+        "Presupuestos y plantillas"@es ;
+    dcat:accessURL "http://cido.diba.cat/rss/normativa_local/pressupostos-i-plantilles" .
+
+<https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/fc80967a-f124-449c-ab60-2cbcbf66493d/format> a dct:IMT ;
+    rdf:value "application/rss+xml" .
+
+<https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/fe3d68e1-8589-4730-8699-e75e5d6f6180> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/fe3d68e1-8589-4730-8699-e75e5d6f6180/format> ;
+    dct:title "Calendari i padrons fiscals"@ca,
+        "Calendario y padrones fiscales"@es ;
+    dcat:accessURL "http://cido.diba.cat/rss/normativa_local/calendari-i-padrons-fiscals" .
+
+<https://datos.gob.es/catalogo/l02000008-cido-normativa-local/resource/fe3d68e1-8589-4730-8699-e75e5d6f6180/format> a dct:IMT ;
+    rdf:value "application/rss+xml" .
+
+<http://datos.gob.es/apidata/catalog/dataset/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l02000008-bopb-boletin-oficial-de-la-provincia-de-barcelona.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l02000008-cido-normativa-local.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l02000008-cido-normativa-local.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l02000008-cido-normativa-local.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l02000008-cido-normativa-local.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l02000008-cido-normativa-local> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l02000008-cido-normativa-local.ttl?_page=0> .
+

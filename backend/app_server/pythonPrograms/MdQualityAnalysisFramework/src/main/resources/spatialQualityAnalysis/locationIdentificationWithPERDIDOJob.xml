@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:batch="http://www.springframework.org/schema/batch"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+		http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch.xsd">
+ 
+ 	<!-- ############################################################# -->
+	<!-- definicion del lanzador y repositorio de trabajos -->
+	<beans:import resource="../applicationContext.xml" />
+ 
+	<!-- ############################################################# -->
+    <!-- identifica nombres de lugar de los metadatos usando el software de PERDIDO, es resultado es por pantalla-->
+    <!-- está deprecated -->
+ 	
+	<batch:job id="locationInTextIdentificationJob">
+		<batch:step id="locationExtractionFromService" >
+			<batch:tasklet ref="locationExtractionFromServiceTasklet"/>
+		</batch:step>
+	</batch:job>
+	
+	<!-- ############################################################# -->
+	<!-- identifica nombres de lugar de los metadatos usando el software de PERDIDO, es resultado es por pantalla-->
+	<beans:bean id="locationExtractionFromServiceTasklet" class="preprocessing.Tasket_LocationIdentificationWithPERDIDO">
+		<beans:property name="sourceFile" value="data/temporal/extractedMetadata.rdf" /> 
+	</beans:bean>
+</beans:beans>
+
+

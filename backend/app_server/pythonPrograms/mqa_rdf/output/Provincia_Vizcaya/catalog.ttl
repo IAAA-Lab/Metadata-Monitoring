@@ -1,0 +1,1680 @@
+@prefix api: <http://purl.org/linked-data/api/vocab#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix ns2: <http://a9.com/-/spec/opensearch/1.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20081> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20081/Frequency> ;
+    dct:description "Indicadores econ&#243;mico-financieros correspondientes al ejercicio 2008. Contiene datos: financieros y patrimoniales, presupuestarios y sobre urbanismo y obras publicas."@es,
+        "2008 ekitaldiari dagozkion adierazle ekonomiko-finantzarioak. Datu hauek ditu: finantzarioak eta ondarezkoak, aurrekontuenak eta hirigintza eta obra publikoei buruzkoak."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-indicadores-economico-finacieros-2008" ;
+    dct:issued "2014-10-30T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2014-10-30T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Indicadores económico-financieros del año 2008"@es,
+        "2008ko adierazle ekonomiko-finantzarioak"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20081/resource/5881bdce-17fe-4168-b6a3-b12104fdae1d> ;
+    dcat:keyword "2008"@es,
+        "economía"@es,
+        "finanzas"@es,
+        "gastos"@es,
+        "indicadores"@es,
+        "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20081/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20081/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20081/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20081/resource/5881bdce-17fe-4168-b6a3-b12104fdae1d> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20081/resource/5881bdce-17fe-4168-b6a3-b12104fdae1d/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-indicadores-economico-finacieros-2008/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2008.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20081/resource/5881bdce-17fe-4168-b6a3-b12104fdae1d/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20091> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20091/Frequency> ;
+    dct:description "Indicadores econ&#243;mico-financieros correspondientes al ejercicio 2009. Contiene datos: financieros y patrimoniales, presupuestarios y sobre urbanismo y obras publicas."@es,
+        "2009 ekitaldiari dagozkion adierazle ekonomiko-finantzarioak. Datu hauek ditu: finantzarioak eta ondarezkoak, aurrekontuenak eta hirigintza eta obra publikoei buruzkoak."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-indicadores-economico-finacieros-2009" ;
+    dct:issued "2014-10-30T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2014-10-30T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Indicadores económico-financieros del año 2009"@es,
+        "2009ko adierazle ekonomiko-finantzarioak"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20091/resource/f0a67b41-02d4-4a1a-8ce3-308f86918893> ;
+    dcat:keyword "2009"@es,
+        "economía"@es,
+        "finanzas"@es,
+        "gastos"@es,
+        "indicadores"@es,
+        "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20091/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20091/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20091/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20091/resource/f0a67b41-02d4-4a1a-8ce3-308f86918893> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20091/resource/f0a67b41-02d4-4a1a-8ce3-308f86918893/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-indicadores-economico-finacieros-2009/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2009.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20091/resource/f0a67b41-02d4-4a1a-8ce3-308f86918893/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20101> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20101/Frequency> ;
+    dct:description "Indicadores econ&#243;mico-financieros correspondientes al ejercicio 2010. Contiene datos: financieros y patrimoniales, presupuestarios y sobre urbanismo y obras publicas."@es,
+        "2010 ekitaldiari dagozkion adierazle ekonomiko-finantzarioak. Datu hauek ditu: finantzarioak eta ondarezkoak, aurrekontuenak eta hirigintza eta obra publikoei buruzkoak."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-indicadores-economico-finacieros-2010" ;
+    dct:issued "2014-10-30T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2014-10-30T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Indicadores económico-financieros del año 2010"@es,
+        "2010eko adierazle ekonomiko-finantzarioak"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20101/resource/7a56a7d3-a7d1-455d-b308-6a2b8dce958d> ;
+    dcat:keyword "2010"@es,
+        "economía"@es,
+        "finanzas"@es,
+        "gastos"@es,
+        "indicadores"@es,
+        "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20101/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20101/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20101/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20101/resource/7a56a7d3-a7d1-455d-b308-6a2b8dce958d> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20101/resource/7a56a7d3-a7d1-455d-b308-6a2b8dce958d/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-indicadores-economico-finacieros-2010/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2010.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20101/resource/7a56a7d3-a7d1-455d-b308-6a2b8dce958d/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20111> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20111/Frequency> ;
+    dct:description "Indicadores econ&#243;mico-financieros correspondientes al ejercicio 2011. Contiene datos: financieros y patrimoniales, presupuestarios y sobre urbanismo y obras publicas."@es,
+        "2011 ekitaldiari dagozkion adierazle ekonomiko-finantzarioak. Datu hauek ditu: finantzarioak eta ondarezkoak, aurrekontuenak eta hirigintza eta obra publikoei buruzkoak."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-indicadores-economico-finacieros-2011" ;
+    dct:issued "2014-10-30T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2014-10-30T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Indicadores económico-financieros del año 2011"@es,
+        "2011ko adierazle ekonomiko-finantzarioak"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20111/resource/683154ce-9098-4ea4-a214-6806fc85b450> ;
+    dcat:keyword "2011"@es,
+        "economía"@es,
+        "finanzas"@es,
+        "gastos"@es,
+        "indicadores"@es,
+        "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20111/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20111/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20111/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20111/resource/683154ce-9098-4ea4-a214-6806fc85b450> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20111/resource/683154ce-9098-4ea4-a214-6806fc85b450/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-indicadores-economico-finacieros-2011/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2011.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20111/resource/683154ce-9098-4ea4-a214-6806fc85b450/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20121> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20121/Frequency> ;
+    dct:description "Indicadores econ&#243;mico-financieros correspondientes al ejercicio 2012. Contiene datos: financieros y patrimoniales, presupuestarios y sobre urbanismo y obras publicas."@es,
+        "2012 ekitaldiari dagozkion adierazle ekonomiko-finantzarioak. Datu hauek ditu: finantzarioak eta ondarezkoak, aurrekontuenak eta hirigintza eta obra publikoei buruzkoak."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-indicadores-economico-finacieros-2012" ;
+    dct:issued "2014-10-30T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2014-10-30T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Indicadores económico-financieros del año 2012"@es,
+        "2012ko adierazle ekonomiko-finantzarioak"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20121/resource/3b0faafd-e5e1-4311-9acf-632591b04983> ;
+    dcat:keyword "2012"@es,
+        "economía"@es,
+        "finanzas"@es,
+        "gastos"@es,
+        "indicadores"@es,
+        "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20121/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20121/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20121/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20121/resource/3b0faafd-e5e1-4311-9acf-632591b04983> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20121/resource/3b0faafd-e5e1-4311-9acf-632591b04983/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-indicadores-economico-finacieros-2012/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2012.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20121/resource/3b0faafd-e5e1-4311-9acf-632591b04983/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20131> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20131/Frequency> ;
+    dct:description "Indicadores econ&#243;mico-financieros correspondientes al ejercicio 2013. Contiene datos: financieros y patrimoniales, presupuestarios y sobre urbanismo y obras publicas."@es,
+        "2013 ekitaldiari dagozkion adierazle ekonomiko-finantzarioak. Datu hauek ditu: finantzarioak eta ondarezkoak, aurrekontuenak eta hirigintza eta obra publikoei buruzkoak."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-indicadores-economico-finacieros-2013" ;
+    dct:issued "2014-10-30T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2014-10-30T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Indicadores económico-financieros del año 2013"@es,
+        "2013ko adierazle ekonomiko-finantzarioak"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20131/resource/7b0aca17-f763-4dc4-ba93-8ad35f32cb71> ;
+    dcat:keyword "2013"@es,
+        "economía"@es,
+        "finanzas"@es,
+        "gastos"@es,
+        "indicadores"@es,
+        "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20131/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20131/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20131/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20131/resource/7b0aca17-f763-4dc4-ba93-8ad35f32cb71> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20131/resource/7b0aca17-f763-4dc4-ba93-8ad35f32cb71/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-indicadores-economico-finacieros-2013/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2013.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20131/resource/7b0aca17-f763-4dc4-ba93-8ad35f32cb71/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20141> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20141/Frequency> ;
+    dct:description "Indicadores econ&#243;mico-financieros correspondientes al ejercicio 2014. Contiene datos: financieros y patrimoniales, presupuestarios y sobre urbanismo y obras publicas."@es,
+        "2014 ekitaldiari dagozkion adierazle ekonomiko-finantzarioak. Datu hauek ditu: finantzarioak eta ondarezkoak, aurrekontuenak eta hirigintza eta obra publikoei buruzkoak."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-indicadores-economico-finacieros-2014" ;
+    dct:issued "2015-05-18T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2015-05-18T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Indicadores económico-financieros del año 2014"@es,
+        "2014ko adierazle ekonomiko-finantzarioak"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20141/resource/ec75bc59-b5de-4e42-821c-651f8e80283e> ;
+    dcat:keyword "2014"@es,
+        "economía"@es,
+        "finanzas"@es,
+        "gastos"@es,
+        "indicadores"@es,
+        "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20141/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20141/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20141/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20141/resource/ec75bc59-b5de-4e42-821c-651f8e80283e> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20141/resource/ec75bc59-b5de-4e42-821c-651f8e80283e/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-indicadores-economico-finacieros-2014/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2014.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20141/resource/ec75bc59-b5de-4e42-821c-651f8e80283e/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2015> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2015/Frequency> ;
+    dct:description "Indicadores econ&#243;mico-financieros correspondientes al ejercicio 2015. Contiene datos: financieros y patrimoniales, presupuestarios y sobre urbanismo y obras publicas."@es,
+        "2015 ekitaldiari dagozkion adierazle ekonomiko-finantzarioak. Datu hauek ditu: finantzarioak eta ondarezkoak, aurrekontuenak eta hirigintza eta obra publikoei buruzkoak."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-indicadores-economico-finacieros-2015" ;
+    dct:issued "2016-05-27T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2016-05-27T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Indicadores económico-financieros del año 2015"@es,
+        "2015eko adierazle ekonomiko-finantzarioak"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2015/resource/e9499520-cf65-4026-98c6-6d78bace0517> ;
+    dcat:keyword "2015"@es,
+        "economía"@es,
+        "finanzas"@es,
+        "gastos"@es,
+        "indicadores"@es,
+        "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2015/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2015/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2015/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2015/resource/e9499520-cf65-4026-98c6-6d78bace0517> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2015/resource/e9499520-cf65-4026-98c6-6d78bace0517/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-indicadores-economico-finacieros-2015/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2015.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2015/resource/e9499520-cf65-4026-98c6-6d78bace0517/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2016> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2016/Frequency> ;
+    dct:description "Indicadores econ&#243;mico-financieros correspondientes al ejercicio 2016. Contiene datos: financieros y patrimoniales, presupuestarios y sobre urbanismo y obras publicas."@es,
+        "2016 ekitaldiari dagozkion adierazle ekonomiko-finantzarioak. Datu hauek ditu: finantzarioak eta ondarezkoak, aurrekontuenak eta hirigintza eta obra publikoei buruzkoak."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-indicadores-economico-finacieros-2016" ;
+    dct:issued "2021-01-15T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2021-01-15T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Indicadores económico-financieros del año 2016"@es,
+        "2016ko adierazle ekonomiko-finantzarioak"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2016/resource/3b5b8570-0811-4202-89cb-5388aa33a1c4> ;
+    dcat:keyword "2016"@es,
+        "economía"@es,
+        "finanzas"@es,
+        "gastos"@es,
+        "indicadores"@es,
+        "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2016/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2016/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2016/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2016/resource/3b5b8570-0811-4202-89cb-5388aa33a1c4> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2016/resource/3b5b8570-0811-4202-89cb-5388aa33a1c4/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-indicadores-economico-finacieros-2016/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2016.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2016/resource/3b5b8570-0811-4202-89cb-5388aa33a1c4/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2017> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2017/Frequency> ;
+    dct:description "Indicadores econ&#243;mico-financieros correspondientes al ejercicio 2017. Contiene datos: financieros y patrimoniales, presupuestarios y sobre urbanismo y obras publicas."@es,
+        "2017 ekitaldiari dagozkion adierazle ekonomiko-finantzarioak. Datu hauek ditu: finantzarioak eta ondarezkoak, aurrekontuenak eta hirigintza eta obra publikoei buruzkoak."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-indicadores-economico-finacieros-2017" ;
+    dct:issued "2021-01-15T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2021-01-15T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Indicadores económico-financieros del año 2017"@es,
+        "2017ko adierazle ekonomiko-finantzarioak"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2017/resource/162c4107-14a9-47b3-8461-67eca6a398c4> ;
+    dcat:keyword "2017"@es,
+        "economía"@es,
+        "finanzas"@es,
+        "gastos"@es,
+        "indicadores"@es,
+        "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2017/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2017/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2017/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2017/resource/162c4107-14a9-47b3-8461-67eca6a398c4> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2017/resource/162c4107-14a9-47b3-8461-67eca6a398c4/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-indicadores-economico-finacieros-2017/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2017.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2017/resource/162c4107-14a9-47b3-8461-67eca6a398c4/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2018> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2018/Frequency> ;
+    dct:description "Indicadores econ&#243;mico-financieros correspondientes al ejercicio 2018. Contiene datos: financieros y patrimoniales, presupuestarios y sobre urbanismo y obras publicas."@es,
+        "2018 ekitaldiari dagozkion adierazle ekonomiko-finantzarioak. Datu hauek ditu: finantzarioak eta ondarezkoak, aurrekontuenak eta hirigintza eta obra publikoei buruzkoak."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-indicadores-economico-finacieros-2018" ;
+    dct:issued "2021-01-15T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2021-01-15T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Indicadores económico-financieros del año 2018"@es,
+        "2018ko adierazle ekonomiko-finantzarioak"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2018/resource/933f6ed5-ffbb-4599-8238-d4efa359f6a1> ;
+    dcat:keyword "2018"@es,
+        "economía"@es,
+        "finanzas"@es,
+        "gastos"@es,
+        "indicadores"@es,
+        "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2018/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2018/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2018/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2018/resource/933f6ed5-ffbb-4599-8238-d4efa359f6a1> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2018/resource/933f6ed5-ffbb-4599-8238-d4efa359f6a1/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-indicadores-economico-finacieros-2018/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2018.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2018/resource/933f6ed5-ffbb-4599-8238-d4efa359f6a1/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2019> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2019/Frequency> ;
+    dct:description "Indicadores econ&#243;mico-financieros correspondientes al ejercicio 2019. Contiene datos: financieros y patrimoniales, presupuestarios y sobre urbanismo y obras publicas."@es,
+        "2019 ekitaldiari dagozkion adierazle ekonomiko-finantzarioak. Datu hauek ditu: finantzarioak eta ondarezkoak, aurrekontuenak eta hirigintza eta obra publikoei buruzkoak."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-indicadores-economico-finacieros-2019" ;
+    dct:issued "2021-01-15T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2021-01-15T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Indicadores económico-financieros del año 2019"@es,
+        "2019ko adierazle ekonomiko-finantzarioak"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2019/resource/1da51767-7223-4c69-b52f-8ba4d900e940> ;
+    dcat:keyword "2019"@es,
+        "economía"@es,
+        "finanzas"@es,
+        "gastos"@es,
+        "indicadores"@es,
+        "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2019/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2019/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2019/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2019/resource/1da51767-7223-4c69-b52f-8ba4d900e940> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2019/resource/1da51767-7223-4c69-b52f-8ba4d900e940/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-indicadores-economico-finacieros-2019/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2019.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2019/resource/1da51767-7223-4c69-b52f-8ba4d900e940/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2020> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2020/Frequency> ;
+    dct:description "Indicadores econ&#243;mico-financieros correspondientes al ejercicio 2020. Contiene datos: financieros y patrimoniales, presupuestarios y sobre urbanismo y obras publicas."@es,
+        "2020 ekitaldiari dagozkion adierazle ekonomiko-finantzarioak. Datu hauek ditu: finantzarioak eta ondarezkoak, aurrekontuenak eta hirigintza eta obra publikoei buruzkoak."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-indicadores-economico-finacieros-2020" ;
+    dct:issued "2021-04-16T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2021-04-16T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Indicadores económico-financieros del año 2020"@es,
+        "2020ko adierazle ekonomiko-finantzarioak"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2020/resource/f472e937-f51c-40a4-bbdb-adeb8f8cced6> ;
+    dcat:keyword "2020"@es,
+        "economía"@es,
+        "finanzas"@es,
+        "gastos"@es,
+        "indicadores"@es,
+        "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2020/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2020/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2020/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2020/resource/f472e937-f51c-40a4-bbdb-adeb8f8cced6> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2020/resource/f472e937-f51c-40a4-bbdb-adeb8f8cced6/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-indicadores-economico-finacieros-2020/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/indicadores_economico_financieros_2020.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2020/resource/f472e937-f51c-40a4-bbdb-adeb8f8cced6/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2012> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2012/Frequency> ;
+    dct:description "Presupuesto de gastos del Ayuntamiento de Bilbao de 2012."@es,
+        "Bilboko Udalaren gastuen aurrekontua 2012."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-presupuesto-gastos-2012" ;
+    dct:issued "2014-09-15T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2014-09-15T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Presupuesto de gastos del Ayuntamiento de Bilbao de 2012"@es,
+        "Bilboko Udalaren gastuen aurrekontua 2012"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2012/resource/0fa22140-70aa-47a5-ba51-5f9d9712be8f> ;
+    dcat:keyword "2012"@es,
+        "economía"@es,
+        "gastos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2012/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2012/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2012/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2012/resource/0fa22140-70aa-47a5-ba51-5f9d9712be8f> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2012/resource/0fa22140-70aa-47a5-ba51-5f9d9712be8f/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-presupuesto-gastos-2012/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/presupuesto_gastos_2012.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2012/resource/0fa22140-70aa-47a5-ba51-5f9d9712be8f/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2013> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2013/Frequency> ;
+    dct:description "Presupuesto de gastos del Ayuntamiento de Bilbao de 2013."@es,
+        "Bilboko Udalaren gastuen aurrekontua 2013."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-presupuesto-gastos-2013" ;
+    dct:issued "2014-09-15T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2014-09-15T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Presupuesto de gastos del Ayuntamiento de Bilbao de 2013"@es,
+        "Bilboko Udalaren gastuen aurrekontua 2013"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2013/resource/cb5504c2-238e-4b36-8a85-5c70be74be1f> ;
+    dcat:keyword "2013"@es,
+        "economía"@es,
+        "gastos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2013/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2013/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2013/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2013/resource/cb5504c2-238e-4b36-8a85-5c70be74be1f> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2013/resource/cb5504c2-238e-4b36-8a85-5c70be74be1f/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-presupuesto-gastos-2013/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/presupuesto_gastos_2013.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2013/resource/cb5504c2-238e-4b36-8a85-5c70be74be1f/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2014> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2014/Frequency> ;
+    dct:description "Presupuesto de gastos del Ayuntamiento de Bilbao de 2014."@es,
+        "Bilboko Udalaren gastuen aurrekontua 2014."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-presupuesto-gastos-2014" ;
+    dct:issued "2014-09-15T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2014-09-15T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Presupuesto de gastos del Ayuntamiento de Bilbao de 2014"@es,
+        "Bilboko Udalaren gastuen aurrekontua 2014"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2014/resource/20a5e3d5-a985-4fdd-8cd3-f8703d5ddffe> ;
+    dcat:keyword "2014"@es,
+        "economía"@es,
+        "gastos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2014/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2014/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2014/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2014/resource/20a5e3d5-a985-4fdd-8cd3-f8703d5ddffe> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2014/resource/20a5e3d5-a985-4fdd-8cd3-f8703d5ddffe/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-presupuesto-gastos-2014/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/presupuesto_gastos_2014.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2014/resource/20a5e3d5-a985-4fdd-8cd3-f8703d5ddffe/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015/Frequency> ;
+    dct:description "Presupuesto de gastos del Ayuntamiento de Bilbao de 2015."@es,
+        "Bilboko Udalaren gastuen Aurrekontuak 2015."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-presupuesto-gastos-2015" ;
+    dct:issued "2014-12-22T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2014-12-22T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Presupuesto de gastos del Ayuntamiento de Bilbao de 2015"@es,
+        "Bilboko Udalaren gastuen Aurrekontuak 2015"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015/resource/326b4b2e-8da6-43aa-a233-c2c6249513d7> ;
+    dcat:keyword "2015"@es,
+        "economía"@es,
+        "gastos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015/resource/326b4b2e-8da6-43aa-a233-c2c6249513d7> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015/resource/326b4b2e-8da6-43aa-a233-c2c6249513d7/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-presupuesto-gastos-2015/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/presupuesto_gastos_2015.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015/resource/326b4b2e-8da6-43aa-a233-c2c6249513d7/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2012> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2012/Frequency> ;
+    dct:description "Presupuesto de ingresos del Ayuntamiento de Bilbao de 2012."@es,
+        "Bilboko Udalaren sarreren aurrekontua 2012."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-presupuesto-ingresos-2012" ;
+    dct:issued "2014-09-15T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2014-09-15T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Presupuesto de ingresos del Ayuntamiento de Bilbao de 2012"@es,
+        "Bilboko Udalaren sarreren aurrekontua 2012"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2012/resource/296ec77f-9e28-47a4-b2cd-0cc6f319bdce> ;
+    dcat:keyword "2012"@es,
+        "economía"@es,
+        "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2012/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2012/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2012/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2012/resource/296ec77f-9e28-47a4-b2cd-0cc6f319bdce> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2012/resource/296ec77f-9e28-47a4-b2cd-0cc6f319bdce/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-presupuesto-ingresos-2012/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/presupuesto_ingresos_2012.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2012/resource/296ec77f-9e28-47a4-b2cd-0cc6f319bdce/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2013> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2013/Frequency> ;
+    dct:description "Presupuesto de ingresos del Ayuntamiento de Bilbao de 2013."@es,
+        "Bilboko Udalaren sarreren aurrekontua 2013."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-presupuesto-ingresos-2013" ;
+    dct:issued "2014-09-15T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2014-09-15T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Presupuesto de ingresos del Ayuntamiento de Bilbao de 2013"@es,
+        "Bilboko Udalaren sarreren aurrekontua 2013"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2013/resource/c1cfa954-36ff-4eaf-bdc0-403dceff486f> ;
+    dcat:keyword "2013"@es,
+        "economía"@es,
+        "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2013/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2013/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2013/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2013/resource/c1cfa954-36ff-4eaf-bdc0-403dceff486f> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2013/resource/c1cfa954-36ff-4eaf-bdc0-403dceff486f/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-presupuesto-ingresos-2013/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/presupuesto_ingresos_2013.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2013/resource/c1cfa954-36ff-4eaf-bdc0-403dceff486f/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2014> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2014/Frequency> ;
+    dct:description "Presupuesto de ingresos del Ayuntamiento de Bilbao de 2014."@es,
+        "Bilboko Udalaren sarreren aurrekontua 2014."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-presupuesto-ingresos-2014" ;
+    dct:issued "2014-09-15T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2014-09-15T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Presupuesto de ingresos del Ayuntamiento de Bilbao de 2014"@es,
+        "Bilboko Udalaren sarreren aurrekontua 2014"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2014/resource/e4c7735f-b30b-4fac-9765-8a687e83c1ac> ;
+    dcat:keyword "2014"@es,
+        "economía"@es,
+        "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2014/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2014/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2014/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2014/resource/e4c7735f-b30b-4fac-9765-8a687e83c1ac> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2014/resource/e4c7735f-b30b-4fac-9765-8a687e83c1ac/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-presupuesto-ingresos-2014/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/presupuesto_ingresos_2014.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2014/resource/e4c7735f-b30b-4fac-9765-8a687e83c1ac/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015/Frequency> ;
+    dct:description "Presupuesto de ingresos del Ayuntamiento de Bilbao de 2015."@es,
+        "Bilboko Udalaren sarreren Aurrekontuak 2015."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-presupuesto-ingresos-2015" ;
+    dct:issued "2014-12-22T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2014-12-22T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Presupuesto de ingresos del Ayuntamiento de Bilbao de 2015"@es,
+        "Bilboko Udalaren sarreren Aurrekontuak 2015"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015/resource/681847ff-84ed-407f-98f5-b4f6e0403a34> ;
+    dcat:keyword "2015"@es,
+        "economía"@es,
+        "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015/resource/681847ff-84ed-407f-98f5-b4f6e0403a34> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015/resource/681847ff-84ed-407f-98f5-b4f6e0403a34/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-presupuesto-ingresos-2015/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/presupuesto_ingresos_2015.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015/resource/681847ff-84ed-407f-98f5-b4f6e0403a34/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015/Frequency> ;
+    dct:description "Proyecto de Presupuesto de gastos del Ayuntamiento de Bilbao de 2015."@es,
+        "Bilboko Udalaren gastuen Aurrekontuen Proiektua 2015."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-proyecto-presupuesto-gastos-2015" ;
+    dct:issued "2014-10-30T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2014-10-30T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Proyecto de Presupuesto de gastos del Ayuntamiento de Bilbao de 2015"@es,
+        "Bilboko Udalaren gastuen Aurrekontuen Proiektua 2015"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015/resource/d7417acd-04f6-4ad4-b24a-a560a5264dbe> ;
+    dcat:keyword "2015"@es,
+        "economía"@es,
+        "gastos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015/resource/d7417acd-04f6-4ad4-b24a-a560a5264dbe> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015/resource/d7417acd-04f6-4ad4-b24a-a560a5264dbe/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-proyecto-presupuesto-gastos-2015/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_gastos_2015.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015/resource/d7417acd-04f6-4ad4-b24a-a560a5264dbe/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2016> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2016/Frequency> ;
+    dct:description "Proyecto de Presupuesto de gastos del Ayuntamiento de Bilbao de 2016."@es,
+        "Bilboko Udalaren gastuen Aurrekontuen Proiektua 2016."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-proyecto-presupuesto-gastos-2016" ;
+    dct:issued "2015-11-06T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2015-11-06T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Proyecto de Presupuesto de gastos del Ayuntamiento de Bilbao de 2016"@es,
+        "Bilboko Udalaren gastuen Aurrekontuen Proiektua 2016"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2016/resource/d7d046b4-82f6-4480-aa79-2ceaee4d5137> ;
+    dcat:keyword "2016"@es,
+        "economía"@es,
+        "gastos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2016/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2016/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2016/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2016/resource/d7d046b4-82f6-4480-aa79-2ceaee4d5137> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2016/resource/d7d046b4-82f6-4480-aa79-2ceaee4d5137/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-proyecto-presupuesto-gastos-2016/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_gastos_2016.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2016/resource/d7d046b4-82f6-4480-aa79-2ceaee4d5137/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2017> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2017/Frequency> ;
+    dct:description "Proyecto de Presupuesto de gastos del Ayuntamiento de Bilbao de 2017."@es,
+        "Bilboko Udalaren gastuen Aurrekontuen Proiektua 2017."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-proyecto-presupuesto-gastos-2017" ;
+    dct:issued "2016-11-04T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2016-11-04T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Proyecto de Presupuesto de gastos del Ayuntamiento de Bilbao de 2017"@es,
+        "Bilboko Udalaren gastuen Aurrekontuen Proiektua 2017"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2017/resource/a9a0fd50-314c-4ff7-be9c-9f60f711f4b3> ;
+    dcat:keyword "2017"@es,
+        "economía"@es,
+        "gastos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2017/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2017/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2017/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2017/resource/a9a0fd50-314c-4ff7-be9c-9f60f711f4b3> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2017/resource/a9a0fd50-314c-4ff7-be9c-9f60f711f4b3/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-proyecto-presupuesto-gastos-2017/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_gastos_2017.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2017/resource/a9a0fd50-314c-4ff7-be9c-9f60f711f4b3/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2019> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2019/Frequency> ;
+    dct:description "Proyecto de Presupuesto de gastos del Ayuntamiento de Bilbao de 2019."@es,
+        "Bilboko Udalaren gastuen Aurrekontuen Proiektua 2019."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-proyecto-presupuesto-gastos-2019" ;
+    dct:issued "2018-10-30T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2018-10-30T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Proyecto de Presupuesto de gastos del Ayuntamiento de Bilbao de 2019"@es,
+        "Bilboko Udalaren gastuen Aurrekontuen Proiektua 2019"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2019/resource/0f63bde1-4805-4de3-9344-b85edf7d2d20> ;
+    dcat:keyword "2019"@es,
+        "economía"@es,
+        "gastos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2019/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2019/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2019/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2019/resource/0f63bde1-4805-4de3-9344-b85edf7d2d20> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2019/resource/0f63bde1-4805-4de3-9344-b85edf7d2d20/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-proyecto-presupuesto-gastos-2019/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_gastos_2019.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2019/resource/0f63bde1-4805-4de3-9344-b85edf7d2d20/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2020> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2020/Frequency> ;
+    dct:description "Proyecto de Presupuesto de gastos del Ayuntamiento de Bilbao de 2020."@es,
+        "Bilboko Udalaren gastuen Aurrekontuen Proiektua 2020."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-proyecto-presupuesto-gastos-2020" ;
+    dct:issued "2020-05-18T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2020-05-18T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Proyecto de Presupuesto de gastos del Ayuntamiento de Bilbao de 2020"@es,
+        "Bilboko Udalaren gastuen Aurrekontuen Proiektua 2020"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2020/resource/74cd40cd-41b2-46c9-8e88-c2a12035f2ba> ;
+    dcat:keyword "2020"@es,
+        "economía"@es,
+        "gastos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2020/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2020/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2020/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2020/resource/74cd40cd-41b2-46c9-8e88-c2a12035f2ba> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2020/resource/74cd40cd-41b2-46c9-8e88-c2a12035f2ba/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-proyecto-presupuesto-gastos-2020/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_gastos_2020.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2020/resource/74cd40cd-41b2-46c9-8e88-c2a12035f2ba/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2021> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2021/Frequency> ;
+    dct:description "Proyecto de Presupuesto de gastos del Ayuntamiento de Bilbao de 2021."@es,
+        "Bilboko Udalaren gastuen Aurrekontuen Proiektua 2021."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-proyecto-presupuesto-gastos-2021" ;
+    dct:issued "2020-12-09T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2020-12-09T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Proyecto de Presupuesto de gastos del Ayuntamiento de Bilbao de 2021"@es,
+        "Bilboko Udalaren gastuen Aurrekontuen Proiektua 2021"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2021/resource/ce372e66-4ff2-4996-a476-8b7386e6160f> ;
+    dcat:keyword "2021"@es,
+        "economía"@es,
+        "gastos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2021/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2021/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2021/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2021/resource/ce372e66-4ff2-4996-a476-8b7386e6160f> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2021/resource/ce372e66-4ff2-4996-a476-8b7386e6160f/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-proyecto-presupuesto-gastos-2021/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_gastos_2021.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2021/resource/ce372e66-4ff2-4996-a476-8b7386e6160f/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2022> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2022/Frequency> ;
+    dct:description "Proyecto de Presupuesto de gastos del Ayuntamiento de Bilbao de 2022."@es,
+        "Bilboko Udalaren gastuen Aurrekontuen Proiektua 2022."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-proyecto-presupuesto-gastos-2022" ;
+    dct:issued "2021-11-12T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2021-11-12T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Proyecto de Presupuesto de gastos del Ayuntamiento de Bilbao de 2022"@es,
+        "Bilboko Udalaren gastuen Aurrekontuen Proiektua 2022"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2022/resource/3d469895-e716-49b6-be47-d7f87744512a> ;
+    dcat:keyword "2022"@es,
+        "economía"@es,
+        "gastos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2022/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2022/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2022/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2022/resource/3d469895-e716-49b6-be47-d7f87744512a> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2022/resource/3d469895-e716-49b6-be47-d7f87744512a/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-proyecto-presupuesto-gastos-2022/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_gastos_2022.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2022/resource/3d469895-e716-49b6-be47-d7f87744512a/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015/Frequency> ;
+    dct:description "Proyecto de Presupuesto de ingresos del Ayuntamiento de Bilbao de 2015."@es,
+        "Bilboko Udalaren sarreren Aurrekontuen Proiektua 2015."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-proyecto-presupuesto-ingresos-2015" ;
+    dct:issued "2014-10-30T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2014-10-30T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Proyecto de Presupuesto de ingresos del Ayuntamiento de Bilbao de 2015"@es,
+        "Bilboko Udalaren sarreren Aurrekontuen Proiektua 2015"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015/resource/9cc0c558-1a36-4629-9f22-a8426a700717> ;
+    dcat:keyword "2015"@es,
+        "economía"@es,
+        "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015/resource/9cc0c558-1a36-4629-9f22-a8426a700717> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015/resource/9cc0c558-1a36-4629-9f22-a8426a700717/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-proyecto-presupuesto-ingresos-2015/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_ingresos_2015.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015/resource/9cc0c558-1a36-4629-9f22-a8426a700717/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2016> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2016/Frequency> ;
+    dct:description "Proyecto de Presupuesto de ingresos del Ayuntamiento de Bilbao de 2016."@es,
+        "Bilboko Udalaren sarreren Aurrekontuen Proiektua 2016."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-proyecto-presupuesto-ingresos-2016" ;
+    dct:issued "2015-11-06T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2015-11-06T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Proyecto de Presupuesto de ingresos del Ayuntamiento de Bilbao de 2016"@es,
+        "Bilboko Udalaren sarreren Aurrekontuen Proiektua 2016"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2016/resource/9701278b-3a97-43f9-969a-218e856ad391> ;
+    dcat:keyword "2016"@es,
+        "economía"@es,
+        "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2016/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2016/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2016/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2016/resource/9701278b-3a97-43f9-969a-218e856ad391> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2016/resource/9701278b-3a97-43f9-969a-218e856ad391/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-proyecto-presupuesto-ingresos-2016/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_ingresos_2016.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2016/resource/9701278b-3a97-43f9-969a-218e856ad391/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2017> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2017/Frequency> ;
+    dct:description "Proyecto de Presupuesto de ingresos del Ayuntamiento de Bilbao de 2017."@es,
+        "Bilboko Udalaren sarreren Aurrekontuen Proiektua 2017."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-proyecto-presupuesto-ingresos-2017" ;
+    dct:issued "2016-11-04T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2016-11-04T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Proyecto de Presupuesto de ingresos del Ayuntamiento de Bilbao de 2017"@es,
+        "Bilboko Udalaren sarreren Aurrekontuen Proiektua 2017"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2017/resource/3477148f-39da-4607-82d1-32c558f11c44> ;
+    dcat:keyword "2017"@es,
+        "economía"@es,
+        "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2017/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2017/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2017/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2017/resource/3477148f-39da-4607-82d1-32c558f11c44> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2017/resource/3477148f-39da-4607-82d1-32c558f11c44/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-proyecto-presupuesto-ingresos-2017/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_ingresos_2017.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2017/resource/3477148f-39da-4607-82d1-32c558f11c44/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2019> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2019/Frequency> ;
+    dct:description "Proyecto de Presupuesto de ingresos del Ayuntamiento de Bilbao de 2019."@es,
+        "Bilboko Udalaren sarreren Aurrekontuen Proiektua 2019."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-proyecto-presupuesto-ingresos-2019" ;
+    dct:issued "2018-10-30T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2018-10-30T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Proyecto de Presupuesto de ingresos del Ayuntamiento de Bilbao de 2019"@es,
+        "Bilboko Udalaren sarreren Aurrekontuen Proiektua 2019"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2019/resource/a9d8efb0-9d73-4e99-92a5-a25b374cb8b8> ;
+    dcat:keyword "2019"@es,
+        "economía"@es,
+        "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2019/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2019/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2019/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2019/resource/a9d8efb0-9d73-4e99-92a5-a25b374cb8b8> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2019/resource/a9d8efb0-9d73-4e99-92a5-a25b374cb8b8/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-proyecto-presupuesto-ingresos-2019/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_ingresos_2019.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2019/resource/a9d8efb0-9d73-4e99-92a5-a25b374cb8b8/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2020> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2020/Frequency> ;
+    dct:description "Proyecto de Presupuesto de ingresos del Ayuntamiento de Bilbao de 2020."@es,
+        "Bilboko Udalaren sarreren Aurrekontuen Proiektua 2020."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-proyecto-presupuesto-ingresos-2020" ;
+    dct:issued "2020-05-18T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2020-05-18T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Proyecto de Presupuesto de ingresos del Ayuntamiento de Bilbao de 2020"@es,
+        "Bilboko Udalaren sarreren Aurrekontuen Proiektua 2020"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2020/resource/fbd58a49-23c3-4ec2-8859-e8cb0d8ee460> ;
+    dcat:keyword "2020"@es,
+        "economía"@es,
+        "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2020/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2020/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2020/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2020/resource/fbd58a49-23c3-4ec2-8859-e8cb0d8ee460> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2020/resource/fbd58a49-23c3-4ec2-8859-e8cb0d8ee460/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-proyecto-presupuesto-ingresos-2020/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_ingresos_2020.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2020/resource/fbd58a49-23c3-4ec2-8859-e8cb0d8ee460/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2021> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2021/Frequency> ;
+    dct:description "Proyecto de Presupuesto de ingresos del Ayuntamiento de Bilbao de 2021."@es,
+        "Bilboko Udalaren sarreren Aurrekontuen Proiektua 2021."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-proyecto-presupuesto-ingresos-2021" ;
+    dct:issued "2020-12-09T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2020-12-09T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Proyecto de Presupuesto de ingresos del Ayuntamiento de Bilbao de 2021"@es,
+        "Bilboko Udalaren sarreren Aurrekontuen Proiektua 2021"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2021/resource/38415ebb-9aa3-418b-8f8e-fc050d1c3594> ;
+    dcat:keyword "2021"@es,
+        "economía"@es,
+        "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2021/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2021/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2021/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2021/resource/38415ebb-9aa3-418b-8f8e-fc050d1c3594> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2021/resource/38415ebb-9aa3-418b-8f8e-fc050d1c3594/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-proyecto-presupuesto-ingresos-2021/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_ingresos_2021.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2021/resource/38415ebb-9aa3-418b-8f8e-fc050d1c3594/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2022> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2022/Frequency> ;
+    dct:description "Proyecto de Presupuesto de ingresos del Ayuntamiento de Bilbao de 2022."@es,
+        "Bilboko Udalaren sarreren Aurrekontuen Proiektua 2022."@eu ;
+    dct:identifier "http://www.bilbao.net/opendata/catalogo/dato-proyecto-presupuesto-ingresos-2022" ;
+    dct:issued "2021-11-12T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <http://creativecommons.org/licenses/by/3.0/es> ;
+    dct:modified "2021-11-12T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01480209> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Vizcaya> ;
+    dct:title "Proyecto de Presupuesto de ingresos del Ayuntamiento de Bilbao de 2022"@es,
+        "Bilboko Udalaren sarreren Aurrekontuen Proiektua 2022"@eu ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2022/resource/096f14f4-f8df-4bdf-8af9-49c81b44c9a6> ;
+    dcat:keyword "2022"@es,
+        "economía"@es,
+        "ingresos"@es,
+        "presupuesto"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/sector-publico> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2022/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2022/Frequency> rdf:value <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2022/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2022/resource/096f14f4-f8df-4bdf-8af9-49c81b44c9a6> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2022/resource/096f14f4-f8df-4bdf-8af9-49c81b44c9a6/format> ;
+    dct:identifier "http://www.bilbao.net/opendata/es/datos/dato-proyecto-presupuesto-ingresos-2022/csv" ;
+    dct:title "CSV"@es,
+        "CSV"@eu ;
+    dcat:accessURL "https://www.bilbao.eus/bilbaoopendata/economia/proyecto_presupuesto_ingresos_2022.csv" .
+
+<https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2022/resource/096f14f4-f8df-4bdf-8af9-49c81b44c9a6/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20081.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20081.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20081.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20081.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20081> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20081.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20091.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20091.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20091.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20091.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20091> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20091.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20101.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20101.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20101.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20101.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20101> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20101.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20111.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20111.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20111.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20111.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20111> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20111.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20121.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20121.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20121.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20121.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20121> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20121.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20131.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20131.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20131.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20131.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20131> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20131.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20141.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20141.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20141.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20141.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-20141> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-20141.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2015.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2015.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2015.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2015.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2015> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2015.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2016.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2016.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2016.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2016.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2016> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2016.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2017.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2017.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2017.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2017.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2017> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2017.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2018.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2018.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2018.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2018.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2018> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2018.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2019.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2019.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2019.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2019.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2019> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2019.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2020.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2020.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2020.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2020.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-indicadores-economico-financieros-del-ano-2020> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-indicadores-economico-financieros-del-ano-2020.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2012.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2012.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2012.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2012.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2012> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2012.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2013.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2013.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2013.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2013.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2013> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2013.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2014.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2014.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2014.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2014.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2014> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2014.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2012.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2012.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2012.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2012.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2012> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2012.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2013.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2013.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2013.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2013.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2013> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2013.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2014.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2014.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2014.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2014.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2014> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2014.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2015.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2016.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2016.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2016.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2016.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2016> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2016.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2017.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2017.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2017.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2017.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2017> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2017.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2019.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2019.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2019.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2019.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2019> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2019.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2020.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2020.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2020.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2020.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2020> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2020.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2021.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2021.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2021.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2021.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2021> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2021.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2022.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2022.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2022.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2022.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2022> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-gastos-del-ayuntamiento-de-bilbao-de-2022.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2015.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2016.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2016.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2016.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2016.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2016> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2016.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2017.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2017.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2017.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2017.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2017> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2017.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2019.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2019.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2019.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2019.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2019> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2019.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2020.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2020.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2020.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2020.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2020> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2020.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2021.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2021.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2021.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2021.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2021> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2021.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2022.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns2:itemsPerPage "10"^^xsd:long ;
+    ns2:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2022.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2022.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2022.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2022> ) ;
+    api:page "0"^^xsd:long ;
+    ns1:first <http://datos.gob.es/apidata/catalog/dataset/l01480209-proyecto-de-presupuesto-de-ingresos-del-ayuntamiento-de-bilbao-de-2022.ttl?_page=0> .
+

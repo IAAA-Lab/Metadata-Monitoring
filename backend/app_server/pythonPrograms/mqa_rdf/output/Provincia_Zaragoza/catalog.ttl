@@ -1,0 +1,1211 @@
+@prefix api: <http://purl.org/linked-data/api/vocab#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://a9.com/-/spec/opensearch/1.1/> .
+@prefix ns2: <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://datos.gob.es/catalogo/l01502973-ejecucion-presupuestaria> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01502973-ejecucion-presupuestaria/Frequency> ;
+    dct:description """Desglose de Ingresos y/o de Gastos corrientes realizados trimestralmente por el Ayuntamiento de Zaragoza.
+Fuente de Información: Servicio de Contabilidad, Servicio de Redes y Sistemas
+Herramientas para Desarrolladores Accediendo a http://www.zaragoza.es/api/recurso/sector-publico/presupuesto/ingreso-corriente.(json|xml|csv) se obtienen los registros de los ingresos del último trimestre cargado. 
+Accediendo a http://www.zaragoza.es/api/recurso/sector-publico/presupuesto/gasto-corriente.(json|xml|csv) se obtienen los registros de los gastos del último trimestre cargado. 
+Para conocer las fechas de las que se disponen datos, se deberá acceder a:
+http://www.zaragoza.es/api/recurso/sector-publico/presupuesto/ingreso-corriente/fecha.(json|xml|csv)
+http://www.zaragoza.es/api/recurso/sector-publico/presupuesto/gasto-corriente/fecha.(json|xml|csv)
+Para acceder al desglose de los Ingresos o los de Gastos corrientes de un trimestre concreto, seleccionar el enlace que contiene los datos trimestrales que interesan y añadir la extensión correspondiente al formato en el que se deseen obtener los datos a los enlaces que se proporcionan.
+Por ejemplo: 
+http://www.zaragoza.es/api/recurso/sector-publico/presupuesto/ingreso-corriente/fecha/20130327.(json|xml|csv)
+http://www.zaragoza.es/api/recurso/sector-publico/presupuesto/gasto-corriente/fecha/20130327.(json|xml|csv)
+Por defecto, se obtienen sólo los 50 primeros registros si se quiere obtener más hay que utilizar los parámetros rows, número de filas a devolver start, primera fila que se obtendrá"""@es ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/336" ;
+    dct:issued "2013-03-27T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://www.zaragoza.es/sede/portal/aviso-legal#condiciones> ;
+    dct:modified "2021-04-12T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01502973> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Aragon>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Zaragoza> ;
+    dct:title "Ejecución Presupuestaria"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01502973-ejecucion-presupuestaria/resource/e79bb350-ea34-48f3-97c1-c7d2229b43e0> ;
+    dcat:keyword "Ayuntamiento de Zaragoza"@es,
+        "administración local"@es,
+        "economía"@es,
+        "ejecución del presupuesto"@es,
+        "presupuesto local"@es,
+        "relación administración-administrado"@es,
+        "transparencia administrativa"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/hacienda> .
+
+<https://datos.gob.es/catalogo/l01502973-ejecucion-presupuestaria/DurationDescription> time:months 1.0 .
+
+<https://datos.gob.es/catalogo/l01502973-ejecucion-presupuestaria/Frequency> rdf:value <https://datos.gob.es/catalogo/l01502973-ejecucion-presupuestaria/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01502973-ejecucion-presupuestaria/resource/e79bb350-ea34-48f3-97c1-c7d2229b43e0> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-ejecucion-presupuestaria/resource/e79bb350-ea34-48f3-97c1-c7d2229b43e0/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2750" ;
+    dct:title "api Gastos"@es ;
+    dcat:accessURL "https://www.zaragoza.es/docs-api_sede/#/Ayuntamiento%3A%20Presupuestos" .
+
+<https://datos.gob.es/catalogo/l01502973-ejecucion-presupuestaria/resource/e79bb350-ea34-48f3-97c1-c7d2229b43e0/format> a dct:IMT ;
+    rdf:value "application/api" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/Frequency> ;
+    dct:description """Presupuesto general del Ayuntamiento de Zaragoza del año 2010
+Índice de contenido:
+Resumen Presupuesto Municipal 2010
+Bases de Ejecución
+Estado de Ingresos
+Estado de gastos: Clasificación económica (I)
+Estado de gastos: Clasificación económica (II)
+Estado de gastos: Clasificación orgánica (I)(ACS-JUV)
+Estado de gastos: Clasificación orgánica (II)(LAL-VIV)
+Plurianuales
+http://www.zaragoza.es/ciudad/encasa/hacienda/presupuestos/presupuesto2010.htm Más información"""@es ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/325" ;
+    dct:issued "2010-02-05T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://www.zaragoza.es/sede/portal/aviso-legal#condiciones> ;
+    dct:modified "2010-02-11T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01502973> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Aragon>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Zaragoza> ;
+    dct:title "Presupuesto Municipal 2010"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/0545342d-91ae-4285-acc5-613cfb60778a>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/3bf622a7-0196-47b0-a49e-1e4e7b14f603>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/43888e12-0000-4854-a1ec-3d8985dd5ed7>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/50c93a17-d91d-40df-b7f2-a23fc4853d3e>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/5fa3c9b3-3195-4792-8d24-033f1dbae80b>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/65de186a-c72b-4884-9305-2f39393c3328>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/c5e94214-75c6-4563-b73a-a20461178118>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/f9bafb0a-f5cd-4344-b5e5-df984ad68abf> ;
+    dcat:keyword "2010"@es,
+        "Ayuntamiento de Zaragoza"@es,
+        "administración local"@es,
+        "economía"@es,
+        "presupuesto local"@es,
+        "relación administración-administrado"@es,
+        "transparencia administrativa"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/hacienda> .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/Frequency> rdf:value <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/0545342d-91ae-4285-acc5-613cfb60778a> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/0545342d-91ae-4285-acc5-613cfb60778a/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/883" ;
+    dct:title "Estado de gastos: Clasificación orgánico 2010"@es ;
+    dcat:accessURL "https://www.zaragoza.es/cont/paginas//encasa/hacienda/presupuestos/Ingresos_2010.ods" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/0545342d-91ae-4285-acc5-613cfb60778a/format> a dct:IMT ;
+    rdf:value "application/vnd.oasis.opendocument.spreadsheet" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/3bf622a7-0196-47b0-a49e-1e4e7b14f603> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/3bf622a7-0196-47b0-a49e-1e4e7b14f603/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/878" ;
+    dct:title "Resumen del Presupuesto Municipal 2010"@es ;
+    dcat:accessURL "https://www.zaragoza.es/cont/paginas/encasa/hacienda/presupuestos/Resumen2010.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/3bf622a7-0196-47b0-a49e-1e4e7b14f603/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/43888e12-0000-4854-a1ec-3d8985dd5ed7> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/43888e12-0000-4854-a1ec-3d8985dd5ed7/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/885" ;
+    dct:title "Estado de gastos: Clasificación económica 2010"@es ;
+    dcat:accessURL "https://www.zaragoza.es/cont/paginas//encasa/hacienda/presupuestos/Gastos_2010.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/43888e12-0000-4854-a1ec-3d8985dd5ed7/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/50c93a17-d91d-40df-b7f2-a23fc4853d3e> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/50c93a17-d91d-40df-b7f2-a23fc4853d3e/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/886" ;
+    dct:title "Estado de gastos: Clasificación económica 2010"@es ;
+    dcat:accessURL "https://www.zaragoza.es/cont/paginas//encasa/hacienda/presupuestos/Gastos_2010.ods" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/50c93a17-d91d-40df-b7f2-a23fc4853d3e/format> a dct:IMT ;
+    rdf:value "application/vnd.oasis.opendocument.spreadsheet" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/5fa3c9b3-3195-4792-8d24-033f1dbae80b> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/5fa3c9b3-3195-4792-8d24-033f1dbae80b/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/882" ;
+    dct:title "Estado de gastos: Clasificación orgánico 2010"@es ;
+    dcat:accessURL "https://www.zaragoza.es/cont/paginas/encasa/hacienda/presupuestos/Ingresos_2010.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/5fa3c9b3-3195-4792-8d24-033f1dbae80b/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/65de186a-c72b-4884-9305-2f39393c3328> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/65de186a-c72b-4884-9305-2f39393c3328/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/879" ;
+    dct:title "Resumen del Presupuesto Municipal 2010"@es ;
+    dcat:accessURL "https://www.zaragoza.es/cont/paginas//encasa/hacienda/presupuestos/Resumen2010.ods" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/65de186a-c72b-4884-9305-2f39393c3328/format> a dct:IMT ;
+    rdf:value "application/vnd.oasis.opendocument.spreadsheet" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/c5e94214-75c6-4563-b73a-a20461178118> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/c5e94214-75c6-4563-b73a-a20461178118/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2104" ;
+    dct:title "Gastos Corrientes 2010"@es ;
+    dcat:accessURL "https://www.zaragoza.es/sede/servicio/presupuesto/gasto-corriente/fecha/20101231.json?rows=10000" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/c5e94214-75c6-4563-b73a-a20461178118/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/f9bafb0a-f5cd-4344-b5e5-df984ad68abf> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/f9bafb0a-f5cd-4344-b5e5-df984ad68abf/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2100" ;
+    dct:title "Ingresos corrientes 2010"@es ;
+    dcat:accessURL "https://www.zaragoza.es/sede/servicio/presupuesto/ingreso-corriente/fecha/20101231.json?rows=10000" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010/resource/f9bafb0a-f5cd-4344-b5e5-df984ad68abf/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/Frequency> ;
+    dct:description """Presupuesto general del Ayuntamiento de Zaragoza del año 2011
+Índice de contenido:
+Resumen Presupuesto Municipal 2011
+Bases de Ejecución 
+Estado de Ingresos 
+Estado de gastos: Clasificación orgánica 
+Estado de gastos: Clasificación económica
+Plurianuales
+http://www.zaragoza.es/ciudad/encasa/hacienda/presupuestos/presupuesto2011.htm Más información"""@es ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/298" ;
+    dct:issued "2011-01-28T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://www.zaragoza.es/sede/portal/aviso-legal#condiciones> ;
+    dct:modified "2011-02-04T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01502973> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Aragon>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Zaragoza> ;
+    dct:title "Presupuesto Municipal 2011"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/1abef1f4-f6f0-4172-8a9d-952988b05d21>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/31d03419-839f-423f-bb7f-c87a50e1a5a8>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/7f4fed35-9695-4b37-aae2-5ab5a831dd2b>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/b3a5693e-7097-4d5b-8fdc-3984efb62058>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/bdd79544-3ca4-4b46-910d-df7ee6dd9a38>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/ca7404ff-2329-4d0d-b1bd-8b81f5b450c7>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/d0fdf12f-8d68-4e04-95f8-dcfe7d2cb0f4>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/d2ddc7da-83cb-4a0d-bb17-424bbf89fdb1>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/e79f2c5b-b19a-4159-b419-eecb3a140896>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/ec8f3f79-4f96-4386-a0d3-0a64b2485b09> ;
+    dcat:keyword "2011"@es,
+        "Ayuntamiento de Zaragoza"@es,
+        "administración local"@es,
+        "economía"@es,
+        "presupuesto local"@es,
+        "relación administración-administrado"@es,
+        "transparencia administrativa"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/hacienda> .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/Frequency> rdf:value <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/1abef1f4-f6f0-4172-8a9d-952988b05d21> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/1abef1f4-f6f0-4172-8a9d-952988b05d21/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/781" ;
+    dct:title "Estado de gastos: Clasificación económica 2011"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2011/Gastos_Eco_C2011.ods" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/1abef1f4-f6f0-4172-8a9d-952988b05d21/format> a dct:IMT ;
+    rdf:value "application/vnd.oasis.opendocument.spreadsheet" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/31d03419-839f-423f-bb7f-c87a50e1a5a8> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/31d03419-839f-423f-bb7f-c87a50e1a5a8/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/770" ;
+    dct:title "Estado de gastos: Clasificación económica 2011"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2011/Gastos_Eco_C2011.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/31d03419-839f-423f-bb7f-c87a50e1a5a8/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/7f4fed35-9695-4b37-aae2-5ab5a831dd2b> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/7f4fed35-9695-4b37-aae2-5ab5a831dd2b/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/780" ;
+    dct:title "Estado de gastos: Clasificación orgánica 2011"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2011/Gastos_Eco_O2011.ods" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/7f4fed35-9695-4b37-aae2-5ab5a831dd2b/format> a dct:IMT ;
+    rdf:value "application/vnd.oasis.opendocument.spreadsheet" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/b3a5693e-7097-4d5b-8fdc-3984efb62058> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/b3a5693e-7097-4d5b-8fdc-3984efb62058/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/778" ;
+    dct:title "Resumen del Presupuesto Municipal 2011"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2011/Resumen2011.ods" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/b3a5693e-7097-4d5b-8fdc-3984efb62058/format> a dct:IMT ;
+    rdf:value "application/vnd.oasis.opendocument.spreadsheet" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/bdd79544-3ca4-4b46-910d-df7ee6dd9a38> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/bdd79544-3ca4-4b46-910d-df7ee6dd9a38/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/779" ;
+    dct:title "Estado de Ingresos 2011"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2011/Ingresos_2011.ods" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/bdd79544-3ca4-4b46-910d-df7ee6dd9a38/format> a dct:IMT ;
+    rdf:value "application/vnd.oasis.opendocument.spreadsheet" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/ca7404ff-2329-4d0d-b1bd-8b81f5b450c7> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/ca7404ff-2329-4d0d-b1bd-8b81f5b450c7/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/763" ;
+    dct:title "Resumen del Presupuesto Municipal 2011"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2011/Resumen2011.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/ca7404ff-2329-4d0d-b1bd-8b81f5b450c7/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/d0fdf12f-8d68-4e04-95f8-dcfe7d2cb0f4> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/d0fdf12f-8d68-4e04-95f8-dcfe7d2cb0f4/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/766" ;
+    dct:title "Estado de Ingresos 2011"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2011/Ingresos_2011.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/d0fdf12f-8d68-4e04-95f8-dcfe7d2cb0f4/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/d2ddc7da-83cb-4a0d-bb17-424bbf89fdb1> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/d2ddc7da-83cb-4a0d-bb17-424bbf89fdb1/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/768" ;
+    dct:title "Estado de gastos: Clasificación orgánica 2011"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2011/Gastos_Eco_O2011.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/d2ddc7da-83cb-4a0d-bb17-424bbf89fdb1/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/e79f2c5b-b19a-4159-b419-eecb3a140896> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/e79f2c5b-b19a-4159-b419-eecb3a140896/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2105" ;
+    dct:title "Gastos Corrientes 2011"@es ;
+    dcat:accessURL "https://www.zaragoza.es/sede/servicio/presupuesto/gasto-corriente/fecha/20111231.json?rows=10000" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/e79f2c5b-b19a-4159-b419-eecb3a140896/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/ec8f3f79-4f96-4386-a0d3-0a64b2485b09> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/ec8f3f79-4f96-4386-a0d3-0a64b2485b09/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2101" ;
+    dct:title "Ingresos corrientes 2011"@es ;
+    dcat:accessURL "https://www.zaragoza.es/sede/servicio/presupuesto/ingreso-corriente/fecha/20111231.json?rows=10000" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011/resource/ec8f3f79-4f96-4386-a0d3-0a64b2485b09/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/Frequency> ;
+    dct:description """Presupuesto general del Ayuntamiento de Zaragoza del año 2012
+Índice de contenido:
+Resumen Presupuesto Municipal 2012
+Bases de Ejecución
+Estado de Ingresos
+Estado de gastos: Clasificación económica
+Estado de gastos: Clasificación orgánica
+Plurianuales
+http://www.zaragoza.es/ciudad/encasa/hacienda/presupuestos/presupuestos-2012.htm Más información"""@es ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/324" ;
+    dct:issued "2012-06-11T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://www.zaragoza.es/sede/portal/aviso-legal#condiciones> ;
+    dct:modified "2012-06-15T00:00:00+02:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01502973> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Aragon>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Zaragoza> ;
+    dct:title "Presupuesto Municipal 2012"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/025e5253-97fe-4236-8324-4c648ec91b42>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/0ca95853-bbc9-4c75-b85b-c1acdd71be8b>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/1f869bde-6f33-467a-822c-bfb04638f0c4>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/5ba7d190-d691-4fc5-aaf4-dc066996b25b>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/6db5a941-be4d-4936-af0e-73b4fe826acc>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/73e7aca5-947e-468e-860e-d291cacd2de5>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/7dad3873-1adf-480f-8808-be6bfef33cbb>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/99eba940-7d59-4bfa-bc6b-163ec548de41>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/de5712d9-de70-4a39-8b4d-f456ef673188>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/ebc8258a-9835-403c-86de-e7efc75938c3> ;
+    dcat:keyword "2012"@es,
+        "Ayuntamiento de Zaragoza"@es,
+        "administración local"@es,
+        "economía"@es,
+        "presupuesto local"@es,
+        "relación administración-administrado"@es,
+        "transparencia administrativa"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/hacienda> .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/Frequency> rdf:value <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/025e5253-97fe-4236-8324-4c648ec91b42> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/025e5253-97fe-4236-8324-4c648ec91b42/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/868" ;
+    dct:title "Estado de Ingresos 2012"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2012/Ingresos2012.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/025e5253-97fe-4236-8324-4c648ec91b42/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/0ca95853-bbc9-4c75-b85b-c1acdd71be8b> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/0ca95853-bbc9-4c75-b85b-c1acdd71be8b/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/869" ;
+    dct:title "Estado de Ingresos 2012"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2012/Ingresos2012.ods" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/0ca95853-bbc9-4c75-b85b-c1acdd71be8b/format> a dct:IMT ;
+    rdf:value "application/vnd.oasis.opendocument.spreadsheet" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/1f869bde-6f33-467a-822c-bfb04638f0c4> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/1f869bde-6f33-467a-822c-bfb04638f0c4/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/871" ;
+    dct:title "Estado de gastos: Clasificación económica 2012"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2012/GastosEconomicos2012.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/1f869bde-6f33-467a-822c-bfb04638f0c4/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/5ba7d190-d691-4fc5-aaf4-dc066996b25b> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/5ba7d190-d691-4fc5-aaf4-dc066996b25b/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/864" ;
+    dct:title "Resumen del Presupuesto Municipal 2012"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2012/Resumen2012.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/5ba7d190-d691-4fc5-aaf4-dc066996b25b/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/6db5a941-be4d-4936-af0e-73b4fe826acc> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/6db5a941-be4d-4936-af0e-73b4fe826acc/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/865" ;
+    dct:title "Resumen del Presupuesto Municipal 2012"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2012/Resumen2012.ods" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/6db5a941-be4d-4936-af0e-73b4fe826acc/format> a dct:IMT ;
+    rdf:value "application/vnd.oasis.opendocument.spreadsheet" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/73e7aca5-947e-468e-860e-d291cacd2de5> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/73e7aca5-947e-468e-860e-d291cacd2de5/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/875" ;
+    dct:title "Estado de gastos: Clasificación orgánica 2012"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2012/GastosOrganicos2012.ods" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/73e7aca5-947e-468e-860e-d291cacd2de5/format> a dct:IMT ;
+    rdf:value "application/vnd.oasis.opendocument.spreadsheet" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/7dad3873-1adf-480f-8808-be6bfef33cbb> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/7dad3873-1adf-480f-8808-be6bfef33cbb/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/872" ;
+    dct:title "Estado de gastos: Clasificación económica 2012"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2012/GastosEconomicos2012.ods" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/7dad3873-1adf-480f-8808-be6bfef33cbb/format> a dct:IMT ;
+    rdf:value "application/vnd.oasis.opendocument.spreadsheet" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/99eba940-7d59-4bfa-bc6b-163ec548de41> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/99eba940-7d59-4bfa-bc6b-163ec548de41/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2106" ;
+    dct:title "Gastos Corrientes 2012"@es ;
+    dcat:accessURL "https://www.zaragoza.es/sede/servicio/presupuesto/gasto-corriente/fecha/20121231.json?rows=10000" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/99eba940-7d59-4bfa-bc6b-163ec548de41/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/de5712d9-de70-4a39-8b4d-f456ef673188> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/de5712d9-de70-4a39-8b4d-f456ef673188/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/874" ;
+    dct:title "Estado de gastos: Clasificación orgánica 2012"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2012/GastosOrganicos2012.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/de5712d9-de70-4a39-8b4d-f456ef673188/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/ebc8258a-9835-403c-86de-e7efc75938c3> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/ebc8258a-9835-403c-86de-e7efc75938c3/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2102" ;
+    dct:title "Ingresos corrientes 2012"@es ;
+    dcat:accessURL "https://www.zaragoza.es/sede/servicio/presupuesto/ingreso-corriente/fecha/20121231.json?rows=10000" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012/resource/ebc8258a-9835-403c-86de-e7efc75938c3/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013> a dcat:Dataset ;
+    dct:description """Presupuesto general del Ayuntamiento de Zaragoza del año 2013
+Índice de contenido:
+Bases de Ejecución 
+Resumen del Presupuesto Municipal
+Estado de Ingresos 
+Estado de gastos: Clasificación económica
+Estado de gastos: Clasificación orgánica 
+Plurianuales
+Resumen del Presupuesto General Consolidado 2013
+Resumen de los Presupuestos 2013 de Organismos Autónomos Municipales y Sociedades Municipales
+http://www.zaragoza.es/ciudad/encasa/hacienda/presupuestos/presupuestos-2013.htm Más información"""@es ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/328" ;
+    dct:issued "2013-05-29T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://www.zaragoza.es/sede/portal/aviso-legal#condiciones> ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01502973> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Aragon>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Zaragoza> ;
+    dct:title "Presupuesto Municipal 2013"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/06bf603a-bf66-4f50-87c4-91fb23cefe50>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/0dbae7d6-e508-451a-bf5e-77e306379318>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/1d4d10ca-b486-465a-acc7-9ed60c930981>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/20f54088-f937-4c44-8e68-b4151ffa042f>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/3e832381-564a-4ca6-9870-ad41354af572>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/5c67c229-706b-4201-869d-b9adb1c5bcdd>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/5eeab48c-1203-4618-b678-37b86103648c>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/607ec8bb-5030-4ba4-b3f7-59547ab44d14>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/6fcea55f-0222-4b2b-8f81-10632f9bdd40>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/77e940db-93d0-49d9-96da-8d0c1fa14422>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/907ef449-fb0d-4d52-8c49-e8731d15811a>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/9944b1cf-19b7-4e81-bdbf-95206ffd9114>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/c034360b-72fc-4cb6-bdf4-834ecf68dbb8>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/ed7eccf0-f8ea-4bf4-a08f-5f3d223e8c37> ;
+    dcat:keyword "Ayuntamiento de Zaragoza"@es,
+        "administración local"@es,
+        "economía"@es,
+        "presupuesto local"@es,
+        "relación administración-administrado"@es,
+        "transparencia administrativa"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/hacienda> .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/06bf603a-bf66-4f50-87c4-91fb23cefe50> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/06bf603a-bf66-4f50-87c4-91fb23cefe50/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/994" ;
+    dct:title "Estado de Gastos: Clasificación Orgánica 2013"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2013/Gastos-Clasificacion-Organica-13.ods" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/06bf603a-bf66-4f50-87c4-91fb23cefe50/format> a dct:IMT ;
+    rdf:value "application/vnd.oasis.opendocument.spreadsheet" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/0dbae7d6-e508-451a-bf5e-77e306379318> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/0dbae7d6-e508-451a-bf5e-77e306379318/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/1000" ;
+    dct:title "Resumen del Presupuesto de Organismos Autónomos Municipales y Sociedades Municipales 2013"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2013/Resumen-Presupuesto-Organismos-Sociedades-13.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/0dbae7d6-e508-451a-bf5e-77e306379318/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/1d4d10ca-b486-465a-acc7-9ed60c930981> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/1d4d10ca-b486-465a-acc7-9ed60c930981/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/985" ;
+    dct:title "Resumen del Presupuesto 2013"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2013/Resumen-Presupuesto-Municipal-13.ods" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/1d4d10ca-b486-465a-acc7-9ed60c930981/format> a dct:IMT ;
+    rdf:value "application/vnd.oasis.opendocument.spreadsheet" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/20f54088-f937-4c44-8e68-b4151ffa042f> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/20f54088-f937-4c44-8e68-b4151ffa042f/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/984" ;
+    dct:title "Resumen del Presupuesto 2013"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2013/Resumen-Presupuesto-Municipal-13.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/20f54088-f937-4c44-8e68-b4151ffa042f/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/3e832381-564a-4ca6-9870-ad41354af572> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/3e832381-564a-4ca6-9870-ad41354af572/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/990" ;
+    dct:title "Estado de Gastos: Clasificación Económica 2013"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2013/Gastos-Clasificacion-Economica-13.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/3e832381-564a-4ca6-9870-ad41354af572/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/5c67c229-706b-4201-869d-b9adb1c5bcdd> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/5c67c229-706b-4201-869d-b9adb1c5bcdd/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/1001" ;
+    dct:title "Resumen del Presupuesto de Organismos Autónomos Municipales y Sociedades Municipales 2013"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2013/Resumen-Presupuesto-Organismos-Sociedades-13.ods" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/5c67c229-706b-4201-869d-b9adb1c5bcdd/format> a dct:IMT ;
+    rdf:value "application/vnd.oasis.opendocument.spreadsheet" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/5eeab48c-1203-4618-b678-37b86103648c> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/5eeab48c-1203-4618-b678-37b86103648c/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/998" ;
+    dct:title "Resumen del Presupuesto Consolidado 2013"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2013/Resumen-Presupuesto-Consolidado-13.ods" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/5eeab48c-1203-4618-b678-37b86103648c/format> a dct:IMT ;
+    rdf:value "application/vnd.oasis.opendocument.spreadsheet" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/607ec8bb-5030-4ba4-b3f7-59547ab44d14> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/607ec8bb-5030-4ba4-b3f7-59547ab44d14/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2107" ;
+    dct:title "Gastos Corrientes 2013"@es ;
+    dcat:accessURL "https://www.zaragoza.es/sede/servicio/presupuesto/gasto-corriente/fecha/20131231.json?rows=10000" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/607ec8bb-5030-4ba4-b3f7-59547ab44d14/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/6fcea55f-0222-4b2b-8f81-10632f9bdd40> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/6fcea55f-0222-4b2b-8f81-10632f9bdd40/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/988" ;
+    dct:title "Estado de Ingresos 2013"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2013/Ingresos-13.ods" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/6fcea55f-0222-4b2b-8f81-10632f9bdd40/format> a dct:IMT ;
+    rdf:value "application/vnd.oasis.opendocument.spreadsheet" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/77e940db-93d0-49d9-96da-8d0c1fa14422> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/77e940db-93d0-49d9-96da-8d0c1fa14422/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/997" ;
+    dct:title "Resumen del Presupuesto Consolidado 2013"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2013/Resumen-Presupuesto-Consolidado-13.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/77e940db-93d0-49d9-96da-8d0c1fa14422/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/907ef449-fb0d-4d52-8c49-e8731d15811a> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/907ef449-fb0d-4d52-8c49-e8731d15811a/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/987" ;
+    dct:title "Estado de Ingresos 2013"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2013/Ingresos-13.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/907ef449-fb0d-4d52-8c49-e8731d15811a/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/9944b1cf-19b7-4e81-bdbf-95206ffd9114> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/9944b1cf-19b7-4e81-bdbf-95206ffd9114/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/991" ;
+    dct:title "Estado de Gastos: Clasificación Económica 2013"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2013/Gastos-Clasificacion-Economica-13.ods" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/9944b1cf-19b7-4e81-bdbf-95206ffd9114/format> a dct:IMT ;
+    rdf:value "application/vnd.oasis.opendocument.spreadsheet" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/c034360b-72fc-4cb6-bdf4-834ecf68dbb8> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/c034360b-72fc-4cb6-bdf4-834ecf68dbb8/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/993" ;
+    dct:title "Estado de Gastos: Clasificación Orgánica 2013"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2013/Gastos-Clasificacion-Organica-13.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/c034360b-72fc-4cb6-bdf4-834ecf68dbb8/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/ed7eccf0-f8ea-4bf4-a08f-5f3d223e8c37> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/ed7eccf0-f8ea-4bf4-a08f-5f3d223e8c37/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2103" ;
+    dct:title "Ingresos corrientes 2013"@es ;
+    dcat:accessURL "https://www.zaragoza.es/sede/servicio/presupuesto/ingreso-corriente/fecha/20131231.json?rows=10000" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013/resource/ed7eccf0-f8ea-4bf4-a08f-5f3d223e8c37/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014> a dcat:Dataset ;
+    dct:description """Presupuesto general del Ayuntamiento de Zaragoza del año 2014
+Índice de contenido:
+Bases de Ejecución
+Resumen del Presupuesto Municipal
+Estado de Ingresos 
+Estado de gastos: Clasificación económica
+Estado de gastos: Clasificación orgánica
+Plurianuales
+Resumen del Presupuesto General Consolidado 2014
+Resumen de los Presupuestos 2014 de Organismos Autónomos Municipales y Sociedades Municipales
+http://www.zaragoza.es/ciudad/encasa/hacienda/presupuestos/presupuestos.htm Más información"""@es ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/1020" ;
+    dct:issued "2013-12-17T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://www.zaragoza.es/sede/portal/aviso-legal#condiciones> ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01502973> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Aragon>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Zaragoza> ;
+    dct:title "Presupuesto Municipal 2014"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/05b82b9c-dd1f-4ebb-a70e-54772408e652>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/0f721870-fcac-4928-813a-d71e5625796d>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/1738dd94-dde8-49ee-931b-ffab5b0fcec2>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/1fb946aa-0b57-49be-9ef8-b60fd867a9b8>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/221ffff1-ac7d-475f-888b-b06365f866c3>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/25853fbf-cbe3-4e0e-8793-7af068fb7b5d>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/277f52bb-757a-4acf-bbba-6d0311fb075c>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/71a9dd77-29c7-4cd7-a209-8be8b487a169>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/7268b656-562f-4da6-a040-dac9bef4969c>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/77a0a224-9e15-4950-94d5-d369fc67d578>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/7e3348b6-1a8f-492b-9b41-de93dfe4d605>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/8a009ff8-edad-4def-b41e-0ab792158335>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/8bb025fc-a901-4571-8de8-d8677834724d>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/9bdeb756-90d7-405f-89f2-a4148f581f6d>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/d30e803e-7c3a-4819-a895-00b025444d97>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/e69c83d4-4c74-4524-8731-44c07fa16111>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/f1728b29-41a9-48d9-95ee-866d784163d2>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/fe94ba84-c05f-493a-a52c-1954fbfb3af0> ;
+    dcat:keyword "Ayuntamiento de Zaragoza"@es,
+        "administración local"@es,
+        "economía"@es,
+        "presupuesto local"@es,
+        "relación administración-administrado"@es,
+        "transparencia administrativa"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/hacienda> .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/05b82b9c-dd1f-4ebb-a70e-54772408e652> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/05b82b9c-dd1f-4ebb-a70e-54772408e652/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2005" ;
+    dct:title "Estado de Ingresos 2014"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2014/Estado-Ingresos-2014.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/05b82b9c-dd1f-4ebb-a70e-54772408e652/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/0f721870-fcac-4928-813a-d71e5625796d> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/0f721870-fcac-4928-813a-d71e5625796d/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2011" ;
+    dct:title "Estado de Gastos: Clasificación Orgánica 2014"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2014/Estado-Gastos-Organica-2014.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/0f721870-fcac-4928-813a-d71e5625796d/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/1738dd94-dde8-49ee-931b-ffab5b0fcec2> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/1738dd94-dde8-49ee-931b-ffab5b0fcec2/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2015" ;
+    dct:title "Resumen del Presupuesto Consolidado 2014"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2014/Resumen-Consolidado-2014.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/1738dd94-dde8-49ee-931b-ffab5b0fcec2/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/1fb946aa-0b57-49be-9ef8-b60fd867a9b8> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/1fb946aa-0b57-49be-9ef8-b60fd867a9b8/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2002" ;
+    dct:title "Resumen del Presupuesto 2014"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2014/Resumen-Presupuesto-2014.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/1fb946aa-0b57-49be-9ef8-b60fd867a9b8/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/221ffff1-ac7d-475f-888b-b06365f866c3> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/221ffff1-ac7d-475f-888b-b06365f866c3/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2009" ;
+    dct:title "Estado de Gastos: Clasificación Económica 2014"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2014/Estado-Gastos-Economica-2014.ods" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/221ffff1-ac7d-475f-888b-b06365f866c3/format> a dct:IMT ;
+    rdf:value "application/vnd.oasis.opendocument.spreadsheet" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/25853fbf-cbe3-4e0e-8793-7af068fb7b5d> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/25853fbf-cbe3-4e0e-8793-7af068fb7b5d/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2108" ;
+    dct:title "Ingresos corrientes 2014"@es ;
+    dcat:accessURL "https://www.zaragoza.es/sede/servicio/presupuesto/ingreso-corriente/fecha/20140101.json?rows=10000" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/25853fbf-cbe3-4e0e-8793-7af068fb7b5d/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/277f52bb-757a-4acf-bbba-6d0311fb075c> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/277f52bb-757a-4acf-bbba-6d0311fb075c/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2018" ;
+    dct:title "Resumen de los Presupuestos de Organismos Autónomos Municipales y Sociedades Municipales 2014"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2014/Resumen-OOAA-Sociedades-2014.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/277f52bb-757a-4acf-bbba-6d0311fb075c/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/71a9dd77-29c7-4cd7-a209-8be8b487a169> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/71a9dd77-29c7-4cd7-a209-8be8b487a169/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2012" ;
+    dct:title "Estado de Gastos: Clasificación Orgánica 2014"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2014/Estado-Gastos-Organica-2014.ods" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/71a9dd77-29c7-4cd7-a209-8be8b487a169/format> a dct:IMT ;
+    rdf:value "application/vnd.oasis.opendocument.spreadsheet" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/7268b656-562f-4da6-a040-dac9bef4969c> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/7268b656-562f-4da6-a040-dac9bef4969c/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2064" ;
+    dct:title "Resumen del Presupuesto 2014"@es ;
+    dcat:accessURL "https://www.zaragoza.es/cont/paginas/opendata/Resumen-Presupuesto-2014.csv" ;
+    dcat:byteSize 1650.0 .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/7268b656-562f-4da6-a040-dac9bef4969c/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/77a0a224-9e15-4950-94d5-d369fc67d578> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/77a0a224-9e15-4950-94d5-d369fc67d578/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2060" ;
+    dct:title "Estado de Gastos: Clasificación Económica 2014"@es ;
+    dcat:accessURL "https://www.zaragoza.es/cont/paginas/opendata/Estado-Gastos-Economica-2014.csv" ;
+    dcat:byteSize 74535.0 .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/77a0a224-9e15-4950-94d5-d369fc67d578/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/7e3348b6-1a8f-492b-9b41-de93dfe4d605> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/7e3348b6-1a8f-492b-9b41-de93dfe4d605/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2062" ;
+    dct:title "Estado de Ingresos 2014"@es ;
+    dcat:accessURL "https://www.zaragoza.es/cont/paginas/opendata/Estado-Ingresos-2014.csv" ;
+    dcat:byteSize 8546.0 .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/7e3348b6-1a8f-492b-9b41-de93dfe4d605/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/8a009ff8-edad-4def-b41e-0ab792158335> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/8a009ff8-edad-4def-b41e-0ab792158335/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2016" ;
+    dct:title "Resumen del Presupuesto Consolidado 2014"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2014/Resumen-Consolidado-2014.ods" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/8a009ff8-edad-4def-b41e-0ab792158335/format> a dct:IMT ;
+    rdf:value "application/vnd.oasis.opendocument.spreadsheet" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/8bb025fc-a901-4571-8de8-d8677834724d> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/8bb025fc-a901-4571-8de8-d8677834724d/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2019" ;
+    dct:title "Resumen de los Presupuestos de Organismos Autónomos Municipales y Sociedades Municipales 2014"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2014/Resumen-OOAA-Sociedades-2014.ods" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/8bb025fc-a901-4571-8de8-d8677834724d/format> a dct:IMT ;
+    rdf:value "application/vnd.oasis.opendocument.spreadsheet" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/9bdeb756-90d7-405f-89f2-a4148f581f6d> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/9bdeb756-90d7-405f-89f2-a4148f581f6d/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2063" ;
+    dct:title "Resumen del Presupuesto Consolidado 2014"@es ;
+    dcat:accessURL "https://www.zaragoza.es/cont/paginas/opendata/Resumen-Consolidado-2014.csv" ;
+    dcat:byteSize 1706.0 .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/9bdeb756-90d7-405f-89f2-a4148f581f6d/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/d30e803e-7c3a-4819-a895-00b025444d97> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/d30e803e-7c3a-4819-a895-00b025444d97/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2061" ;
+    dct:title "Estado de Gastos: Clasificación Orgánica 2014"@es ;
+    dcat:accessURL "https://www.zaragoza.es/cont/paginas/opendata/Estado-Gastos-Organica-2014.csv" ;
+    dcat:byteSize 74535.0 .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/d30e803e-7c3a-4819-a895-00b025444d97/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/e69c83d4-4c74-4524-8731-44c07fa16111> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/e69c83d4-4c74-4524-8731-44c07fa16111/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2008" ;
+    dct:title "Estado de Gastos: Clasificación Económica 2014"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2014/Estado-Gastos-Economica-2014.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/e69c83d4-4c74-4524-8731-44c07fa16111/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/f1728b29-41a9-48d9-95ee-866d784163d2> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/f1728b29-41a9-48d9-95ee-866d784163d2/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2006" ;
+    dct:title "Estado de Ingresos 2014"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2014/Estado-Ingresos-2014.ods" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/f1728b29-41a9-48d9-95ee-866d784163d2/format> a dct:IMT ;
+    rdf:value "application/vnd.oasis.opendocument.spreadsheet" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/fe94ba84-c05f-493a-a52c-1954fbfb3af0> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/fe94ba84-c05f-493a-a52c-1954fbfb3af0/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2003" ;
+    dct:title "Resumen del Presupuesto 2014"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2014/Resumen-Presupuesto-2014.ods" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014/resource/fe94ba84-c05f-493a-a52c-1954fbfb3af0/format> a dct:IMT ;
+    rdf:value "application/vnd.oasis.opendocument.spreadsheet" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/Frequency> ;
+    dct:description "Presupuesto general del Ayuntamiento de Zaragoza del año 2015"@es ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/1340" ;
+    dct:issued "2015-03-24T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://www.zaragoza.es/sede/portal/aviso-legal#condiciones> ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01502973> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Aragon>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Zaragoza> ;
+    dct:title "Presupuesto Municipal 2015"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/1972ef06-4d50-48d2-bef2-85fae15a108e>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/1b191837-2902-4fca-802d-90547d0270ce>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/2543f6c5-b22a-4300-8d38-c1d0bf30f998>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/5bb6a6d3-c106-44c0-b247-a4d1365f48b5>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/71a63742-238c-4d08-b1fe-3d1d7961f83e>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/76468da2-cafa-4073-af5b-f4b3954aef2d>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/8d7c2ffe-9910-4e7d-ae38-bfda994e52c1>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/b6e377f4-0046-4dcb-acb8-c323ebbd2051>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/c04cc77f-260f-4623-97b3-52cd9571b48e>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/c335f93d-11a2-4eed-b729-b757c7354b44>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/dbb29a0a-3840-4823-816d-7c0c0e49f233>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/dca7eb74-1ca3-476a-aaa2-757da98dac4f>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/ede008b3-d090-4ad4-a2be-62324991cdc3> ;
+    dcat:keyword "Ayuntamiento de Zaragoza"@es,
+        "administración local"@es,
+        "presupuesto local"@es,
+        "relación administración-administrado"@es,
+        "transparencia administrativa"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/economia>,
+        <http://datos.gob.es/kos/sector-publico/sector/hacienda> .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/Frequency> rdf:value <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/1972ef06-4d50-48d2-bef2-85fae15a108e> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/1972ef06-4d50-48d2-bef2-85fae15a108e/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2962" ;
+    dct:title "Resumen del Presupuesto General Consolidado 2015"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2015/9_Resumen_Pto_General_Consolidado_2015.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/1972ef06-4d50-48d2-bef2-85fae15a108e/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/1b191837-2902-4fca-802d-90547d0270ce> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/1b191837-2902-4fca-802d-90547d0270ce/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2943" ;
+    dct:title "Estado de Gastos Clasificación Económica 2015"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2015/4_Estado%20de%20Gastos_Economico_Pto_2015.csv" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/1b191837-2902-4fca-802d-90547d0270ce/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/2543f6c5-b22a-4300-8d38-c1d0bf30f998> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/2543f6c5-b22a-4300-8d38-c1d0bf30f998/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2949" ;
+    dct:title "Gasto corriente 2015"@es ;
+    dcat:accessURL "https://www.zaragoza.es/docs-api_sede/#/Ayuntamiento%3A%20Presupuestos" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/2543f6c5-b22a-4300-8d38-c1d0bf30f998/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/5bb6a6d3-c106-44c0-b247-a4d1365f48b5> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/5bb6a6d3-c106-44c0-b247-a4d1365f48b5/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2940" ;
+    dct:title "Resumen presupuesto municipal 2015"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2015/2_%20Resumen_Pto_%20Municipal_%202015.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/5bb6a6d3-c106-44c0-b247-a4d1365f48b5/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/71a63742-238c-4d08-b1fe-3d1d7961f83e> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/71a63742-238c-4d08-b1fe-3d1d7961f83e/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2944" ;
+    dct:title "Ingresos corrientes 2015"@es ;
+    dcat:accessURL "https://www.zaragoza.es/docs-api_sede/#/Ayuntamiento%3A%20Presupuestos" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/71a63742-238c-4d08-b1fe-3d1d7961f83e/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/76468da2-cafa-4073-af5b-f4b3954aef2d> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/76468da2-cafa-4073-af5b-f4b3954aef2d/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2942" ;
+    dct:title "Estado de Gastos: Clasificación Orgánica"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2015/5_EstadodeGastos_Organico_Pto_2015.csv" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/76468da2-cafa-4073-af5b-f4b3954aef2d/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/8d7c2ffe-9910-4e7d-ae38-bfda994e52c1> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/8d7c2ffe-9910-4e7d-ae38-bfda994e52c1/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2945" ;
+    dct:title "Resumen del Presupuesto Municipal"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2015/2_%20Resumen_Pto_%20Municipal_%202015.csv" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/8d7c2ffe-9910-4e7d-ae38-bfda994e52c1/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/b6e377f4-0046-4dcb-acb8-c323ebbd2051> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/b6e377f4-0046-4dcb-acb8-c323ebbd2051/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2961" ;
+    dct:title "Resumen del Presupuesto General Consolidado 2015"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2015/9_Resumen_Pto_General_Consolidado_2015.csv" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/b6e377f4-0046-4dcb-acb8-c323ebbd2051/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/c04cc77f-260f-4623-97b3-52cd9571b48e> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/c04cc77f-260f-4623-97b3-52cd9571b48e/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2946" ;
+    dct:title "Estado de Gastos: Clasificación Económica 2015"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2015/4_Estado%20de%20Gastos_Economico_Pto_2015.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/c04cc77f-260f-4623-97b3-52cd9571b48e/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/c335f93d-11a2-4eed-b729-b757c7354b44> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/c335f93d-11a2-4eed-b729-b757c7354b44/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2960" ;
+    dct:title "Resumen de los Presupuestos 2015 de Organismos Autónomos Municipales y Sociedades Municipales"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2015/8PresupuestosOOAAySociedades_2015.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/c335f93d-11a2-4eed-b729-b757c7354b44/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/dbb29a0a-3840-4823-816d-7c0c0e49f233> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/dbb29a0a-3840-4823-816d-7c0c0e49f233/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2947" ;
+    dct:title "Estado de Gastos: Clasificación Programas 2015"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2015/6_EstadodeGastos_Programas_Pto_2015.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/dbb29a0a-3840-4823-816d-7c0c0e49f233/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/dca7eb74-1ca3-476a-aaa2-757da98dac4f> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/dca7eb74-1ca3-476a-aaa2-757da98dac4f/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2941" ;
+    dct:title "Estado de Gastos: Clasificación Orgánica"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2015/5_EstadodeGastos_Organico_Pto_2015.xls" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/dca7eb74-1ca3-476a-aaa2-757da98dac4f/format> a dct:IMT ;
+    rdf:value "application/vnd.ms-excel" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/ede008b3-d090-4ad4-a2be-62324991cdc3> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/ede008b3-d090-4ad4-a2be-62324991cdc3/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/2948" ;
+    dct:title "Estado de Gastos: Clasificación Programas 2015"@es ;
+    dcat:accessURL "https://www.zaragoza.es/contenidos/encasa/hacienda/presupuestos/2015/6_EstadodeGastos_Programas_Pto_2015.csv" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015/resource/ede008b3-d090-4ad4-a2be-62324991cdc3/format> a dct:IMT ;
+    rdf:value "text/csv" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2016> a dcat:Dataset ;
+    dct:accrualPeriodicity <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2016/Frequency> ;
+    dct:description """Presupuesto general del Ayuntamiento de Zaragoza del año 2016
+
+INDICE DE CONTENIDO:
+
+
+	Bases de Ejecución
+	Resumen del Presupuesto Municipal
+	Estado de Ingresos
+	Estado de gastos: Clasificación económica
+	Estado de gastos: Clasificación orgánica
+	Plurianuales
+	Resumen del Presupuesto General Consolidado 2016"""@es ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/1540" ;
+    dct:issued "2016-04-13T00:00:00+02:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://www.zaragoza.es/sede/portal/aviso-legal#condiciones> ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01502973> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Aragon>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Zaragoza> ;
+    dct:title "Presupuesto Municipal 2016"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2016/resource/58537186-8fbb-489d-80a1-67d21c2e102e>,
+        <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2016/resource/b9a76df8-4dad-4092-9ac2-8b9887bb5ad6> ;
+    dcat:keyword "Ayuntamiento de Zaragoza"@es,
+        "administración local"@es,
+        "presupuesto local"@es,
+        "relación administración-administrado"@es,
+        "transparencia administrativa"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/hacienda> .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2016/DurationDescription> time:years 1.0 .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2016/Frequency> rdf:value <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2016/DurationDescription> .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2016/resource/58537186-8fbb-489d-80a1-67d21c2e102e> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2016/resource/58537186-8fbb-489d-80a1-67d21c2e102e/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/3181" ;
+    dct:title "Ingresos 2016"@es ;
+    dcat:accessURL "https://www.zaragoza.es/sede/servicio/presupuesto/ingreso-corriente/fecha/20160331.json?rows=10000" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2016/resource/58537186-8fbb-489d-80a1-67d21c2e102e/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2016/resource/b9a76df8-4dad-4092-9ac2-8b9887bb5ad6> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2016/resource/b9a76df8-4dad-4092-9ac2-8b9887bb5ad6/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/3180" ;
+    dct:title "Gasto corriente 2016"@es ;
+    dcat:accessURL "https://www.zaragoza.es/api/recurso/sector-publico/presupuesto/gasto-corriente/fecha/20160331.json?rows=10000" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2016/resource/b9a76df8-4dad-4092-9ac2-8b9887bb5ad6/format> a dct:IMT ;
+    rdf:value "application/json" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuestos-municipales-anteriores-2004-2009> a dcat:Dataset ;
+    dct:description """Presupuestos generales del Ayuntamiento de Zaragoza de ejercicios anteriores y de sus entidades dependientes (Organismos Autónomos y Sociedades Mercantiles).
+Fuente de información: Ayuntamiento de Zaragoza. Servicio de Presupuestos
+http://www.zaragoza.es/ciudad/encasa/hacienda/presupuestos/presupuestos_anteriores.htm Más Información"""@es ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/326" ;
+    dct:issued "2004-03-01T00:00:00+01:00"^^xsd:dateTime ;
+    dct:language "es" ;
+    dct:license <https://www.zaragoza.es/sede/portal/aviso-legal#condiciones> ;
+    dct:modified "2009-03-03T00:00:00+01:00"^^xsd:dateTime ;
+    dct:publisher <http://datos.gob.es/recurso/sector-publico/org/Organismo/L01502973> ;
+    dct:spatial <http://datos.gob.es/recurso/sector-publico/territorio/Autonomia/Aragon>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Pais/España>,
+        <http://datos.gob.es/recurso/sector-publico/territorio/Provincia/Zaragoza> ;
+    dct:title "Presupuestos Municipales Anteriores (2004-2009)"@es ;
+    dcat:distribution <https://datos.gob.es/catalogo/l01502973-presupuestos-municipales-anteriores-2004-2009/resource/1f3d5a25-73b1-4f3f-b027-9dadd5447bc9>,
+        <https://datos.gob.es/catalogo/l01502973-presupuestos-municipales-anteriores-2004-2009/resource/272964e6-80d6-4ca0-a589-9c37c8921461>,
+        <https://datos.gob.es/catalogo/l01502973-presupuestos-municipales-anteriores-2004-2009/resource/50b242ec-c5a7-4428-9fbb-6c28c51a7276>,
+        <https://datos.gob.es/catalogo/l01502973-presupuestos-municipales-anteriores-2004-2009/resource/6b4e10ed-a716-414d-bd84-86a27de3912c>,
+        <https://datos.gob.es/catalogo/l01502973-presupuestos-municipales-anteriores-2004-2009/resource/cfca9ad9-0776-4fff-a080-b8f36e76c8d7> ;
+    dcat:keyword "Ayuntamiento de Zaragoza"@es,
+        "administración local"@es,
+        "economía"@es,
+        "presupuesto local"@es,
+        "relación administración-administrado"@es,
+        "transparencia administrativa"@es ;
+    dcat:theme <http://datos.gob.es/kos/sector-publico/sector/hacienda> .
+
+<https://datos.gob.es/catalogo/l01502973-presupuestos-municipales-anteriores-2004-2009/resource/1f3d5a25-73b1-4f3f-b027-9dadd5447bc9> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuestos-municipales-anteriores-2004-2009/resource/1f3d5a25-73b1-4f3f-b027-9dadd5447bc9/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/925" ;
+    dct:title "Presupuesto Municipal 2009"@es ;
+    dcat:accessURL "https://www.zaragoza.es/ciudad/encasa/hacienda/presupuestos/presupuesto2009.htm" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuestos-municipales-anteriores-2004-2009/resource/1f3d5a25-73b1-4f3f-b027-9dadd5447bc9/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuestos-municipales-anteriores-2004-2009/resource/272964e6-80d6-4ca0-a589-9c37c8921461> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuestos-municipales-anteriores-2004-2009/resource/272964e6-80d6-4ca0-a589-9c37c8921461/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/923" ;
+    dct:title "Presupuesto Municipal 2008"@es ;
+    dcat:accessURL "https://www.zaragoza.es/ciudad/encasa/hacienda/presupuestos/presupuesto2008.htm" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuestos-municipales-anteriores-2004-2009/resource/272964e6-80d6-4ca0-a589-9c37c8921461/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuestos-municipales-anteriores-2004-2009/resource/50b242ec-c5a7-4428-9fbb-6c28c51a7276> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuestos-municipales-anteriores-2004-2009/resource/50b242ec-c5a7-4428-9fbb-6c28c51a7276/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/921" ;
+    dct:title "Presupuesto Municipal 2007"@es ;
+    dcat:accessURL "https://www.zaragoza.es/ciudad/encasa/hacienda/presupuestos/default07.htm" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuestos-municipales-anteriores-2004-2009/resource/50b242ec-c5a7-4428-9fbb-6c28c51a7276/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuestos-municipales-anteriores-2004-2009/resource/6b4e10ed-a716-414d-bd84-86a27de3912c> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuestos-municipales-anteriores-2004-2009/resource/6b4e10ed-a716-414d-bd84-86a27de3912c/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/920" ;
+    dct:title "Presupuesto Municipal 2006"@es ;
+    dcat:accessURL "https://www.zaragoza.es/ciudad/encasa/hacienda/presupuestos/default06.htm" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuestos-municipales-anteriores-2004-2009/resource/6b4e10ed-a716-414d-bd84-86a27de3912c/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuestos-municipales-anteriores-2004-2009/resource/cfca9ad9-0776-4fff-a080-b8f36e76c8d7> a dcat:Distribution ;
+    dct:format <https://datos.gob.es/catalogo/l01502973-presupuestos-municipales-anteriores-2004-2009/resource/cfca9ad9-0776-4fff-a080-b8f36e76c8d7/format> ;
+    dct:identifier "https://www.zaragoza.es/sede/servicio/catalogo/formato/924" ;
+    dct:title "Presupuesto Municipal 2004"@es ;
+    dcat:accessURL "https://www.zaragoza.es/ciudad/encasa/hacienda/presupuestos/pre2004.htm" .
+
+<https://datos.gob.es/catalogo/l01502973-presupuestos-municipales-anteriores-2004-2009/resource/cfca9ad9-0776-4fff-a080-b8f36e76c8d7/format> a dct:IMT ;
+    rdf:value "text/html" .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01502973-ejecucion-presupuestaria.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01502973-ejecucion-presupuestaria.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01502973-ejecucion-presupuestaria.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01502973-ejecucion-presupuestaria.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01502973-ejecucion-presupuestaria> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01502973-ejecucion-presupuestaria.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2010.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2010.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2010.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2010.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2010> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2010.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2011.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2011.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2011.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2011.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2011> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2011.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2012.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2012.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2012.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2012.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2012> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2012.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2013.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2013.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2013.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2013.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2013> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2013.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2014.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2014.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2014.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2014.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2014> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2014.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2015.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2015.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2015.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2015.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2015> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2015.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2016.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2016.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2016.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2016.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01502973-presupuesto-municipal-2016> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuesto-municipal-2016.ttl?_page=0> .
+
+<http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuestos-municipales-anteriores-2004-2009.ttl> a api:ListEndpoint,
+        api:Page ;
+    ns1:itemsPerPage "10"^^xsd:long ;
+    ns1:startIndex "1"^^xsd:long ;
+    dct:hasPart <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuestos-municipales-anteriores-2004-2009.ttl> ;
+    dct:isPartOf <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuestos-municipales-anteriores-2004-2009.ttl> ;
+    api:definition <http://datos.gob.es/apidata/catalog/meta/dataset/_id.ttl> ;
+    api:extendedMetadataVersion <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuestos-municipales-anteriores-2004-2009.ttl?_metadata=all> ;
+    api:items ( <https://datos.gob.es/catalogo/l01502973-presupuestos-municipales-anteriores-2004-2009> ) ;
+    api:page "0"^^xsd:long ;
+    ns2:first <http://datos.gob.es/apidata/catalog/dataset/l01502973-presupuestos-municipales-anteriores-2004-2009.ttl?_page=0> .
+
