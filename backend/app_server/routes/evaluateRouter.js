@@ -4,6 +4,6 @@ const evaluateController = require('../controllers/evaluateController')
 
 
 /* GET users listing. */
-router.get('/', evaluateController.executePython);
+router.get('/mqa_sparql', evaluateController.mqa_sparql);
 
 module.exports = router;

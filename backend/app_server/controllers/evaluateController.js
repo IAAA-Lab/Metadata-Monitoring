@@ -1,35 +1,44 @@
-const { Result } = require('./schema')
+const { results_mqa_sparql } = require('./schema')
 
-const executePython = function (req, res) {
-    const PythonShell = require('python-shell').PythonShell;
+const PythonShell = require('python-shell').PythonShell;
+const myPython = './app_server/pythonPrograms/my-environment/bin/python3'
 
+const mqa_sparql = function (req, res) {
     const options = {
-        pythonPath: "./app_server/pythonPrograms/my-environment/bin/python3",
+        pythonPath: myPython,
         args: [req.query.url]
     };
 
-    console.log("entra!!")
-
-    PythonShell.run('./app_server/pythonPrograms/mqa_sparql/run.py', options, function (err, results) {
+    PythonShell.run('./app_server/pythonPrograms/mqa_sparql/run.py', options, function (err, output) {
         if (err)
             throw err;
-        // Results is an array consisting of messages collected during execution
-        console.log('results: %j', results);
-        Result.create({text:  results[results.length - 1]})
+
+        let properties = []
+        //component 1 and output.length-2 is ignored because the last message is not usefull
+        for(let i=1; i<output.length-2; i++) {
+            let property = output[i].split(' ')
+            let property_item = {
+                Dimension: property[0],
+                Indicator_property: property[1],
+                Count: property[2],
+                Population: property[3],
+                Percentage: property[4],
+                Points: property[5]
+            }
+            properties.push(property_item)
+        }
+        let result = {
+            Date: new Date(),
+            properties: properties
+        }
+        console.log(properties)
+        // results_mqa_sparql.create(result)
         console.log("guardado")
     });
-
-    // console.log("entrado: " + req.query.url)
-    // const CronJob = require('cron').CronJob;
-    // new CronJob('* * * * * *', function() {
-    //     console.log("URL: " + req.query.url)
-    // },
-    //     null,
-    //     true);
 
     res.send("vale ya")
 }
 
 module.exports = {
-    executePython
-}
+    mqa_sparql
+};
