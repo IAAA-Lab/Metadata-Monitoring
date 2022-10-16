@@ -1,5 +1,5 @@
 const {Schema, model} = require("mongoose")
-
+const bcrypt = require('bcrypt');
 
 const properties_ISO19157 = new Schema({
     Dimension: {
@@ -70,6 +70,23 @@ const results_mqa_sparql_schema = new Schema({
     }
 })
 
+const admin_schema = new Schema({
+    username: {
+        type: String,
+        required: true
+    },
+    password: {
+        type: String,
+        required: true
+    }
+})
+
+// check if the user password is valid
+admin_schema.methods.validPassword = function(password) {
+    return bcrypt.compareSync(password, this.password);
+};
+
 module.exports = {
-    results_mqa_sparql: model('results_mqa_sparql', results_mqa_sparql_schema)
+    Results_mqa_sparql: model('results_mqa_sparql', results_mqa_sparql_schema),
+    Admin: model('admin', admin_schema)
 }

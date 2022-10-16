@@ -6,9 +6,12 @@ const logger = require('morgan');
 const cors = require('cors');
 const Agenda = require('agenda');
 const connectionDB = require('./app_server/config/db.config')
+const passport = require('passport');
+var session = require('express-session');
 
 const agenda = new Agenda({db: {address: connectionDB.url_agenda}});
 require('./app_server/services/connection')
+require('./app_server/config/passport')(passport);
 
 const evaluateRouter = require('./app_server/routes/evaluateRouter');
 
@@ -25,6 +28,19 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors())
 
+app.use(session({ secret: 'secreto' })); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+
+app.get('/login', passport.authenticate('local'), function(req, res) {
+  res.send('logeado');
+});
+app.post('/logout', function(req, res, next){
+  req.logout(function(err) {
+    if (err) { return next(err); }
+    res.redirect('/');
+  });
+});
 app.use('/evaluate', evaluateRouter);
 
 // catch 404 and forward to error handler

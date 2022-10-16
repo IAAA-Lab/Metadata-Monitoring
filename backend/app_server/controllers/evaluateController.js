@@ -39,6 +39,11 @@ const mqa_sparql = function (req, res) {
     res.send("vale ya")
 }
 
+const test_true = function (req, res) {
+    res.send("dentro")
+}
+
 module.exports = {
-    mqa_sparql
+    mqa_sparql,
+    test_true
 };
