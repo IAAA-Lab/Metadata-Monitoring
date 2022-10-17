@@ -10,7 +10,6 @@
     <div class="col-6" style="background: green"><h2>Methods</h2>
       <input type="text" style="width: 75%" #url>
       <button type="button" class="btn btn-primary" (click)="getForm(mqa, iso19157, sparql, ckan, nti, dcat_ap, direct, local, url, days)">Evaluate</button>
-
       <br>
       <input class="form-check-input" type="checkbox" name="methods" id="MQA" #mqa>
       <label class="form-check-label" for="MQA">MQA</label><br>
@@ -42,12 +41,18 @@
       <br></div>
     <div class="col-3" style="background: purple">
       <br>
-      <label for="days">Days:</label>
-      <input type="number" min="1" step="1" id="days" [disabled]="periodicityIsDisabled" style="width: 75%" #days>
+      <div  class="text-center" *ngIf="!isAdminLoggedIn">
+        <a type="button" class="btn btn-primary" href="/login">Login</a>
+      </div>
       <br>
-      <input class="form-check-input" type="checkbox" name="periodicity" id="periodicity" (click)="togglePeriodicity()">
-      <label class="form-check-label" for="periodicity">Run periodically</label><br>
-
+      <div *ngIf="isAdminLoggedIn">
+        <label>Days:
+          <input type="number" min="1" step="1" name="days" [disabled]="periodicityIsDisabled" style="width: 75%" [(ngModel)]="days">
+        </label>
+        <br>
+        <input class="form-check-input" type="checkbox" name="periodicity" id="periodicity" (click)="togglePeriodicity()">
+        <label class="form-check-label" for="periodicity">Run periodically</label><br>
+      </div>
       <br>
       <label *ngIf="periodicityIsNotANumber" class="text-danger">This field must contain only numbers greater than 0</label>
       <br>

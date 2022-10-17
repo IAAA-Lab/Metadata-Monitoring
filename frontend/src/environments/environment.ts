@@ -1,6 +1,9 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
+import { Injectable } from '@angular/core';
+import {BehaviorSubject} from 'rxjs';
+import {HttpClient, HttpParams} from '@angular/common/http';
 
 export const environment = {
   production: false,
@@ -8,7 +11,22 @@ export const environment = {
 };
 
 export enum apiPaths {
-  evaluate = "/evaluate"
+  mqa_sparql = "/evaluate/mqa_sparql",
+  login = "/login"
+}
+
+@Injectable({
+  providedIn: 'root'
+})
+export class GlobalVariables {
+  isAdminLoggedIn = false
+
+  private messageIsAdminLoggedIn = new BehaviorSubject(this.isAdminLoggedIn);
+  sharedMessageIsAdminLoggedIn = this.messageIsAdminLoggedIn.asObservable();
+
+  nextMessageIsAdminLoggedIn(message: boolean) {
+    this.messageIsAdminLoggedIn.next(message);
+  }
 }
 
 /*

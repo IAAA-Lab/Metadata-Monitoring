@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient, HttpParams} from "@angular/common/http";
-import {apiPaths, environment} from "../../environments/environment";
-import { tap } from 'rxjs/operators';
+import {apiPaths, environment, GlobalVariables} from "../../environments/environment";
 
 @Component({
   selector: 'app-evaluation',
@@ -19,15 +18,19 @@ export class EvaluationComponent implements OnInit {
   displayFilters = false
   periodicityIsNotANumber = false
   periodicityIsDisabled = true
+  isAdminLoggedIn: boolean | undefined
 
-  constructor(private http: HttpClient) { }
+  days = -1;
+
+  constructor(private http: HttpClient, public GlobalVariables: GlobalVariables) { }
 
   ngOnInit(): void {
+    this.GlobalVariables.sharedMessageIsAdminLoggedIn.subscribe( messageIsAdminLoggedIn => this.isAdminLoggedIn = messageIsAdminLoggedIn);
   }
 
   getForm(mqa: HTMLInputElement, iso19157: HTMLInputElement, sparql: HTMLInputElement, ckan: HTMLInputElement,
           nti: HTMLInputElement, dcat_ap: HTMLInputElement, direct: HTMLInputElement, local: HTMLInputElement,
-          url: HTMLInputElement, days: HTMLInputElement): void {
+          url: HTMLInputElement, days: number): void {
     console.log("mqa: " + mqa.checked)
     console.log("iso19157: " + iso19157.checked)
     console.log("sparql: " + sparql.checked)
@@ -37,8 +40,9 @@ export class EvaluationComponent implements OnInit {
     console.log("direct: " + direct.checked)
     console.log("local: " + local.checked)
     console.log("URL: " + url.value)
-    console.log("Days: " + days.valueAsNumber)
-    if (!this.periodicityIsDisabled && (isNaN(days.valueAsNumber) || days.valueAsNumber <= 0)) {
+    console.log("Days: " + days)
+
+    if (!this.periodicityIsDisabled && (days <= 0)) {
       this.periodicityIsNotANumber = true
     } else {
       this.periodicityIsNotANumber = false
@@ -48,11 +52,11 @@ export class EvaluationComponent implements OnInit {
 
   evaluate(url: HTMLInputElement) {
 
-    const parameters = new HttpParams()
+    const params = new HttpParams()
       .set("url", url.value)
 
     //TODO: comprobar si hay error sacar ventanita y si no lo hay, diciendo que todo correcto que ya aparecerá en los resultados
-    this.http.get(this.baseUrl + apiPaths.evaluate, {params: parameters, responseType: "text"}).subscribe(
+    this.http.get(this.baseUrl + apiPaths.mqa_sparql, {params: params, responseType: "text"}).subscribe(
       (resp: string) => {
         console.log(resp)
       }
