@@ -252,7 +252,7 @@ class MQAevaluate:
             self.totalPoints += partialPoints
         else:
             partialPoints = 0
-        print(dimension, property, count, population, percentage, partialPoints)
+        print(dimension, property, count, population, percentage, partialPoints, sep=",")
 
     def findability_keywords_available(self):
         dimension = FINDABILITY

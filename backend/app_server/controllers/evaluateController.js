@@ -1,4 +1,4 @@
-const { results_mqa_sparql } = require('./schema')
+const { Results_mqa_sparql } = require('./schema')
 
 const PythonShell = require('python-shell').PythonShell;
 const myPython = './app_server/pythonPrograms/my-environment/bin/python3'
@@ -16,7 +16,7 @@ const mqa_sparql = function (req, res) {
         let properties = []
         //component 1 and output.length-2 is ignored because the last message is not usefull
         for(let i=1; i<output.length-2; i++) {
-            let property = output[i].split(' ')
+            let property = output[i].split(',')
             let property_item = {
                 Dimension: property[0],
                 Indicator_property: property[1],
@@ -31,8 +31,7 @@ const mqa_sparql = function (req, res) {
             Date: new Date(),
             properties: properties
         }
-        console.log(properties)
-        // results_mqa_sparql.create(result)
+        Results_mqa_sparql.create(result)
         console.log("guardado")
     });
 

@@ -81,12 +81,13 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-// async function graceful() {
-//   await agenda.stop();
-//   process.exit(0);
-// }
-//
-// process.on("SIGTERM", graceful);
-// process.on("SIGINT", graceful);
+//stops the agenda module gracefully
+async function graceful() {
+  await agenda.stop();
+  process.exit(0);
+}
+
+process.on("SIGTERM", graceful);
+process.on("SIGINT", graceful);
 
 module.exports = app;
