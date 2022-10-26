@@ -94,7 +94,7 @@ class MQAevaluate:
         sg.parse(source=self.shapes, format='turtle')
 
         try:
-            r = validate(self.graph, shacl_graph=sg, inference='rdfs', abort_on_first=True)
+            r = validate(self.graph, shacl_graph=sg, inference='rdfs', abort_on_error=True)
             conforms, results_graph, results_text = r
             if not conforms:
                 error_file_name = self.catalog+ '_errors_SHACL.txt'
@@ -513,9 +513,9 @@ class MQAevaluate:
         self.findability_category_available()
         self.findability_spatial_available()
         self.findability_temporal_available()
-        # self.accesibility_accessURL_code_200()
-        # self.accesibility_downloadURL_available()
-        # self.accesibility_downloadURL_code_200()
+        self.accesibility_accessURL_code_200()
+        self.accesibility_downloadURL_available()
+        self.accesibility_downloadURL_code_200()
         self.interoperability_format_available()
         self.interoperability_mediaType_available()
         self.interoperability_format_from_vocabulary()

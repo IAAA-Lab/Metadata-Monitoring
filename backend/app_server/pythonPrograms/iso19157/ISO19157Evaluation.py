@@ -6,13 +6,17 @@ Last update: 2020-04-14
 Class to compute measures proposed according to ISO 19157
 """
 
-from SPARQLWrapper import SPARQLWrapper, JSON
 import urllib.request
-import validators
-from pyshacl import validate
-import rdflib
-from IndicePerspicuidad import DeterminarIndices
 from datetime import datetime, timezone
+
+import rdflib
+import validators
+from SPARQLWrapper import SPARQLWrapper, JSON
+from pyshacl import validate
+
+from IndicePerspicuidad import DeterminarIndices
+
+from uri_access import *
 
 COMPLETENESS_OMISSION = 'DQ_CompletenessOmission'
 
@@ -40,13 +44,15 @@ DATASET = 'dcat:Dataset'
 
 THRESHOLD = 0.9584
 
-HARVEST_DATE = datetime.fromisoformat("2019-06-13T00:00:00+02:00")
+LIMIT = 200000
+
 
 def make_request(url):
     request = urllib.request.Request(url)
     # Make the HTTP request.
     response = urllib.request.urlopen(request, timeout=5)
     assert 200 <= response.code < 400
+
 
 def load_vocabulary(vocabulary_file):
     vocabulary = []
@@ -57,11 +63,13 @@ def load_vocabulary(vocabulary_file):
                 vocabulary.append(words[0])
     return vocabulary
 
+
 def contains_exact(vocabulary, word):
     for value in vocabulary:
         if value == word:
             return True
     return False
+
 
 def contains(vocabulary, word):
     for value in vocabulary:
@@ -69,59 +77,36 @@ def contains(vocabulary, word):
             return True
     return False
 
+
 def parse_url(origin_url):
-    return urllib.parse.quote(origin_url.strip(), ':/?=&%@*_+-.')
+    return urllib.parse.quote(origin_url.strip(), ':/?=&%@*_+-.').lower()
 
 
-'''
-Expected date:  1900-01-01T09:00:00Z , 2022-03-16T00:00:00+01:00
-'''
 def str_to_date(date_time_str):
+    """
+    Expected date:  1900-01-01T09:00:00Z , 2022-03-16T00:00:00+01:00
+    """
     date_time_obj = datetime.strptime(date_time_str, '%Y-%m-%dT%H:%M:%S%z')
-    #previous code:  datetime.fromisoformat(i['issued']['value'])
+    # previous code:  datetime.fromisoformat(i['issued']['value'])
     return date_time_obj
 
 
 class ISO19157Evaluation:
 
-    def __init__(self, url, user = None, passwd = None, catalog_rdf_file = None, shapes_turtle_file = None, harvest_date_string = None):
+    def __init__(self, url, user=None, passwd=None, harvest_date_string=None, url_strict_check=False):
         self.sparql = SPARQLWrapper(url)
         if user is not None:
             self.sparql.setCredentials(user, passwd)
-        self.catalog = catalog_rdf_file
-        self.shapes = shapes_turtle_file
         self.datasetCount = self.count_entities(DATASET)
         self.distributionCount = self.count_entities(DISTRIBUTION)
-        self.timeData = "" # Espacio para los resultados de la consulta temporal porque se usa dos veces
+        self.timeData = ""  # Espacio para los resultados de la consulta temporal porque se usa dos veces
         self.checks = 0
         self.passedChecks = 0
         if harvest_date_string is not None:
             self.harvest_date = str_to_date(harvest_date_string)
         else:
             self.harvest_date = datetime.now(timezone.utc)
-        print(self.harvest_date)
-
-    def shacl(self):
-        '''
-        https://github.com/RDFLib/pySHACL
-        More inormation about SHACL at https://www.w3.org/TR/shacl/
-        Shapes file adapted from https://github.com/SEMICeu/dcat-ap_shacl/blob/master/shacl/dcat-ap.shapes.ttl
-        Original shapefile does not include sh:targetClass and does not verify anything.
-        The following target class was included:
-          sh:targetClass dcat:Dataset ;
-        '''
-        sg = rdflib.Graph()
-        sg.parse(source=self.shapes, format='turtle')
-        data_graph = rdflib.Graph()
-        data_graph.load(self.catalog)
-        # data_graph.parse(source = catalog, format = 'turtle')
-
-        r = validate(data_graph, shacl_graph=sg, inference='rdfs', abort_on_error=True)
-        conforms, results_graph, results_text = r
-        # print(conforms)
-        # print(results_graph)
-        # print(results_text)
-        return conforms
+        self.url_strict_check = url_strict_check
 
     def count_entities(self, entity):
         self.sparql.setQuery("""
@@ -130,7 +115,7 @@ class ISO19157Evaluation:
                    PREFIX dcat: <http://www.w3.org/ns/dcat#>
                     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                     SELECT  (count(DISTINCT ?resource) as ?values)  WHERE {
-                        ?resource rdf:type """+ entity +""" .
+                        ?resource rdf:type """ + entity + """ .
                     }
                     """)
         self.sparql.setReturnFormat(JSON)
@@ -156,8 +141,8 @@ class ISO19157Evaluation:
                    PREFIX dcat: <http://www.w3.org/ns/dcat#>
                     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                     SELECT  (count(DISTINCT ?resource) as ?values)  WHERE {
-                        ?resource rdf:type """+ entity + """ .
-        	            ?resource """ + property +""" ?value .
+                        ?resource rdf:type """ + entity + """ .
+        	            ?resource """ + property + """ ?value .
                     }
                     """)
 
@@ -175,8 +160,8 @@ class ISO19157Evaluation:
                    PREFIX dcat: <http://www.w3.org/ns/dcat#>
                    PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                    SELECT  (count(DISTINCT ?value) as ?values)  WHERE {
-                        ?resource rdf:type """+ entity + """ .
-        	            ?resource """ + property +""" ?value .
+                        ?resource rdf:type """ + entity + """ .
+        	            ?resource """ + property + """ ?value .
                     }
                     """)
 
@@ -194,9 +179,9 @@ class ISO19157Evaluation:
                    PREFIX dcat: <http://www.w3.org/ns/dcat#>
                     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                     SELECT  (count(DISTINCT ?value) as ?values)  WHERE {
-                        ?resource rdf:type """+ entity + """ .
-        	            ?resource """ + property +""" ?value .
-        	            FILTER(datatype(?value)="""+range+""") .
+                        ?resource rdf:type """ + entity + """ .
+        	            ?resource """ + property + """ ?value .
+        	            FILTER(datatype(?value)=""" + range + """) .
                     }
                     """)
 
@@ -214,8 +199,8 @@ class ISO19157Evaluation:
                    PREFIX dcat: <http://www.w3.org/ns/dcat#>
                     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                     SELECT  (count(DISTINCT ?value) as ?values)  WHERE {
-                        ?resource rdf:type """+ entity + """ .
-        	            ?resource """ + property +""" ?value .
+                        ?resource rdf:type """ + entity + """ .
+        	            ?resource """ + property + """ ?value .
         	            FILTER(isLiteral(?value)) .
                     }
                     """)
@@ -237,9 +222,9 @@ class ISO19157Evaluation:
                    PREFIX foaf: <http://xmlns.com/foaf/0.1/>
                    PREFIX vocab: <http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio#>
                    SELECT  (count(DISTINCT ?value) as ?values)  WHERE {
-                        ?resource rdf:type """+ entity + """ .
-        	            ?resource """ + property +""" ?value .
-        	            ?value rdf:type """+range+""" .
+                        ?resource rdf:type """ + entity + """ .
+        	            ?resource """ + property + """ ?value .
+        	            ?value rdf:type """ + range + """ .
                     }
                     """)
 
@@ -274,7 +259,7 @@ class ISO19157Evaluation:
     def count_formats_from_vocabulary(self, vocabulary):
         self.sparql.setQuery("""
             PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema>
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
             PREFIX dct: <http://purl.org/dc/terms/>
             PREFIX dcat: <http://www.w3.org/ns/dcat#>
             SELECT ?value (COUNT(?value) as ?count)
@@ -292,20 +277,20 @@ class ISO19157Evaluation:
             """value, count"""
             format = row["value"]["value"]
             partialCount = int(row["count"]["value"])
-            if contains_exact(vocabulary,format):
-                count += 1 # We are only interested in distinct formats
+            if contains_exact(vocabulary, format):
+                count += 1  # We are only interested in distinct formats
         return count
 
     def count_urls_with_200_code(self, entity, property):
         self.sparql.setQuery("""
             PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema>
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
             PREFIX dct: <http://purl.org/dc/terms/>
             PREFIX dcat: <http://www.w3.org/ns/dcat#>
             SELECT ?value (COUNT(?value) as ?count)
             WHERE {
-                ?resource a """ + entity+ """ .
-                ?resource """+ property+""" ?value
+                ?resource a """ + entity + """ .
+                ?resource """ + property + """ ?value
             }
             GROUP BY ?value
             """)
@@ -313,7 +298,7 @@ class ISO19157Evaluation:
         results = self.sparql.query().convert()
         count = 0
 
-        error_file_name = 'errors_'+property.replace(":","_") + ".txt"
+        error_file_name = 'errors_' + property.replace(":", "_") + ".txt"
         with open(error_file_name, "w", encoding="utf-8") as text_file:
             for row in results["results"]["bindings"]:
                 """value, count"""
@@ -321,72 +306,74 @@ class ISO19157Evaluation:
                 partialCount = int(row["count"]["value"])
                 try:
                     make_request(url)
-                    count += 1 # We are only interested in distinct accessible URLs
+                    count += 1  # We are only interested in distinct accessible URLs
                 except:
                     text_file.write(url + '\t' + str(partialCount) + '\n')
-                    #print(url + " not reached")
+                    # print(url + " not reached")
         return count
-    
-    def count_valid_uris(self, entity, property):
-        self.sparql.setQuery("""
-            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema>
-            PREFIX dct: <http://purl.org/dc/terms/>
-            PREFIX dcat: <http://www.w3.org/ns/dcat#>
-            SELECT DISTINCT ?value
-            WHERE {
-                ?resource a """ + entity+ """ .
-                ?resource """+ property+""" ?value
-            }
-            """)
-        self.sparql.setReturnFormat(JSON)
-        results = self.sparql.query().convert()
-        count = 0
-        rows = 0
 
-        for row in results["results"]["bindings"]:
-            rows = rows + 1
-            uri = row["value"]["value"]
-            url = parse_url(uri)
-            valid = validators.url(url)
-            if valid==True:
-                count += 1
-            else: #Check if uri is a urn. This check could be improved
-                if uri.strip().lower().startswith('urn:'):
+    def count_valid_uris(self, entity, property, population):
+        offset = 0
+        count = 0
+        while offset < population:
+            self.sparql.setQuery("""
+                PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                PREFIX dct: <http://purl.org/dc/terms/>
+                PREFIX dcat: <http://www.w3.org/ns/dcat#>
+                SELECT DISTINCT ?value
+                WHERE {
+                    ?resource a """ + entity + """ .
+                    ?resource """ + property + """ ?value
+                }
+                OFFSET """ + str(offset) + """
+                LIMIT """ + str(LIMIT))
+            self.sparql.setReturnFormat(JSON)
+            results = self.sparql.query().convert()
+
+            for row in results["results"]["bindings"]:
+                offset = offset + 1
+                uri = row["value"]["value"]
+                url = parse_url(uri)
+                valid = validators.url(url)
+                if valid:
                     count += 1
- #               else:
- #                   print('Invalid URI: <' + uri +'>')
-        return count, rows
+                else:  # Check if uri is a urn. This check could be improved
+                    if uri.strip().lower().startswith('urn:'):
+                        count += 1
+        return count
 
-    def count_valid_urls(self, entity, property):
-        self.sparql.setQuery("""
-            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema>
-            PREFIX dct: <http://purl.org/dc/terms/>
-            PREFIX dcat: <http://www.w3.org/ns/dcat#>
-            SELECT DISTINCT ?value
-            WHERE {
-                ?resource a """ + entity+ """ .
-                ?resource """+ property+""" ?value
-            }
-            """)
-        self.sparql.setReturnFormat(JSON)
-        results = self.sparql.query().convert()
+    def count_valid_urls(self, entity, property, population):
+        offset = 0
         count = 0
-        rows = 0
+        while offset < population:
+            self.sparql.setQuery("""
+                PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                PREFIX dct: <http://purl.org/dc/terms/>
+                PREFIX dcat: <http://www.w3.org/ns/dcat#>
+                SELECT DISTINCT ?value
+                WHERE {
+                    ?resource a """ + entity + """ .
+                    ?resource """ + property + """ ?value
+                }
+                OFFSET """ + str(offset) + """
+                LIMIT """ + str(LIMIT))
+            self.sparql.setReturnFormat(JSON)
+            results = self.sparql.query().convert()
 
-        for row in results["results"]["bindings"]:
-            rows = rows + 1
-            url = parse_url(row["value"]["value"])
-            valid = validators.url(url)
-            if valid==True:
-                count += 1
-        return count, rows
+            for row in results["results"]["bindings"]:
+                offset = offset + 1
+                url = parse_url(row["value"]["value"])
+                valid = validators.url(url)
+                if valid:
+                    count += 1
+        return count
 
     def count_freetext(self, entity, property):
         self.sparql.setQuery("""
             PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema> 
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
             PREFIX dct: <http://purl.org/dc/terms/>
             PREFIX dcat: <http://www.w3.org/ns/dcat#>
 
@@ -404,7 +391,8 @@ class ISO19157Evaluation:
         # Por ahora eso no afecta a los resultados con el conjunto almacenado
 
         # Calculamos ambos índices
-        count = sum(map(lambda x: 1 if x>=50 else 0,[DeterminarIndices(i['valor']['value']).returnmax() for i in results['results']['bindings']]))
+        count = sum(map(lambda x: 1 if x >= 50 else 0,
+                        [DeterminarIndices(i['valor']['value']).returnmax() for i in results['results']['bindings']]))
 
         return count
 
@@ -413,7 +401,7 @@ class ISO19157Evaluation:
         if len(self.timeData) == 0:
             self.sparql.setQuery("""
                 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema> 
+                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
                 PREFIX dct: <http://purl.org/dc/terms/>
                 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 
@@ -426,7 +414,7 @@ class ISO19157Evaluation:
                 }""")
             self.sparql.setReturnFormat(JSON)
             self.timeData = self.sparql.query().convert()
-            
+
         # Asignamos la consulta almacenada
         results = self.timeData
 
@@ -437,7 +425,6 @@ class ISO19157Evaluation:
             issued_lt_modified = True
             issued_lt_valid = True
             modified_lt_valid = True
-
 
             if ('issued' in i) and ('modified' in i):
                 issued_lt_modified = str_to_date(i['issued']['value']) <= str_to_date(i['modified']['value'])
@@ -455,7 +442,7 @@ class ISO19157Evaluation:
         if len(self.timeData) == 0:
             self.sparql.setQuery("""
                 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema> 
+                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
                 PREFIX dct: <http://purl.org/dc/terms/>
                 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 
@@ -488,8 +475,8 @@ class ISO19157Evaluation:
             if issued_lt_harvest and modified_lt_harvest and valid_gt_harvest:
                 pass
             else:
-                error_count = error_count + 1 # El error funciona mejor que en la solución suma
-                
+                error_count = error_count + 1  # El error funciona mejor que en la solución suma
+
         return error_count
 
     def print(self, dimension, entity, property, count, population):
@@ -526,7 +513,7 @@ class ISO19157Evaluation:
         self.sparql.setReturnFormat(JSON)
         self.sparql.setQuery(query)
         results = self.sparql.query().convert()
-        count = population - len(results["results"]["bindings"]) # For the moment, we compute correct percentage
+        count = population - len(results["results"]["bindings"])  # For the moment, we compute correct percentage
         self.print(dimension, entity, None, count, population)
 
     def completeness_commission_distribution(self):
@@ -580,7 +567,7 @@ class ISO19157Evaluation:
                   }
                 }
                     """
-        count = population - self.count(query) # For the moment, we compute correct percentage
+        count = population - self.count(query)  # For the moment, we compute correct percentage
         self.print(dimension, entity, None, count, population)
 
     def completeness_omission_distribution(self):
@@ -601,7 +588,7 @@ class ISO19157Evaluation:
                   }
                 }
                     """
-        count = population - self.count(query) # For the moment, we compute correct percentage
+        count = population - self.count(query)  # For the moment, we compute correct percentage
         self.print(dimension, entity, None, count, population)
 
     def conceptual_consistency_dataset(self):
@@ -610,7 +597,7 @@ class ISO19157Evaluation:
         population = self.datasetCount
         query = """
             PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema> 
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
             PREFIX dct: <http://purl.org/dc/terms/>
             PREFIX dcat: <http://www.w3.org/ns/dcat#>
             SELECT (count (DISTINCT ?resource) as ?values)
@@ -631,7 +618,7 @@ class ISO19157Evaluation:
         population = self.distributionCount
         query = """
             PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema> 
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
             PREFIX dct: <http://purl.org/dc/terms/>
             PREFIX dcat: <http://www.w3.org/ns/dcat#>
             SELECT (count (DISTINCT ?resource) as ?values)
@@ -644,11 +631,65 @@ class ISO19157Evaluation:
         count = population - self.count(query)
         self.print(dimension, entity, None, count, population)
 
+    def count_valid_format_urls(self, population):
+        offset = 0
+        count = 0
+        while offset < population:
+            self.sparql.setQuery("""
+                PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                PREFIX dct: <http://purl.org/dc/terms/>
+                PREFIX dcat: <http://www.w3.org/ns/dcat#>
+                SELECT ?url ?value ?label
+                WHERE {
+                    ?resource rdf:type dcat:Distribution .
+                    ?resource dcat:accessURL ?url .
+                    ?resource dct:format ?format .
+                    OPTIONAL {?format rdf:value ?value} .
+                    OPTIONAL {?format rdfs:label ?label}
+                }
+                OFFSET """ + str(offset) + """
+                LIMIT """ + str(LIMIT))
+            self.sparql.setReturnFormat(JSON)
+            results = self.sparql.query().convert()
+
+            for row in results["results"]["bindings"]:
+                offset = offset + 1
+                url = parse_url(row["url"]["value"])
+                label = row["label"]["value"].lower()
+                value = row["value"]["value"].lower()
+                if self.url_strict_check:
+                    urlReport = URL(url, offline=False, timeout=5)
+                    magic = urlReport.getType().magic
+                    http = urlReport.getType().http
+                    extension = urlReport.getType().extension
+                    if label in magic or label in http or label in extension:
+                        count += 1
+                else:
+                    if label in url or value in url:
+                        count += 1
+        return count
+
     def conceptual_consistency_distribution_format_accessURL(self):
         dimension = CONCEPTUAL_CONSISTENCY
         entity = DISTRIBUTION
-        count = -1 #TODO
-        population = self.distributionCount
+        query = """
+            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+            PREFIX dct: <http://purl.org/dc/terms/>
+            PREFIX dcat: <http://www.w3.org/ns/dcat#>
+            SELECT (count (DISTINCT ?resource) as ?values)
+            WHERE {
+                ?resource rdf:type dcat:Distribution .
+                ?resource dcat:accessURL ?url .
+                ?resource dct:format ?format .
+                OPTIONAL {?format rdf:value ?value} .
+                OPTIONAL {?format rdfs:label ?label}
+            }
+                    """
+        # in principle the population should be equivalent to self.distributionCount. We calculate again for security if later we use while loop
+        population = self.count(query)
+        count = self.count_valid_format_urls(population)
         self.print(dimension, entity, 'dct:format vs dcat:accessURL', count, population)
 
     def domain_consistency_dataset_title(self):
@@ -690,10 +731,8 @@ class ISO19157Evaluation:
         dimension = DOMAIN_CONSISTENCY
         entity = DATASET
         property = 'dct:identifier'
-        count, rows = self.count_valid_uris(entity,property)
         population = self.count_distinct_entity_property(entity, property)
-        if (rows != population):
-            print("ERROR: SPARQL query unable to retrieve all results")
+        count = self.count_valid_uris(entity, property, population)
         self.print(dimension, entity, property, count, population)
 
     def domain_consistency_dataset_issued(self):
@@ -727,7 +766,7 @@ class ISO19157Evaluation:
         population = self.count_distinct_entity_property(entity, property)
         query = """
             PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema> 
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
             PREFIX dct: <http://purl.org/dc/terms/>
             PREFIX dcat: <http://www.w3.org/ns/dcat#>
             SELECT (count(DISTINCT ?value) as ?values)
@@ -776,30 +815,24 @@ class ISO19157Evaluation:
         dimension = DOMAIN_CONSISTENCY
         entity = DATASET
         property = 'dct:references'
-        count, rows = self.count_valid_urls(entity,property)
         population = self.count_distinct_entity_property(entity, property)
-        if (rows != population):
-            print("ERROR: SPARQL query unable to retrieve all results")
+        count = self.count_valid_urls(entity, property, population)
         self.print(dimension, entity, property, count, population)
 
     def domain_consistency_dataset_conformsTo(self):
         dimension = DOMAIN_CONSISTENCY
         entity = DATASET
         property = 'dct:conformsTo'
-        count, rows = self.count_valid_urls(entity,property)
         population = self.count_distinct_entity_property(entity, property)
-        if (rows != population):
-            print("ERROR: SPARQL query unable to retrieve all results")
+        count = self.count_valid_urls(entity, property, population)
         self.print(dimension, entity, property, count, population)
 
     def domain_consistency_dataset_license(self):
         dimension = DOMAIN_CONSISTENCY
         entity = DATASET
         property = 'dct:license'
-        count, rows = self.count_valid_urls(entity,property)
         population = self.count_distinct_entity_property(entity, property)
-        if (rows != population):
-            print("ERROR: SPARQL query unable to retrieve all results")
+        count = self.count_valid_urls(entity, property, population)
         self.print(dimension, entity, property, count, population)
 
     def domain_consistency_dataset_distribution(self):
@@ -814,10 +847,8 @@ class ISO19157Evaluation:
         dimension = DOMAIN_CONSISTENCY
         entity = DISTRIBUTION
         property = 'dct:identifier'
-        count, rows = self.count_valid_uris(entity,property)
         population = self.count_distinct_entity_property(entity, property)
-        if (rows != population):
-            print("ERROR: SPARQL query unable to retrieve all results")
+        count = self.count_valid_uris(entity, property, population)
         self.print(dimension, entity, property, count, population)
 
     def domain_consistency_distribution_title(self):
@@ -825,7 +856,7 @@ class ISO19157Evaluation:
         entity = DISTRIBUTION
         property = 'dct:title'
         count = self.count_distinct_entity_property_is_literal(entity, property)
-        #count = self.count_distinct_entity_property_literal_range(entity, property, 'rdf:langString')
+        # count = self.count_distinct_entity_property_literal_range(entity, property, 'rdf:langString')
         population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population)
 
@@ -833,10 +864,8 @@ class ISO19157Evaluation:
         dimension = DOMAIN_CONSISTENCY
         entity = DISTRIBUTION
         property = 'dcat:accessURL'
-        count, rows = self.count_valid_urls(entity,property)
         population = self.count_distinct_entity_property(entity, property)
-        if (rows != population):
-            print("ERROR: SPARQL query unable to retrieve all results")
+        count = self.count_valid_urls(entity, property, population)
         self.print(dimension, entity, property, count, population)
 
     def domain_consistency_distribution_format(self):
@@ -860,10 +889,8 @@ class ISO19157Evaluation:
         dimension = DOMAIN_CONSISTENCY
         entity = DISTRIBUTION
         property = 'dct:license'
-        count, rows = self.count_valid_urls(entity,property)
         population = self.count_distinct_entity_property(entity, property)
-        if (rows != population):
-            print("ERROR: SPARQL query unable to retrieve all results")
+        count = self.count_valid_urls(entity, property, population)
         self.print(dimension, entity, property, count, population)
 
     def temporal_consistency(self):
@@ -884,39 +911,39 @@ class ISO19157Evaluation:
         dimension = NON_QUANTITATIVE_ATTRIBUTE_CORRECTNESS
         entity = DATASET
         property = 'dct:references'
-        count = self.count_urls_with_200_code(entity,property)
-        population = self.count_distinct_entity_property(entity,property)
+        count = self.count_urls_with_200_code(entity, property)
+        population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population)
 
     def non_quantitative_attribute_correctness_dataset_conformsTo(self):
         dimension = NON_QUANTITATIVE_ATTRIBUTE_CORRECTNESS
         entity = DATASET
         property = 'dct:conformsTo'
-        count = self.count_urls_with_200_code(entity,property)
-        population = self.count_distinct_entity_property(entity,property)
+        count = self.count_urls_with_200_code(entity, property)
+        population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population)
 
     def non_quantitative_attribute_correctness_distribution_accessURL(self):
         dimension = NON_QUANTITATIVE_ATTRIBUTE_CORRECTNESS
         entity = DISTRIBUTION
         property = 'dcat:accessURL'
-        count = self.count_urls_with_200_code(entity,property)
-        population = self.count_distinct_entity_property(entity,property)
+        count = self.count_urls_with_200_code(entity, property)
+        population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population)
 
     def non_quantitative_attribute_correctness_distribution_license(self):
         dimension = NON_QUANTITATIVE_ATTRIBUTE_CORRECTNESS
         entity = DISTRIBUTION
         property = 'dct:license'
-        count = self.count_urls_with_200_code(entity,property)
-        population = self.count_distinct_entity_property(entity,property)
+        count = self.count_urls_with_200_code(entity, property)
+        population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population)
 
     def positional_correctness(self):
         dimension = POSITIONAL_CORRECTNESS
         entity = DATASET
         property = 'dct:spatial'
-        count = -1 #TODO
+        count = -1  # TODO
         population = self.datasetCount
         self.print(dimension, entity, property, count, population)
 
@@ -938,11 +965,7 @@ class ISO19157Evaluation:
 
     def evaluate(self):
 
-        # self.domain_consistency_dataset_identifier()
-        # exit(0)
-
-
-        print("Dimension", "Entity", "Property","Count","Population","Percentage", "Pass")
+        print("Dimension", "Entity", "Property", "Count", "Population", "Percentage", "Pass")
 
         # Completeness commission
         self.completeness_commission_dataset()
@@ -982,17 +1005,17 @@ class ISO19157Evaluation:
         self.domain_consistency_distribution_accessURL()
         self.domain_consistency_distribution_format()
         self.domain_consistency_distribution_byteSize()
-        #self.domain_consistency_distribution_license()
+        # self.domain_consistency_distribution_license()
 
         # Temporal quality
         self.temporal_consistency()
         self.temporal_validity()
 
         # Thematic accuracy
-        #self.non_quantitative_attribute_correctness_dataset_conformsTo()
-        #self.non_quantitative_attribute_correctness_dataset_references()
-        #self.non_quantitative_attribute_correctness_distribution_accessURL()
-        #self.non_quantitative_attribute_correctness_distribution_license()
+        # self.non_quantitative_attribute_correctness_dataset_conformsTo()
+        # self.non_quantitative_attribute_correctness_dataset_references()
+        # self.non_quantitative_attribute_correctness_distribution_accessURL()
+        # self.non_quantitative_attribute_correctness_distribution_license()
 
         # Positional positional_correctness
         self.positional_correctness()
@@ -1002,4 +1025,3 @@ class ISO19157Evaluation:
         self.quality_of_free_text_dataset_description()
 
         print(self.passedChecks, "passed checks out of ", self.checks, " checks")
-

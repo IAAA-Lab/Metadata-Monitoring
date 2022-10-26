@@ -3,7 +3,7 @@ harvester/SPARQL_harvester.py
 Author: Javier Nogueras (jnog@unizar.es)
 Last update: 2022-07-06
 
-Program to harvest metadata records using a CKAN API
+Program to harvest metadata records using a SPARQL end-point
 """
 
 
@@ -140,8 +140,8 @@ if __name__ == '__main__':
             getattr(ssl, '_create_unverified_context', None)):
         ssl._create_default_https_context = ssl._create_unverified_context
 
-    #harvester = SPARQL_harvester(url = ES_SPARQL, rdf_url= ES_RDF, limit=100, max_number_of_records=1000, output_folder = OUTPUT)
-    # harvester.harvest()
+    #harvester = SPARQL_harvester(url = ES_SPARQL, rdf_url= ES_RDF, limit=500, max_number_of_records=5000, output_folder = OUTPUT)
+    #harvester.harvest()
 
     harvester = SPARQL_harvester(url = EDP_SPARQL, rdf_url= EDP_RDF, limit=500, max_number_of_records=5000, output_folder = OUTPUT, format = EDP_FORMAT)
     harvester.harvest()
