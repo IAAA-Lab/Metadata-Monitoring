@@ -11,7 +11,7 @@ export const environment = {
 };
 
 export enum apiPaths {
-  mqa_sparql = "/evaluate/mqa_sparql",
+  evaluate = "/evaluate",
   login = "/login"
 }
 

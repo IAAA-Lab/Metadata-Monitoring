@@ -33,7 +33,6 @@ app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 
 app.post('/login', passport.authenticate('local'), function(req, res) {
-  console.log(true)
   res.json({isAdminLoggedIn: true});
 });
 app.post('/logout', function(req, res, next){
