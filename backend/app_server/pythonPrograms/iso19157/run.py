@@ -12,6 +12,9 @@ import os, ssl
 
 
 if __name__ == '__main__':
+    abspath = os.path.abspath(__file__)
+    dname = os.path.dirname(abspath)
+    os.chdir(dname)
 
     if (not os.environ.get('PYTHONHTTPSVERIFY', '') and
             getattr(ssl, '_create_unverified_context', None)):
@@ -20,14 +23,14 @@ if __name__ == '__main__':
     #url = 'https://datosgob.iaaa.es/db/query'
     #user = 'admin'
     #passwd = ''
-    url = 'http://155.210.155.161:3030/db/query'
-    user = 'admin'
-    passwd = ''
-    
-    evaluation = ISO19157Evaluation(url, user, passwd, 'datosgobes20190612.rdf', 'dcat-ap.shapes.ttl',)
-    evaluation.evaluate()
-
-    exit(0)
+    # url = 'http://155.210.155.161:3030/db/query'
+    # user = 'admin'
+    # passwd = ''
+    #
+    # evaluation = ISO19157Evaluation(url, user, passwd, 'datosgobes20190612.rdf', 'dcat-ap.shapes.ttl',)
+    # evaluation.evaluate()
+    #
+    # exit(0)
 
     print("\nCURRENT")
     evaluationCurrent = ISO19157Evaluation('http://datos.gob.es/virtuoso/sparql')

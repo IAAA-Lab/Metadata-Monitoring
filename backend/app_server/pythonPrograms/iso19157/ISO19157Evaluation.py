@@ -16,7 +16,7 @@ from pyshacl import validate
 
 from IndicePerspicuidad import DeterminarIndices
 
-from uri_access import *
+# from uri_access import *
 
 COMPLETENESS_OMISSION = 'DQ_CompletenessOmission'
 
@@ -487,7 +487,7 @@ class ISO19157Evaluation:
             self.passedChecks += 1
         else:
             passed = False
-        print(dimension, entity, property, count, population, percentage, passed)
+        print(dimension, entity, property, count, population, percentage, passed, sep=";")
 
     def completeness_commission_dataset(self):
         dimension = COMPLETENESS_COMMISSION
@@ -978,7 +978,8 @@ class ISO19157Evaluation:
         # Conceptual consistency
         self.conceptual_consistency_dataset()
         self.conceptual_consistency_distribution()
-        self.conceptual_consistency_distribution_format_accessURL()
+        # TODO: Habilitar metrica
+        # self.conceptual_consistency_distribution_format_accessURL()
 
         # Domain consistency Dataset
         self.domain_consistency_dataset_title()
@@ -1002,7 +1003,8 @@ class ISO19157Evaluation:
         # Domain consistency Distribution
         self.domain_consistency_distribution_identifier()
         self.domain_consistency_distribution_title()
-        self.domain_consistency_distribution_accessURL()
+        #TODO: Habilitar metrica
+        # self.domain_consistency_distribution_accessURL()
         self.domain_consistency_distribution_format()
         self.domain_consistency_distribution_byteSize()
         # self.domain_consistency_distribution_license()

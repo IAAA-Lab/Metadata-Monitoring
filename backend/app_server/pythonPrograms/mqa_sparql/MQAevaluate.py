@@ -252,7 +252,7 @@ class MQAevaluate:
             self.totalPoints += partialPoints
         else:
             partialPoints = 0
-        print(dimension, property, count, population, percentage, partialPoints)
+        print(dimension, property, count, population, percentage, partialPoints, sep=";")
 
     def findability_keywords_available(self):
         dimension = FINDABILITY
@@ -468,9 +468,9 @@ class MQAevaluate:
         self.findability_category_available()
         self.findability_spatial_available()
         self.findability_temporal_available()
-        self.accesibility_accessURL_code_200()
-        self.accesibility_downloadURL_available()
-        self.accesibility_downloadURL_code_200()
+        # self.accesibility_accessURL_code_200()
+        # self.accesibility_downloadURL_available()
+        # self.accesibility_downloadURL_code_200()
         self.interoperability_format_available()
         self.interoperability_mediaType_available()
         self.interoperability_format_from_vocabulary()
