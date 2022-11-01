@@ -18,13 +18,13 @@ if __name__ == '__main__':
     os.chdir(dname)
 
     # # len - 1 to delete argv[0] (for testing purposes)
-    # if len(sys.argv)-1 == 0:
-    #     URL = 'http://datos.gob.es/virtuoso/sparql'
-    #     # date in YYYY-MM-DD HH-mm-ss format
-    #     date = datetime.now().strftime('%Y-%d-%m %H:%M:%S')
-    # else:
-    URL = sys.argv[1]
-    date = sys.argv[2]
+    if len(sys.argv)-1 == 0:
+        URL = 'http://datos.gob.es/virtuoso/sparql'
+        # date in YYYY-MM-DD HH-mm-ss format
+        date = datetime.now().strftime('%Y-%d-%m %H:%M:%S')
+    else:
+        URL = sys.argv[1]
+        date = sys.argv[2]
 
     if (not os.environ.get('PYTHONHTTPSVERIFY', '') and
             getattr(ssl, '_create_unverified_context', None)):
@@ -44,4 +44,5 @@ if __name__ == '__main__':
 
     print("\nCURRENT")
     evaluationCurrent = ISO19157Evaluation(URL)
-    evaluationCurrent.evaluate()
+    # evaluationCurrent.evaluate()
+    evaluationCurrent.prueba()

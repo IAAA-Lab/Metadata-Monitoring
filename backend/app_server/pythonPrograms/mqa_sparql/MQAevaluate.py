@@ -10,6 +10,9 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 import urllib.request
 from pyshacl import validate
 import rdflib
+from rdflib import Graph, URIRef
+from rdflib.namespace import FOAF, RDF, DCTERMS, SKOS
+
 
 FINDABILITY = 'Findability'
 
@@ -78,6 +81,12 @@ class MQAevaluate:
         self.datasetCount = self.count_entities(DATASET)
         self.distributionCount = self.count_entities(DISTRIBUTION)
         self.totalPoints = 0
+
+        # Initialize a graph
+        self.graph = Graph()
+
+        # Load definitions from file
+        self.graph.parse('../DQV_files/templates/MQA_definitions.ttl', format='turtle')
 
     def shacl(self):
         '''
@@ -488,3 +497,8 @@ class MQAevaluate:
         self.contextuality_issued_available()
         self.contextuality_modified_available()
         print("Total points", self.totalPoints)
+
+    def prueba(self):
+        print(f'graf has {len(self.graph)} facts')
+        self.graph.add(('myCatalog', 'dqv:hasQualityMeasurement', 'DQ_ComComDat_QR'))
+

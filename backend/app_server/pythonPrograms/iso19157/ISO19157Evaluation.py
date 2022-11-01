@@ -16,6 +16,9 @@ from pyshacl import validate
 
 from IndicePerspicuidad import DeterminarIndices
 
+from rdflib import Graph, URIRef, Literal
+from rdflib.namespace import FOAF, RDF, DCTERMS, SKOS
+
 # from uri_access import *
 
 COMPLETENESS_OMISSION = 'DQ_CompletenessOmission'
@@ -108,6 +111,11 @@ class ISO19157Evaluation:
             self.harvest_date = datetime.now(timezone.utc)
         self.url_strict_check = url_strict_check
 
+        # Initialize a graph
+        self.graph = Graph()
+
+        # Load definitions from file
+        self.graph.parse('../DQV_files/templates/ISO19157_definitions.ttl', format='turtle')
     def count_entities(self, entity):
         self.sparql.setQuery("""
                    PREFIX dct:<http://purl.org/dc/terms/>
@@ -1027,3 +1035,53 @@ class ISO19157Evaluation:
         self.quality_of_free_text_dataset_description()
 
         print(self.passedChecks, "passed checks out of ", self.checks, " checks")
+
+    def prueba(self):
+        # FIJO
+        catalog = URIRef(':myCatalog')
+        self.graph.add((catalog, RDF.type, Literal('dcat:Catalog')))
+        self.graph.add((catalog, DCTERMS.title, Literal('datos.gob.es')))
+        ####
+
+        #TODO: poner nombre generico a variable DQ_ComComDat_QR, pasar el string por param
+        DQ_ComComDat_QR = URIRef('DQ_ComComDat_QR')
+        self.graph.add((catalog, Literal('dqv:hasQualityMeasurement'), DQ_ComComDat_QR))
+        self.graph.add((DQ_ComComDat_QR, RDF.type, Literal('dqv:QualityMeasurement')))
+        self.graph.add((DQ_ComComDat_QR, Literal('dqv:computedOn'), catalog))
+
+        #TODO: poner nombre generico a variable D_3_ISO_19157, pasar el string por param
+        #   pasar tambien value y date por params
+        D_3_ISO_19157 = URIRef('D.3.ISO.19157')
+        self.graph.add((DQ_ComComDat_QR, Literal('dqv:isMeasurementOf'), D_3_ISO_19157))
+        self.graph.add((DQ_ComComDat_QR, Literal('dqv:value'), Literal('0.4',  datatype='xsd:double')))
+        self.graph.add((DQ_ComComDat_QR, Literal('dqv:date'), Literal('2020-03-01', datatype='xsd:date')))
+
+        # TODO: pasar 'dataset' por params
+        onProperty = URIRef('dcat:dataset')
+        self.graph.add((DQ_ComComDat_QR, Literal(':onProperty'), onProperty))
+
+        # Measurement 'wasDerivedFrom'
+        # TODO: poner nombre generico a variable DQ_ComComDat_QR, pasar el string por param
+        DQ_ComComDat_CR = URIRef('DQ_ComComDat_CR')
+        self.graph.add((catalog, Literal('dqv:hasQualityMeasurement'), DQ_ComComDat_CR))
+        self.graph.add((DQ_ComComDat_CR, RDF.type, Literal('dqv:QualityMeasurement')))
+        self.graph.add((DQ_ComComDat_CR, Literal('dqv:computedOn'), catalog))
+
+        # TODO: poner nombre generico a variable D_3_ISO_19157_conformance, pasar el string por param
+        #   pasar tambien value y date por params
+        D_3_ISO_19157_conformance = URIRef('D.3.ISO.19157_conformance')
+        self.graph.add((DQ_ComComDat_CR, Literal('dqv:isMeasurementOf'), D_3_ISO_19157_conformance))
+        # se añade esta linea
+        self.graph.add((DQ_ComComDat_CR, Literal('prov:wasDerivedFrom'), DQ_ComComDat_QR))
+        #
+        #Cambia el tipo
+        self.graph.add((DQ_ComComDat_CR, Literal('dqv:value'), Literal('true', datatype='xsd:boolean')))
+        #
+        self.graph.add((DQ_ComComDat_CR, Literal('dqv:date'), Literal('2020-03-01', datatype='xsd:date')))
+
+        #TODO: pasar 'dataset' por params
+        onProperty = URIRef('dcat:dataset')
+        self.graph.add((DQ_ComComDat_CR, Literal(':onProperty'), onProperty))
+
+
+        self.graph.serialize(destination='./test.ttl', format='turtle')

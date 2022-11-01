@@ -22,10 +22,11 @@ const mqa_sparql = function (url) {
     let date = new Date().toISOString()
         .replace(/T/, ' ')
         .replace(/\..+/, '')
+    let fileName = url + '-' + date
 
     const options = {
         pythonPath: myPython,
-        args: [url, date]
+        args: [url, fileName]
     };
 
     console.log('Starting evaluation MQA of: ' + url)
@@ -64,13 +65,15 @@ const mqa_sparql = function (url) {
 };
 
 const iso19157 = function (url) {
+    //date in format YYYY-MM-DD HH-mm-ss
     let date = new Date().toISOString()
         .replace(/T/, ' ')
         .replace(/\..+/, '')
+    let fileName = url + '-' + date
 
     const options = {
         pythonPath: myPython,
-        args: [url, date]
+        args: [url, fileName]
     };
 
     console.log('Starting evaluation ISO19157 of: ' + url)

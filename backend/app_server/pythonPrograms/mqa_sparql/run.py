@@ -16,14 +16,14 @@ if __name__ == '__main__':
     dname = os.path.dirname(abspath)
     os.chdir(dname)
 
-    # # len - 1 to delete argv[0] (for testing purposes)
-    # if len(sys.argv)-1 == 0:
-    #     URL = 'http://datos.gob.es/virtuoso/sparql'
-    #     # date in YYYY-MM-DD HH-mm-ss format
-    #     date = datetime.now().strftime('%Y-%d-%m %H:%M:%S')
-    # else:
-    URL = sys.argv[1]
-    date = sys.argv[2]
+    # len - 1 to delete argv[0] (for testing purposes)
+    if len(sys.argv)-1 == 0:
+        URL = 'http://datos.gob.es/virtuoso/sparql'
+        # date in YYYY-MM-DD HH-mm-ss format
+        date = datetime.now().strftime('%Y-%d-%m %H:%M:%S')
+    else:
+        URL = sys.argv[1]
+        date = sys.argv[2]
 
 
     if (not os.environ.get('PYTHONHTTPSVERIFY', '') and
@@ -40,4 +40,5 @@ if __name__ == '__main__':
 
     print("\nCURRENT")
     mqaCurrent = MQAevaluate(URL)
-    mqaCurrent.evaluate()
+    # mqaCurrent.evaluate()
+    mqaCurrent.prueba()

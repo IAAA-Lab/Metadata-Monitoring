@@ -1,0 +1,481 @@
+@prefix : <http://www.qualityreport.com/qr/>.
+@prefix dcat:<http://www.w3.org/ns/dcat#>. 
+@prefix dcterms:<http://purl.org/dc/terms/>.
+@prefix xsd:<http://www.w3.org/2001/XMLSchema#>.
+@prefix dqv:<http://www.w3.org/ns/dqv#>.
+@prefix skos:<http://www.w3.org/2004/02/skos/core#>.
+@prefix ldqd:<http://www.w3.org/2016/05/ldqd#> .
+@prefix dct:<http://purl.org/dc/terms/>.
+@prefix qb:<http://purl.org/linked-data/cube#>.
+@prefix owl:<http://www.w3.org/2002/07/owl#>.
+@prefix rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+
+#################################################################################
+#### definition of categories, dimensions and metrics  ###
+#################################################################################
+
+
+##################################################################################
+### Extra properties in the model
+
+#Parameters of the measurements (derived from DQV specification)
+:onLanguage
+    a qb:DimensionProperty, owl:DatatypeProperty ;
+    rdfs:comment   "Language on which the quality measure is assessed."@en ;
+    rdfs:domain    dqv:QualityMeasurement;
+    rdfs:label     "Label assessment language"@en ;
+    rdfs:range       xsd:string.
+
+:onProperty
+    a qb:DimensionProperty, rdf:Property ;
+    rdfs:comment 	"Property on which the quality measure is assessed."@en ;
+    rdfs:domain 	dqv:QualityMeasurement ;
+    rdfs:label  	"Label assessment property"@en ;
+    rdfs:range     	rdf:Property.
+
+
+#################################################################################
+#### Findability  ###
+
+
+:Findability a dqv:Category ;
+    skos:prefLabel "Findability"@en ;
+    skos:definition "Metrics that help people and machines in finding datasets."@en .
+
+:KeywordAvailability a dqv:Dimension ;
+    dqv:inCategory :Findability ;
+    skos:prefLabel "Keyword usage"@en ;
+    skos:definition "Keywords directly support the search and thus increase the findability of the data dataset."@en .
+
+:KeywordAvailability_rate a dqv:Metric ;
+    skos:definition "Rate metric: The system checks whether keywords are defined. The number of keywords has no impact to the score."@en ;
+    dqv:inDimension :KeywordAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:KeywordAvailability_points a dqv:Metric ;
+    prov:wasDerivedFrom :CategoryAvailability ;
+    skos:definition "Points metric (0-30): The system checks whether keywords are defined. The number of keywords has no impact to the score."@en ;
+    dqv:inDimension :KeywordAvailability_rate ;
+    dqv:expectedDataType xsd:double .
+
+:CategoryAvailability a dqv:Dimension ;
+    dqv:inCategory :Findability ;
+    skos:prefLabel "Categories"@en ;
+    skos:definition "Categories help users to explore datasets thematically."@en .
+
+:CategoryAvailability_rate a dqv:Metric ;
+    skos:definition "Rate metric: It is checked whether one or more categories are assigned to the dataset. The number of assigned categories has no impact to the score."@en ;
+    dqv:inDimension :CategoryAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:CategoryAvailability_points a dqv:Metric ;
+    prov:wasDerivedFrom :CategoryAvailability ;
+    skos:definition "Points metric (0-30): It is checked whether one or more categories are assigned to the dataset. The number of assigned categories has no impact to the score."@en ;
+    dqv:inDimension :CategoryAvailability_rate ;
+    dqv:expectedDataType xsd:double .
+
+:SpatialAvailability a dqv:Dimension ;
+    dqv:inCategory :Findability ;
+    skos:prefLabel "Geo search"@en ;
+    skos:definition "Usage of spatial information would enable users in order to find the dataset with a geo facetted search."@en .
+
+:SpatialAvailability_rate a dqv:Metric ;
+    skos:definition "Rate metric: It is checked wether the property is set or not."@en ;
+    dqv:inDimension :SpatialAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:SpatialAvailability_points a dqv:Metric ;
+    prov:wasDerivedFrom :SpatialAvailability_rate ;
+    skos:definition "Points metric (0-20): It is checked wether the property is set or not."@en ;
+    dqv:inDimension :SpatialAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:TemporalAvailability a dqv:Dimension ;
+    dqv:inCategory :Findability ;
+    skos:prefLabel "Time based search"@en ;
+    skos:definition "Usage of temporal information would enable users for a timely based facetted search."@en .
+
+:TemporalAvailability_rate a dqv:Metric ;
+    skos:definition "Rate metric: It is checked wether the property is set or not."@en ;
+    dqv:inDimension :TemporalAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:TemporalAvailability_points a dqv:Metric ;
+    prov:wasDerivedFrom :TemporalAvailability_rate ;
+    skos:definition "Points metric (0-20): It is checked wether the property is set or not."@en ;
+    dqv:inDimension :TemporalAvailability ;
+    dqv:expectedDataType xsd:double .
+
+
+##################################################################################
+### Accessibility
+
+
+:Accessibility a dqv:Category ;
+    skos:prefLabel "Accessibility"@en ;
+    skos:definition "Metrics used to determine whether access to the data referenced by the distributions is guaranteed."@en .
+
+:AccessUrlStatusCode a dqv:Dimension ;
+    dqv:inCategory :Accessibility ;
+    skos:prefLabel "AccessURL accessibility"@en ;
+    skos:definition "The AccessURL is not necessarily a direct link to the data, but also may refers to a URL that gives access to the dataset or where more information about the dataset is available."@en .
+
+:AccessUrlStatusCode_rate a dqv:Metric ;
+    skos:definition "Rate metric: The specified URL is checked for accessibility via a HTTP HEAD request. If the responded status code is in the 200 or 300 range, the accessibility of the resource is evaluated positively."@en ;
+    dqv:inDimension :AccessUrlStatusCode ;
+    dqv:expectedDataType xsd:double .
+
+:AccessUrlStatusCode_points a dqv:Metric ;
+    prov:wasDerivedFrom :AccessUrlStatusCode_rate ;
+    skos:definition "Points metric (0-50): The specified URL is checked for accessibility via a HTTP HEAD request. If the responded status code is in the 200 or 300 range, the accessibility of the resource is evaluated positively."@en ;
+    dqv:inDimension :AccessUrlStatusCode ;
+    dqv:expectedDataType xsd:double .
+
+:DownloadUrlAvailability a dqv:Dimension ;
+    dqv:inCategory :Accessibility ;
+    skos:prefLabel "DownloadURL"@en ;
+    skos:definition "The downloadURL is a direct link to the referenced data."@en .
+
+:DownloadUrlAvailability_rate a dqv:Metric ;
+    skos:definition "Rate metric: It is checked wether the property is set or not."@en ;
+    dqv:inDimension :DownloadUrlAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:DownloadUrlAvailability_points a dqv:Metric ;
+    prov:wasDerivedFrom :DownloadUrlAvailability_rate ;
+    skos:definition "Points metric (0-20): It is checked wether the property is set or not."@en ;
+    dqv:inDimension :DownloadUrlAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:DownloadUrlStatusCode a dqv:Dimension ;
+    dqv:inCategory :Accessibility ;
+    skos:prefLabel "DownloadURL accessibility"@en ;
+    skos:definition "The AccessURL is not necessarily a direct link to the data, but also may refers to a URL that gives access to the dataset or where more information about the dataset is available."@en .
+
+:DownloadUrlStatusCode_rate a dqv:Metric ;
+    skos:definition "Rate metric: The specified URL is checked for accessibility via a HTTP HEAD request. If the responded status code is in the 200 or 300 range, the accessibility of the resource is evaluated positively."@en ;
+    dqv:inDimension :DownloadUrlStatusCode ;
+    dqv:expectedDataType xsd:double .
+
+:DownloadUrlStatusCode_points a dqv:Metric ;
+    prov:wasDerivedFrom :DownloadUrlStatusCode_rate ;
+    skos:definition "Points metric (0-30): The specified URL is checked for accessibility via a HTTP HEAD request. If the responded status code is in the 200 or 300 range, the accessibility of the resource is evaluated positively."@en ;
+    dqv:inDimension :DownloadUrlStatusCode ;
+    dqv:expectedDataType xsd:double .
+
+
+##################################################################################
+### Interoperability
+
+:Interoperability a dqv:Category ;
+    skos:prefLabel "Interoperability"@en ;
+    skos:definition "Metrics used to determine whether a distribution is considered interoperable."@en .
+
+:FormatAvailability a dqv:Dimension ;
+    dqv:inCategory :Interoperability ;
+    skos:prefLabel "Format"@en ;
+    skos:definition "This field specifies the file format of the distribution."@en .
+
+:FormatAvailability_rate a dqv:Metric ;
+    skos:definition "Rate metric: It is checked wether the property is set or not."@en ;
+    dqv:inDimension :FormatAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:FormatAvailability_points a dqv:Metric ;
+    prov:wasDerivedFrom :FormatAvailability_rate ;
+    skos:definition "Points metric (0-20): It is checked wether the property is set or not."@en ;
+    dqv:inDimension :FormatAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:MediaTypeAvailability a dqv:Dimension ;
+    dqv:inCategory :Interoperability ;
+    skos:prefLabel "Media type"@en ;
+    skos:definition "This field specifies the media type of the distribution."@en .
+
+:MediaTypeAvailability_rate a dqv:Metric ;
+    skos:definition "Rate metric: It is checked wether the property is set or not."@en ;
+    dqv:inDimension :MediaTypeAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:MediaTypeAvailability_points a dqv:Metric ;
+    prov:wasDerivedFrom :FormatAvailability_rate ;
+    skos:definition "Points metric (0-10): It is checked wether the property is set or not."@en ;
+    dqv:inDimension :MediaTypeAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:FormatMediaTypeVocabularyAlignment a dqv:Dimension ;
+    dqv:inCategory :Interoperability ;
+    skos:prefLabel "Format / Media type from vocabulary"@en ;
+    skos:definition "Checks whether format and media type belong to a controlled vocabulary."@en .
+
+:FormatMediaTypeVocabularyAlignment_rate a dqv:Metric ;
+    skos:definition "Rate metric: The format vocabulary can be found in the data.europa.eu GitLab repository. The media type is check against the IANA list."@en ;
+    dqv:inDimension :FormatAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:FormatMediaTypeVocabularyAlignment_points a dqv:Metric ;
+    prov:wasDerivedFrom :FormatAvailability_rate ;
+    skos:definition "Points metric (0-10): The format vocabulary can be found in the data.europa.eu GitLab repository. The media type is check against the IANA list."@en ;
+    dqv:inDimension :FormatAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:FormatMediaTypeNonProprietary a dqv:Dimension ;
+    dqv:inCategory :Interoperability ;
+    skos:prefLabel "Non-proprietary"@en ;
+    skos:definition "Checks if the format of the distribution is non-proprietary."@en .
+
+:FormatMediaTypeNonProprietary_rate a dqv:Metric ;
+    skos:definition "Rate metric: The distribution is considered as non-proprietary if the specified format is contained in the corresponding data.europa.eu GitLab repository vocabulary."@en ;
+    dqv:inDimension :FormatMediaTypeNonProprietary ;
+    dqv:expectedDataType xsd:double .
+
+:FormatMediaTypeNonProprietary_points a dqv:Metric ;
+    prov:wasDerivedFrom :FormatMediaTypeNonProprietary_rate ;
+    skos:definition "Points metric (0-20): The distribution is considered as non-proprietary if the specified format is contained in the corresponding data.europa.eu GitLab repository vocabulary."@en ;
+    dqv:inDimension :FormatMediaTypeNonProprietary ;
+    dqv:expectedDataType xsd:double .
+
+:FormatMediaTypeMachineInterpretable a dqv:Dimension ;
+    dqv:inCategory :Interoperability ;
+    skos:prefLabel "Format"@en ;
+    skos:definition "Checks if the format of the distribution is machine-readable."@en .
+
+:FormatMediaTypeMachineInterpretable_rate a dqv:Metric ;
+    skos:definition "Rate metric: The distribution is considered as machine-readable if the specified format is contained in the corresponding data.europa.eu GitLab repository vocabulary."@en ;
+    dqv:inDimension :FormatMediaTypeMachineInterpretable ;
+    dqv:expectedDataType xsd:double .
+
+:FormatMediaTypeMachineInterpretable_points a dqv:Metric ;
+    prov:wasDerivedFrom :FormatMediaTypeMachineInterpretable_rate ;
+    skos:definition "Points metric (0-20): The distribution is considered as machine-readable if the specified format is contained in the corresponding data.europa.eu GitLab repository vocabulary."@en ;
+    dqv:inDimension :FormatMediaTypeMachineInterpretable ;
+    dqv:expectedDataType xsd:double .
+
+:DcatApCompliance a dqv:Dimension ;
+    dqv:inCategory :Interoperability ;
+    skos:prefLabel "DCAT-AP compliance"@en ;
+    skos:definition "DCAT-AP compliance is calculated across all sources and datasets available on a catalogue. This check is only performed if the metadata is originally harvested as DCAT-AP or as a valid derivate. DCAT-AP is a specification for describing linked public data in Europe. The data.europa.eu portal may also harvest metadata which does not fully comply to DCAT-AP. In order to increase conformity to DCAT-AP, the MQA checks each metadata for its DCAT-AP compliance."@en .
+
+:DcatApCompliance_rate a dqv:Metric ;
+    skos:definition "Rate metric: The metadata is validated against a set of SHACL shapes. The metadata is not compliant, if the SHACL validation reports at least one issue. The MQA uses data.europa.eu's DCAT-AP SHACL validation service. SHACL is a recommendation from the W3C and is used for validating RDF graphs against a set of shapes."@en ;
+    dqv:inDimension :DcatApCompliance ;
+    dqv:expectedDataType xsd:double .
+
+:DcatApCompliance_points a dqv:Metric ;
+    prov:wasDerivedFrom :DcatApCompliance_rate ;
+    skos:definition "Points metric (0-30): The metadata is validated against a set of SHACL shapes. The metadata is not compliant, if the SHACL validation reports at least one issue. The MQA uses data.europa.eu's DCAT-AP SHACL validation service. SHACL is a recommendation from the W3C and is used for validating RDF graphs against a set of shapes."@en ;
+    dqv:inDimension :DcatApCompliance ;
+    dqv:expectedDataType xsd:double .
+
+
+##################################################################################
+### Reusability
+
+:Reusability a dqv:Category ;
+    skos:prefLabel "Reusability"@en ;
+    skos:definition "Metrics used to check the reusability of the data."@en .
+
+:LicenceAvailability a dqv:Dimension ;
+    dqv:inCategory :Reusability ;
+    skos:prefLabel "License information"@en ;
+    skos:definition "A license is valuable information for the reuse of data."@en .
+
+:LicenceAvailability_rate a dqv:Metric ;
+    skos:definition "Rate metric: It is checked wether the property is set or not."@en ;
+    dqv:inDimension :LicenceAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:LicenceAvailability_points a dqv:Metric ;
+    prov:wasDerivedFrom :LicenceAvailability_rate ;
+    skos:definition "Points metric (0-20): It is checked wether the property is set or not."@en ;
+    dqv:inDimension :LicenceAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:KnownLicence a dqv:Dimension ;
+    dqv:inCategory :Reusability ;
+    skos:prefLabel "License vocabulary"@en ;
+    skos:definition "We would like to limit the indication of incorrect license information. For example, we encounter many CC licenses that lack versioning."@en .
+
+:KnownLicence_rate a dqv:Metric ;
+    skos:definition "Rate metric: The MQA recommends and credits the usage of controlled vocabularies. The data.europa.eu portal publishes its controlled vocabularies in GitLab. The vocabularies are derived from the EU Vocabularies."@en ;
+    dqv:inDimension :KnownLicence ;
+    dqv:expectedDataType xsd:double .
+
+:KnownLicence_points a dqv:Metric ;
+    prov:wasDerivedFrom :KnownLicence_rate ;
+    skos:definition "Points metric (0-10): The MQA recommends and credits the usage of controlled vocabularies. The data.europa.eu portal publishes its controlled vocabularies in GitLab. The vocabularies are derived from the EU Vocabularies."@en ;
+    dqv:inDimension :KnownLicence ;
+    dqv:expectedDataType xsd:double .
+
+:AccessRightsAvailability a dqv:Dimension ;
+    dqv:inCategory :Reusability ;
+    skos:prefLabel "Access restrictions"@en ;
+    skos:definition "This field indicates whether the access to the data is public or restricted."@en .
+
+:AccessRightsAvailability_rate a dqv:Metric ;
+    skos:definition "Rate metric: It is checked wether the property is set or not."@en ;
+    dqv:inDimension :AccessRightsAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:AccessRightsAvailability_points a dqv:Metric ;
+    prov:wasDerivedFrom :AccessRightsAvailability_rate ;
+    skos:definition "Points metric (0-10): It is checked wether the property is set or not."@en ;
+    dqv:inDimension :AccessRightsAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:AccessRightsVocabularyAlignment a dqv:Dimension ;
+    dqv:inCategory :Reusability ;
+    skos:prefLabel "Access restrictions vocabulary"@en ;
+    skos:definition "The use of a controlled vocabulary for access restrictions increases reusability."@en .
+
+:AccessRightsVocabularyAlignment_rate a dqv:Metric ;
+    skos:definition "Rate metric: It is checked whether the controlled vocabulary for access rights is used."@en ;
+    dqv:inDimension :AccessRightsVocabularyAlignment ;
+    dqv:expectedDataType xsd:double .
+
+:AccessRightsVocabularyAlignment_points a dqv:Metric ;
+    prov:wasDerivedFrom :AccessRightsVocabularyAlignment_rate ;
+    skos:definition "Points metric (0-5): It is checked whether the controlled vocabulary for access rights is used."@en ;
+    dqv:inDimension :AccessRightsVocabularyAlignment ;
+    dqv:expectedDataType xsd:double .
+
+:ContactPointAvailability a dqv:Dimension ;
+    dqv:inCategory :Reusability ;
+    skos:prefLabel "Contact point"@en ;
+    skos:definition "The contact point contains inform whom to address in case of questions regarding the data."@en .
+
+:ContactPointAvailability_rate a dqv:Metric ;
+    skos:definition "Rate metric: It is checked wether the property is set or not."@en ;
+    dqv:inDimension :ContactPointAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:ContactPointAvailability_points a dqv:Metric ;
+    prov:wasDerivedFrom :AccessRightsVocabularyAlignment_rate ;
+    skos:definition "Points metric (0-20): It is checked wether the property is set or not."@en ;
+    dqv:inDimension :ContactPointAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:PublisherAvailability a dqv:Dimension ;
+    dqv:inCategory :Reusability ;
+    skos:prefLabel "Publisher"@en ;
+    skos:definition "It is checked wether the Publisher is set or not."@en .
+
+:PublisherAvailability_rate a dqv:Metric ;
+    skos:definition "Rate metric: It is checked wether the property is set or not."@en ;
+    dqv:inDimension :PublisherAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:PublisherAvailability_points a dqv:Metric ;
+    prov:wasDerivedFrom :AccessRightsVocabularyAlignment_rate ;
+    skos:definition "Points metric (0-10): It is checked wether the property is set or not."@en ;
+    dqv:inDimension :PublisherAvailability ;
+    dqv:expectedDataType xsd:double .
+
+##################################################################################
+### Contextuality
+
+:Contextuality a dqv:Category ;
+    skos:prefLabel "Contextuality"@en ;
+    skos:definition "Light weight properties, that provide more context to the user.."@en .
+
+:RightsAvailability a dqv:Dimension ;
+    dqv:inCategory :Contextuality ;
+    skos:prefLabel "Rights"@en ;
+    skos:definition "In some cases, a specific license cannot be applied to a dataset. The 'Rights' field can be used to specify a reference to a resource that will inform a user about the rights he has when using the dataset."@en .
+
+:RightsAvailability_rate a dqv:Metric ;
+    skos:definition "Rate metric: It is checked wether the property is set or not."@en ;
+    dqv:inDimension :RightsAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:RightsAvailability_points a dqv:Metric ;
+    prov:wasDerivedFrom :RightsAvailability_rate ;
+    skos:definition "Points metric (0-5): It is checked wether the property is set or not."@en ;
+    dqv:inDimension :RightsAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:ByteSizeAvailability a dqv:Dimension ;
+    dqv:inCategory :Contextuality ;
+    skos:prefLabel "File size"@en ;
+    skos:definition "Specifies the size of the file in bytes."@en .
+
+:ByteSizeAvailability_rate a dqv:Metric ;
+    skos:definition "Rate metric: It is checked wether the property is set or not."@en ;
+    dqv:inDimension :ByteSizeAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:ByteSizeAvailability_points a dqv:Metric ;
+    prov:wasDerivedFrom :ByteSizeAvailability_rate ;
+    skos:definition "Points metric (0-5): It is checked wether the property is set or not."@en ;
+    dqv:inDimension :ByteSizeAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:DateIssuedAvailability a dqv:Dimension ;
+    dqv:inCategory :Contextuality ;
+    skos:prefLabel "Date of issue"@en ;
+    skos:definition "The date on which the dataset or distribution was released."@en .
+
+:DateIssuedAvailability_rate a dqv:Metric ;
+    skos:definition "Rate metric: It is checked wether the property is set or not."@en ;
+    dqv:inDimension :DateIssuedAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:DateIssuedAvailability_points a dqv:Metric ;
+    prov:wasDerivedFrom :DateIssuedAvailability_rate ;
+    skos:definition "Points metric (0-5): It is checked wether the property is set or not."@en ;
+    dqv:inDimension :DateIssuedAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:DateModifiedAvailability a dqv:Dimension ;
+    dqv:inCategory :Contextuality ;
+    skos:prefLabel "Modification date"@en ;
+    skos:definition "The date on which the dataset or distribution was last changed."@en .
+
+:DateModifiedAvailability_rate a dqv:Metric ;
+    skos:definition "Rate metric: It is checked wether the property is set or not."@en ;
+    dqv:inDimension :DateModifiedAvailability ;
+    dqv:expectedDataType xsd:double .
+
+:DateModifiedAvailability_points a dqv:Metric ;
+    prov:wasDerivedFrom :DateModifiedAvailability_rate ;
+    skos:definition "Points metric (0-5): It is checked wether the property is set or not."@en ;
+    dqv:inDimension :DateModifiedAvailability ;
+    dqv:expectedDataType xsd:double .
+
+
+#################################################################################
+#### Quality Report  ###
+#################################################################################
+
+    :myCatalog a dcat:Catalog ;
+        dcterms:title 
+        dqv:hasQualityMeasurement  .
+
+:myCatalog a dcat:Catalog ;
+    dcterms:title "datos.gob.es" ;
+    dqv:hasQualityMeasurement 
+	:KeywordAvailability_rate_value,:KeywordAvailability_points_value,
+	:CategoryAvailability_rate_value,:CategoryAvailability_points_value,
+	:SpatialAvailability_rate_value,:SpatialAvailability_points_value,
+	:TemporalAvailability_rate_value,:TemporalAvailability_points_value,
+	:AccessUrlStatusCode_rate_value,:AccessUrlStatusCode_points_value,
+	:DownloadUrlAvailability_rate_value,:DownloadUrlAvailability_points_value,
+	:DownloadUrlStatusCode_rate_value,:DownloadUrlStatusCode_points_value,
+	:FormatAvailability_rate_value,:FormatAvailability_points_value,
+	:MediaTypeAvailability_rate_value,:MediaTypeAvailability_points_value,
+	:FormatMediaTypeVocabularyAlignment_rate_value,:FormatMediaTypeVocabularyAlignment_points_value,
+	:FormatMediaTypeNonProprietary_rate_value,:FormatMediaTypeNonProprietary_points_value,
+	:FormatMediaTypeMachineInterpretable_rate_value,:FormatMediaTypeMachineInterpretable_points_value,
+	:DcatApCompliance_rate_value,:DcatApCompliance_points_value,
+	:LicenceAvailability_rate_value,:LicenceAvailability_points_value,
+	:KnownLicence_rate_value,:KnownLicence_points_value,
+	:AccessRightsAvailability_rate_value,:AccessRightsAvailability_points_value,
+	:AccessRightsVocabularyAlignment_rate_value,:AccessRightsVocabularyAlignment_points_value,
+	:ContactPointAvailability_rate_value,:ContactPointAvailability_points_value,
+	:PublisherAvailability_rate_value,:PublisherAvailability_points_value,
+	:RightsAvailability_rate_value,:RightsAvailability_points_value,
+	:ByteSizeAvailability_rate_value,:ByteSizeAvailability_points_value,
+	:DateIssuedAvailability_rate_value,:DateIssuedAvailability_points_value,
+	:DateModifiedAvailability_rate_value,:DateModifiedAvailability_points_value.

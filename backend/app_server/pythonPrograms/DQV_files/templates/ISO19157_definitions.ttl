@@ -1,0 +1,273 @@
+@prefix : <http://www.qualityreport.com/qr/>.
+@prefix dcat:<http://www.w3.org/ns/dcat#>. 
+@prefix dcterms:<http://purl.org/dc/terms/>.
+@prefix xsd:<http://www.w3.org/2001/XMLSchema#>.
+@prefix dqv:<http://www.w3.org/ns/dqv#>.
+@prefix skos:<http://www.w3.org/2004/02/skos/core#>.
+@prefix ldqd:<http://www.w3.org/2016/05/ldqd#> .
+@prefix dct:<http://purl.org/dc/terms/>.
+@prefix qb:<http://purl.org/linked-data/cube#>.
+@prefix owl:<http://www.w3.org/2002/07/owl#>.
+@prefix rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs:<http://www.w3.org/2000/01/rdf-schema#>.
+@prefix prov: <http://www.w3.org/ns/prov#>.
+
+#################################################################################
+#### definition of categories, dimensions and metrics  ###
+#################################################################################
+
+
+##################################################################################
+### Extra properties in the model
+
+#Parameters of the measurements (derived from DQV specification)
+:onLanguage
+    a qb:DimensionProperty, owl:DatatypeProperty ;
+    rdfs:comment   "Language on which the quality measure is assessed."@en ;
+    rdfs:domain    dqv:QualityMeasurement;
+    rdfs:label     "Label assessment language"@en ;
+    rdfs:range       xsd:string.
+
+:onProperty
+    a qb:DimensionProperty, rdf:Property ;
+    rdfs:comment 	"Property on which the quality measure is assessed."@en ;
+    rdfs:domain 	dqv:QualityMeasurement ;
+    rdfs:label  	"Label assessment property"@en ;
+    rdfs:range     	rdf:Property.
+
+
+#################################################################################
+#### Completeness  ###
+
+:DQ_Completeness a dqv:Category ;
+    skos:prefLabel "Completeness"@en ;
+    skos:definition "Completeness refers to the degree in which the metadata elements are present or absent."@en .
+
+:DQ_CompletenessCommission a dqv:Dimension ;
+    dqv:inCategory :DQ_Completeness ;
+    skos:prefLabel "Completeness commission"@en ;
+    skos:definition "Completeness commission refers to the degree in which there are excess instances of metadata elements in a metadata record."@en .
+
+:D.3.ISO.19157 a dqv:Metric ;
+    skos:definition "Rate of records with excess items."@en ;
+    dqv:inDimension :DQ_CompletenessCommission ;
+    dqv:expectedDataType xsd:double .
+
+:D.3.ISO.19157_conformance a dqv:Metric ;
+    prov:wasDerivedFrom :D.3.ISO.19157 ;
+    skos:definition "Checks if the rate of records with excess items is below AQL (statistical error level)."@en ;
+    dqv:inDimension :DQ_CompletenessCommission ;
+    dqv:expectedDataType xsd:boolean .
+
+:DQ_CompletenessOmission a dqv:Dimension ;
+    dqv:inCategory :DQ_Completeness ;
+    skos:prefLabel "Completeness ommission"@en ;
+    skos:definition "Completeness ommission refers to the degree in which there are mandatory elements absent in metadata records."@en .
+
+:D.7.ISO.19157 a dqv:Metric ;
+    skos:definition "Rate of records with missing items."@en ;
+    dqv:inDimension :DQ_CompletenessOmission;
+    dqv:expectedDataType xsd:double .
+
+:D.7.ISO.19157_conformance a dqv:Metric ;
+    prov:wasDerivedFrom :D.7.ISO.19157 ;
+    skos:definition "Checks if the rate of records with missing items is below AQL (statistical error level)."@en ;
+    dqv:inDimension :DQ_CompletenessOmission;
+    dqv:expectedDataType xsd:boolean .
+
+
+##################################################################################
+### Logical Consistency
+
+
+:DQ_LogicalConsistency a dqv:Category ;
+    skos:prefLabel "Logical Consistency"@en ;
+    skos:definition "Logical consistency refers to the degree of adherence to logical rules of metadata structure."@en .
+
+:DQ_ConceptualConsistency a dqv:Dimension ;
+    dqv:inCategory :DQ_LogicalConsistency ;
+    skos:prefLabel "Conceptual consistency"@en ;
+    skos:definition "Conceptual consistency refers to the degree of adherence to the metadata schema."@en .
+
+:D.13.ISO.19157 a dqv:Metric ;
+    skos:definition "Rate of records compliant with the conceptual schema."@en ;
+    dqv:inDimension :DQ_ConceptualConsistency ;
+    dqv:expectedDataType xsd:double .
+
+:D.13.ISO.19157_conformance a dqv:Metric ;
+    prov:wasDerivedFrom :D.13.ISO.19157 ;
+    skos:definition "Checks if the rate of records compliant with the conceptual schema is above 100 - AQL (statistical error level)."@en ;
+    dqv:inDimension :DQ_ConceptualConsistency ;
+    dqv:expectedDataType xsd:boolean .
+
+:DQ_DomainConsistency a dqv:Dimension ;
+    dqv:inCategory :DQ_LogicalConsistency ;
+    skos:prefLabel "Domain consistency"@en ;
+    skos:definition "Domain consistency refers to the degree of adherence of metadata element values to the value domains."@en .
+
+:D.17.ISO.19157 a dqv:Metric ;
+    skos:definition "Value domain conformance rate."@en ;
+    dqv:inDimension :DQ_ConceptualConsistency ;
+    dqv:expectedDataType xsd:double .
+
+:D.17.ISO.19157_conformance a dqv:Metric ;
+    prov:wasDerivedFrom :D.17.ISO.19157 ;
+    skos:definition "Checks if the value domain conformance rate is above 100 - AQL (statistical error level)."@en ;
+    dqv:inDimension :DQ_ConceptualConsistency ;
+    dqv:expectedDataType xsd:boolean .
+
+
+
+##################################################################################
+### Temporal Accuracy
+
+
+:DQ_TemporalQuality a dqv:Category ;
+    skos:prefLabel "Temporal quality"@en ;
+    skos:definition "Temporal quality refers to the accuracy of the temporal metadata elements and temporal relationships of metadata elements."@en .
+
+:DQ_TemporalConsistency a dqv:Dimension ;
+    dqv:inCategory :DQ_TemporalQuality ;
+    skos:prefLabel "Temporal consistency"@en ;
+    skos:definition "Temporal consistency refers to the degree of correctness of ordered events or sequences, if reported, within a single metadata record."@en .
+
+:Sim_D.62.ISO.19157 a dqv:Metric ;
+    skos:definition "Rate of records with conflict time sequences."@en ;
+    dqv:inDimension :DQ_TemporalConsistency ;
+    dqv:expectedDataType xsd:double .
+
+:Sim_D.62.ISO.19157_conformance a dqv:Metric ;
+    prov:wasDerivedFrom :Sim_D.62.ISO.19157 ;
+    skos:definition "Checks if the rate of records with conflict time sequences is below AQL (statistical error level)."@en ;
+    dqv:inDimension :DQ_TemporalConsistency ;
+    dqv:expectedDataType xsd:boolean .
+
+:DQ_TemporalValidity a dqv:Dimension ;
+    dqv:inCategory :DQ_TemporalQuality ;
+    skos:prefLabel "Temporal validity"@en ;
+    skos:definition "Temporal consistency refers to the degree of validity of metadata time values with respect to a defined time range."@en .
+
+:D18.ISO.19157 a dqv:Metric ;
+    skos:definition "Value domain non-conformance rate."@en ;
+    dqv:inDimension :DQ_TemporalValidity ;
+    dqv:expectedDataType xsd:double .
+
+:D18.ISO.19157_conformance a dqv:Metric ;
+    prov:wasDerivedFrom :D18.ISO.19157 ;
+    skos:definition "Checks if the value domain non-conformance rate is below AQL (statistical error level)."@en ;
+    dqv:inDimension :DQ_TemporalValidity ;
+    dqv:expectedDataType xsd:boolean .
+
+
+##################################################################################
+### Thematic Accuracy
+
+:DQ_ThematicAccuracy a dqv:Category ;
+    skos:prefLabel "Thematic accuracy"@en ;
+    skos:definition "Thematic accuracy refers to the correctness of non-quantitative metadata elements and metadata elements related to classifications."@en .
+
+:DQ_ThematicClassificationCorrectness a dqv:Dimension ;
+    dqv:inCategory :DQ_ThematicAccuracy ;
+    skos:prefLabel "Thematic classification correctness"@en ;
+    skos:definition "Thematic classification correctness refers to the degree of correctness of the thematic keywords and categories included in the metadata with respect to a universe of discourse."@en .
+
+:D63.ISO.19157 a dqv:Metric ;
+    skos:definition "Number of incorrectly classified records."@en ;
+    dqv:inDimension :DQ_ThematicClassificationCorrectness ;
+    dqv:expectedDataType xsd:integer .
+
+:D63.ISO.19157_conformance a dqv:Metric ;
+    prov:wasDerivedFrom :D63.ISO.19157 ;
+    skos:definition "Checks if the number of incorrectly classified records is below Ac (maximum number of accepted errors)."@en ;
+    dqv:inDimension :DQ_ThematicClassificationCorrectness ;
+    dqv:expectedDataType xsd:boolean .
+
+:DQ_NonQuantitativeAttributeCorrectness a dqv:Dimension ;
+    dqv:inCategory :DQ_ThematicAccuracy ;
+    skos:prefLabel "Non-quantitative attribute correctness"@en ;
+    skos:definition "Non-quantitative attribute correctness refers to the degree of correctness of correctness of non-quantitative metadata elements in relation to a universe of discourse."@en .
+
+:D68.ISO.19157 a dqv:Metric ;
+    skos:definition "Number of incorrect attribute values."@en ;
+    dqv:inDimension :DQ_NonQuantitativeAttributeCorrectness ;
+    dqv:expectedDataType xsd:integer .
+
+:D68.ISO.19157_conformance a dqv:Metric ;
+    prov:wasDerivedFrom :D68.ISO.19157 ;
+    skos:definition "Checks if the number of incorrect attribute values is below Ac (maximum number of accepted errors)."@en ;
+    dqv:inDimension :DQ_NonQuantitativeAttributeCorrectness ;
+    dqv:expectedDataType xsd:boolean .
+
+:D69.ISO.19157 a dqv:Metric ;
+    skos:definition "Rate of incorrect attribute values."@en ;
+    dqv:inDimension :DQ_NonQuantitativeAttributeCorrectness ;
+    dqv:expectedDataType xsd:double .
+
+:D69.ISO.19157_conformance a dqv:Metric ;
+    prov:wasDerivedFrom :D69.ISO.19157 ;
+    skos:definition "Checks if the rate of incorrect attribute values is below AQL (statistical error level)."@en ;
+    dqv:inDimension :DQ_NonQuantitativeAttributeCorrectness ;
+    dqv:expectedDataType xsd:boolean .
+
+
+
+
+##################################################################################
+### Positional Correctness
+
+:DQ_PositionalCorrectness a dqv:Category, dqv:Dimension ;
+    skos:prefLabel "Positional correctness"@en ;
+    skos:definition "Positional correctness refers to the degree of correctnes of metadata elements describing the geographic extent of a resource."@en .
+
+:Sim_D33.ISO.19157 a dqv:Metric ;
+    skos:definition "Rate of records with positional errors (no overlapping between direct and indirect georeferences)."@en ;
+    dqv:inDimension :DQ_PositionalCorrectness ;
+    dqv:expectedDataType xsd:double .
+
+:Sim_D33.ISO.19157_conformance a dqv:Metric ;
+    prov:wasDerivedFrom :Sim_D33.ISO.19157 ;
+    skos:definition "Checks if the rate of records with positional errors (no overlapping between direct and indirect georeferences) is below AQL (statistical error level)."@en ;
+    dqv:inDimension :DQ_PositionalCorrectness ;
+    dqv:expectedDataType xsd:boolean .
+
+
+
+
+##################################################################################
+### Quality of Free Text
+
+:DQ_QualityOfFreeText a dqv:Category, dqv:Dimension ;
+    skos:prefLabel "Quality of free text"@en ;
+    skos:definition "Quality of free text refers to the editorial quality in the content of free-text metadata elements."@en .
+
+:OverallQualityOfFreeText a dqv:Metric ;
+    skos:definition "Number of records using text values with a bad quality level."@en ;
+    dqv:inDimension :DQ_QualityOfFreeText ;
+    dqv:expectedDataType xsd:integer .
+
+:OverallQualityOfFreeText_conformance a dqv:Metric ;
+    prov:wasDerivedFrom :OverallQualityOfFreeText ;
+    skos:definition "Checks if the number of records using text values with a bad quality level is below Ac (maximum number of accepted errors)."@en ;
+    dqv:inDimension :DQ_QualityOfFreeText ;
+    dqv:expectedDataType xsd:boolean .
+
+:ReadibilityOfTreeText a dqv:Metric ;
+    skos:definition "Rate of records using text values considered readable with a readability index (e.g. Flesch) above a threshold."@en ;
+    dqv:inDimension :DQ_QualityOfFreeText ;
+    dqv:expectedDataType xsd:double .
+
+:ReadibilityOfTreeText_conformance a dqv:Metric ;
+    prov:wasDerivedFrom :ReadibilityOfTreeText ;
+    skos:definition "Checks if the rate of records using text values considered readable with a readability index (e.g. Flesch) above a threshold is above 100 - AQL (statistical error level)."@en ;
+    dqv:inDimension :DQ_QualityOfFreeText ;
+    dqv:expectedDataType xsd:boolean .
+
+
+
+#################################################################################
+#### Quality Report  ###
+#################################################################################
+
+:myCatalog a dcat:Catalog ;
+    dcterms:title
+    dqv:hasQualityMeasurement  .

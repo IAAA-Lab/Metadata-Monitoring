@@ -5,7 +5,7 @@ const { Results_mqa_sparql, Results_ISO19157 } = require('./schema')
 const resultsIndex = async function (req, res) {
     let result_mqa = await Results_mqa_sparql.find({}).then(r => {
         let result = []
-        for(let i=0; i<r.length-1; i++) {
+        for(let i=0; i<r.length; i++) {
             let property = {
                 URL: r[i].URL,
                 Date: r[i].Date,
@@ -18,7 +18,7 @@ const resultsIndex = async function (req, res) {
 
     let result_ISO19157 = await Results_ISO19157.find({}).then(r => {
         let result = []
-        for(let i=0; i<r.length-1; i++) {
+        for(let i=0; i<r.length; i++) {
             let property = {
                 URL: r[i].URL,
                 Date: r[i].Date,
@@ -29,7 +29,7 @@ const resultsIndex = async function (req, res) {
         return result
     })
     //Concatenar los dos arrays
-    res.json(result_ISO19157)
+    res.json(result_mqa)
 }
 
 module.exports = {

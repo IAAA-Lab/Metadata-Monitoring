@@ -65,7 +65,7 @@ const results_mqa_sparql_schema = new Schema({
         required: true
     },
     Date: {
-        type: Date,
+        type: String,
         required: true
     },
     properties: {
@@ -80,7 +80,7 @@ const results_ISO19157_sparql_schema = new Schema({
         required: true
     },
     Date: {
-        type: Date,
+        type: String,
         required: true
     },
     properties: {
