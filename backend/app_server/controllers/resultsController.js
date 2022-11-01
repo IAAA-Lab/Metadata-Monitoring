@@ -35,6 +35,10 @@ const exportData = function (req, res) {
 
     const fileName = req.query.filename
     Attachment.read({ filename: fileName }, (error, buffer) => {
+        if (error) {
+            res.status(404).send('file does not exists')
+            return
+        }
         res.setHeader('Content-Disposition','attachment; filename=' + fileName);
         res.send(buffer.toString())
     });
