@@ -1,6 +1,7 @@
 const { Results_mqa_sparql, Results_ISO19157 } = require('./schema')
 const { createReadStream } = require('fs')
 const { createModel } = require('mongoose-gridfs');
+const path = require('path');
 
 const PythonShell = require('python-shell').PythonShell;
 const myPython = './app_server/pythonPrograms/my-environment/bin/python3'
@@ -58,7 +59,7 @@ const mqa_sparql = function (url) {
         }
         Results_mqa_sparql.create(result)
         console.log('Evaluation MQA of ' + url + ' saved')
-        storeFile('MQA_qualityReport.ttl')
+        storeFile('test.ttl')
 
     });
     return true
@@ -107,6 +108,7 @@ const iso19157 = function (url) {
 
         Results_ISO19157.create(result)
         console.log('Evaluation ISO19157 of ' + url + ' saved')
+        storeFile('test.ttl')
     });
 
     return true
@@ -117,12 +119,14 @@ const storeFile = function (name) {
     const Attachment = createModel();
 
     // write file to gridfs
-    const readStream = createReadStream(__dirname + '/test.ttl');
-    const options = ({ filename: 'test2.ttl', contentType: 'text/plain' });
+    const realPath = path.resolve('./app_server/pythonPrograms/DQV_files/' + name)
+    console.log(realPath)
+    const readStream = createReadStream(realPath);
+    const options = ({ filename: name, contentType: 'text/plain' });
     Attachment.write(options, readStream, (error, file) => {
-        console.log('write')
     });
 
+    //Para descargar
     // Attachment.read({ filename: 'test.ttl' }, (error, buffer) => {
     //     res.setHeader('Content-Disposition','attachment; filename=test.ttl');
     //     res.send(buffer.toString())
