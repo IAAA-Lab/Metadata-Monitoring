@@ -1,4 +1,6 @@
-const { Results_mqa_sparql } = require('./schema')
+const { Results_mqa_sparql, Results_ISO19157 } = require('./schema')
+const { createReadStream } = require('fs')
+const { createModel } = require('mongoose-gridfs');
 
 const PythonShell = require('python-shell').PythonShell;
 const myPython = './app_server/pythonPrograms/my-environment/bin/python3'
@@ -7,36 +9,36 @@ const myPython = './app_server/pythonPrograms/my-environment/bin/python3'
 const evaluate = function (req, res) {
     let evaluationStarted = false
     if (req.query.mqa === 'true') {
-        console.log("")
         evaluationStarted = mqa_sparql(req.query.url);
     }
     if (req.query.iso19157 === 'true') {
         evaluationStarted = iso19157(req.query.url)
     }
-    if (evaluationStarted) {
-        res.json({evaluationStarted: evaluationStarted});
-    } else {
-        res.json({evaluationStarted: evaluationStarted});
-    }
+    res.json({evaluationStarted: evaluationStarted});
 }
 
 const mqa_sparql = function (url) {
+    //date in format YYYY-MM-DD HH-mm-ss
+    let date = new Date().toISOString()
+        .replace(/T/, ' ')
+        .replace(/\..+/, '')
+
     const options = {
         pythonPath: myPython,
-        args: [url]
+        args: [url, date]
     };
 
     console.log('Starting evaluation MQA of: ' + url)
     PythonShell.run('./app_server/pythonPrograms/mqa_sparql/run.py', options, function (err, output) {
         if (err) {
-            console.log('Evaluation of ' + url + ' failed')
+            console.log('Evaluation of MQA ' + url + ' failed')
             console.log(err)
             return false
         }
 
         let properties = []
         //component 1 and output.length-2 is ignored because the last message is not usefull
-        for(let i=1; i<output.length-2; i++) {
+        for(let i=2; i<output.length-2; i++) {
             let property = output[i].split(';')
             let property_item = {
                 Dimension: property[0],
@@ -50,31 +52,37 @@ const mqa_sparql = function (url) {
         }
         let result = {
             URL: url,
-            Date: new Date(),
+            Date: date,
             properties: properties
         }
         Results_mqa_sparql.create(result)
         console.log('Evaluation MQA of ' + url + ' saved')
+        storeFile('MQA_qualityReport.ttl')
+
     });
     return true
 };
 
 const iso19157 = function (url) {
+    let date = new Date().toISOString()
+        .replace(/T/, ' ')
+        .replace(/\..+/, '')
+
     const options = {
         pythonPath: myPython,
-        args: [url]
+        args: [url, date]
     };
 
     console.log('Starting evaluation ISO19157 of: ' + url)
     PythonShell.run('./app_server/pythonPrograms/iso19157/run.py', options, function (err, output) {
         if (err) {
-            console.log('Evaluation of ' + url + ' failed')
+            console.log('Evaluation of ISO19157' + url + ' failed')
             console.log(err)
             return false
         }
 
         let properties = []
-        //component 1 and output.length-2 is ignored because the last message is not usefull
+        //component 2 and output.length-2 is ignored because the last message is not usefull
         for(let i=2; i<output.length-2; i++) {
             let property = output[i].split(';')
             let property_item = {
@@ -84,21 +92,38 @@ const iso19157 = function (url) {
                 Count: property[3],
                 Population: property[4],
                 Percentage: property[5],
-                Pass: property[6]
+                Pass: property[6] === 'True'
             }
             properties.push(property_item)
         }
         let result = {
             URL: url,
-            Date: new Date(),
+            Date: date,
             properties: properties
         }
 
-        Results_mqa_sparql.create(result)
+        Results_ISO19157.create(result)
         console.log('Evaluation ISO19157 of ' + url + ' saved')
     });
 
     return true
+};
+
+const storeFile = function (name) {
+    // use default bucket
+    const Attachment = createModel();
+
+    // write file to gridfs
+    const readStream = createReadStream(__dirname + '/test.ttl');
+    const options = ({ filename: 'test2.ttl', contentType: 'text/plain' });
+    Attachment.write(options, readStream, (error, file) => {
+        console.log('write')
+    });
+
+    // Attachment.read({ filename: 'test.ttl' }, (error, buffer) => {
+    //     res.setHeader('Content-Disposition','attachment; filename=test.ttl');
+    //     res.send(buffer.toString())
+    // });
 };
 
 module.exports = {

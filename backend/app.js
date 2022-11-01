@@ -14,6 +14,7 @@ require('./app_server/services/connection')
 require('./app_server/config/passport')(passport);
 
 const evaluateRouter = require('./app_server/routes/evaluateRouter');
+const resultsRouter = require('./app_server/routes/resultsRouter');
 
 const app = express();
 
@@ -41,7 +42,9 @@ app.post('/logout', function(req, res, next){
     res.redirect('/');
   });
 });
+
 app.use('/evaluate', evaluateRouter);
+app.use('/results', resultsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -7,7 +7,8 @@ Main program to test ISO19157 evaluation
 """
 
 from ISO19157Evaluation import ISO19157Evaluation
-import os, ssl
+import os, ssl, sys
+from datetime import datetime
 
 
 
@@ -15,6 +16,15 @@ if __name__ == '__main__':
     abspath = os.path.abspath(__file__)
     dname = os.path.dirname(abspath)
     os.chdir(dname)
+
+    # # len - 1 to delete argv[0] (for testing purposes)
+    # if len(sys.argv)-1 == 0:
+    #     URL = 'http://datos.gob.es/virtuoso/sparql'
+    #     # date in YYYY-MM-DD HH-mm-ss format
+    #     date = datetime.now().strftime('%Y-%d-%m %H:%M:%S')
+    # else:
+    URL = sys.argv[1]
+    date = sys.argv[2]
 
     if (not os.environ.get('PYTHONHTTPSVERIFY', '') and
             getattr(ssl, '_create_unverified_context', None)):
@@ -33,5 +43,5 @@ if __name__ == '__main__':
     # exit(0)
 
     print("\nCURRENT")
-    evaluationCurrent = ISO19157Evaluation('http://datos.gob.es/virtuoso/sparql')
+    evaluationCurrent = ISO19157Evaluation(URL)
     evaluationCurrent.evaluate()

@@ -1,7 +1,7 @@
 const {Schema, model} = require("mongoose")
 const bcrypt = require('bcrypt');
 
-const properties_ISO19157 = new Schema({
+const properties_ISO19157_schema = new Schema({
     Dimension: {
         type: String,
         required: true
@@ -10,7 +10,7 @@ const properties_ISO19157 = new Schema({
         type: String,
         required: true
     },
-    Porperty: {
+    Property: {
         type: String,
         required: true
     },
@@ -60,12 +60,31 @@ const properties_mqa_sparql_schema = new Schema({
 })
 
 const results_mqa_sparql_schema = new Schema({
+    URL: {
+        type: String,
+        required: true
+    },
     Date: {
         type: Date,
         required: true
     },
     properties: {
         type: [properties_mqa_sparql_schema],
+        required: true
+    }
+})
+
+const results_ISO19157_sparql_schema = new Schema({
+    URL: {
+        type: String,
+        required: true
+    },
+    Date: {
+        type: Date,
+        required: true
+    },
+    properties: {
+        type: [properties_ISO19157_schema],
         required: true
     }
 })
@@ -88,5 +107,6 @@ admin_schema.methods.validPassword = function(password) {
 
 module.exports = {
     Results_mqa_sparql: model('results_mqa_sparql', results_mqa_sparql_schema),
+    Results_ISO19157: model('results_ISO19157', results_ISO19157_sparql_schema),
     Admin: model('admin', admin_schema)
 }

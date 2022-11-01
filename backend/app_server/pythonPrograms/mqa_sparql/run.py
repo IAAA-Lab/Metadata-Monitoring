@@ -6,15 +6,25 @@ Last update: 2020-04-21
 Main program to test MQA evaluation: Evaluation of catalog RDF DCAT-AP metadata according to Metadata Quality Assessment methodology (https://www.europeandataportal.eu/mqa/methodology?locale=en)
 """
 
-from mqa_sparql.MQAevaluate import MQAevaluate
-import os, ssl
-
+from MQAevaluate import MQAevaluate
+import os, ssl, sys
+from datetime import datetime
 
 
 if __name__ == '__main__':
     abspath = os.path.abspath(__file__)
     dname = os.path.dirname(abspath)
     os.chdir(dname)
+
+    # # len - 1 to delete argv[0] (for testing purposes)
+    # if len(sys.argv)-1 == 0:
+    #     URL = 'http://datos.gob.es/virtuoso/sparql'
+    #     # date in YYYY-MM-DD HH-mm-ss format
+    #     date = datetime.now().strftime('%Y-%d-%m %H:%M:%S')
+    # else:
+    URL = sys.argv[1]
+    date = sys.argv[2]
+
 
     if (not os.environ.get('PYTHONHTTPSVERIFY', '') and
             getattr(ssl, '_create_unverified_context', None)):
@@ -29,5 +39,5 @@ if __name__ == '__main__':
     # exit(0)
 
     print("\nCURRENT")
-    mqaCurrent = MQAevaluate('http://datos.gob.es/virtuoso/sparql')
+    mqaCurrent = MQAevaluate(URL)
     mqaCurrent.evaluate()
