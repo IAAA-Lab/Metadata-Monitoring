@@ -40,5 +40,5 @@ if __name__ == '__main__':
 
     print("\nCURRENT")
     mqaCurrent = MQAevaluate(URL)
-    # mqaCurrent.evaluate()
+    mqaCurrent.evaluate()
     mqaCurrent.prueba()

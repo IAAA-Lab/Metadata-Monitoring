@@ -44,5 +44,5 @@ if __name__ == '__main__':
 
     print("\nCURRENT")
     evaluationCurrent = ISO19157Evaluation(URL)
-    # evaluationCurrent.evaluate()
+    evaluationCurrent.evaluate()
     evaluationCurrent.prueba()
