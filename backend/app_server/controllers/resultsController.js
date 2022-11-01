@@ -1,5 +1,5 @@
 const { Results_mqa_sparql, Results_ISO19157 } = require('./schema')
-
+const { createModel } = require('mongoose-gridfs');
 
 //Return every 'URL - DATE - MQA/ISO19157' in the database
 const resultsIndex = async function (req, res) {
@@ -29,6 +29,18 @@ const resultsIndex = async function (req, res) {
     res.json(indexes)
 }
 
+const exportData = function (req, res) {
+    // use default bucket
+    const Attachment = createModel();
+
+    const fileName = req.query.filename
+    Attachment.read({ filename: fileName }, (error, buffer) => {
+        res.setHeader('Content-Disposition','attachment; filename=' + fileName);
+        res.send(buffer.toString())
+    });
+}
+
 module.exports = {
-    resultsIndex
+    resultsIndex,
+    exportData
 };

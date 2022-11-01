@@ -126,11 +126,6 @@ const storeFile = function (name) {
     Attachment.write(options, readStream, (error, file) => {
     });
 
-    //Para descargar
-    // Attachment.read({ filename: 'test.ttl' }, (error, buffer) => {
-    //     res.setHeader('Content-Disposition','attachment; filename=test.ttl');
-    //     res.send(buffer.toString())
-    // });
 };
 
 module.exports = {
