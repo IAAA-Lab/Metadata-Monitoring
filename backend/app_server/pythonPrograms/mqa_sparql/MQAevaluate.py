@@ -498,53 +498,45 @@ class MQAevaluate:
         self.contextuality_modified_available()
         print("Total points", self.totalPoints)
 
-    def prueba(self):
+    def graph_composition(self, measurement_name, measurement_of_name, value, date,
+                          property_uri, measurement_derived_name, measurement_of_conformance_name,
+                          conformance):
         # FIJO
         catalog = URIRef(':myCatalog')
         self.graph.add((catalog, RDF.type, Literal('dcat:Catalog')))
         self.graph.add((catalog, DCTERMS.title, Literal('datos.gob.es')))
         ####
 
-        #TODO: poner nombre generico a variable DQ_ComComDat_QR, pasar el string por param
-        DQ_ComComDat_QR = URIRef('DQ_ComComDat_QR')
-        self.graph.add((catalog, Literal('dqv:hasQualityMeasurement'), DQ_ComComDat_QR))
-        self.graph.add((DQ_ComComDat_QR, RDF.type, Literal('dqv:QualityMeasurement')))
-        self.graph.add((DQ_ComComDat_QR, Literal('dqv:computedOn'), catalog))
+        measurement = URIRef(measurement_name)
+        self.graph.add((catalog, Literal('dqv:hasQualityMeasurement'), measurement))
+        self.graph.add((measurement, RDF.type, Literal('dqv:QualityMeasurement')))
+        self.graph.add((measurement, Literal('dqv:computedOn'), catalog))
 
-        #TODO: poner nombre generico a variable D_3_ISO_19157, pasar el string por param
-        #   pasar tambien value y date por params
-        D_3_ISO_19157 = URIRef('D.3.ISO.19157')
-        self.graph.add((DQ_ComComDat_QR, Literal('dqv:isMeasurementOf'), D_3_ISO_19157))
-        self.graph.add((DQ_ComComDat_QR, Literal('dqv:value'), Literal('0.4',  datatype='xsd:double')))
-        self.graph.add((DQ_ComComDat_QR, Literal('dqv:date'), Literal('2020-03-01', datatype='xsd:date')))
+        measurement_of = URIRef(measurement_of_name)
+        self.graph.add((measurement, Literal('dqv:isMeasurementOf'), measurement_of))
+        self.graph.add((measurement, Literal('dqv:value'), Literal(value,  datatype='xsd:double')))
+        self.graph.add((measurement, Literal('dqv:date'), Literal(date, datatype='xsd:date')))
 
-        # TODO: pasar 'dataset' por params
-        onProperty = URIRef('dcat:dataset')
-        self.graph.add((DQ_ComComDat_QR, Literal(':onProperty'), onProperty))
+        onProperty = URIRef(property_uri)
+        self.graph.add((measurement, Literal(':onProperty'), onProperty))
 
         # Measurement 'wasDerivedFrom'
-        # TODO: poner nombre generico a variable DQ_ComComDat_QR, pasar el string por param
-        DQ_ComComDat_CR = URIRef('DQ_ComComDat_CR')
-        self.graph.add((catalog, Literal('dqv:hasQualityMeasurement'), DQ_ComComDat_CR))
-        self.graph.add((DQ_ComComDat_CR, RDF.type, Literal('dqv:QualityMeasurement')))
-        self.graph.add((DQ_ComComDat_CR, Literal('dqv:computedOn'), catalog))
+        measurement_derived = URIRef(measurement_derived_name)
+        self.graph.add((catalog, Literal('dqv:hasQualityMeasurement'), measurement_derived))
+        self.graph.add((measurement_derived, RDF.type, Literal('dqv:QualityMeasurement')))
+        self.graph.add((measurement_derived, Literal('dqv:computedOn'), catalog))
 
-        # TODO: poner nombre generico a variable D_3_ISO_19157_conformance, pasar el string por param
-        #   pasar tambien value y date por params
-        D_3_ISO_19157_conformance = URIRef('D.3.ISO.19157_conformance')
-        self.graph.add((DQ_ComComDat_CR, Literal('dqv:isMeasurementOf'), D_3_ISO_19157_conformance))
+        measurement_of_conformance = URIRef(measurement_of_conformance_name)
+        self.graph.add((measurement_derived, Literal('dqv:isMeasurementOf'), measurement_of_conformance))
         # se añade esta linea
-        self.graph.add((DQ_ComComDat_CR, Literal('prov:wasDerivedFrom'), DQ_ComComDat_QR))
+        self.graph.add((measurement_derived, Literal('prov:wasDerivedFrom'), measurement))
         #
         #Cambia el tipo
-        self.graph.add((DQ_ComComDat_CR, Literal('dqv:value'), Literal('true', datatype='xsd:boolean')))
+        self.graph.add((measurement_derived, Literal('dqv:value'), Literal(conformance, datatype='xsd:boolean')))
         #
-        self.graph.add((DQ_ComComDat_CR, Literal('dqv:date'), Literal('2020-03-01', datatype='xsd:date')))
+        self.graph.add((measurement_derived, Literal('dqv:date'), Literal(date, datatype='xsd:date')))
+        self.graph.add((measurement_derived, Literal(':onProperty'), onProperty))
 
-        #TODO: pasar 'dataset' por params
-        onProperty = URIRef('dcat:dataset')
-        self.graph.add((DQ_ComComDat_CR, Literal(':onProperty'), onProperty))
-
-
-        self.graph.serialize(destination='../DQV_files/test.ttl', format='turtle')
+    def graph_serialization(self, filename, graph_format='turtle'):
+        self.graph.serialize(destination='../DQV_files/' + filename, format=graph_format)
 
