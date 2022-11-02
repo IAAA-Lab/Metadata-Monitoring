@@ -20,10 +20,12 @@ if __name__ == '__main__':
     if len(sys.argv)-1 == 0:
         URL = 'http://datos.gob.es/virtuoso/sparql'
         # date in YYYY-MM-DD HH-mm-ss format
-        date = datetime.now().strftime('%Y-%d-%m %H:%M:%S')
+        date = datetime.now().strftime('%Y-%d-%m')
+        filename = 'test - ' + datetime.now().strftime('%Y-%d-%m %H:%M:%S') + '.ttl'
     else:
         URL = sys.argv[1]
-        date = sys.argv[2]
+        filename = sys.argv[2]
+        date = sys.argv[3]
 
 
     if (not os.environ.get('PYTHONHTTPSVERIFY', '') and
@@ -39,6 +41,5 @@ if __name__ == '__main__':
     # exit(0)
 
     print("\nCURRENT")
-    mqaCurrent = MQAevaluate(URL)
+    mqaCurrent = MQAevaluate(URL, filename=filename, date=date)
     mqaCurrent.evaluate()
-    mqaCurrent.prueba()

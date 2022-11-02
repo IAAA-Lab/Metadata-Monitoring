@@ -72,7 +72,9 @@ def contains_word_vocabulary(vocabulary, word):
 
 class MQAevaluate:
 
-    def __init__(self, url, user = None, passwd = None, catalog_rdf_file = None, shapes_turtle_file = None):
+    def __init__(self, url, user = None, passwd = None, catalog_rdf_file = None, shapes_turtle_file = None,
+                 filename = None, date = None):
+
         self.sparql = SPARQLWrapper(url)
         if user is not None:
             self.sparql.setCredentials(user, passwd)
@@ -82,9 +84,10 @@ class MQAevaluate:
         self.distributionCount = self.count_entities(DISTRIBUTION)
         self.totalPoints = 0
 
+        self.filename = filename
+        self.date = date
         # Initialize a graph
         self.graph = Graph()
-
         # Load definitions from file
         self.graph.parse('../DQV_files/templates/MQA_definitions.ttl', format='turtle')
 
@@ -254,7 +257,10 @@ class MQAevaluate:
                     #print(url + " not reached")
         return count
 
-    def print(self, dimension, property, count, population, weight):
+    def print(self, dimension, property, count, population, weight,
+              measurement_name, measurement_of_name, date,
+              property_uri, measurement_derived_name, measurement_of_conformance_name,
+              conformance):
         percentage = count / population
         if count > 0:
             partialPoints = percentage * weight
@@ -262,6 +268,9 @@ class MQAevaluate:
         else:
             partialPoints = 0
         print(dimension, property, count, population, percentage, partialPoints, sep=";")
+        self.graph_composition(measurement_name, measurement_of_name, partialPoints, date,
+                               property_uri, measurement_derived_name, measurement_of_conformance_name,
+                               conformance)
 
     def findability_keywords_available(self):
         dimension = FINDABILITY
@@ -498,7 +507,7 @@ class MQAevaluate:
         self.contextuality_modified_available()
         print("Total points", self.totalPoints)
 
-    def graph_composition(self, measurement_name, measurement_of_name, value, date,
+    def graph_composition(self, measurement_name, measurement_of_name, value,
                           property_uri, measurement_derived_name, measurement_of_conformance_name,
                           conformance):
         # FIJO
@@ -515,7 +524,7 @@ class MQAevaluate:
         measurement_of = URIRef(measurement_of_name)
         self.graph.add((measurement, Literal('dqv:isMeasurementOf'), measurement_of))
         self.graph.add((measurement, Literal('dqv:value'), Literal(value,  datatype='xsd:double')))
-        self.graph.add((measurement, Literal('dqv:date'), Literal(date, datatype='xsd:date')))
+        self.graph.add((measurement, Literal('dqv:date'), Literal(self.date, datatype='xsd:date')))
 
         onProperty = URIRef(property_uri)
         self.graph.add((measurement, Literal(':onProperty'), onProperty))
@@ -534,7 +543,7 @@ class MQAevaluate:
         #Cambia el tipo
         self.graph.add((measurement_derived, Literal('dqv:value'), Literal(conformance, datatype='xsd:boolean')))
         #
-        self.graph.add((measurement_derived, Literal('dqv:date'), Literal(date, datatype='xsd:date')))
+        self.graph.add((measurement_derived, Literal('dqv:date'), Literal(self.date, datatype='xsd:date')))
         self.graph.add((measurement_derived, Literal(':onProperty'), onProperty))
 
     def graph_serialization(self, filename, graph_format='turtle'):
