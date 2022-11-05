@@ -17,9 +17,8 @@ from pyshacl import validate
 from IndicePerspicuidad import DeterminarIndices
 
 from rdflib import Graph, URIRef, Literal
-from rdflib.namespace import FOAF, RDF, DCTERMS, SKOS
+from rdflib.namespace import RDF, DCTERMS, SKOS
 import urllib.parse
-# from uri_access import *
 
 COMPLETENESS_OMISSION = 'DQ_CompletenessOmission'
 
@@ -49,6 +48,12 @@ THRESHOLD = 0.9584
 
 LIMIT = 200000
 
+DCAT = 'http://www.w3.org/ns/dcat#'
+DQV = 'http://www.w3.org/ns/dqv#'
+DCT = 'http://purl.org/dc/terms/'
+PROV = 'http://www.w3.org/ns/prov#'
+XSD = 'http://www.w3.org/2001/XMLSchema#'
+QR = 'http://www.qualityreport.com/qr/'
 
 def make_request(url):
     request = urllib.request.Request(url)
@@ -492,7 +497,7 @@ class ISO19157Evaluation:
 
     def print(self, dimension, entity, property, count, population,
               measurement_name, measurement_of_name,
-              property_uri, measurement_derived_name, measurement_of_conformance_name,
+              properties, measurement_derived_name, measurement_of_conformance_name,
               language = None):
         self.checks += 1
         percentage = count / population
@@ -503,7 +508,7 @@ class ISO19157Evaluation:
             passed = False
         print(dimension, entity, property, count, population, percentage, passed, sep=";")
         self.graph_composition(measurement_name, measurement_of_name, percentage,
-                               property_uri, measurement_derived_name, measurement_of_conformance_name,
+                               properties, measurement_derived_name, measurement_of_conformance_name,
                                passed, language)
 
     def completeness_commission_dataset(self):
@@ -532,7 +537,7 @@ class ISO19157Evaluation:
         results = self.sparql.query().convert()
         count = population - len(results["results"]["bindings"])  # For the moment, we compute correct percentage
         self.print(dimension, entity, None, count, population,
-                   ':DQ_ComComDat_QR', ':D.3.ISO.19157', 'dcat:dataset', ':DQ_ComComDat_CR', ':D.3.ISO.19157_conformance')
+                   QR + 'DQ_ComComDat_QR', QR + 'D.3.ISO.19157', [DCAT + 'dataset'], QR + 'DQ_ComComDat_CR', QR + 'D.3.ISO.19157_conformance')
 
     def completeness_commission_distribution(self):
         dimension = COMPLETENESS_COMMISSION
@@ -557,7 +562,7 @@ class ISO19157Evaluation:
         results = self.sparql.query().convert()
         count = population - len(results["results"]["bindings"])  # For the moment, we compute correct percentage
         self.print(dimension, entity, None, count, population,
-                   ':DQ_ComComDis_QR', ':D.3.ISO.19157', 'dcat:distribution', ':DQ_ComComDis_CR', 'D.3.ISO.19157_conformance')
+                   QR + 'DQ_ComComDis_QR', QR + 'D.3.ISO.19157', [DCAT + 'distribution'], QR + 'DQ_ComComDis_CR', QR + 'D.3.ISO.19157_conformance')
 
     def completeness_omission_dataset(self):
         dimension = COMPLETENESS_OMISSION
@@ -588,7 +593,7 @@ class ISO19157Evaluation:
                     """
         count = population - self.count(query)  # For the moment, we compute correct percentage
         self.print(dimension, entity, None, count, population,
-                   ':DQ_ComOmiDat_QR', ':D.7.ISO.19157', 'dcat:dataset', ':DQ_ComOmiDat_CR', ':D.7.ISO.19157_conformance')
+                   QR + 'DQ_ComOmiDat_QR', QR + 'D.7.ISO.19157', [DCAT + 'dataset'], QR + 'DQ_ComOmiDat_CR', QR + 'D.7.ISO.19157_conformance')
 
     def completeness_omission_distribution(self):
         dimension = COMPLETENESS_OMISSION
@@ -610,7 +615,7 @@ class ISO19157Evaluation:
                     """
         count = population - self.count(query)  # For the moment, we compute correct percentage
         self.print(dimension, entity, None, count, population,
-                   ':DQ_ComOmiDis_QR', ':D.7.ISO.19157', 'dcat:distribution', ':DQ_ComOmiDis_CR', ':D.3.ISO.19157_conformance' )
+                   QR + 'DQ_ComOmiDis_QR', QR + 'D.7.ISO.19157', [DCAT + 'distribution'], QR + 'DQ_ComOmiDis_CR', QR + 'D.3.ISO.19157_conformance' )
 
     def conceptual_consistency_dataset(self):
         dimension = CONCEPTUAL_CONSISTENCY
@@ -632,7 +637,7 @@ class ISO19157Evaluation:
         # We make the exception of considering dct:language instead of dc:language
         count = population - self.count(query)
         self.print(dimension, entity, None, count, population,
-                   ':DQ_LogConDat_QR', ':D.13.ISO.19157', 'dcat:dataset', ':DQ_LogConDat_CR', ':D.13.ISO.19157_conformance')
+                   QR + 'DQ_LogConDat_QR', QR + 'D.13.ISO.19157', [DCAT + 'dataset'], QR + 'DQ_LogConDat_CR', QR + 'D.13.ISO.19157_conformance')
 
     def conceptual_consistency_distribution(self):
         dimension = CONCEPTUAL_CONSISTENCY
@@ -652,7 +657,7 @@ class ISO19157Evaluation:
                     """
         count = population - self.count(query)
         self.print(dimension, entity, None, count, population,
-                   ':DQ_LogConDis_QR', ':D.13.ISO.19157', 'dcat:dataset', ':DQ_LogConDis_CR', ':D.13.ISO.19157_conformance')
+                   QR + 'DQ_LogConDis_QR', QR + 'D.13.ISO.19157', [DCAT + 'dataset'], QR + 'DQ_LogConDis_CR', QR + 'D.13.ISO.19157_conformance')
 
     def count_valid_format_urls(self, population):
         offset = 0
@@ -714,7 +719,7 @@ class ISO19157Evaluation:
         population = self.count(query)
         count = self.count_valid_format_urls(population)
         self.print(dimension, entity, 'dct:format vs dcat:accessURL', count, population,
-                   ':DQ_LogConDisFor_QR', ':D.13.ISO.19157', 'dcat:distribution, dct:format, dct:accessURL', ':DQ_LogConDisFor_CR', ':D.13.ISO.19157_conformance')
+                   QR + 'DQ_LogConDisFor_QR', QR + 'D.13.ISO.19157', [DCAT + 'distribution', DCT + 'format', DCT + 'accessURL'], QR + 'DQ_LogConDisFor_CR', QR + 'D.13.ISO.19157_conformance')
 
     def domain_consistency_dataset_title(self):
         dimension = DOMAIN_CONSISTENCY
@@ -724,7 +729,7 @@ class ISO19157Evaluation:
         count = self.count_distinct_entity_property_is_literal(entity, property)
         population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population,
-                   ':DQ_LogDomDatTit_QR', ':D.17.ISO.19157', 'dcat:dataset, dct:title', ':DQ_LogDomDatTit_CR', ':D.17.ISO.19157_conformance')
+                   QR + 'DQ_LogDomDatTit_QR', QR + 'D.17.ISO.19157', [DCAT + 'dataset', DCT + 'title'], QR + 'DQ_LogDomDatTit_CR', QR + 'D.17.ISO.19157_conformance')
 
     def domain_consistency_dataset_description(self):
         dimension = DOMAIN_CONSISTENCY
@@ -734,7 +739,7 @@ class ISO19157Evaluation:
         count = self.count_distinct_entity_property_is_literal(entity, property)
         population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population,
-                   ':DQ_LogDomDatDes_QR', ':D.17.ISO.19157', 'dcat:dataset, dct:description', ':DQ_LogDomDatDes_CR', ':D.17.ISO.19157_conformance')
+                   QR + 'DQ_LogDomDatDes_QR', QR + 'D.17.ISO.19157', [DCAT + 'dataset', DCT + 'description'], QR + 'DQ_LogDomDatDes_CR', QR + 'D.17.ISO.19157_conformance')
 
     def domain_consistency_dataset_theme(self):
         dimension = DOMAIN_CONSISTENCY
@@ -743,7 +748,7 @@ class ISO19157Evaluation:
         count = self.count_distinct_entity_property_class_range(entity, property, 'skos:Concept')
         population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population,
-                   ':DQ_LogDomDatThe_QR', ':D.17.ISO.19157', 'dcat:dataset, dcat:theme', ':DQ_LogDomDatThe_CR', ':D.17.ISO.19157_conformance')
+                   QR + 'DQ_LogDomDatThe_QR', QR + 'D.17.ISO.19157', [DCAT + 'dataset', DCAT + 'theme'], QR + 'DQ_LogDomDatThe_CR', QR + 'D.17.ISO.19157_conformance')
 
     def domain_consistency_dataset_keyword(self):
         dimension = DOMAIN_CONSISTENCY
@@ -753,7 +758,7 @@ class ISO19157Evaluation:
         # count = self.count_distinct_entity_property_literal_range(entity, property, 'xsd:string')
         population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population,
-                   ':DQ_LogDomDatKey_QR', ':D.17.ISO.19157', 'dcat:dataset, dcat:keyword', ':DQ_LogDomDatKey_CR', ':D.17.ISO.19157_conformance')
+                   QR + 'DQ_LogDomDatKey_QR', QR + 'D.17.ISO.19157', [DCAT + 'dataset', DCAT + 'keyword'], QR + 'DQ_LogDomDatKey_CR', QR + 'D.17.ISO.19157_conformance')
 
     def domain_consistency_dataset_identifier(self):
         dimension = DOMAIN_CONSISTENCY
@@ -762,7 +767,7 @@ class ISO19157Evaluation:
         population = self.count_distinct_entity_property(entity, property)
         count = self.count_valid_uris(entity, property, population)
         self.print(dimension, entity, property, count, population,
-                   ':DQ_LogDomDatIde_QR', ':D.17.ISO.19157', 'dcat:dataset, dct:identifier', ':DQ_LogDomDatIde_CR', ':D.17.ISO.19157_conformance')
+                   QR + 'DQ_LogDomDatIde_QR', QR + 'D.17.ISO.19157', [DCAT + 'dataset', DCT + 'identifier'], QR + 'DQ_LogDomDatIde_CR', QR + 'D.17.ISO.19157_conformance')
 
     def domain_consistency_dataset_issued(self):
         dimension = DOMAIN_CONSISTENCY
@@ -771,7 +776,7 @@ class ISO19157Evaluation:
         count = self.count_distinct_entity_property_literal_range(entity, property, 'xsd:dateTime')
         population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population,
-                   ':DQ_LogDomDatIss_QR', ':D.17.ISO.19157', 'dcat:dataset, dct:issued', ':DQ_LogDomDatIss_CR', ':D.17.ISO.19157_conformance')
+                   QR + 'DQ_LogDomDatIss_QR', QR + 'D.17.ISO.19157', [DCAT + 'dataset', DCT + 'issued'], QR + 'DQ_LogDomDatIss_CR', QR + 'D.17.ISO.19157_conformance')
 
     def domain_consistency_dataset_modified(self):
         dimension = DOMAIN_CONSISTENCY
@@ -780,7 +785,7 @@ class ISO19157Evaluation:
         count = self.count_distinct_entity_property_literal_range(entity, property, 'xsd:dateTime')
         population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population,
-                   ':DQ_LogDomDatMod_QR', ':D.17.ISO.19157', 'dcat:dataset, dct:modified', ':DQ_LogDomDatMod_CR', ':D.17.ISO.19157_conformance')
+                   QR + 'DQ_LogDomDatMod_QR', QR + 'D.17.ISO.19157', [DCAT + 'dataset', DCT + 'modified'], QR + 'DQ_LogDomDatMod_CR', QR + 'D.17.ISO.19157_conformance')
 
     def domain_consistency_dataset_accrualPeriodicity(self):
         dimension = DOMAIN_CONSISTENCY
@@ -789,7 +794,7 @@ class ISO19157Evaluation:
         count = self.count_distinct_entity_property_class_range(entity, property, 'dct:Frequency')
         population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population,
-                   ':DQ_LogDomDatAcc_QR', ':D.17.ISO.19157', 'dcat:dataset, dct:accrualPeriodicity', ':DQ_LogDomDatAcc_CR', ':D.17.ISO.19157_conformance')
+                   QR + 'DQ_LogDomDatAcc_QR', QR + 'D.17.ISO.19157', [DCAT + 'dataset', DCT + 'accrualPeriodicity'], QR + 'DQ_LogDomDatAcc_CR', QR + 'D.17.ISO.19157_conformance')
 
     def domain_consistency_dataset_language(self):
         dimension = DOMAIN_CONSISTENCY
@@ -810,7 +815,7 @@ class ISO19157Evaluation:
             """
         count = self.count(query)
         self.print(dimension, entity, property, count, population,
-                   ':DQ_LogDomDatLan_QR', ':D.17.ISO.19157', 'dcat:dataset, dct:language', ':DQ_LogDomDatLan_CR', ':D.17.ISO.19157_conformance')
+                   QR + 'DQ_LogDomDatLan_QR', QR + 'D.17.ISO.19157', [DCAT + 'dataset', DCT + 'language'], QR + 'DQ_LogDomDatLan_CR', QR + 'D.17.ISO.19157_conformance')
 
     def domain_consistency_dataset_publisher(self):
         dimension = DOMAIN_CONSISTENCY
@@ -819,7 +824,7 @@ class ISO19157Evaluation:
         count = self.count_distinct_entity_property_class_range(entity, property, 'foaf:Agent')
         population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population,
-                   ':DQ_LogDomDatPub_QR', ':D.17.ISO.19157', 'dcat:dataset, dct:publisher', ':DQ_LogDomDatPub_CR', ':D.17.ISO.19157_conformance')
+                   QR + 'DQ_LogDomDatPub_QR', QR + 'D.17.ISO.19157', [DCAT + 'dataset', DCT + 'publisher'], QR + 'DQ_LogDomDatPub_CR', QR + 'D.17.ISO.19157_conformance')
 
     def domain_consistency_dataset_spatial(self):
         dimension = DOMAIN_CONSISTENCY
@@ -828,7 +833,7 @@ class ISO19157Evaluation:
         count = self.count_distinct_entity_property_class_range(entity, property, 'vocab:Provincia')
         population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population,
-                   ':DQ_LogDomDatSpa_QR', ':D.17.ISO.19157', 'dcat:dataset, dct:spatial', ':DQ_LogDomDatSpa_CR', ':D.17.ISO.19157_conformance')
+                   QR + 'DQ_LogDomDatSpa_QR', QR + 'D.17.ISO.19157', [DCAT + 'dataset', DCT + 'spatial'], QR + 'DQ_LogDomDatSpa_CR', QR + 'D.17.ISO.19157_conformance')
 
     def domain_consistency_dataset_temporal(self):
         dimension = DOMAIN_CONSISTENCY
@@ -837,7 +842,7 @@ class ISO19157Evaluation:
         count = self.count_distinct_entity_property_class_range(entity, property, 'dct:PeriodOfTime')
         population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population,
-                   ':DQ_LogDomDatTem_QR', ':D.17.ISO.19157', 'dcat:dataset, dct:temporal', ':DQ_LogDomDatTem_CR', ':D.17.ISO.19157_conformance')
+                   QR + 'DQ_LogDomDatTem_QR', QR + 'D.17.ISO.19157', [DCAT + 'dataset', DCT + 'temporal'], QR + 'DQ_LogDomDatTem_CR', QR + 'D.17.ISO.19157_conformance')
 
     def domain_consistency_dataset_valid(self):
         dimension = DOMAIN_CONSISTENCY
@@ -846,7 +851,7 @@ class ISO19157Evaluation:
         count = self.count_distinct_entity_property_literal_range(entity, property, 'xsd:dateTime')
         population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population,
-                   ':DQ_LogDomDatValid_QR', ':D.17.ISO.19157', 'dcat:dataset, dct:valid', ':DQ_LogDomDatValid_CR', ':D.17.ISO.19157_conformance')
+                   QR + 'DQ_LogDomDatValid_QR', QR + 'D.17.ISO.19157', [DCAT + 'dataset', DCT + 'valid'], QR + 'DQ_LogDomDatValid_CR', QR + 'D.17.ISO.19157_conformance')
 
     def domain_consistency_dataset_references(self):
         dimension = DOMAIN_CONSISTENCY
@@ -855,7 +860,7 @@ class ISO19157Evaluation:
         population = self.count_distinct_entity_property(entity, property)
         count = self.count_valid_urls(entity, property, population)
         self.print(dimension, entity, property, count, population,
-                   ':DQ_LogDomDatRef_QR', ':D.17.ISO.19157', 'dcat:dataset, dct:references', ':DQ_LogDomDatRef_CR', ':D.17.ISO.19157_conformance')
+                   QR + 'DQ_LogDomDatRef_QR', QR + 'D.17.ISO.19157', [DCAT + 'dataset', DCT + 'references'], QR + 'DQ_LogDomDatRef_CR', QR + 'D.17.ISO.19157_conformance')
 
     def domain_consistency_dataset_conformsTo(self):
         dimension = DOMAIN_CONSISTENCY
@@ -864,7 +869,7 @@ class ISO19157Evaluation:
         population = self.count_distinct_entity_property(entity, property)
         count = self.count_valid_urls(entity, property, population)
         self.print(dimension, entity, property, count, population,
-                   ':DQ_LogDomDatCon_QR', ':D.17.ISO.19157', 'dcat:dataset, dct:conformsTo', ':DQ_LogDomDatCon_CR', ':D.17.ISO.19157_conformance')
+                   QR + 'DQ_LogDomDatCon_QR', QR + 'D.17.ISO.19157', [DCAT + 'dataset', DCT + 'conformsTo'], QR + 'DQ_LogDomDatCon_CR', QR + 'D.17.ISO.19157_conformance')
 
     def domain_consistency_dataset_license(self):
         dimension = DOMAIN_CONSISTENCY
@@ -881,7 +886,7 @@ class ISO19157Evaluation:
         count = self.count_distinct_entity_property_class_range(entity, property, DISTRIBUTION)
         population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population,
-                   ':DQ_LogDomDatDis_QR', ':D.17.ISO.19157', 'dcat:distribution', ':DQ_LogDomDatDis_CR', ':D.17.ISO.19157_conformance')
+                   QR + 'DQ_LogDomDatDis_QR', QR + 'D.17.ISO.19157', [DCAT + 'distribution'], QR + 'DQ_LogDomDatDis_CR', QR + 'D.17.ISO.19157_conformance')
 
     def domain_consistency_distribution_identifier(self):
         dimension = DOMAIN_CONSISTENCY
@@ -890,7 +895,7 @@ class ISO19157Evaluation:
         population = self.count_distinct_entity_property(entity, property)
         count = self.count_valid_uris(entity, property, population)
         self.print(dimension, entity, property, count, population,
-                   ':DQ_LogDomDisIde_QR', ':D.17.ISO.19157', 'dcat:distribution,dct:identifier', ':DQ_LogDomDisIde_CR', ':D.17.ISO.19157_conformance')
+                   QR + 'DQ_LogDomDisIde_QR', QR + 'D.17.ISO.19157', [DCAT + 'distribution', DCT + 'identifier'], QR + 'DQ_LogDomDisIde_CR', QR + 'D.17.ISO.19157_conformance')
 
     def domain_consistency_distribution_title(self):
         dimension = DOMAIN_CONSISTENCY
@@ -900,7 +905,7 @@ class ISO19157Evaluation:
         # count = self.count_distinct_entity_property_literal_range(entity, property, 'rdf:langString')
         population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population,
-                   ':DQ_LogDomDisTit_QR', ':D.17.ISO.19157', 'dcat:distribution,dct:title', ':DQ_LogDomDisTit_CR', ':D.17.ISO.19157_conformance')
+                   QR + 'DQ_LogDomDisTit_QR', QR + 'D.17.ISO.19157', [DCAT + 'distribution', DCT + 'title'], QR + 'DQ_LogDomDisTit_CR', QR + 'D.17.ISO.19157_conformance')
 
     def domain_consistency_distribution_accessURL(self):
         dimension = DOMAIN_CONSISTENCY
@@ -909,7 +914,7 @@ class ISO19157Evaluation:
         population = self.count_distinct_entity_property(entity, property)
         count = self.count_valid_urls(entity, property, population)
         self.print(dimension, entity, property, count, population,
-                   ':DQ_LogDomDisAcc_QR', ':D.17.ISO.19157', 'dcat:distribution,dcat:accessURL', ':DQ_LogDomDisAcc_CR', ':D.17.ISO.19157_conformance')
+                   QR + 'DQ_LogDomDisAcc_QR', QR + 'D.17.ISO.19157', [DCAT + 'distribution', DCAT + 'accessURL'], QR + 'DQ_LogDomDisAcc_CR', QR + 'D.17.ISO.19157_conformance')
 
     def domain_consistency_distribution_format(self):
         dimension = DOMAIN_CONSISTENCY
@@ -919,7 +924,7 @@ class ISO19157Evaluation:
         count = self.count_formats_from_vocabulary(vocabulary)
         population = self.count_distinct_formats()
         self.print(dimension, entity, property, count, population,
-                   ':DQ_LogDomDisFor_QR', ':D.17.ISO.19157', 'dcat:distribution,dct:format', ':DQ_LogDomDisFor_CR', ':D.17.ISO.19157_conformance')
+                   QR + 'DQ_LogDomDisFor_QR', QR + 'D.17.ISO.19157', [DCAT + 'distribution', DCT + 'format'], QR + 'DQ_LogDomDisFor_CR', QR + 'D.17.ISO.19157_conformance')
 
     def domain_consistency_distribution_byteSize(self):
         dimension = DOMAIN_CONSISTENCY
@@ -928,7 +933,7 @@ class ISO19157Evaluation:
         count = self.count_distinct_entity_property_literal_range(entity, property, 'xsd:decimal')
         population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population,
-                   ':DQ_LogDomDisByt_QR', ':D.17.ISO.19157', 'dcat:distribution,dcat:byteSize', ':DQ_LogDomDisByt_CR', ':D.17.ISO.19157_conformance')
+                   QR + 'DQ_LogDomDisByt_QR', QR + 'D.17.ISO.19157', [DCAT + 'distribution', DCAT + 'byteSize'], QR + 'DQ_LogDomDisByt_CR', QR + 'D.17.ISO.19157_conformance')
 
     def domain_consistency_distribution_license(self):
         dimension = DOMAIN_CONSISTENCY
@@ -937,7 +942,7 @@ class ISO19157Evaluation:
         population = self.count_distinct_entity_property(entity, property)
         count = self.count_valid_urls(entity, property, population)
         self.print(dimension, entity, property, count, population,
-                   ':DQ_LogDomDisLic_QR', ':D.17.ISO.19157', 'dcat:distribution,dct:license', ':DQ_LogDomDisLic_CR', ':D.17.ISO.19157_conformance')
+                   QR + 'DQ_LogDomDisLic_QR', QR + 'D.17.ISO.19157', [DCAT + 'distribution', DCT + 'license'], QR + 'DQ_LogDomDisLic_CR', QR + 'D.17.ISO.19157_conformance')
 
     def temporal_consistency(self):
         dimension = TEMPORAL_CONSISTENCY
@@ -945,7 +950,7 @@ class ISO19157Evaluation:
         count = self.datasetCount - self.count_temporal_consistency()
         population = self.datasetCount
         self.print(dimension, entity, 'dct:issued, dct:modified, dct:valid', count, population,
-                   ':DQ_TemDatIss_QR', ':Sim_D.62.ISO.19157', 'dcat:dataset, dct:issued, dct:modified, dct:valid', ':DQ_TemDatIss_CR', ':Sim_D.62.ISO.19157_conformance')
+                   QR + 'DQ_TemDatIss_QR', QR + 'Sim_D.62.ISO.19157', [DCAT + 'dataset', DCT + 'issued', DCT + 'modified', DCT + 'valid'], QR + 'DQ_TemDatIss_CR', QR + 'Sim_D.62.ISO.19157_conformance')
 
     def temporal_validity(self):
         dimension = TEMPORAL_VALIDITY
@@ -953,7 +958,7 @@ class ISO19157Evaluation:
         count = self.datasetCount - self.count_temporal_validity(self.harvest_date)
         population = self.datasetCount
         self.print(dimension, entity, 'dct:issued, dct:modified, dct:valid', count, population,
-                   ':DQ_TemDatHar_QR', ':D18.ISO.19157', 'dcat:dataset, dct:issued, dct:modified, dct:valid', ':DQ_TemDatHar_CR', ':D18.ISO.19157_conformance')
+                   QR + 'DQ_TemDatHar_QR', QR + 'D18.ISO.19157', [DCAT + 'dataset', DCT + 'issued', DCT + 'modified', DCT + 'valid'], QR + 'DQ_TemDatHar_CR', QR + 'D18.ISO.19157_conformance')
 
     def non_quantitative_attribute_correctness_dataset_references(self):
         dimension = NON_QUANTITATIVE_ATTRIBUTE_CORRECTNESS
@@ -962,7 +967,7 @@ class ISO19157Evaluation:
         count = self.count_urls_with_200_code(entity, property)
         population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population,
-                   ':DQ_TheNQADatRefA_QR', ':D69.ISO.19157', 'dcat:dataset, dct:references', ':DQ_TheNQADatRefA_CR', ':D69.ISO.19157_conformance')
+                   QR + 'DQ_TheNQADatRefA_QR', QR + 'D69.ISO.19157', [DCAT + 'dataset', DCT + 'references'], QR + 'DQ_TheNQADatRefA_CR', QR + 'D69.ISO.19157_conformance')
 
     def non_quantitative_attribute_correctness_dataset_conformsTo(self):
         dimension = NON_QUANTITATIVE_ATTRIBUTE_CORRECTNESS
@@ -971,7 +976,7 @@ class ISO19157Evaluation:
         count = self.count_urls_with_200_code(entity, property)
         population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population,
-                   ':DQ_TheNQADatConA_QR', ':D69.ISO.19157', 'dcat:dataset, dct:conformsTo', ':DQ_TheNQADatConA_CR', ':D69.ISO.19157_conformance')
+                   QR + 'DQ_TheNQADatConA_QR', QR + 'D69.ISO.19157', [DCAT + 'dataset', DCT + 'conformsTo'], QR + 'DQ_TheNQADatConA_CR', QR + 'D69.ISO.19157_conformance')
 
     def non_quantitative_attribute_correctness_distribution_accessURL(self):
         dimension = NON_QUANTITATIVE_ATTRIBUTE_CORRECTNESS
@@ -980,7 +985,7 @@ class ISO19157Evaluation:
         count = self.count_urls_with_200_code(entity, property)
         population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population,
-                   ':DQ_TheNQADisAccA_QR', ':D69.ISO.19157', 'dcat:distribution, dcat:accessURL', ':DQ_TheNQADisAcc_CR', ':D69.ISO.19157_conformance')
+                   QR + 'DQ_TheNQADisAccA_QR', QR + 'D69.ISO.19157', [DCAT + 'distribution', DCT + 'accessURL'], QR + 'DQ_TheNQADisAcc_CR', QR + 'D69.ISO.19157_conformance')
 
     def non_quantitative_attribute_correctness_distribution_license(self):
         dimension = NON_QUANTITATIVE_ATTRIBUTE_CORRECTNESS
@@ -989,7 +994,7 @@ class ISO19157Evaluation:
         count = self.count_urls_with_200_code(entity, property)
         population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population,
-                   ':DQ_TheNQADisLicA_QR', ':D69.ISO.19157', 'dcat:distribution, dct:license', ':DQ_TheNQADisLic_CR', ':D69.ISO.19157_conformance')
+                   QR + 'DQ_TheNQADisLicA_QR', QR + 'D69.ISO.19157', [DCAT + 'distribution', DCT + 'license'], QR + 'DQ_TheNQADisLic_CR', QR + 'D69.ISO.19157_conformance')
 
     def positional_correctness(self):
         dimension = POSITIONAL_CORRECTNESS
@@ -998,7 +1003,7 @@ class ISO19157Evaluation:
         count = -1  # TODO
         population = self.datasetCount
         self.print(dimension, entity, property, count, population,
-                   ':DQ_PosCorrDatSpa_QR', ':D69.ISO.19157', 'dcat:distribution, dct:license', ':DQ_PosCorrDatSpa_CR', ':D69.ISO.19157_conformance')
+                   QR + 'DQ_PosCorrDatSpa_QR', QR + 'D69.ISO.19157', [DCAT + 'distribution', DCT + 'license'], QR + 'DQ_PosCorrDatSpa_CR', QR + 'D69.ISO.19157_conformance')
 
     def quality_of_free_text_dataset_title(self):
         dimension = QUALITY_OF_FREE_TEXT
@@ -1007,7 +1012,7 @@ class ISO19157Evaluation:
         count = self.count_freetext(entity, property)
         population = self.datasetCount
         self.print(dimension, entity, property, count, population,
-                   ':DQ_QFTDatTitR_QR', ':ReadibilityOfTreeText', 'dcat:dataset, dct:title', ':DQ_QFTDatTitR_CR', ':ReadibilityOfTreeText_conformance',
+                   QR + 'DQ_QFTDatTitR_QR', QR + 'ReadibilityOfTreeText', [DCAT + 'dataset', DCT + 'title'], QR + 'DQ_QFTDatTitR_CR', QR + 'ReadibilityOfTreeText_conformance',
                    'es')
 
 
@@ -1018,7 +1023,7 @@ class ISO19157Evaluation:
         count = self.count_freetext(entity, property)
         population = self.datasetCount
         self.print(dimension, entity, property, count, population,
-                   'DQ_QFTDatDesR_QR', ':ReadibilityOfTreeText', 'dcat:dataset, dct:title', ':DQ_QFTDatDesR_CR', ':ReadibilityOfTreeText_conformance',
+                   QR + 'DQ_QFTDatDesR_QR', QR + 'YAAAAAAAAA--ReadibilityOfTreeText', [DCAT + 'dataset', DCT + 'title'], QR + 'DQ_QFTDatDesR_CR', QR + 'ReadibilityOfTreeText_conformance',
                    'es')
 
     def evaluate(self):
@@ -1089,45 +1094,47 @@ class ISO19157Evaluation:
         self.graph_serialization()
 
     def graph_composition(self, measurement_name, measurement_of_name, value,
-                          property_uri, measurement_derived_name, measurement_of_conformance_name,
+                          properties, measurement_derived_name, measurement_of_conformance_name,
                           conformance, language):
         # FIJO
-        catalog = URIRef(':myCatalog')
-        self.graph.add((catalog, RDF.type, Literal('dcat:Catalog')))
+        catalog = URIRef(QR + 'myCatalog')
+        self.graph.add((catalog, RDF.type, URIRef(DCAT + 'Catalog')))
         self.graph.add((catalog, DCTERMS.title, Literal('datos.gob.es')))
         ####
 
         measurement = URIRef(measurement_name)
-        self.graph.add((catalog, Literal('dqv:hasQualityMeasurement'), measurement))
-        self.graph.add((measurement, RDF.type, Literal('dqv:QualityMeasurement')))
-        self.graph.add((measurement, Literal('dqv:computedOn'), catalog))
+        measurement_derived = URIRef(measurement_derived_name)
+
+        self.graph.add((catalog, URIRef(DQV + 'hasQualityMeasurement'), measurement))
+        self.graph.add((measurement, RDF.type, URIRef(DQV + 'QualityMeasurement')))
+        self.graph.add((measurement, URIRef(DQV + 'computedOn'), catalog))
 
         measurement_of = URIRef(measurement_of_name)
-        self.graph.add((measurement, Literal('dqv:isMeasurementOf'), measurement_of))
-        self.graph.add((measurement, Literal('dqv:value'), Literal(value,  datatype='xsd:double')))
-        self.graph.add((measurement, Literal('dqv:date'), Literal(self.date, datatype='xsd:date')))
+        self.graph.add((measurement, URIRef(DQV + 'isMeasurementOf'), measurement_of))
+        self.graph.add((measurement, URIRef(DQV + 'value'), Literal(value,  datatype=XSD + 'double')))
+        self.graph.add((measurement, URIRef(DCT + 'date'), Literal(self.date, datatype=XSD + 'date')))
 
-        onProperty = URIRef(property_uri.replace(" ", "+"))
-        self.graph.add((measurement, Literal(':onProperty'), onProperty))
+        for property in properties:
+            onProperty = URIRef(property)
+            self.graph.add((measurement, URIRef(QR + 'onProperty'), onProperty))
+            self.graph.add((measurement_derived, URIRef(QR + 'onProperty'), onProperty))
+
         if language is not None:
-            self.graph.add((measurement, Literal(':onLanguage'), Literal(language)))
+            self.graph.add((measurement, URIRef('http://www.qualityreport.com/qr/onLanguage'), Literal(language)))
 
-        # Measurement 'wasDerivedFrom'
-        measurement_derived = URIRef(measurement_derived_name)
-        self.graph.add((catalog, Literal('dqv:hasQualityMeasurement'), measurement_derived))
-        self.graph.add((measurement_derived, RDF.type, Literal('dqv:QualityMeasurement')))
-        self.graph.add((measurement_derived, Literal('dqv:computedOn'), catalog))
+        self.graph.add((catalog, URIRef(DQV + 'hasQualityMeasurement'), measurement_derived))
+        self.graph.add((measurement_derived, RDF.type, URIRef(DQV + 'QualityMeasurement')))
+        self.graph.add((measurement_derived, URIRef(DQV + 'computedOn'), catalog))
 
         measurement_of_conformance = URIRef(measurement_of_conformance_name)
-        self.graph.add((measurement_derived, Literal('dqv:isMeasurementOf'), measurement_of_conformance))
+        self.graph.add((measurement_derived, URIRef(DQV + 'isMeasurementOf'), measurement_of_conformance))
         # se añade esta linea
-        self.graph.add((measurement_derived, Literal('prov:wasDerivedFrom'), measurement))
+        self.graph.add((measurement_derived, URIRef(PROV + 'wasDerivedFrom'), measurement))
         #
         #Cambia el tipo
-        self.graph.add((measurement_derived, Literal('dqv:value'), Literal(conformance, datatype='xsd:boolean')))
+        self.graph.add((measurement_derived, URIRef(DQV + 'value'), Literal(conformance, datatype=XSD + 'boolean')))
         #
-        self.graph.add((measurement_derived, Literal('dqv:date'), Literal(self.date, datatype='xsd:date')))
-        self.graph.add((measurement_derived, Literal(':onProperty'), onProperty))
+        self.graph.add((measurement_derived, URIRef(DCT + 'date'), Literal(self.date, datatype=XSD + 'date')))
 
 
     def graph_serialization(self, graph_format='turtle'):
