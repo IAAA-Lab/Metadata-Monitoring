@@ -448,34 +448,3 @@
 #################################################################################
 #### Quality Report  ###
 #################################################################################
-
-    :myCatalog a dcat:Catalog ;
-        dcterms:title 
-        dqv:hasQualityMeasurement  .
-
-:myCatalog a dcat:Catalog ;
-    dcterms:title "datos.gob.es" ;
-    dqv:hasQualityMeasurement 
-	:KeywordAvailability_rate_value,:KeywordAvailability_points_value,
-	:CategoryAvailability_rate_value,:CategoryAvailability_points_value,
-	:SpatialAvailability_rate_value,:SpatialAvailability_points_value,
-	:TemporalAvailability_rate_value,:TemporalAvailability_points_value,
-	:AccessUrlStatusCode_rate_value,:AccessUrlStatusCode_points_value,
-	:DownloadUrlAvailability_rate_value,:DownloadUrlAvailability_points_value,
-	:DownloadUrlStatusCode_rate_value,:DownloadUrlStatusCode_points_value,
-	:FormatAvailability_rate_value,:FormatAvailability_points_value,
-	:MediaTypeAvailability_rate_value,:MediaTypeAvailability_points_value,
-	:FormatMediaTypeVocabularyAlignment_rate_value,:FormatMediaTypeVocabularyAlignment_points_value,
-	:FormatMediaTypeNonProprietary_rate_value,:FormatMediaTypeNonProprietary_points_value,
-	:FormatMediaTypeMachineInterpretable_rate_value,:FormatMediaTypeMachineInterpretable_points_value,
-	:DcatApCompliance_rate_value,:DcatApCompliance_points_value,
-	:LicenceAvailability_rate_value,:LicenceAvailability_points_value,
-	:KnownLicence_rate_value,:KnownLicence_points_value,
-	:AccessRightsAvailability_rate_value,:AccessRightsAvailability_points_value,
-	:AccessRightsVocabularyAlignment_rate_value,:AccessRightsVocabularyAlignment_points_value,
-	:ContactPointAvailability_rate_value,:ContactPointAvailability_points_value,
-	:PublisherAvailability_rate_value,:PublisherAvailability_points_value,
-	:RightsAvailability_rate_value,:RightsAvailability_points_value,
-	:ByteSizeAvailability_rate_value,:ByteSizeAvailability_points_value,
-	:DateIssuedAvailability_rate_value,:DateIssuedAvailability_points_value,
-	:DateModifiedAvailability_rate_value,:DateModifiedAvailability_points_value.

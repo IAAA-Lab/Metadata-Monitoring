@@ -34,6 +34,14 @@ FROM_VOCABULARY = ' from vocabulary'
 
 TIMEOUT = 5
 
+DCAT = 'http://www.w3.org/ns/dcat#'
+DQV = 'http://www.w3.org/ns/dqv#'
+DCT = 'http://purl.org/dc/terms/'
+PROV = 'http://www.w3.org/ns/prov#'
+PROV = 'http://www.w3.org/ns/prov#'
+XSD = 'http://www.w3.org/2001/XMLSchema#'
+QR = 'http://www.qualityreport.com/qr/'
+
 def make_request(url):
     request = urllib.request.Request(url)
     # Make the HTTP request.
@@ -257,10 +265,11 @@ class MQAevaluate:
                     #print(url + " not reached")
         return count
 
+
     def print(self, dimension, property, count, population, weight,
-              measurement_name, measurement_of_name, date,
-              property_uri, measurement_derived_name, measurement_of_conformance_name,
-              conformance):
+              measurement_rate, measurement_of_rate,
+              properties, measurement_points, measurement_of_points,
+              language=None):
         percentage = count / population
         if count > 0:
             partialPoints = percentage * weight
@@ -268,9 +277,9 @@ class MQAevaluate:
         else:
             partialPoints = 0
         print(dimension, property, count, population, percentage, partialPoints, sep=";")
-        self.graph_composition(measurement_name, measurement_of_name, partialPoints, date,
-                               property_uri, measurement_derived_name, measurement_of_conformance_name,
-                               conformance)
+        self.graph_composition(measurement_rate, measurement_of_rate, percentage,
+                               properties, measurement_points, measurement_of_points,
+                               partialPoints, language)
 
     def findability_keywords_available(self):
         dimension = FINDABILITY
@@ -278,7 +287,10 @@ class MQAevaluate:
         property = 'dcat:keyword'
         count = self.count_entity_property(entity, property)
         population = self.datasetCount
-        self.print(dimension, property, count, population, 30)
+        self.print(dimension, property, count, population, 30,
+                   QR + 'KeywordAvailability_rate_value', QR + 'KeywordAvailability_rate',
+                   [DCAT + 'dataset', DCAT + 'keyword'], QR + 'KeywordAvailability_points_value',
+                   QR + 'KeywordAvailability_points')
 
     def findability_category_available(self):
         dimension = FINDABILITY
@@ -286,7 +298,10 @@ class MQAevaluate:
         property = 'dcat:theme'
         count = self.count_entity_property(entity, property)
         population = self.datasetCount
-        self.print(dimension, property, count, population, 30)
+        self.print(dimension, property, count, population, 30,
+                   QR + 'CategoryAvailability_rate_value', QR + 'CategoryAvailability_rate',
+                   [DCAT + 'dataset', DCAT + 'theme'], QR + 'CategoryAvailability_points_value',
+                   QR + 'CategoryAvailability_points')
 
     def findability_spatial_available(self):
         dimension = FINDABILITY
@@ -294,7 +309,10 @@ class MQAevaluate:
         property = 'dct:spatial'
         count = self.count_entity_property(entity, property)
         population = self.datasetCount
-        self.print(dimension, property, count, population, 20)
+        self.print(dimension, property, count, population, 20,
+                   QR + 'SpatialAvailability_rate_value', QR + 'SpatialAvailability_rate',
+                   [DCAT + 'dataset', DCT + 'spatial'], QR + 'SpatialAvailability_points_value',
+                   QR + 'SpatialAvailability_points')
 
     def findability_temporal_available(self):
         dimension = FINDABILITY
@@ -302,7 +320,10 @@ class MQAevaluate:
         property = 'dct:temporal'
         count = self.count_entity_property(entity, property)
         population = self.datasetCount
-        self.print(dimension, property, count, population, 20)
+        self.print(dimension, property, count, population, 20,
+                   QR + 'TemporalAvailability_rate_value', QR + 'TemporalAvailability_rate',
+                   [DCAT + 'dataset', DCT + 'temporal'], QR + 'TemporalAvailability_points_value',
+                   QR + 'TemporalAvailability_points')
 
     def accesibility_accessURL_code_200(self):
         dimension = ACCESIBILITY
@@ -310,7 +331,10 @@ class MQAevaluate:
         property = 'dcat:accessURL'
         count = self.count_urls_with_200_code(property)
         population = self.distributionCount
-        self.print(dimension, property + CODE_200, count, population, 50)
+        self.print(dimension, property + CODE_200, count, population, 50,
+                   QR + 'AccessUrlStatusCode_rate_value', QR + 'AccessUrlStatusCode_rate',
+                   [DCAT + 'distribution', DCAT + 'accessURL'], QR + 'AccessUrlStatusCode_points_value',
+                   QR + 'AccessUrlStatusCode_points')
 
     def accesibility_downloadURL_available(self):
         dimension = ACCESIBILITY
@@ -318,7 +342,10 @@ class MQAevaluate:
         property = 'dcat:downloadURL'
         count = self.count_entity_property(entity, property)
         population = self.distributionCount
-        self.print(dimension, property, count, population, 20)
+        self.print(dimension, property, count, population, 20,
+                   QR + 'DownloadUrlAvailability_rate_value', QR + 'AccessUrlStatusCode_rate',
+                   [DCAT + 'distribution', DCT + 'downloadURL'], QR + 'DownloadUrlAvailability_points_value',
+                   QR + 'AccessUrlStatusCode_points')
 
     def accesibility_downloadURL_code_200(self):
         dimension = ACCESIBILITY
@@ -326,7 +353,10 @@ class MQAevaluate:
         property = 'dcat:downloadURL'
         count = self.count_urls_with_200_code(property)
         population = self.distributionCount
-        self.print(dimension, property + CODE_200, count, population, 30)
+        self.print(dimension, property + CODE_200, count, population, 30,
+                   QR + 'DownloadUrlStatusCode_rate_value', QR + 'DownloadUrlStatusCode_rate',
+                   [DCAT + 'distribution', DCAT + 'downloadURL'], QR + 'DownloadUrlStatusCode_points_value',
+                   QR + 'DownloadUrlStatusCode_points')
 
     def interoperability_format_available(self):
         dimension = INTEROPERABILITY
@@ -334,7 +364,10 @@ class MQAevaluate:
         property = 'dct:format'
         count = self.count_entity_property(entity, property)
         population = self.distributionCount
-        self.print(dimension, property, count, population, 20)
+        self.print(dimension, property, count, population, 20,
+                   QR + 'FormatAvailability_rate_value', QR + 'FormatAvailability_rate',
+                   [DCAT + 'distribution', DCT + 'format'], QR + 'FormatAvailability_points_value',
+                   QR + 'FormatAvailability_points')
 
     def interoperability_mediaType_available(self):
         dimension = INTEROPERABILITY
@@ -342,7 +375,10 @@ class MQAevaluate:
         property = 'dcat:mediaType'
         count = self.count_entity_property(entity, property)
         population = self.distributionCount
-        self.print(dimension, property, count, population, 10)
+        self.print(dimension, property, count, population, 10,
+                   QR + 'MediaTypeAvailability_rate_value', QR + 'MediaTypeAvailability_rate',
+                   [DCAT + 'distribution', DCAT + 'mediaType'], QR + 'MediaTypeAvailability_points_value',
+                   QR + 'MediaTypeAvailability_points')
 
     def interoperability_format_from_vocabulary(self):
         '''
@@ -354,7 +390,10 @@ class MQAevaluate:
         vocabulary = load_vocabulary('IMTvalues.csv')
         count = self.count_formats_from_vocabulary(vocabulary)
         population = self.distributionCount
-        self.print(dimension, property + FROM_VOCABULARY, count, population, 10)
+        self.print(dimension, property + FROM_VOCABULARY, count, population, 10,
+                   QR + 'FormatMediaTypeVocabularyAlignment_rate_value', QR + 'FormatMediaTypeVocabularyAlignment_rate',
+                   [DCAT + 'distribution', DCT + 'format', DCAT + 'mediaType'], QR + 'FormatMediaTypeVocabularyAlignment_points_value',
+                   QR + 'FormatMediaTypeVocabularyAlignment_points')
 
     def interoperability_format_nonProprietary(self):
         '''
@@ -366,7 +405,10 @@ class MQAevaluate:
         vocabulary = load_vocabulary('non-proprietary.csv')
         count = self.count_formats_from_vocabulary(vocabulary)
         population = self.distributionCount
-        self.print(dimension, property + ' non-proprietary', count, population, 20)
+        self.print(dimension, property + ' non-proprietary', count, population, 20,
+                   QR + 'FormatMediaTypeNonProprietary_rate_value', QR + 'FormatMediaTypeVocabularyAlignment_rate',
+                   [DCAT + 'distribution', DCT + 'format'], QR + 'FormatMediaTypeNonProprietary_points_value',
+                   QR + 'FormatMediaTypeNonProprietary_points')
 
     def interoperability_format_machineReadable(self):
         '''
@@ -378,7 +420,10 @@ class MQAevaluate:
         vocabulary = load_vocabulary('machine-readable.csv')
         count = self.count_formats_from_vocabulary(vocabulary)
         population = self.distributionCount
-        self.print(dimension, property + ' machine-readable', count, population, 20)
+        self.print(dimension, property + ' machine-readable', count, population, 20,
+                   QR + 'FormatMediaTypeMachineInterpretable_rate_value', QR + 'FormatMediaTypeMachineInterpretable_rate',
+                   [DCAT + 'distribution', DCT + 'format'], QR + 'FormatMediaTypeMachineInterpretable_points_value',
+                   QR + 'FormatMediaTypeMachineInterpretable_points')
 
     def interoperability_DCAT_AP_compliance(self):
         dimension = INTEROPERABILITY
@@ -393,7 +438,10 @@ class MQAevaluate:
         else:
             count = -1
         population = self.datasetCount
-        self.print(dimension, 'DCAT-AP compliance', count, population, 30)
+        self.print(dimension, 'DCAT-AP compliance', count, population, 30,
+                   QR + 'DcatApCompliance_rate_value', QR + 'DcatApCompliance_rate',
+                   [DCAT + 'dataset'], QR + 'DcatApCompliance_points_value',
+                   QR + 'DcatApCompliance_points')
 
     def reusability_license_available(self):
         dimension = REUSABILITY
@@ -401,7 +449,10 @@ class MQAevaluate:
         property = 'dct:license'
         count = self.count_entity_property(entity, property)
         population = self.distributionCount
-        self.print(dimension, property, count, population, 20)
+        self.print(dimension, property, count, population, 20,
+                   QR + 'LicenceAvailability_rate_value', QR + 'LicenceAvailability_rate',
+                   [DCAT + 'distribution', DCT + 'license'], QR + 'LicenceAvailability_points_value',
+                   QR + 'LicenceAvailability_points')
 
     def reusability_license_from_vocabulary(self):
         '''
@@ -413,7 +464,10 @@ class MQAevaluate:
         vocabulary = load_vocabulary('licenses.csv')
         count = self.count_values_containing_vocabulary(entity,property,vocabulary)
         population = self.distributionCount
-        self.print(dimension, property + FROM_VOCABULARY, count, population, 10)
+        self.print(dimension, property + FROM_VOCABULARY, count, population, 10,
+                   QR + 'KnownLicence_rate_value', QR + 'KnownLicence_rate',
+                   [DCAT + 'distribution', DCT + 'license'], QR + 'KnownLicence_points_value',
+                   QR + 'KnownLicence_points')
 
     def reusability_accessRights_available(self):
         dimension = REUSABILITY
@@ -421,7 +475,10 @@ class MQAevaluate:
         property = 'dct:accessRights'
         count = self.count_entity_property(entity, property)
         population = self.datasetCount
-        self.print(dimension, property, count, population, 10)
+        self.print(dimension, property, count, population, 10,
+                   QR + 'AccessRightsAvailability_rate_value', QR + 'AccessRightsAvailability_rate',
+                   [DCAT + 'dataset', DCT + 'accessRights'], QR + 'AccessRightsAvailability_points_value',
+                   QR + 'AccessRightsAvailability_points')
 
     def reusability_accessRights_from_vocabulary(self):
         dimension = REUSABILITY
@@ -430,7 +487,11 @@ class MQAevaluate:
         vocabulary = load_vocabulary('access-right.csv',1)
         count = self.count_values_contained_in_vocabulary(entity,property,vocabulary)
         population = self.datasetCount
-        self.print(dimension, property + FROM_VOCABULARY, count, population, 5)
+        self.print(dimension, property + FROM_VOCABULARY, count, population, 5,
+                   QR + 'AccessRightsVocabularyAlignment_rate_value', QR + 'AccessRightsVocabularyAlignment_rate',
+                   [DCAT + 'dataset', DCT + 'accessRights'], QR + 'AccessRightsVocabularyAlignment_points_value',
+                   QR + 'AccessRightsVocabularyAlignment_points')
+
 
     def reusability_contactPoint_available(self):
         dimension = REUSABILITY
@@ -438,7 +499,10 @@ class MQAevaluate:
         property = 'dcat:contactPoint'
         count = self.count_entity_property(entity, property)
         population = self.datasetCount
-        self.print(dimension, property, count, population, 20)
+        self.print(dimension, property, count, population, 20,
+                   QR + 'ContactPointAvailability_rate_value', QR + 'ContactPointAvailability_rate',
+                   [DCAT + 'dataset', DCAT + 'contactPoint'], QR + 'ContactPointAvailability_points_value',
+                   QR + 'ContactPointAvailability_points')
 
     def reusability_publisher_available(self):
         dimension = REUSABILITY
@@ -446,7 +510,10 @@ class MQAevaluate:
         property = 'dct:publisher'
         count = self.count_entity_property(entity, property)
         population = self.datasetCount
-        self.print(dimension, property, count, population, 10)
+        self.print(dimension, property, count, population, 10,
+                   QR + 'PublisherAvailability_rate_value', QR + 'PublisherAvailability_rate',
+                   [DCAT + 'distribution', DCAT + 'contactPoint'], QR + 'PublisherAvailability_points_value',
+                   QR + 'PublisherAvailability_points')
 
     def contextuality_rights_available(self):
         dimension = CONTEXTUALITY
@@ -454,7 +521,10 @@ class MQAevaluate:
         property = 'dct:rights'
         count = self.count_entity_property(entity, property)
         population = self.distributionCount
-        self.print(dimension, property, count, population, 5)
+        self.print(dimension, property, count, population, 5,
+                   QR + 'RightsAvailability_rate_value', QR + 'PublisherAvailability_rate',
+                   [DCAT + 'distribution', DCT + 'rights'], QR + 'RightsAvailability_points_value',
+                   QR + 'RightsAvailability_points')
 
     def contextuality_fileSize_available(self):
         dimension = CONTEXTUALITY
@@ -462,7 +532,10 @@ class MQAevaluate:
         property = 'dcat:byteSize'
         count = self.count_entity_property(entity, property)
         population = self.distributionCount
-        self.print(dimension, property, count, population, 5)
+        self.print(dimension, property, count, population, 5,
+                   QR + 'ByteSizeAvailability_rate_value', QR + 'ByteSizeAvailability_rate',
+                   [DCAT + 'distribution', DCAT + 'byteSize'], QR + 'ByteSizeAvailability_points_value',
+                   QR + 'ByteSizeAvailability_points')
 
     def contextuality_issued_available(self):
         dimension = CONTEXTUALITY
@@ -470,7 +543,10 @@ class MQAevaluate:
         property = 'dct:issued'
         count = self.count_entity_property(entity, property)
         population = self.datasetCount
-        self.print(dimension, property, count, population, 5)
+        self.print(dimension, property, count, population, 5,
+                   QR + 'DateIssuedAvailability_rate_value', QR + 'DateIssuedAvailability_rate',
+                   [DCAT + 'dataset', DCT + 'issued'], QR + 'DateIssuedAvailability_points_value',
+                   QR + 'DateIssuedAvailability_points')
 
     def contextuality_modified_available(self):
         dimension = CONTEXTUALITY
@@ -478,7 +554,10 @@ class MQAevaluate:
         property = 'dct:modified'
         count = self.count_entity_property(entity, property)
         population = self.datasetCount
-        self.print(dimension, property, count, population, 5)
+        self.print(dimension, property, count, population, 5,
+                   QR + 'DateModifiedAvailability_rate_value', QR + 'DateModifiedAvailability_rate',
+                   [DCAT + 'dataset', DCT + 'modified'], QR + 'DateModifiedAvailability_points_value',
+                   QR + 'DateModifiedAvailability_points')
 
     def evaluate(self):
         print("Dimension", "Indicator/property", "Count","Population","Percentage", "Points")
@@ -506,46 +585,50 @@ class MQAevaluate:
         self.contextuality_issued_available()
         self.contextuality_modified_available()
         print("Total points", self.totalPoints)
+        self.graph_serialization()
 
-    def graph_composition(self, measurement_name, measurement_of_name, value,
-                          property_uri, measurement_derived_name, measurement_of_conformance_name,
-                          conformance):
+    def graph_composition(self, measurement_rate, measurement_of_rate, value,
+                          properties, measurement_points, measurement_of_points,
+                          partialPoints, language):
         # FIJO
-        catalog = URIRef(':myCatalog')
-        self.graph.add((catalog, RDF.type, Literal('dcat:Catalog')))
+        catalog = URIRef(QR + 'myCatalog')
+        self.graph.add((catalog, RDF.type, URIRef(DCAT + 'Catalog')))
         self.graph.add((catalog, DCTERMS.title, Literal('datos.gob.es')))
         ####
 
-        measurement = URIRef(measurement_name)
-        self.graph.add((catalog, Literal('dqv:hasQualityMeasurement'), measurement))
-        self.graph.add((measurement, RDF.type, Literal('dqv:QualityMeasurement')))
-        self.graph.add((measurement, Literal('dqv:computedOn'), catalog))
+        measurement = URIRef(measurement_rate)
+        measurement_derived = URIRef(measurement_points)
 
-        measurement_of = URIRef(measurement_of_name)
-        self.graph.add((measurement, Literal('dqv:isMeasurementOf'), measurement_of))
-        self.graph.add((measurement, Literal('dqv:value'), Literal(value,  datatype='xsd:double')))
-        self.graph.add((measurement, Literal('dqv:date'), Literal(self.date, datatype='xsd:date')))
+        self.graph.add((catalog, URIRef(DQV + 'hasQualityMeasurement'), measurement))
+        self.graph.add((measurement, RDF.type, URIRef(DQV + 'QualityMeasurement')))
+        self.graph.add((measurement, URIRef(DQV + 'computedOn'), catalog))
 
-        onProperty = URIRef(property_uri)
-        self.graph.add((measurement, Literal(':onProperty'), onProperty))
+        measurement_of = URIRef(measurement_of_rate)
+        self.graph.add((measurement, URIRef(DQV + 'isMeasurementOf'), measurement_of))
+        self.graph.add((measurement, URIRef(DQV + 'value'), Literal(value, datatype=XSD + 'double')))
+        self.graph.add((measurement, URIRef(DCT + 'date'), Literal(self.date, datatype=XSD + 'date')))
 
-        # Measurement 'wasDerivedFrom'
-        measurement_derived = URIRef(measurement_derived_name)
-        self.graph.add((catalog, Literal('dqv:hasQualityMeasurement'), measurement_derived))
-        self.graph.add((measurement_derived, RDF.type, Literal('dqv:QualityMeasurement')))
-        self.graph.add((measurement_derived, Literal('dqv:computedOn'), catalog))
+        for property in properties:
+            onProperty = URIRef(property)
+            self.graph.add((measurement, URIRef(QR + 'onProperty'), onProperty))
+            self.graph.add((measurement_derived, URIRef(QR + 'onProperty'), onProperty))
 
-        measurement_of_conformance = URIRef(measurement_of_conformance_name)
-        self.graph.add((measurement_derived, Literal('dqv:isMeasurementOf'), measurement_of_conformance))
+        if language is not None:
+            self.graph.add((measurement, URIRef('http://www.qualityreport.com/qr/onLanguage'), Literal(language)))
+
+        self.graph.add((catalog, URIRef(DQV + 'hasQualityMeasurement'), measurement_derived))
+        self.graph.add((measurement_derived, RDF.type, URIRef(DQV + 'QualityMeasurement')))
+        self.graph.add((measurement_derived, URIRef(DQV + 'computedOn'), catalog))
+
+        measurement_of_conformance = URIRef(measurement_of_points)
+        self.graph.add((measurement_derived, URIRef(DQV + 'isMeasurementOf'), measurement_of_conformance))
         # se añade esta linea
-        self.graph.add((measurement_derived, Literal('prov:wasDerivedFrom'), measurement))
+        self.graph.add((measurement_derived, URIRef(PROV + 'wasDerivedFrom'), measurement))
         #
-        #Cambia el tipo
-        self.graph.add((measurement_derived, Literal('dqv:value'), Literal(conformance, datatype='xsd:boolean')))
+        # Cambia el tipo
+        self.graph.add((measurement_derived, URIRef(DQV + 'value'), Literal(partialPoints, datatype=XSD + 'double')))
         #
-        self.graph.add((measurement_derived, Literal('dqv:date'), Literal(self.date, datatype='xsd:date')))
-        self.graph.add((measurement_derived, Literal(':onProperty'), onProperty))
+        self.graph.add((measurement_derived, URIRef(DCT + 'date'), Literal(self.date, datatype=XSD + 'date')))
 
-    def graph_serialization(self, filename, graph_format='turtle'):
-        self.graph.serialize(destination='../DQV_files/' + filename, format=graph_format)
-
+    def graph_serialization(self, graph_format='turtle'):
+        self.graph.serialize(destination='../DQV_files/' + self.filename, format=graph_format)

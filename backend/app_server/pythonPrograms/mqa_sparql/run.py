@@ -21,7 +21,7 @@ if __name__ == '__main__':
         URL = 'http://datos.gob.es/virtuoso/sparql'
         # date in YYYY-MM-DD HH-mm-ss format
         date = datetime.now().strftime('%Y-%d-%m')
-        filename = 'test - ' + datetime.now().strftime('%Y-%d-%m %H:%M:%S') + '.ttl'
+        filename = 'testMQA - ' + datetime.now().strftime('%Y-%d-%m %H:%M:%S') + '.ttl'
     else:
         URL = sys.argv[1]
         filename = sys.argv[2]
