@@ -500,7 +500,10 @@ class ISO19157Evaluation:
               properties, measurement_derived_name, measurement_of_conformance_name,
               language = None):
         self.checks += 1
-        percentage = count / population
+        if population == 0:
+            percentage = 100.0
+        else:
+            percentage = count / population
         if percentage >= THRESHOLD:
             passed = True
             self.passedChecks += 1

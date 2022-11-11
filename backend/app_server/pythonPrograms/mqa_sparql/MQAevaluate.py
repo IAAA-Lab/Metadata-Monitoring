@@ -270,7 +270,10 @@ class MQAevaluate:
               measurement_rate, measurement_of_rate,
               properties, measurement_points, measurement_of_points,
               language=None):
-        percentage = count / population
+        if population == 0:
+            percentage = 100.0
+        else:
+            percentage = count / population
         if count > 0:
             partialPoints = percentage * weight
             self.totalPoints += partialPoints

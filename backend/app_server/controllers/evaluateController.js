@@ -1,7 +1,8 @@
 const { Results_mqa_sparql, Results_ISO19157 } = require('./schema')
-const { createReadStream } = require('fs')
+const { createReadStream, unlinkSync } = require('fs')
 const { createModel } = require('mongoose-gridfs');
 const path = require('path');
+const dateFormat = require('date-and-time')
 
 const PythonShell = require('python-shell').PythonShell;
 const myPython = './app_server/pythonPrograms/my-environment/bin/python3'
@@ -19,15 +20,19 @@ const evaluate = function (req, res) {
 }
 
 const mqa_sparql = function (url) {
+    let actualDate = new Date
     //date in format YYYY-MM-DD HH-mm-ss
-    let date = new Date().toISOString()
+    let fileName = url.replace(/\//g, '-')
+        + ' - ' + ' MQA - '
+        + actualDate.toISOString()
         .replace(/T/, ' ')
         .replace(/\..+/, '')
-    let fileName = url + '-' + date
+        + '.ttl'
+    let date = dateFormat.format(actualDate, 'YYYY-DD-MM')
 
     const options = {
         pythonPath: myPython,
-        args: [url, fileName]
+        args: [url, fileName, date]
     };
 
     console.log('Starting evaluation MQA of: ' + url)
@@ -59,22 +64,26 @@ const mqa_sparql = function (url) {
         }
         Results_mqa_sparql.create(result)
         console.log('Evaluation MQA of ' + url + ' saved')
-        storeFile('test.ttl')
+        storeFile(fileName)
 
     });
     return true
 };
 
 const iso19157 = function (url) {
+    let actualDate = new Date
     //date in format YYYY-MM-DD HH-mm-ss
-    let date = new Date().toISOString()
+    let fileName = url.replace(/\//g, '-')
+        + ' - ' + ' ISO19157 - '
+        + actualDate.toISOString()
         .replace(/T/, ' ')
         .replace(/\..+/, '')
-    let fileName = url + '-' + date
+        + '.ttl'
+    let date = dateFormat.format(actualDate, 'YYYY-DD-MM')
 
     const options = {
         pythonPath: myPython,
-        args: [url, fileName]
+        args: [url, fileName, date]
     };
 
     console.log('Starting evaluation ISO19157 of: ' + url)
@@ -108,7 +117,7 @@ const iso19157 = function (url) {
 
         Results_ISO19157.create(result)
         console.log('Evaluation ISO19157 of ' + url + ' saved')
-        storeFile('test.ttl')
+        storeFile(fileName)
     });
 
     return true
@@ -120,10 +129,11 @@ const storeFile = function (name) {
 
     // write file to gridfs
     const realPath = path.resolve('./app_server/pythonPrograms/DQV_files/' + name)
-    console.log(realPath)
     const readStream = createReadStream(realPath);
     const options = ({ filename: name, contentType: 'text/plain' });
     Attachment.write(options, readStream, (error, file) => {
+        //Deletes the stored file only if its really stored
+        unlinkSync(realPath)
     });
 
 };
