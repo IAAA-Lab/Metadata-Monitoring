@@ -19,7 +19,7 @@ OUTPUT = "output/"
 ES_SPARQL = 'http://datos.gob.es/virtuoso/sparql'
 ES_RDF = 'https://datos.gob.es/apidata/catalog/dataset/'
 
-
+# EDP_SPARQL = 'http://localhost:3030/asturias'
 EDP_SPARQL = 'https://data.europa.eu/sparql'
 EDP_RDF = 'https://data.europa.eu/data/api/datasets/'
 EDP_FORMAT = '.ttl?useNormalizedId=true&locale=en'
@@ -143,5 +143,5 @@ if __name__ == '__main__':
     #harvester = SPARQL_harvester(url = ES_SPARQL, rdf_url= ES_RDF, limit=500, max_number_of_records=5000, output_folder = OUTPUT)
     #harvester.harvest()
 
-    harvester = SPARQL_harvester(url = EDP_SPARQL, rdf_url= EDP_RDF, limit=500, max_number_of_records=5000, output_folder = OUTPUT, format = EDP_FORMAT)
+    harvester = SPARQL_harvester(url = EDP_SPARQL, rdf_url= EDP_RDF, limit=500, max_number_of_records=1000, output_folder = OUTPUT, format = EDP_FORMAT)
     harvester.harvest()

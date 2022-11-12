@@ -63,8 +63,8 @@ export class EvaluationComponent implements OnInit {
       .set('dcatAp', dcatAp)
       .set('direct', direct)
       .set('local', local)
-      .set('url', url)
       .set('days', days)
+      .set('url', url)
 
     //TODO: comprobar si hay error sacar ventanita y si no lo hay, diciendo que todo correcto que ya aparecerá en los resultados
     this.http.get<JSON>(this.baseUrl + apiPaths.evaluate, {params: params}).subscribe(

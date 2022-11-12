@@ -3,33 +3,52 @@ const { createReadStream, unlinkSync } = require('fs')
 const { createModel } = require('mongoose-gridfs');
 const path = require('path');
 const dateFormat = require('date-and-time')
+const connectionDB = require('../config/db.config');
+const {Agenda} = require('agenda');
 
 const PythonShell = require('python-shell').PythonShell;
 const myPython = './app_server/pythonPrograms/my-environment/bin/python3'
 
-//incoming parameters are: mqa, iso19157, sparql, ckan, nti, dcatAp, direct, local, url, days
+
+
+
+//incoming parameters are: mqa, iso19157, sparql, ckan, nti, dcatAp, direct, local, days, url
 const evaluate = function (req, res) {
     let evaluationStarted = false
+    let url = req.query.url
+    let interval = Number(req.query.days)
+    let actualDate = new Date()
+    let date = dateFormat.format(actualDate, 'YYYY-DD-MM')
+
     if (req.query.mqa === 'true') {
-        evaluationStarted = mqa_sparql(req.query.url);
+        let fileName = url.replace(/\//g, '-')
+            + ' - ' + ' MQA - '
+            + actualDate.toISOString()
+                .replace(/T/, ' ')
+                .replace(/\..+/, '')
+            + '.ttl'
+        evaluationStarted = mqa_sparql(url, fileName, date);
+        if (interval > 0) {
+            schedule_task(url, fileName, interval)
+        }
     }
     if (req.query.iso19157 === 'true') {
-        evaluationStarted = iso19157(req.query.url)
+        let fileName = url.replace(/\//g, '-')
+            + ' - ' + ' ISO19157 - '
+            + actualDate.toISOString()
+                .replace(/T/, ' ')
+                .replace(/\..+/, '')
+            + '.ttl'
+        evaluationStarted = iso19157(url, fileName, date)
+        if (interval> 0) {
+            schedule_task(url, fileName, interval)
+        }
     }
+
     res.json({evaluationStarted: evaluationStarted});
 }
 
-const mqa_sparql = function (url) {
-    let actualDate = new Date
-    //date in format YYYY-MM-DD HH-mm-ss
-    let fileName = url.replace(/\//g, '-')
-        + ' - ' + ' MQA - '
-        + actualDate.toISOString()
-        .replace(/T/, ' ')
-        .replace(/\..+/, '')
-        + '.ttl'
-    let date = dateFormat.format(actualDate, 'YYYY-DD-MM')
-
+const mqa_sparql = function (url, fileName, date) {
     const options = {
         pythonPath: myPython,
         args: [url, fileName, date]
@@ -70,17 +89,7 @@ const mqa_sparql = function (url) {
     return true
 };
 
-const iso19157 = function (url) {
-    let actualDate = new Date
-    //date in format YYYY-MM-DD HH-mm-ss
-    let fileName = url.replace(/\//g, '-')
-        + ' - ' + ' ISO19157 - '
-        + actualDate.toISOString()
-        .replace(/T/, ' ')
-        .replace(/\..+/, '')
-        + '.ttl'
-    let date = dateFormat.format(actualDate, 'YYYY-DD-MM')
-
+const iso19157 = function (url, fileName, date) {
     const options = {
         pythonPath: myPython,
         args: [url, fileName, date]
@@ -123,6 +132,20 @@ const iso19157 = function (url) {
     return true
 };
 
+function schedule_task(url, fileName, interval) {
+    const agenda = new Agenda({db: {address: connectionDB.url_agenda}});
+    agenda.define(fileName, function(job) {
+        console.log("filename: " + fileName + " URL: " + url);
+    });
+
+    agenda.on('ready', function() {
+        agenda.every(interval + ' days', fileName);
+        agenda.enable();
+        agenda.start();
+    });
+
+}
+
 const storeFile = function (name) {
     // use default bucket
     const Attachment = createModel();
@@ -134,6 +157,7 @@ const storeFile = function (name) {
     Attachment.write(options, readStream, (error, file) => {
         //Deletes the stored file only if its really stored
         unlinkSync(realPath)
+        console.log('Successfully stored DQV file to databe')
     });
 
 };

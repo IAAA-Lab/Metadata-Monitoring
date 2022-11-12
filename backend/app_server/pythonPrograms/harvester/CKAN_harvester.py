@@ -118,6 +118,6 @@ if __name__ == '__main__':
             getattr(ssl, '_create_unverified_context', None)):
         ssl._create_default_https_context = ssl._create_unverified_context
 
-    harvester = CKAN_harvester(url = EDP_CKAN, rdf_url= EDP_RDF, limit=500, max_number_of_records=5000, output_folder = OUTPUT, format = EDP_FORMAT)
+    harvester = CKAN_harvester(url = LOCAL_CKAN, rdf_url= EDP_RDF, limit=500, max_number_of_records=5000, output_folder = OUTPUT, format = EDP_FORMAT)
     harvester.harvest()
 
