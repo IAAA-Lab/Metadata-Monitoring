@@ -229,11 +229,11 @@ function schedule_task(url, jobID, interval, isMQA, isISO19157) {
     }
 
     agenda.on('ready', function() {
-        agenda.every(interval + ' seconds', jobID);
+        agenda.every(interval + ' days', jobID);
         agenda.enable();
         agenda.start();
     });
-
+    console.log('Stored job: ' + jobID + ' every ' + interval + ' days')
 }
 
 const storeFile = function (name) {

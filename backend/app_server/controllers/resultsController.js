@@ -29,6 +29,27 @@ const resultsIndex = async function (req, res) {
     res.json(indexes)
 }
 
+const analysis = async function (req, res) {
+    let method = req.query.method
+    let date = req.query.date
+    let url = req.query.url
+    let analysis
+
+    if (method === 'MQA') {
+        analysis = await Results_mqa_sparql.findOne({URL: url, Date: date}, {_id: 0, URL: 0, Date: 0},
+            function (err, r) {
+            return r;
+        }).clone().catch(function(err){ console.log(err)})
+
+    } else if (method === 'ISO19157') {
+        analysis = await Results_ISO19157.findOne({URL: url, Date: date}, {_id: 0, URL: 0, Date: 0},
+        function (err, r) {
+            return r;
+        }).clone().catch(function(err){ console.log(err)})
+    }
+    res.json(analysis)
+};
+
 const exportData = function (req, res) {
     // use default bucket
     const Attachment = createModel();
@@ -44,7 +65,10 @@ const exportData = function (req, res) {
     });
 }
 
+
+
 module.exports = {
     resultsIndex,
-    exportData
+    exportData,
+    analysis
 };
