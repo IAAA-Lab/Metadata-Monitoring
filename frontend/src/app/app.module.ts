@@ -8,19 +8,23 @@ import { ResultsComponent } from './results/results.component';
 import {AppRoutingModule} from "./app-routing.module";
 import { EvaluationComponent } from './evaluation/evaluation.component';
 import { LoginComponent } from './login/login.component';
+import { AnalysisComponent } from './analysis/analysis.component';
+import { NgChartsModule} from 'ng2-charts';
 
 @NgModule({
   declarations: [
     AppComponent,
     ResultsComponent,
     EvaluationComponent,
-    LoginComponent
+    LoginComponent,
+    AnalysisComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

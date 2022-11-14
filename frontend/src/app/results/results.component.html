@@ -1,1 +1,26 @@
-<p>results works!</p>
+<!DOCTYPE html>
+<html>
+<body style="background: aquamarine">
+<div class="overflow-scroll">
+  <table class="table table-hover">
+    <tr>
+      <td><p>URL</p></td>
+      <td><p>Date</p></td>
+      <td><p>Method</p></td>
+    </tr>
+    <tr *ngFor="let result of results" style="width: border-box">
+      <div *ngIf="result.Method == 'MQA'" (click)="getAnalysisMQA(result)">
+        <td><p>{{result.URL}}</p></td>
+        <td><p>{{result.Date}}</p></td>
+        <td><p>{{result.Method}}</p></td>
+      </div>
+      <div *ngIf="result.Method == 'ISO19157'" (click)="getAnalysisISO19157(result)">
+        <td><p>{{result.URL}}</p></td>
+        <td><p>{{result.Date}}</p></td>
+        <td><p>{{result.Method}}</p></td>
+      </div>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
