@@ -39,3 +39,7 @@ export class Analysis_ISO19157 {
 export class Analysis_MQA {
   properties: Properties_MQA[] = []
 }
+
+export class EvaluationStarted {
+  evaluationStarted: boolean = false
+}

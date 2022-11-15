@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient, HttpParams} from '@angular/common/http';
 import {apiPaths, environment, GlobalVariables} from '../../environments/environment';
+import {EvaluationStarted} from "../app.component";
 
 @Component({
   selector: 'app-evaluation',
@@ -19,6 +20,9 @@ export class EvaluationComponent implements OnInit {
   periodicityIsNotANumber = false
   periodicityIsDisabled = true
   isAdminLoggedIn: boolean | undefined
+  isEvaluationStarted: EvaluationStarted = {
+    evaluationStarted: false
+  }
 
   days = -1;
 
@@ -31,6 +35,19 @@ export class EvaluationComponent implements OnInit {
   getForm(mqa: HTMLInputElement, iso19157: HTMLInputElement, sparql: HTMLInputElement, ckan: HTMLInputElement,
           nti: HTMLInputElement, dcatAp: HTMLInputElement, direct: HTMLInputElement, local: HTMLInputElement,
           url: HTMLInputElement, days: number): void {
+
+    if (!this.periodicityIsDisabled && (days <= 0)) {
+      this.periodicityIsNotANumber = true
+    } else {
+      this.periodicityIsNotANumber = false
+      //If more than one evaluation is submitted without reloading, days is not reset to -1
+      // if only the check is disabled
+      if (this.periodicityIsDisabled) {
+        days = -1
+      }
+      this.evaluate(mqa.checked, iso19157.checked, sparql.checked, ckan.checked, nti.checked,
+      dcatAp.checked, direct.checked, local.checked, url.value, days);
+    }
     console.log('mqa: ' + mqa.checked)
     console.log('iso19157: ' + iso19157.checked)
     console.log('sparql: ' + sparql.checked)
@@ -41,14 +58,6 @@ export class EvaluationComponent implements OnInit {
     console.log('local: ' + local.checked)
     console.log('URL: ' + url.value)
     console.log('Days: ' + days)
-
-    if (!this.periodicityIsDisabled && (days <= 0)) {
-      this.periodicityIsNotANumber = true
-    } else {
-      this.periodicityIsNotANumber = false
-      this.evaluate(mqa.checked, iso19157.checked, sparql.checked, ckan.checked, nti.checked,
-      dcatAp.checked, direct.checked, local.checked, url.value, days)
-    }
   }
 
   evaluate(mqa: boolean, iso19157: boolean, sparql: boolean, ckan: boolean,
@@ -67,9 +76,10 @@ export class EvaluationComponent implements OnInit {
       .set('url', url)
 
     //TODO: comprobar si hay error sacar ventanita y si no lo hay, diciendo que todo correcto que ya aparecerá en los resultados
-    this.http.get<JSON>(this.baseUrl + apiPaths.evaluate, {params: params}).subscribe(
-      (resp: JSON) => {
-        console.log(JSON.stringify(resp))
+    this.http.get<EvaluationStarted>(this.baseUrl + apiPaths.evaluate, {params: params}).subscribe(
+      (resp: EvaluationStarted) => {
+        this.isEvaluationStarted = resp
+        console.log(this.isEvaluationStarted.evaluationStarted)
       }
     )
 

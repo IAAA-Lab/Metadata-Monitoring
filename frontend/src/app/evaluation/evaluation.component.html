@@ -3,11 +3,14 @@
 <body style="background: aquamarine">
 <div class="container">
   <h1 class="text-center">Metadata evaluation</h1>
+  <div *ngIf="isEvaluationStarted.evaluationStarted" style="color: blue" class="text-center">
+    <h4>Evaluation started</h4>
+  </div>
   <div class="row">
-    <div class="col-3" style="background: red">
-      <a class="btn btn-secondary" routerLink="/results">Results</a>
+    <div class="col-3">
+      <a class="btn btn-primary" routerLink="/results">Results</a>
     </div>
-    <div class="col-6" style="background: green"><h2>Methods</h2>
+    <div class="col-6"><h2>Methods</h2>
       <input type="text" style="width: 75%" #url>
       <button type="button" class="btn btn-primary" (click)="getForm(mqa, iso19157, sparql, ckan, nti, dcat_ap, direct, local, url, days)">Evaluate</button>
       <br>
@@ -39,7 +42,7 @@
              [checked]="directEvaluationIsDisabled" #local>
       <label class="form-check-label" for="local">local</label>
       <br></div>
-    <div class="col-3" style="background: purple">
+    <div class="col-3">
       <br>
       <div  class="text-center" *ngIf="!isAdminLoggedIn">
         <a type="button" class="btn btn-primary" href="/login">Login</a>
