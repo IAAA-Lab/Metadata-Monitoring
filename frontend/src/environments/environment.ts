@@ -32,6 +32,8 @@ export class GlobalVariables {
     properties: new Array<Properties_MQA>()
   };
 
+  Date: string = '';
+  URL: string = '';
 
   private messageIsAdminLoggedIn = new BehaviorSubject(this.isAdminLoggedIn);
   sharedMessageIsAdminLoggedIn = this.messageIsAdminLoggedIn.asObservable();
@@ -41,6 +43,12 @@ export class GlobalVariables {
 
   private messageAnalysisMQA = new BehaviorSubject(this.analysisMQA);
   sharedMessageAnalysisMQA = this.messageAnalysisMQA.asObservable();
+
+  private messageDate = new BehaviorSubject(this.Date);
+  sharedMessageDate = this.messageDate.asObservable();
+
+  private messageURL = new BehaviorSubject(this.URL);
+  sharedMessageURL = this.messageURL.asObservable();
 
   nextMessageIsAdminLoggedIn(message: boolean) {
     this.messageIsAdminLoggedIn.next(message);
@@ -52,6 +60,14 @@ export class GlobalVariables {
 
   nextMessageAnalysisMQA(message: Analysis_MQA) {
     this.messageAnalysisMQA.next(message);
+  }
+
+  nextMessageDate(message: string) {
+    this.messageDate.next(message);
+  }
+
+  nextMessageURL(message: string) {
+    this.messageURL.next(message);
   }
 }
 

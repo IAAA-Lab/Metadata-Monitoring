@@ -3,7 +3,12 @@
 <body style="background: aquamarine">
 <div>
   <br>
-  <p>Datos de URL para el día FECHA y método ISO19157</p>
+  <p>Datos de <b>{{URL}}</b> para el día <b>{{date}}</b> y método <b>{{method}}</b></p>
+  <br>
+  <div *ngIf="method != 'MQA'">
+    <div id="rectangle-green"></div><p>Pass</p>
+    <div id="rectangle-red"></div><p>No Pass</p>
+  </div>
   <canvas  id="MyChart" >{{ chart }}</canvas>
   <br>
 </div>

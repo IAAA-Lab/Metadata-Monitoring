@@ -38,6 +38,8 @@ export class ResultsComponent implements OnInit {
     this.http.get<Analysis_MQA>(this.baseUrl + apiPaths.analysis, {params: params}).subscribe(
       (resp: Analysis_MQA) => {
           this.GlobalVariables.nextMessageAnalysisMQA(resp);
+          this.GlobalVariables.nextMessageDate(result.Date)
+          this.GlobalVariables.nextMessageURL(result.URL)
           this.goToAnalysis()
       }
     )
@@ -52,6 +54,8 @@ export class ResultsComponent implements OnInit {
     this.http.get<Analysis_ISO19157>(this.baseUrl + apiPaths.analysis, {params: params}).subscribe(
       (resp: Analysis_ISO19157) => {
         this.GlobalVariables.nextMessageAnalysisISO19157(resp);
+        this.GlobalVariables.nextMessageDate(result.Date)
+        this.GlobalVariables.nextMessageURL(result.URL)
         this.goToAnalysis()
       }
     )

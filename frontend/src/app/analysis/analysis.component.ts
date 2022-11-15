@@ -21,12 +21,16 @@ export class AnalysisComponent implements OnInit{
   };
 
   method = '';
+  URL = '';
+  date = '';
 
   constructor(public GlobalVariables: GlobalVariables) { }
 
   ngOnInit(): void {
     this.GlobalVariables.sharedMessageAnalysisMQA.subscribe( messageAnalysisMQA => this.messageAnalysisMQA = messageAnalysisMQA);
     this.GlobalVariables.sharedMessageAnalysisISO19157.subscribe( messageAnalysisISO19157 => this.messageAnalysisISO19157 = messageAnalysisISO19157);
+    this.GlobalVariables.sharedMessageDate.subscribe( messageDate => this.date = messageDate);
+    this.GlobalVariables.sharedMessageURL.subscribe( messageURL => this.URL = messageURL);
     this.drawGraphs()
   }
   drawGraphs() {
@@ -70,7 +74,7 @@ export class AnalysisComponent implements OnInit{
     }
     this.createChart(labels, data, colors)
   }
-  // labels: string[], datasetLabel: string, data: string
+
   createChart(labels: string[], dataValues: string[], colors: string[]){
     this.chart = new Chart("MyChart", {
       type: 'bar', //this denotes tha type of chart
@@ -79,14 +83,18 @@ export class AnalysisComponent implements OnInit{
         labels: labels,
         datasets: [
           {
-            label: "Sales",
             data: dataValues,
             backgroundColor: colors
           }
         ]
       },
       options: {
-        aspectRatio:2.5
+        aspectRatio:2.5,
+        plugins: {
+          legend: {
+            display: false
+          }
+        }
       }
     });
   }
