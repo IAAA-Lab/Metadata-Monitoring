@@ -75,7 +75,6 @@ export class EvaluationComponent implements OnInit {
       .set('days', days)
       .set('url', url)
 
-    //TODO: comprobar si hay error sacar ventanita y si no lo hay, diciendo que todo correcto que ya aparecerá en los resultados
     this.http.get<EvaluationStarted>(this.baseUrl + apiPaths.evaluate, {params: params}).subscribe(
       (resp: EvaluationStarted) => {
         this.isEvaluationStarted = resp
