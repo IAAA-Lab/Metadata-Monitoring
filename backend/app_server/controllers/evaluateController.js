@@ -4,17 +4,17 @@ const https = require('https');
 const { createModel } = require('mongoose-gridfs');
 const path = require('path');
 const dateFormat = require('date-and-time')
-const connectionDB = require('../config/db.config');
+const {connectionDB, url_fuseki} = require('../config/db.config');
 const {Agenda} = require('agenda');
 const request = require('request');
 
 const PythonShell = require('python-shell').PythonShell;
 const myPython = './app_server/pythonPrograms/my-environment/bin/python3'
-const urlFuseki = 'http://localhost:3030/'
+
 function uploadFuseki(filePath, fileName, dataset, isMQA, isISO19157, interval) {
     let options = {
         'method': 'POST',
-        'url': urlFuseki + dataset,
+        'url': url_fuseki + dataset,
         'headers': {
         },
         formData: {
@@ -33,10 +33,10 @@ function uploadFuseki(filePath, fileName, dataset, isMQA, isISO19157, interval) 
         if (error) throw new Error(error);
         console.log('upload to fuseki completed')
         if (isMQA === 'true') {
-            evaluate_mqa_sparql(urlFuseki + dataset, interval)
+            evaluate_mqa_sparql(url_fuseki + dataset, interval)
         }
         if (isISO19157 === 'true') {
-            evaluate_ISO19157_sparql(urlFuseki + dataset, interval)
+            evaluate_ISO19157_sparql(url_fuseki + dataset, interval)
         }
     });
     return true
@@ -66,10 +66,9 @@ const evaluate = function (req, res) {
     let interval = Number(req.query.days)
     let isMQA = req.query.mqa
     let isISO19157 = req.query.iso19157
-    // let dataset = req.query.dataset
-    let dataset = 'prueba'
 
     if (req.query.local === 'true') {
+        let dataset = req.query.dataset
         evaluationStarted = downloadRDF(url, dataset, isMQA, isISO19157, interval);
     } else {
         if (isMQA === 'true') {
