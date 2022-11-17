@@ -1,0 +1,7 @@
+.marginButtons{
+  display: flex;
+  align-items: center;
+  padding-left: 20vw;
+  width: 100vw;
+  margin-bottom: 20px;
+}

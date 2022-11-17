@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html>
-<body style="background: aquamarine">
-<a class="btn btn-primary" routerLink="/evaluation">Back</a>
+<body style="background: #A4BE7B">
+<div class="marginButtons">
+  <a class="btn btn-primary" routerLink="/evaluation">Back</a>
+</div>
 <div class="overflow-scroll">
   <table class="table table-hover">
-    <tr>
-      <td><p>URL</p></td>
-      <td><p>Date</p></td>
-      <td><p>Method</p></td>
-    </tr>
-    <tr *ngFor="let result of results" style="width: border-box">
-      <div *ngIf="result.Method == 'MQA'" (click)="getAnalysisMQA(result)">
+    <thead>
+      <tr style="background: brown">
+        <th><p>URL</p></th>
+        <th><p>Date</p></th>
+        <th><p>Method</p></th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let result of results">
+      <tr *ngIf="result.Method == 'MQA'" (click)="getAnalysisMQA(result)">
+          <td><p>{{result.URL}}</p></td>
+          <td><p>{{result.Date}}</p></td>
+          <td><p>{{result.Method}}</p></td>
+      </tr>
+      <tr *ngIf="result.Method == 'ISO19157'" (click)="getAnalysisISO19157(result)">
         <td><p>{{result.URL}}</p></td>
         <td><p>{{result.Date}}</p></td>
         <td><p>{{result.Method}}</p></td>
-      </div>
-      <div *ngIf="result.Method == 'ISO19157'" (click)="getAnalysisISO19157(result)">
-        <td><p>{{result.URL}}</p></td>
-        <td><p>{{result.Date}}</p></td>
-        <td><p>{{result.Method}}</p></td>
-      </div>
-    </tr>
+      </tr>
+    </tbody>
   </table>
 </div>
 </body>

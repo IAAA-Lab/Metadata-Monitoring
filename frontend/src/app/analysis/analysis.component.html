@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html>
-<body style="background: aquamarine">
-<a class="btn btn-primary" routerLink="/results">Back</a>
+<body style="background: #A4BE7B">
+<div class="marginButtons">
+  <a class="btn btn-primary" routerLink="/results">Back</a>
+  <a class="btn btn-primary" routerLink="/results">Export data</a>
+</div>
 <div>
   <br>
-  <p>Datos de <b>{{URL}}</b> para el día <b>{{date}}</b> y método <b>{{method}}</b></p>
+  <p>Data from <b>{{URL}}</b>, with date <b>{{date}}</b> and method <b>{{method}}</b></p>
   <br>
   <div *ngIf="method != 'MQA'">
     <div id="rectangle-green"></div><p>Pass</p>
