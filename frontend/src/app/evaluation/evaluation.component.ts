@@ -33,7 +33,7 @@ export class EvaluationComponent implements OnInit {
   }
 
   getForm(mqa: HTMLInputElement, iso19157: HTMLInputElement, sparql: HTMLInputElement, ckan: HTMLInputElement,
-          nti: HTMLInputElement, dcatAp: HTMLInputElement, direct: HTMLInputElement, local: HTMLInputElement,
+          direct: HTMLInputElement, local: HTMLInputElement,
           url: HTMLInputElement, days: number): void {
 
     if (!this.periodicityIsDisabled && (days <= 0)) {
@@ -45,15 +45,13 @@ export class EvaluationComponent implements OnInit {
       if (this.periodicityIsDisabled) {
         days = -1
       }
-      this.evaluate(mqa.checked, iso19157.checked, sparql.checked, ckan.checked, nti.checked,
-      dcatAp.checked, direct.checked, local.checked, url.value, days);
+      this.evaluate(mqa.checked, iso19157.checked, sparql.checked, ckan.checked,
+      direct.checked, local.checked, url.value, days);
     }
     console.log('mqa: ' + mqa.checked)
     console.log('iso19157: ' + iso19157.checked)
     console.log('sparql: ' + sparql.checked)
     console.log('ckan: ' + ckan.checked)
-    console.log('nti: ' + nti.checked)
-    console.log('dcatAp: ' + dcatAp.checked)
     console.log('direct: ' + direct.checked)
     console.log('local: ' + local.checked)
     console.log('URL: ' + url.value)
@@ -61,15 +59,13 @@ export class EvaluationComponent implements OnInit {
   }
 
   evaluate(mqa: boolean, iso19157: boolean, sparql: boolean, ckan: boolean,
-           nti: boolean, dcatAp: boolean, direct: boolean, local: boolean,
+           direct: boolean, local: boolean,
            url: string, days: number) {
     const params = new HttpParams()
       .set('mqa', mqa)
       .set('iso19157', iso19157)
       .set('sparql', sparql)
       .set('ckan', ckan)
-      .set('nti', nti)
-      .set('dcatAp', dcatAp)
       .set('direct', direct)
       .set('local', local)
       .set('days', days)
