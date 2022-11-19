@@ -498,7 +498,7 @@ class ISO19157Evaluation:
     def print(self, dimension, entity, property, count, population,
               measurement_name, measurement_of_name,
               properties, measurement_derived_name, measurement_of_conformance_name,
-              language = None):
+              language = None, is_error_measure = False):
         self.checks += 1
         if population == 0:
             percentage = 100.0
@@ -509,6 +509,9 @@ class ISO19157Evaluation:
             self.passedChecks += 1
         else:
             passed = False
+
+        if is_error_measure:
+            percentage = 1.0 - percentage
         print(dimension, entity, property, count, population, percentage, passed, sep=";")
         self.graph_composition(measurement_name, measurement_of_name, percentage,
                                properties, measurement_derived_name, measurement_of_conformance_name,
@@ -540,7 +543,8 @@ class ISO19157Evaluation:
         results = self.sparql.query().convert()
         count = population - len(results["results"]["bindings"])  # For the moment, we compute correct percentage
         self.print(dimension, entity, None, count, population,
-                   QR + 'DQ_ComComDat_QR', QR + 'D.3.ISO.19157', [DCAT + 'dataset'], QR + 'DQ_ComComDat_CR', QR + 'D.3.ISO.19157_conformance')
+                   QR + 'DQ_ComComDat_QR', QR + 'D.3.ISO.19157', [DCAT + 'dataset'],
+                   QR + 'DQ_ComComDat_CR', QR + 'D.3.ISO.19157_conformance', is_error_measure=True)
 
     def completeness_commission_distribution(self):
         dimension = COMPLETENESS_COMMISSION
@@ -565,7 +569,8 @@ class ISO19157Evaluation:
         results = self.sparql.query().convert()
         count = population - len(results["results"]["bindings"])  # For the moment, we compute correct percentage
         self.print(dimension, entity, None, count, population,
-                   QR + 'DQ_ComComDis_QR', QR + 'D.3.ISO.19157', [DCAT + 'distribution'], QR + 'DQ_ComComDis_CR', QR + 'D.3.ISO.19157_conformance')
+                   QR + 'DQ_ComComDis_QR', QR + 'D.3.ISO.19157', [DCAT + 'distribution'],
+                   QR + 'DQ_ComComDis_CR', QR + 'D.3.ISO.19157_conformance', is_error_measure=True)
 
     def completeness_omission_dataset(self):
         dimension = COMPLETENESS_OMISSION
@@ -596,7 +601,8 @@ class ISO19157Evaluation:
                     """
         count = population - self.count(query)  # For the moment, we compute correct percentage
         self.print(dimension, entity, None, count, population,
-                   QR + 'DQ_ComOmiDat_QR', QR + 'D.7.ISO.19157', [DCAT + 'dataset'], QR + 'DQ_ComOmiDat_CR', QR + 'D.7.ISO.19157_conformance')
+                   QR + 'DQ_ComOmiDat_QR', QR + 'D.7.ISO.19157', [DCAT + 'dataset'],
+                   QR + 'DQ_ComOmiDat_CR', QR + 'D.7.ISO.19157_conformance', is_error_measure=True)
 
     def completeness_omission_distribution(self):
         dimension = COMPLETENESS_OMISSION
@@ -618,7 +624,8 @@ class ISO19157Evaluation:
                     """
         count = population - self.count(query)  # For the moment, we compute correct percentage
         self.print(dimension, entity, None, count, population,
-                   QR + 'DQ_ComOmiDis_QR', QR + 'D.7.ISO.19157', [DCAT + 'distribution'], QR + 'DQ_ComOmiDis_CR', QR + 'D.3.ISO.19157_conformance' )
+                   QR + 'DQ_ComOmiDis_QR', QR + 'D.7.ISO.19157', [DCAT + 'distribution'],
+                   QR + 'DQ_ComOmiDis_CR', QR + 'D.3.ISO.19157_conformance', is_error_measure=True)
 
     def conceptual_consistency_dataset(self):
         dimension = CONCEPTUAL_CONSISTENCY
@@ -953,7 +960,8 @@ class ISO19157Evaluation:
         count = self.datasetCount - self.count_temporal_consistency()
         population = self.datasetCount
         self.print(dimension, entity, 'dct:issued, dct:modified, dct:valid', count, population,
-                   QR + 'DQ_TemDatIss_QR', QR + 'Sim_D.62.ISO.19157', [DCAT + 'dataset', DCT + 'issued', DCT + 'modified', DCT + 'valid'], QR + 'DQ_TemDatIss_CR', QR + 'Sim_D.62.ISO.19157_conformance')
+                   QR + 'DQ_TemDatIss_QR', QR + 'Sim_D.62.ISO.19157', [DCAT + 'dataset', DCT + 'issued', DCT + 'modified', DCT + 'valid'],
+                   QR + 'DQ_TemDatIss_CR', QR + 'Sim_D.62.ISO.19157_conformance', is_error_measure=True)
 
     def temporal_validity(self):
         dimension = TEMPORAL_VALIDITY
@@ -961,7 +969,8 @@ class ISO19157Evaluation:
         count = self.datasetCount - self.count_temporal_validity(self.harvest_date)
         population = self.datasetCount
         self.print(dimension, entity, 'dct:issued, dct:modified, dct:valid', count, population,
-                   QR + 'DQ_TemDatHar_QR', QR + 'D18.ISO.19157', [DCAT + 'dataset', DCT + 'issued', DCT + 'modified', DCT + 'valid'], QR + 'DQ_TemDatHar_CR', QR + 'D18.ISO.19157_conformance')
+                   QR + 'DQ_TemDatHar_QR', QR + 'D18.ISO.19157', [DCAT + 'dataset', DCT + 'issued', DCT + 'modified', DCT + 'valid'],
+                   QR + 'DQ_TemDatHar_CR', QR + 'D18.ISO.19157_conformance', is_error_measure=True)
 
     def non_quantitative_attribute_correctness_dataset_references(self):
         dimension = NON_QUANTITATIVE_ATTRIBUTE_CORRECTNESS
@@ -970,7 +979,8 @@ class ISO19157Evaluation:
         count = self.count_urls_with_200_code(entity, property)
         population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population,
-                   QR + 'DQ_TheNQADatRefA_QR', QR + 'D69.ISO.19157', [DCAT + 'dataset', DCT + 'references'], QR + 'DQ_TheNQADatRefA_CR', QR + 'D69.ISO.19157_conformance')
+                   QR + 'DQ_TheNQADatRefA_QR', QR + 'D69.ISO.19157', [DCAT + 'dataset', DCT + 'references'],
+                   QR + 'DQ_TheNQADatRefA_CR', QR + 'D69.ISO.19157_conformance', is_error_measure=True)
 
     def non_quantitative_attribute_correctness_dataset_conformsTo(self):
         dimension = NON_QUANTITATIVE_ATTRIBUTE_CORRECTNESS
@@ -979,7 +989,8 @@ class ISO19157Evaluation:
         count = self.count_urls_with_200_code(entity, property)
         population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population,
-                   QR + 'DQ_TheNQADatConA_QR', QR + 'D69.ISO.19157', [DCAT + 'dataset', DCT + 'conformsTo'], QR + 'DQ_TheNQADatConA_CR', QR + 'D69.ISO.19157_conformance')
+                   QR + 'DQ_TheNQADatConA_QR', QR + 'D69.ISO.19157', [DCAT + 'dataset', DCT + 'conformsTo'],
+                   QR + 'DQ_TheNQADatConA_CR', QR + 'D69.ISO.19157_conformance', is_error_measure=True)
 
     def non_quantitative_attribute_correctness_distribution_accessURL(self):
         dimension = NON_QUANTITATIVE_ATTRIBUTE_CORRECTNESS
@@ -988,7 +999,8 @@ class ISO19157Evaluation:
         count = self.count_urls_with_200_code(entity, property)
         population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population,
-                   QR + 'DQ_TheNQADisAccA_QR', QR + 'D69.ISO.19157', [DCAT + 'distribution', DCT + 'accessURL'], QR + 'DQ_TheNQADisAcc_CR', QR + 'D69.ISO.19157_conformance')
+                   QR + 'DQ_TheNQADisAccA_QR', QR + 'D69.ISO.19157', [DCAT + 'distribution', DCT + 'accessURL'],
+                   QR + 'DQ_TheNQADisAcc_CR', QR + 'D69.ISO.19157_conformance', is_error_measure=True)
 
     def non_quantitative_attribute_correctness_distribution_license(self):
         dimension = NON_QUANTITATIVE_ATTRIBUTE_CORRECTNESS
@@ -997,7 +1009,8 @@ class ISO19157Evaluation:
         count = self.count_urls_with_200_code(entity, property)
         population = self.count_distinct_entity_property(entity, property)
         self.print(dimension, entity, property, count, population,
-                   QR + 'DQ_TheNQADisLicA_QR', QR + 'D69.ISO.19157', [DCAT + 'distribution', DCT + 'license'], QR + 'DQ_TheNQADisLic_CR', QR + 'D69.ISO.19157_conformance')
+                   QR + 'DQ_TheNQADisLicA_QR', QR + 'D69.ISO.19157', [DCAT + 'distribution', DCT + 'license'],
+                   QR + 'DQ_TheNQADisLic_CR', QR + 'D69.ISO.19157_conformance', is_error_measure=True)
 
     def positional_correctness(self):
         dimension = POSITIONAL_CORRECTNESS
@@ -1006,7 +1019,8 @@ class ISO19157Evaluation:
         count = -1  # TODO
         population = self.datasetCount
         self.print(dimension, entity, property, count, population,
-                   QR + 'DQ_PosCorrDatSpa_QR', QR + 'D69.ISO.19157', [DCAT + 'distribution', DCT + 'license'], QR + 'DQ_PosCorrDatSpa_CR', QR + 'D69.ISO.19157_conformance')
+                   QR + 'DQ_PosCorrDatSpa_QR', QR + 'D69.ISO.19157', [DCAT + 'distribution', DCT + 'license'],
+                   QR + 'DQ_PosCorrDatSpa_CR', QR + 'D69.ISO.19157_conformance', is_error_measure=True)
 
     def quality_of_free_text_dataset_title(self):
         dimension = QUALITY_OF_FREE_TEXT
@@ -1026,7 +1040,7 @@ class ISO19157Evaluation:
         count = self.count_freetext(entity, property)
         population = self.datasetCount
         self.print(dimension, entity, property, count, population,
-                   QR + 'DQ_QFTDatDesR_QR', QR + 'YAAAAAAAAA--ReadibilityOfTreeText', [DCAT + 'dataset', DCT + 'title'], QR + 'DQ_QFTDatDesR_CR', QR + 'ReadibilityOfTreeText_conformance',
+                   QR + 'DQ_QFTDatDesR_QR', QR + 'ReadibilityOfTreeText', [DCAT + 'dataset', DCT + 'title'], QR + 'DQ_QFTDatDesR_CR', QR + 'ReadibilityOfTreeText_conformance',
                    'es')
 
     def evaluate(self):
