@@ -10,37 +10,30 @@
     <div class="col-3">
       <a class="btn btn-primary" style="margin-top: 30px" routerLink="/results">Results</a>
     </div>
-    <div class="col-6"><h2>Methods</h2>
+    <div class="col-6">
+      <h2>Endpoint</h2>
       <input placeholder="Enter the URL" type="text" style="width: 75%" #url>
       <button type="button" class="btn btn-primary" (click)="getForm(mqa, iso19157, sparql, ckan, direct, local, url, days)">Evaluate</button>
       <br>
-      <input class="form-check-input" type="checkbox" name="methods" id="MQA" #mqa>
-      <label class="form-check-label" for="MQA">MQA</label><br>
-      <input class="form-check-input" type="checkbox" name="methods" id="ISO19157" #iso19157>
-      <label class="form-check-label" for="ISO19157">ISO19157</label>
-      <br>
-
-      <h2>Endpoint</h2>
       <input class="form-check-input" type="radio" name="endpoint" id="SPARQL" (click)="activateDirectEvaluation()" #sparql>
       <label class="form-check-label" for="SPARQL">SPARQL</label><br>
       <input class="form-check-input" type="radio" name="endpoint" id="CKAN" (click)="disableDirectEvaluation()" #ckan>
       <label class="form-check-label" for="CKAN">CKAN</label>
       <br>
 
-<!--      <h2>Metadata model</h2>-->
-<!--      <input class="form-check-input" type="radio" name="metadata_model" id="NTI (Spain)" #nti>-->
-<!--      <label class="form-check-label" for="NTI (Spain)">NTI (Spain)</label><br>-->
-<!--      <input class="form-check-input" type="radio" name="metadata_model" id="DCAT-AP" #dcat_ap>-->
-<!--      <label class="form-check-label" for="DCAT-AP">DCAT-AP</label>-->
-<!--      <br>-->
-
+      <h2>Quality method</h2>
+      <input class="form-check-input" type="checkbox" name="methods" id="MQA" #mqa>
+      <label class="form-check-label" for="MQA">MQA</label><br>
+      <input class="form-check-input" type="checkbox" name="methods" id="ISO19157" #iso19157>
+      <label class="form-check-label" for="ISO19157">ISO19157</label>
+      <br>
       <h2>Evaluation type</h2>
       <input class="form-check-input" type="radio" name="evaluation_type" id="direct" (click)="checkDirectEvaluation()"
              [disabled]="directEvaluationIsDisabled" [checked]="forceUncheckDirectEvaluation" #direct>
-      <label class="form-check-label" for="direct">direct</label><br>
+      <label class="form-check-label" for="direct">Direct</label><br>
       <input class="form-check-input" type="radio" name="evaluation_type" id="local" (click)="checkLocalEvaluation()"
              [checked]="directEvaluationIsDisabled" #local>
-      <label class="form-check-label" for="local">local</label>
+      <label class="form-check-label" for="local">Local</label>
       <br></div>
     <div class="col-3">
       <br>
