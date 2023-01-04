@@ -4,7 +4,7 @@ const https = require('https');
 const { createModel } = require('mongoose-gridfs');
 const path = require('path');
 const dateFormat = require('date-and-time')
-const {connectionDB, url_fuseki} = require('../config/db.config');
+const {connectionDB, url_fuseki, url_agenda} = require('../config/db.config');
 const {Agenda} = require('agenda');
 const request = require('request');
 
@@ -68,7 +68,8 @@ const evaluate = function (req, res) {
     let isISO19157 = req.query.iso19157
 
     if (req.query.local === 'true') {
-        let dataset = req.query.dataset
+        // let dataset = req.query.dataset
+        let dataset = 'prueba'
         evaluationStarted = downloadRDF(url, dataset, isMQA, isISO19157, interval);
     } else {
         if (isMQA === 'true') {
@@ -115,11 +116,13 @@ const evaluate_ISO19157_sparql = function (url, interval) {
 const mqa_sparql = function (url) {
     let actualDate = new Date()
     let date = dateFormat.format(actualDate, 'YYYY-DD-MM')
+    let dateToFileName = actualDate.toISOString()
+        .replace(/T/, ' ')
+        .replace(/\..+/, '')
+
     let fileName = url.replace(/\//g, '-')
-        + ' - ' + ' MQA - '
-        + actualDate.toISOString()
-            .replace(/T/, ' ')
-            .replace(/\..+/, '')
+        + ' - ' + 'MQA - '
+        + dateToFileName
         + '.ttl';
 
     const options = {
@@ -151,7 +154,7 @@ const mqa_sparql = function (url) {
         }
         let result = {
             URL: url,
-            Date: date,
+            Date: dateToFileName,
             properties: properties
         }
         Results_mqa_sparql.create(result)
@@ -165,11 +168,13 @@ const mqa_sparql = function (url) {
 const iso19157 = function (url) {
     let actualDate = new Date()
     let date = dateFormat.format(actualDate, 'YYYY-DD-MM')
+    let dateToFileName = actualDate.toISOString()
+        .replace(/T/, ' ')
+        .replace(/\..+/, '')
+
     let fileName = url.replace(/\//g, '-')
-        + ' - ' + ' ISO19157 - '
-        + actualDate.toISOString()
-            .replace(/T/, ' ')
-            .replace(/\..+/, '')
+        + ' - ' + 'ISO19157 - '
+        + dateToFileName
         + '.ttl';
 
     const options = {
@@ -202,7 +207,7 @@ const iso19157 = function (url) {
         }
         let result = {
             URL: url,
-            Date: date,
+            Date: dateToFileName,
             properties: properties
         }
 
@@ -215,7 +220,7 @@ const iso19157 = function (url) {
 };
 
 function schedule_task(url, jobID, interval, isMQA, isISO19157) {
-    const agenda = new Agenda({db: {address: connectionDB.url_agenda}});
+    const agenda = new Agenda({db: {address: url_agenda}});
 
     if (isMQA) {
         agenda.define(jobID, function (job) {
@@ -246,7 +251,7 @@ const storeFile = function (name) {
     Attachment.write(options, readStream, (error, file) => {
         //Deletes the stored file only if its really stored
         // unlinkSync(realPath)
-        console.log('Successfully stored DQV file to databe: ' + name)
+        console.log('Successfully stored DQV file to database: ' + name)
     });
 
 };
