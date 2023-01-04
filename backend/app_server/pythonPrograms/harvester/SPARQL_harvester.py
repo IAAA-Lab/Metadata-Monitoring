@@ -19,7 +19,7 @@ OUTPUT = "output/"
 ES_SPARQL = 'http://datos.gob.es/virtuoso/sparql'
 ES_RDF = 'https://datos.gob.es/apidata/catalog/dataset/'
 
-# EDP_SPARQL = 'http://localhost:3030/asturias'
+
 EDP_SPARQL = 'https://data.europa.eu/sparql'
 EDP_RDF = 'https://data.europa.eu/data/api/datasets/'
 EDP_FORMAT = '.ttl?useNormalizedId=true&locale=en'
@@ -82,8 +82,8 @@ class SPARQL_harvester:
             """s"""
             dataset = row["s"]["value"]
             graph = self.parse_dataset(dataset, graph)
-        # graph.serialize(destination=filename, format='pretty-xml') # we use XML to avoid the problems derived from the serialization of some URIs
-        graph.serialize(destination=filename, format='turtle')
+        graph.serialize(destination=filename, format='pretty-xml') # we use XML to avoid the problems derived from the serialization of some URIs
+        # graph.serialize(destination=filename, format='turtle')
 
     def count_datasets(self):
         self.sparql.setQuery("""
@@ -129,7 +129,7 @@ class SPARQL_harvester:
         offset = 0
         i=1
         while (offset < count):
-            catalog_file_name = os.path.join(folder, 'catalog'+str(i)+'.ttl')
+            catalog_file_name = os.path.join(folder, 'catalog'+str(i)+'.rdf')
             self.download_datasets( catalog_file_name, offset)
             offset = offset + self.limit
             i = i + 1
@@ -140,8 +140,8 @@ if __name__ == '__main__':
             getattr(ssl, '_create_unverified_context', None)):
         ssl._create_default_https_context = ssl._create_unverified_context
 
-    #harvester = SPARQL_harvester(url = ES_SPARQL, rdf_url= ES_RDF, limit=500, max_number_of_records=5000, output_folder = OUTPUT)
+    harvester = SPARQL_harvester(url = ES_SPARQL, rdf_url= ES_RDF, limit=50, max_number_of_records=50, output_folder = OUTPUT)
     #harvester.harvest()
 
-    harvester = SPARQL_harvester(url = EDP_SPARQL, rdf_url= EDP_RDF, limit=500, max_number_of_records=1000, output_folder = OUTPUT, format = EDP_FORMAT)
+    # harvester = SPARQL_harvester(url = EDP_SPARQL, rdf_url= EDP_RDF, limit=50, max_number_of_records=50, output_folder = OUTPUT, format = EDP_FORMAT)
     harvester.harvest()

@@ -19,7 +19,8 @@ if __name__ == '__main__':
 
     # # len - 1 to delete argv[0] (for testing purposes)
     if len(sys.argv)-1 == 0:
-        URL = 'http://datos.gob.es/virtuoso/sparql'
+        # URL = 'http://datos.gob.es/virtuoso/sparql'
+        URL = 'http://localhost:3030/prueba'
         # date in YYYY-MM-DD HH-mm-ss format
         date = datetime.now().strftime('%Y-%d-%m')
         filename = 'testISO19157 - ' + datetime.now().strftime('%Y-%d-%m %H:%M:%S') + '.ttl'

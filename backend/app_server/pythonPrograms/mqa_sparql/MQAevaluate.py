@@ -279,6 +279,7 @@ class MQAevaluate:
             self.totalPoints += partialPoints
         else:
             partialPoints = 0
+            percentage = 0.0
         print(dimension, property, count, population, percentage, partialPoints, sep=";")
         self.graph_composition(measurement_rate, measurement_of_rate, percentage,
                                properties, measurement_points, measurement_of_points,

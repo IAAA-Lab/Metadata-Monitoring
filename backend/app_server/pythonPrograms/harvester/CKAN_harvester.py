@@ -21,8 +21,14 @@ OUTPUT = "output"
 
 LOCAL_CKAN = "http://localhost:5000/api/3/action/"
 
-EDP_CKAN = 'https://data.europa.eu/data/search/ckan/'
-EDP_RDF = 'https://data.europa.eu/data/api/datasets/'
+# EDP_CKAN = 'https://data.europa.eu/data/search/ckan/'
+# EDP_CKAN = 'https://opendata.aragon.es/ckan/api/3/action/'
+EDP_CKAN = 'https://datos.santiagodecompostela.gal/catalogo/api/3/action/'
+
+# EDP_RDF = 'https://data.europa.eu/data/api/datasets/'
+# EDP_RDF = 'https://opendata.aragon.es/ckan/dataset/'
+EDP_RDF = 'https://datos.santiagodecompostela.gal/catalogo/dataset/'
+
 EDP_FORMAT = '.ttl?useNormalizedId=true&locale=en'
 
 #https://data.europa.eu/data/api/datasets/5fa93b994b29f6390f150980.ttl?useNormalizedId=true&locale=en
@@ -57,7 +63,7 @@ class CKAN_harvester:
         """
         Downloads the RDF in a paged JSON response with dataset identifiers
         """
-        search_request = self.url + 'package_search?rows=0'
+        search_request = self.url + 'package_search?&rows=0'
         print(search_request)
         try:
             response = urlopen(search_request)
@@ -81,14 +87,15 @@ class CKAN_harvester:
         graph = rdflib.Graph()
         for row in rows:
             graph = self.parse_dataset(row["id"], graph)
-        # graph.serialize(destination=file_name, format='pretty-xml')
-        graph.serialize(destination=file_name, format='turtle')
+        graph.serialize(destination=file_name, format='pretty-xml')
+        # graph.serialize(destination=file_name, format='turtle')
 
     def download_datasets(self, file_name, offset):
         """
         Downloads the RDF in a paged JSON response with dataset identifiers
         """
-        search_request = self.url + 'package_search?rows='+str(self.limit)+'&start='+str(offset)+'&sort=%27id%20asc%27'
+        search_request = self.url + 'package_search?&rows='+str(self.limit)+'&start='+str(offset)
+        # search_request = self.url + 'package_search?q=\'Trafair\'&rows=20'
         print(search_request)
         response = urlopen(search_request)
         jsonResponse = json.load(response)
@@ -104,8 +111,8 @@ class CKAN_harvester:
         offset = 0
         i=1
         while (offset < count):
-            catalog_file_name = os.path.join(folder, 'catalog'+str(i)+'.ttl')
-            self.download_datasets( catalog_file_name, offset)
+            catalog_file_name = os.path.join(folder, 'catalog'+str(i)+'.rdf')
+            self.download_datasets(catalog_file_name, offset)
             offset = offset + self.limit
             i = i + 1
 
@@ -118,6 +125,8 @@ if __name__ == '__main__':
             getattr(ssl, '_create_unverified_context', None)):
         ssl._create_default_https_context = ssl._create_unverified_context
 
-    harvester = CKAN_harvester(url = LOCAL_CKAN, rdf_url= EDP_RDF, limit=500, max_number_of_records=5000, output_folder = OUTPUT, format = EDP_FORMAT)
+    # harvester = CKAN_harvester(url = EDP_CKAN, rdf_url= EDP_RDF, limit=100, max_number_of_records=500, output_folder = OUTPUT, format = EDP_FORMAT)
+    harvester = CKAN_harvester(url=EDP_CKAN, rdf_url=EDP_RDF, limit=100,
+                               output_folder=OUTPUT, format=EDP_FORMAT)
     harvester.harvest()
 
