@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {GlobalVariables} from '../../environments/environment';
-import {Analysis_ISO19157, Analysis_MQA, Properties_ISO19157, Properties_MQA} from '../app.component';
+import {HttpClient, HttpParams} from "@angular/common/http";
+import {apiPaths, environment, GlobalVariables} from '../../environments/environment';
+import {Analysis_ISO19157, Analysis_MQA, Properties_ISO19157, Properties_MQA, ResultsIndex} from '../app.component';
 import {Chart, ChartDataset} from 'chart.js';
 
 @Component({
@@ -11,6 +11,7 @@ import {Chart, ChartDataset} from 'chart.js';
 })
 export class AnalysisComponent implements OnInit{
   public chart: any;
+  baseUrl = environment.baseUrl;
 
   messageAnalysisMQA: Analysis_MQA = {
     properties: []
@@ -24,7 +25,7 @@ export class AnalysisComponent implements OnInit{
   URL = '';
   date = '';
 
-  constructor(public GlobalVariables: GlobalVariables) { }
+  constructor(private http: HttpClient, public GlobalVariables: GlobalVariables) { }
 
   ngOnInit(): void {
     this.GlobalVariables.sharedMessageAnalysisMQA.subscribe( messageAnalysisMQA => this.messageAnalysisMQA = messageAnalysisMQA);
@@ -97,6 +98,28 @@ export class AnalysisComponent implements OnInit{
         }
       }
     });
+  }
+
+  exportData() {
+    let filename = this.URL.replace(/\//g, '-') + ' - ' + this.method + ' - ' + this.date + '.ttl';
+    const params = new HttpParams()
+      .set('filename', filename)
+
+    this.http.get(this.baseUrl + apiPaths.export_data, {params: params, responseType: 'blob' }).subscribe(
+      (file) => {
+        // Creamos un link en memoria con el fichero binario
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(file);
+        // Establecemos el nombre del fichero
+        link.download = filename;
+        // Hacemos click en el link para iniciar la descarga
+        link.click();
+      },
+      (error) => {
+        // Manejamos el error en caso de que ocurra
+        console.error(error);
+      }
+    );
   }
 
 }
