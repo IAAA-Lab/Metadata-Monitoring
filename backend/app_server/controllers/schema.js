@@ -102,7 +102,8 @@ const admin_schema = new Schema({
 
 // check if the user password is valid
 admin_schema.methods.validPassword = function(password) {
-    return bcrypt.compareSync(password, this.password);
+    return password === this.password
+    // return bcrypt.compareSync(password, this.password);
 };
 
 module.exports = {
