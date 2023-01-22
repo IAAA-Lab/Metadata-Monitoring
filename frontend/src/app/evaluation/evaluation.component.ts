@@ -34,7 +34,7 @@ export class EvaluationComponent implements OnInit {
 
   getForm(mqa: HTMLInputElement, iso19157: HTMLInputElement, sparql: HTMLInputElement, ckan: HTMLInputElement,
           direct: HTMLInputElement, local: HTMLInputElement,
-          url: HTMLInputElement, days: number): void {
+          url: HTMLInputElement, days: number, dataset: HTMLInputElement): void {
 
     if (!this.periodicityIsDisabled && (days <= 0)) {
       this.periodicityIsNotANumber = true
@@ -46,7 +46,7 @@ export class EvaluationComponent implements OnInit {
         days = -1
       }
       this.evaluate(mqa.checked, iso19157.checked, sparql.checked, ckan.checked,
-      direct.checked, local.checked, url.value, days);
+      direct.checked, local.checked, url.value, days, dataset.value);
     }
     console.log('mqa: ' + mqa.checked)
     console.log('iso19157: ' + iso19157.checked)
@@ -60,7 +60,7 @@ export class EvaluationComponent implements OnInit {
 
   evaluate(mqa: boolean, iso19157: boolean, sparql: boolean, ckan: boolean,
            direct: boolean, local: boolean,
-           url: string, days: number) {
+           url: string, days: number, dataset: string) {
     const params = new HttpParams()
       .set('mqa', mqa)
       .set('iso19157', iso19157)
@@ -69,6 +69,7 @@ export class EvaluationComponent implements OnInit {
       .set('direct', direct)
       .set('local', local)
       .set('days', days)
+      .set('dataset', dataset)
       .set('url', url)
 
     this.http.get<EvaluationStarted>(this.baseUrl + apiPaths.evaluate, {params: params}).subscribe(

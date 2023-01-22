@@ -13,7 +13,10 @@
     <div class="col-6">
       <h2>Endpoint</h2>
       <input placeholder="Enter the URL" type="text" style="width: 75%" #url>
-      <button type="button" class="btn btn-primary" (click)="getForm(mqa, iso19157, sparql, ckan, direct, local, url, days)">Evaluate</button>
+      <button type="button" class="btn btn-primary" (click)="getForm(mqa, iso19157, sparql, ckan, direct, local, url, days, dataset)">Evaluate</button>
+      <div [hidden]="!localEvaluationIsChecked">
+        <input placeholder="Enter the Dataset's name" type="text" style="width: 75%" #dataset>
+      </div>
       <br>
       <input class="form-check-input" type="radio" name="endpoint" id="SPARQL" (click)="activateDirectEvaluation()" #sparql>
       <label class="form-check-label" for="SPARQL">SPARQL</label><br>
