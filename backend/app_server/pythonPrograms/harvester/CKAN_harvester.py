@@ -6,7 +6,7 @@ Last update: 2022-07-06
 Program to harvest metadata records using a CKAN API. See https://docs.ckan.org/en/2.9/api/index.html#ckan.logic.action.get.package_search for additional parameters
 """
 
-import os
+import os, sys
 import ssl
 
 
@@ -125,8 +125,13 @@ if __name__ == '__main__':
             getattr(ssl, '_create_unverified_context', None)):
         ssl._create_default_https_context = ssl._create_unverified_context
 
+    abspath = os.path.abspath(__file__)
+    dname = os.path.dirname(abspath)
+    os.chdir(dname)
+    URL = sys.argv[1]
+
     # harvester = CKAN_harvester(url = EDP_CKAN, rdf_url= EDP_RDF, limit=100, max_number_of_records=500, output_folder = OUTPUT, format = EDP_FORMAT)
-    harvester = CKAN_harvester(url=EDP_CKAN, rdf_url=EDP_RDF, limit=100,
+    harvester = CKAN_harvester(url=URL, rdf_url=EDP_RDF, limit=100,
                                output_folder=OUTPUT, format=EDP_FORMAT)
     harvester.harvest()
 

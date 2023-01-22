@@ -6,10 +6,9 @@ Last update: 2022-07-06
 Program to harvest metadata records using a SPARQL end-point
 """
 
-
 from SPARQLWrapper import SPARQLWrapper, JSON
 
-import os
+import os, sys
 import ssl
 
 import rdflib
@@ -140,7 +139,12 @@ if __name__ == '__main__':
             getattr(ssl, '_create_unverified_context', None)):
         ssl._create_default_https_context = ssl._create_unverified_context
 
-    harvester = SPARQL_harvester(url = ES_SPARQL, rdf_url= ES_RDF, limit=50, max_number_of_records=50, output_folder = OUTPUT)
+    abspath = os.path.abspath(__file__)
+    dname = os.path.dirname(abspath)
+    os.chdir(dname)
+    URL = sys.argv[1]
+
+    harvester = SPARQL_harvester(url = URL, rdf_url= ES_RDF, limit=100, output_folder = OUTPUT)
     #harvester.harvest()
 
     # harvester = SPARQL_harvester(url = EDP_SPARQL, rdf_url= EDP_RDF, limit=50, max_number_of_records=50, output_folder = OUTPUT, format = EDP_FORMAT)
