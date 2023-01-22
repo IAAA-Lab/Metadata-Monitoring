@@ -3,6 +3,7 @@ const { createWriteStream, createReadStream, unlinkSync } = require('fs')
 const https = require('https');
 const { createModel } = require('mongoose-gridfs');
 const path = require('path');
+const fs = require('fs')
 const dateFormat = require('date-and-time')
 const {connectionDB, url_fuseki, url_agenda} = require('../config/db.config');
 const {Agenda} = require('agenda');
@@ -11,79 +12,100 @@ const request = require('request');
 const PythonShell = require('python-shell').PythonShell;
 const myPython = './app_server/pythonPrograms/my-environment/bin/python3'
 
-function uploadFuseki(filePath, fileName, dataset, isMQA, isISO19157, interval) {
-    let options = {
-        'method': 'POST',
-        'url': url_fuseki + dataset,
-        'headers': {
-        },
-        formData: {
-            'data': {
-                'value': createReadStream(filePath),
-                'options': {
-                    'filename': fileName,
-                    'contentType': null
+function uploadFuseki(outputPath, dataset, isMQA, isISO19157, interval, count) {
+    let fileName = 'catalog' + count + '.rdf'
+    if(fs.existsSync(outputPath + '/' + fileName)) {
+        let options = {
+            'method': 'POST',
+            'url': url_fuseki + dataset,
+            'headers': {},
+            formData: {
+                'data': {
+                    'value': createReadStream(outputPath + '/' + fileName),
+                    'options': {
+                        'filename': fileName,
+                        'contentType': null
+                    }
                 }
             }
+        };
+
+        //Uploads the file to fuseki
+        request(options, function (error, response) {
+            if (error) throw new Error(error);
+
+            unlinkSync(outputPath + '/' + fileName)
+            console.log('upload of ' + outputPath + '/' + fileName + ' to fuseki completed')
+            uploadFuseki(outputPath, dataset, isMQA, isISO19157, interval, count + 1)
+        });
+    } else {
+        if (isMQA) {
+            prepare_mqa_sparql(url_fuseki + dataset, interval)
         }
+        if (isISO19157) {
+            prepare_ISO19157_sparql(url_fuseki + dataset, interval)
+        }
+    }
+    return true
+}
+
+//Ejecutar el harvester correspondiente y al acabar uploadFuseki del fichero creado
+function harvester(url, dataset, isMQA, isISO19157, interval, isSPARQL, isCKAN) {
+    //replace : . or / by _ for the output folder
+    let folderName = url.replace(/[:.\/]/g, '_')
+    const outputPath = path.resolve('./app_server/pythonPrograms/harvester/output/' + folderName)
+
+    let scriptPath = ''
+    if (isSPARQL) {
+        scriptPath = './app_server/pythonPrograms/harvester/SPARQL_harvester.py'
+    } else if (isCKAN) {
+        scriptPath = './app_server/pythonPrograms/harvester/CKAN_harvester.py'
+    }
+
+    const options = {
+        pythonPath: myPython,
+        args: [url]
     };
 
-    //Uploads the file to fuseki
-    request(options, function (error, response) {
-        if (error) throw new Error(error);
-        console.log('upload to fuseki completed')
-        if (isMQA === 'true') {
-            evaluate_mqa_sparql(url_fuseki + dataset, interval)
+    PythonShell.run(scriptPath, options, function (err, output) {
+        if (err) {
+            console.log('Execution of harvester failed')
+            console.log(err)
+            return false
         }
-        if (isISO19157 === 'true') {
-            evaluate_ISO19157_sparql(url_fuseki + dataset, interval)
-        }
+        console.log('Execution of harvester for url: ' + url + ' finished.')
+        uploadFuseki(outputPath, dataset, isMQA, isISO19157, interval, 1)
     });
     return true
 }
 
-function downloadRDF(url, dataset, isMQA, isISO19157, interval) {
-    let fileName = url.replace(/\//g, '-')
-    const realPath = path.resolve('./app_server/downloadedFiles/' + fileName)
-
-    https.get(url,(res) => {
-        // file will be stored at this path
-        const filePath = createWriteStream(realPath);
-        res.pipe(filePath);
-        filePath.on('finish',() => {
-            filePath.close();
-            console.log('Download completed from: ' + url);
-            uploadFuseki(realPath, fileName, dataset, isMQA, isISO19157, interval)
-        })
-    })
-    return true
-}
-
-//incoming parameters are: mqa, iso19157, sparql, ckan, nti, dcatAp, direct, local, days, url
+//incoming parameters are: mqa, iso19157, sparql, ckan, direct, local, days, url
 const evaluate = function (req, res) {
     let evaluationStarted = false
     let url = req.query.url
     let interval = Number(req.query.days)
-    let isMQA = req.query.mqa
-    let isISO19157 = req.query.iso19157
+    let isMQA = req.query.mqa === 'true'
+    let isISO19157 = req.query.iso19157 === 'true'
+    let isLocal = req.query.local === 'true'
+    let isSPARQL = req.query.sparql === 'true'
+    let isCKAN = req.query.ckan === 'true'
 
-    if (req.query.local === 'true') {
-        // let dataset = req.query.dataset
-        let dataset = 'prueba'
-        evaluationStarted = downloadRDF(url, dataset, isMQA, isISO19157, interval);
+    if (isLocal) {
+        let dataset = req.query.dataset
+        evaluationStarted = harvester(url, dataset, isMQA, isISO19157, interval, isSPARQL, isCKAN);
     } else {
-        if (isMQA === 'true') {
-            evaluationStarted = evaluate_mqa_sparql(url, interval)
+        if (isMQA) {
+            evaluationStarted = prepare_mqa_sparql(url, interval)
         }
-        if (isISO19157 === 'true') {
-            evaluationStarted = evaluate_ISO19157_sparql(url, interval)
+        if (isISO19157) {
+            evaluationStarted = prepare_ISO19157_sparql(url, interval)
         }
     }
 
     res.json({evaluationStarted: evaluationStarted});
 }
 
-const evaluate_mqa_sparql = function (url, interval) {
+const prepare_mqa_sparql = function (url, interval) {
     let actualDate = new Date()
     let jobID = url.replace(/\//g, '-')
         + ' - ' + ' MQA - '
@@ -91,14 +113,16 @@ const evaluate_mqa_sparql = function (url, interval) {
             .replace(/T/, ' ')
             .replace(/\..+/, '');
 
-    let evaluationStarted = mqa_sparql(url);
+    let evaluationStarted;
     if (interval > 0) {
-        schedule_task(url, jobID, interval, true, false)
+        evaluationStarted = schedule_task(url, jobID, interval, true, false)
+    } else {
+        evaluationStarted = evaluate_mqa_sparql(url);
     }
-    return evaluationStarted
+    return evaluationStarted;
 };
 
-const evaluate_ISO19157_sparql = function (url, interval) {
+const prepare_ISO19157_sparql = function (url, interval) {
     let actualDate = new Date()
     let jobID = url.replace(/\//g, '-')
         + ' - ' + ' ISO19157 - '
@@ -106,14 +130,16 @@ const evaluate_ISO19157_sparql = function (url, interval) {
             .replace(/T/, ' ')
             .replace(/\..+/, '');
 
-    let evaluationStarted = iso19157(url)
-    if (interval> 0) {
-        schedule_task(url, jobID, interval, false, true)
+    let evaluationStarted;
+    if (interval > 0) {
+        evaluationStarted = schedule_task(url, jobID, interval, false, true);
+    } else {
+        evaluationStarted = evaluate_iso19157(url)
     }
-    return evaluationStarted
+    return evaluationStarted;
 }
 
-const mqa_sparql = function (url) {
+const evaluate_mqa_sparql = function (url) {
     let actualDate = new Date()
     let date = dateFormat.format(actualDate, 'YYYY-DD-MM')
     let dateToFileName = actualDate.toISOString()
@@ -165,7 +191,7 @@ const mqa_sparql = function (url) {
     return true
 };
 
-const iso19157 = function (url) {
+const evaluate_iso19157 = function (url) {
     let actualDate = new Date()
     let date = dateFormat.format(actualDate, 'YYYY-DD-MM')
     let dateToFileName = actualDate.toISOString()
@@ -224,11 +250,11 @@ function schedule_task(url, jobID, interval, isMQA, isISO19157) {
 
     if (isMQA) {
         agenda.define(jobID, function (job) {
-            mqa_sparql(url)
+            evaluate_mqa_sparql(url)
         });
     } else if (isISO19157) {
         agenda.define(jobID, function(job) {
-            iso19157(url)
+            evaluate_iso19157(url)
         });
     }
 
@@ -238,6 +264,9 @@ function schedule_task(url, jobID, interval, isMQA, isISO19157) {
         agenda.start();
     });
     console.log('Stored job: ' + jobID + ' every ' + interval + ' days')
+
+    //Return only for consistency with no scheduled evaluations
+    return true;
 }
 
 const storeFile = function (name) {
@@ -250,7 +279,7 @@ const storeFile = function (name) {
     const options = ({ filename: name, contentType: 'text/plain' });
     Attachment.write(options, readStream, (error, file) => {
         //Deletes the stored file only if its really stored
-        // unlinkSync(realPath)
+        unlinkSync(realPath)
         console.log('Successfully stored DQV file to database: ' + name)
     });
 
