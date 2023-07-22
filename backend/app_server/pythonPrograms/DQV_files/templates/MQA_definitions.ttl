@@ -55,9 +55,9 @@
     dqv:expectedDataType xsd:double .
 
 :KeywordAvailability_points a dqv:Metric ;
-    prov:wasDerivedFrom :CategoryAvailability ;
+    prov:wasDerivedFrom :KeywordAvailability_rate ;
     skos:definition "Points metric (0-30): The system checks whether keywords are defined. The number of keywords has no impact to the score."@en ;
-    dqv:inDimension :KeywordAvailability_rate ;
+    dqv:inDimension :KeywordAvailability  ;
     dqv:expectedDataType xsd:double .
 
 :CategoryAvailability a dqv:Dimension ;
@@ -71,9 +71,9 @@
     dqv:expectedDataType xsd:double .
 
 :CategoryAvailability_points a dqv:Metric ;
-    prov:wasDerivedFrom :CategoryAvailability ;
+    prov:wasDerivedFrom :CategoryAvailability_rate ;
     skos:definition "Points metric (0-30): It is checked whether one or more categories are assigned to the dataset. The number of assigned categories has no impact to the score."@en ;
-    dqv:inDimension :CategoryAvailability_rate ;
+    dqv:inDimension :CategoryAvailability ;
     dqv:expectedDataType xsd:double .
 
 :SpatialAvailability a dqv:Dimension ;
@@ -82,13 +82,13 @@
     skos:definition "Usage of spatial information would enable users in order to find the dataset with a geo facetted search."@en .
 
 :SpatialAvailability_rate a dqv:Metric ;
-    skos:definition "Rate metric: It is checked wether the property is set or not."@en ;
+    skos:definition "Rate metric: It is checked whether the property is set or not."@en ;
     dqv:inDimension :SpatialAvailability ;
     dqv:expectedDataType xsd:double .
 
 :SpatialAvailability_points a dqv:Metric ;
     prov:wasDerivedFrom :SpatialAvailability_rate ;
-    skos:definition "Points metric (0-20): It is checked wether the property is set or not."@en ;
+    skos:definition "Points metric (0-20): It is checked whether the property is set or not."@en ;
     dqv:inDimension :SpatialAvailability ;
     dqv:expectedDataType xsd:double .
 
@@ -98,13 +98,13 @@
     skos:definition "Usage of temporal information would enable users for a timely based facetted search."@en .
 
 :TemporalAvailability_rate a dqv:Metric ;
-    skos:definition "Rate metric: It is checked wether the property is set or not."@en ;
+    skos:definition "Rate metric: It is checked whether the property is set or not."@en ;
     dqv:inDimension :TemporalAvailability ;
     dqv:expectedDataType xsd:double .
 
 :TemporalAvailability_points a dqv:Metric ;
     prov:wasDerivedFrom :TemporalAvailability_rate ;
-    skos:definition "Points metric (0-20): It is checked wether the property is set or not."@en ;
+    skos:definition "Points metric (0-20): It is checked whether the property is set or not."@en ;
     dqv:inDimension :TemporalAvailability ;
     dqv:expectedDataType xsd:double .
 
@@ -347,13 +347,13 @@
     skos:definition "The contact point contains inform whom to address in case of questions regarding the data."@en .
 
 :ContactPointAvailability_rate a dqv:Metric ;
-    skos:definition "Rate metric: It is checked wether the property is set or not."@en ;
+    skos:definition "Rate metric: It is checked whether the property is set or not."@en ;
     dqv:inDimension :ContactPointAvailability ;
     dqv:expectedDataType xsd:double .
 
 :ContactPointAvailability_points a dqv:Metric ;
     prov:wasDerivedFrom :AccessRightsVocabularyAlignment_rate ;
-    skos:definition "Points metric (0-20): It is checked wether the property is set or not."@en ;
+    skos:definition "Points metric (0-20): It is checked whether the property is set or not."@en ;
     dqv:inDimension :ContactPointAvailability ;
     dqv:expectedDataType xsd:double .
 
@@ -363,13 +363,13 @@
     skos:definition "It is checked wether the Publisher is set or not."@en .
 
 :PublisherAvailability_rate a dqv:Metric ;
-    skos:definition "Rate metric: It is checked wether the property is set or not."@en ;
+    skos:definition "Rate metric: It is checked whether the property is set or not."@en ;
     dqv:inDimension :PublisherAvailability ;
     dqv:expectedDataType xsd:double .
 
 :PublisherAvailability_points a dqv:Metric ;
     prov:wasDerivedFrom :AccessRightsVocabularyAlignment_rate ;
-    skos:definition "Points metric (0-10): It is checked wether the property is set or not."@en ;
+    skos:definition "Points metric (0-10): It is checked whether the property is set or not."@en ;
     dqv:inDimension :PublisherAvailability ;
     dqv:expectedDataType xsd:double .
 
@@ -386,13 +386,13 @@
     skos:definition "In some cases, a specific license cannot be applied to a dataset. The 'Rights' field can be used to specify a reference to a resource that will inform a user about the rights he has when using the dataset."@en .
 
 :RightsAvailability_rate a dqv:Metric ;
-    skos:definition "Rate metric: It is checked wether the property is set or not."@en ;
+    skos:definition "Rate metric: It is checked whether the property is set or not."@en ;
     dqv:inDimension :RightsAvailability ;
     dqv:expectedDataType xsd:double .
 
 :RightsAvailability_points a dqv:Metric ;
     prov:wasDerivedFrom :RightsAvailability_rate ;
-    skos:definition "Points metric (0-5): It is checked wether the property is set or not."@en ;
+    skos:definition "Points metric (0-5): It is checked whether the property is set or not."@en ;
     dqv:inDimension :RightsAvailability ;
     dqv:expectedDataType xsd:double .
 
@@ -402,13 +402,13 @@
     skos:definition "Specifies the size of the file in bytes."@en .
 
 :ByteSizeAvailability_rate a dqv:Metric ;
-    skos:definition "Rate metric: It is checked wether the property is set or not."@en ;
+    skos:definition "Rate metric: It is checked whether the property is set or not."@en ;
     dqv:inDimension :ByteSizeAvailability ;
     dqv:expectedDataType xsd:double .
 
 :ByteSizeAvailability_points a dqv:Metric ;
     prov:wasDerivedFrom :ByteSizeAvailability_rate ;
-    skos:definition "Points metric (0-5): It is checked wether the property is set or not."@en ;
+    skos:definition "Points metric (0-5): It is checked whether the property is set or not."@en ;
     dqv:inDimension :ByteSizeAvailability ;
     dqv:expectedDataType xsd:double .
 
@@ -418,13 +418,13 @@
     skos:definition "The date on which the dataset or distribution was released."@en .
 
 :DateIssuedAvailability_rate a dqv:Metric ;
-    skos:definition "Rate metric: It is checked wether the property is set or not."@en ;
+    skos:definition "Rate metric: It is checked whether the property is set or not."@en ;
     dqv:inDimension :DateIssuedAvailability ;
     dqv:expectedDataType xsd:double .
 
 :DateIssuedAvailability_points a dqv:Metric ;
     prov:wasDerivedFrom :DateIssuedAvailability_rate ;
-    skos:definition "Points metric (0-5): It is checked wether the property is set or not."@en ;
+    skos:definition "Points metric (0-5): It is checked whether the property is set or not."@en ;
     dqv:inDimension :DateIssuedAvailability ;
     dqv:expectedDataType xsd:double .
 
@@ -434,13 +434,13 @@
     skos:definition "The date on which the dataset or distribution was last changed."@en .
 
 :DateModifiedAvailability_rate a dqv:Metric ;
-    skos:definition "Rate metric: It is checked wether the property is set or not."@en ;
+    skos:definition "Rate metric: It is checked whether the property is set or not."@en ;
     dqv:inDimension :DateModifiedAvailability ;
     dqv:expectedDataType xsd:double .
 
 :DateModifiedAvailability_points a dqv:Metric ;
     prov:wasDerivedFrom :DateModifiedAvailability_rate ;
-    skos:definition "Points metric (0-5): It is checked wether the property is set or not."@en ;
+    skos:definition "Points metric (0-5): It is checked whether the property is set or not."@en ;
     dqv:inDimension :DateModifiedAvailability ;
     dqv:expectedDataType xsd:double .
 
