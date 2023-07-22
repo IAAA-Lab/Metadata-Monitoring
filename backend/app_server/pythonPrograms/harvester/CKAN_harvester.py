@@ -21,13 +21,11 @@ OUTPUT = "output"
 
 LOCAL_CKAN = "http://localhost:5000/api/3/action/"
 
-# EDP_CKAN = 'https://data.europa.eu/data/search/ckan/'
-# EDP_CKAN = 'https://opendata.aragon.es/ckan/api/3/action/'
-EDP_CKAN = 'https://datos.santiagodecompostela.gal/catalogo/api/3/action/'
+EDP_CKAN = 'https://data.europa.eu/data/search/ckan/'
+# Aragon: 'https://opendata.aragon.es/ckan/api/3/action/'
+# Santiago: 'https://datos.santiagodecompostela.gal/catalogo/api/3/action/'
 
-# EDP_RDF = 'https://data.europa.eu/data/api/datasets/'
-# EDP_RDF = 'https://opendata.aragon.es/ckan/dataset/'
-EDP_RDF = 'https://datos.santiagodecompostela.gal/catalogo/dataset/'
+EDP_RDF = 'https://data.europa.eu/data/api/datasets/'
 
 EDP_FORMAT = '.ttl?useNormalizedId=true&locale=en'
 
@@ -63,7 +61,7 @@ class CKAN_harvester:
         """
         Downloads the RDF in a paged JSON response with dataset identifiers
         """
-        search_request = self.url + 'package_search?&rows=0'
+        search_request = self.url + '/api/3/action/package_search?&rows=0'
         print(search_request)
         try:
             response = urlopen(search_request)
@@ -74,7 +72,10 @@ class CKAN_harvester:
             print(f'Other error occurred: {err}')
 
     def parse_dataset(self, id, graph):
-        rdf_url = self.rdf_url + id + self.format
+        if self.rdf_url is not None:
+            rdf_url = self.rdf_url + id + self.format
+        else:
+            rdf_url = self.url + '/dataset/'+ id + self.format
         # print(rdf_url)
         try:
             graph.parse(rdf_url, format="turtle")
@@ -94,8 +95,7 @@ class CKAN_harvester:
         """
         Downloads the RDF in a paged JSON response with dataset identifiers
         """
-        search_request = self.url + 'package_search?&rows='+str(self.limit)+'&start='+str(offset)
-        # search_request = self.url + 'package_search?q=\'Trafair\'&rows=20'
+        search_request = self.url + '/api/3/action/package_search?&rows='+str(self.limit)+'&start='+str(offset)
         print(search_request)
         response = urlopen(search_request)
         jsonResponse = json.load(response)
@@ -131,7 +131,6 @@ if __name__ == '__main__':
     URL = sys.argv[1]
 
     # harvester = CKAN_harvester(url = EDP_CKAN, rdf_url= EDP_RDF, limit=100, max_number_of_records=500, output_folder = OUTPUT, format = EDP_FORMAT)
-    harvester = CKAN_harvester(url=URL, rdf_url=EDP_RDF, limit=100,
-                               output_folder=OUTPUT, format=EDP_FORMAT)
+    harvester = CKAN_harvester(url=URL, limit=100, max_number_of_records=500, output_folder=OUTPUT, format=EDP_FORMAT)
     harvester.harvest()
 
