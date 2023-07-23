@@ -66,8 +66,11 @@ class SPARQL_harvester:
         """
         Parses the dataset with URL in the graph
         """
-        id = get_file_name(url)
-        rdf_url = self.rdf_url + id + self.format
+        if self.rdf_url is not None:
+            id = get_file_name(url)
+            rdf_url = self.rdf_url + id + self.format
+        else:
+            rdf_url = url + self.format
         # print(rdf_url)
         try:
             graph.parse(rdf_url, format="turtle")
@@ -144,8 +147,7 @@ if __name__ == '__main__':
     os.chdir(dname)
     URL = sys.argv[1]
 
-    harvester = SPARQL_harvester(url = URL, rdf_url= ES_RDF, limit=100, output_folder = OUTPUT)
-    #harvester.harvest()
-
+    harvester = SPARQL_harvester(url = URL, limit=100, max_number_of_records=500, output_folder = OUTPUT)
+    # harvester = SPARQL_harvester(url = ES_SPARQL, rdf_url= ES_RDF, limit=50, max_number_of_records=50, output_folder = OUTPUT, format = EDP_FORMAT)
     # harvester = SPARQL_harvester(url = EDP_SPARQL, rdf_url= EDP_RDF, limit=50, max_number_of_records=50, output_folder = OUTPUT, format = EDP_FORMAT)
     harvester.harvest()
