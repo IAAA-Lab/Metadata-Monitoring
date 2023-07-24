@@ -56,7 +56,10 @@ class SPARQL_harvester:
         self.sparql = SPARQLWrapper(url)
         if user is not None:
             self.sparql.setCredentials(user, passwd)
-        self.rdf_url = rdf_url
+        if self.url == EDP_SPARQL:
+            self.rdf_url = EDP_RDF
+        else:
+            self.rdf_url = rdf_url
         self.limit = limit
         self.output_folder = output_folder
         self.format = format
@@ -149,5 +152,5 @@ if __name__ == '__main__':
 
     harvester = SPARQL_harvester(url = URL, limit=100, max_number_of_records=500, output_folder = OUTPUT)
     # harvester = SPARQL_harvester(url = ES_SPARQL, rdf_url= ES_RDF, limit=50, max_number_of_records=50, output_folder = OUTPUT, format = EDP_FORMAT)
-    # harvester = SPARQL_harvester(url = EDP_SPARQL, rdf_url= EDP_RDF, limit=50, max_number_of_records=50, output_folder = OUTPUT, format = EDP_FORMAT)
+    # harvester = SPARQL_harvester(url = EDP_SPARQL, rdf_url= EDP_RDF, limit=100, max_number_of_records=500, output_folder = OUTPUT, format = EDP_FORMAT)
     harvester.harvest()
