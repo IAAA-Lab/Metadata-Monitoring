@@ -1,19 +1,42 @@
-# Software utilizado
-- Ubuntu 20.04
-- Node.js v16.16.0
-- Python3 (se utiliza un entorno virtual, por lo que la versión concreta no es relevante)
-- MongoDB 4.4.5
+# Software requirements
+- Ubuntu 22.04
+- Node.js v16.x
+- Python3
+- MongoDB 6.0
 - Fuseki
 
-# Instalación de dependencias
-## Node.js
-Para instalar las dependencias necesarias se debe ubicar en la carpeta 'backen' o 'frontend' para cada caso y ejecutar en una terminal:
+# Installation and execution on Ubuntu 22.04
+## 1. Installation of Node.js v16
+We need to install specifically version 16, as this is required for the client implemented with Angular.
+First, we need to install curl if not previously installed:
 ```
+sudo apt-get install curl
+```
+Then, we download the specfic version of node.js and we install it:
+```
+curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+The version installed should be v16
+```
+node-v
+```
+## 2. Installation of dependencies in the backend and front end
+First, we need to install depedencies at the backend from a terminal
+```
+cd backend
 npm install
 ```
-
-# Ejecución
-## MongoDB
+Probably, npm nodemon is also required:
+```
+npm install nodemon --save-dev
+```
+Second, we need to install the dependecies at the frontend:
+```
+cd frontend
+npm install
+```
+## 3. Installation and configuration of MongoDB
 MongoDB debe estar ejecutandose para que la aplicación funcione correctamente, para esto, se puede ejecutar sobre una terminal:
 ```
 service mongod start
