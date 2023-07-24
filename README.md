@@ -128,6 +128,8 @@ More information at: https://hub.docker.com/r/stain/jena-fuseki/
 
 Last, we need to add a new dataset, which will be used for the temporal storage of metadata. This can be done through the 'management: New dataset' option. For instance, we call this dataset 'test' and use 'Persistent (TDB2) – dataset will persist across Fuseki restarts' as Dataset type.
 
+![Fuseki](fuseki.png)
+
 ### 7. Configuration of the python environment
 We need to set up a python virtual environment for the execution of the python environment.
 
