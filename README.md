@@ -142,4 +142,7 @@ os.chdir(dname)
 # Execution of the frontend (open data monitoring web application)
 If the installation of the software worked properly, the web application is available at https://localhost:4200/evaluation.
 
+Some examples of successful execution are the following:
+
+[datos.gob.es](http://datos.gob.es/virtuoso/sparql)http://datos.gob.es/virtuoso/sparql, SPARQL, MQA direct
 
