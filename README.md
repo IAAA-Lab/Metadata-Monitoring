@@ -77,6 +77,8 @@ Within 'results' database, we need to create the collection 'admins' with the in
 db.admins.insert({ username: "user", password: "user" })
 db.admins.insert({ username: “admin”, password: “admin” })
 ```
+If we want an enhanced security for the  login of users, we can modify 'scquema.js' (admin_schema) to use comparisons with encrypting function.
+
 ## Frontend y Backend
 En caso de no utilizar un IDE que facilite la ejecución de la aplicación web, puede ejecutarse mediante una terminal accediendo a las carpetas 'backend' y 'frontend', en función de qué componente se quiere ejecutar, y para ambos casos utilizar la instrucción:
 
