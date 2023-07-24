@@ -1,5 +1,13 @@
 # Metadata-Monitoring: Web portal for the monitoring of metadata quality in Government Open Data portals.
 
+## Table of Contents <!-- omit in toc -->
+
+- [Introduction](#introduction)
+- [Installation of the software on Ubuntu 22.04](#installation)
+- [Execution of the frontend](#execution of the frontend)
+- [Credits](#credits)
+
+## Introduction
 The objective of this Open Sorce project is to provide a software for the deployment of a web portal for monitoring the metadata quality of open data portals based on existing methods of metadata quality.
 
 To promote transparency and citizen participation, many governments, both at the national and local levels, have
@@ -150,7 +158,7 @@ abspath = os.path.abspath(__file__)
 dname = os.path.dirname(abspath)
 os.chdir(dname)
 ```
-# Execution of the frontend (open data monitoring web application)
+## Execution of the frontend
 If the installation of the software worked properly, the web application is available at https://localhost:4200/evaluation.
 
 Some examples of successful execution are the following:
