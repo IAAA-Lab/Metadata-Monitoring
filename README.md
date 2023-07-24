@@ -170,18 +170,22 @@ If the installation of the software worked properly, the web application (fronte
 Some examples of successful execution are the following:
 - Endpoint: http://datos.gob.es/virtuoso/sparql (SPARQL), Quality method: MQA, Evaluation type: direct
 ![dge_sparql_mqa_direct](dge_sparql_mqa_direct.png)
+after clicking on the results, the application should display something similar to the following screenshot
 ![dge_sparql_mqa_direct_results](dge_sparql_mqa_direct_results.png)
 
 - Endpoint: http://datos.gob.es/virtuoso/sparql (SPARQL), Quality method: ISO19157, Evaluation type: direct
 ![dge_sparql_iso19157_direct](dge_sparql_iso19157_direct.png)
+after clicking on the results, the application should display something similar to the following screenshot
 ![dge_sparql_iso19157_direct_results](dge_sparql_iso19157_direct_results.png)
 
 - Endpoint: http://datos.gob.es/virtuoso/sparql (SPARQL), Quality method: MQA, Evaluation type: Local (Note: there is a limitation of a maximum number of 500 records for the harvesting, it can be modified at SPARQ_harvester.py)
 ![dge_sparql_mqa_local](dge_sparql_mqa_local.png)
+after clicking on the results, the application should display something similar to the following screenshot
 ![dge_sparql_mqa_local_results](dge_sparql_mqa_local_results.png)
 
 - Endpoint: https://opendata.aragon.es/ckan (CKAN), Quality method: ISO19157, Evaluation type: Local (Note: there is a limitation of a maximum number of 500 records for the harvesting, it can be modified at CKAN_harvester.py)
 ![aragon_ckan_iso19157_local](aragon_ckan_iso19157_local.png)
+after clicking on the results, the application should display something similar to the following screenshot
 ![aragon_ckan_iso19157_local_results](aragon_ckan_iso19157_local_results.png)
 
 - Endpoint: https://opendata.aragon.es/sparql (SPARQL), Quality method: MQA, Evaluation type: Direct
