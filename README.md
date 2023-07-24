@@ -1,4 +1,4 @@
-# Web portal for the monitoring of metadata quality in Government Open Data portals.
+# Metadata-Monitoring: Web portal for the monitoring of metadata quality in Government Open Data portals.
 
 The objective of this Open Sorce project is to provide a software for the deployment of a web portal for monitoring the metadata quality of open data portals based on existing methods of metadata quality.
 
@@ -162,3 +162,21 @@ Some examples of successful execution are the following:
 - Endpoint: https://data.europa.eu/sparql (SPARQL), Quality method: MQA, Evaluation type: Local (Note: there is a limitation of a maximum number of 500 records for the harvesting, it can be modified at SPARQ_harvester.py)
 - Endpoint: http://datos.zaragoza.es/sparql (SPARQL), Quality method: MQA, Evaluation type: Local (Note: there is a limitation of a maximum number of 500 records for the harvesting, it can be modified at SPARQ_harvester.py)
 
+## Credits
+
+The work of this Respository is licensed under a [Creative Commons Attribution 4.0 International License][cc-by].
+
+Except where otherwise noted, this content is published under a [CC BY license][cc-by], which means that you can copy, redistribute, remix, transform and build upon the content for any purpose even commercially as long as you give appropriate credit and provide a link to the license.
+
+Recommended attribution:
+
+> "Metadata-Monitoring: Web portal for the monitoring of metadata quality in Government Open Data portals" by Javier Nogueras-Iso (Universidad de Zaragoza), Sergio Martínez (Universidad de Zaragoza), Javier Lacasta (Universidad de Zaragoza), Manuel Antonio Ureña-Cámara (Universidad de Jaén), Francisco Javier Ariza-López (Universidad de Jaén) is licensed under CC BY 4.0. Available at
+> <https://github.com/javierni/Metadata-Monitoring/edit/master/README.md>
+
+[![CC BY 4.0][cc-by-image]][cc-by]
+
+[cc-by]: http://creativecommons.org/licenses/by/4.0/
+[cc-by-image]: https://i.creativecommons.org/l/by/4.0/88x31.png
+[cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
+[version]: v0.5-beta
+[development-shield]: https://img.shields.io/badge/-development%20repository-red?style=flat
