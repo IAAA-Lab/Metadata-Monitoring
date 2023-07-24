@@ -24,6 +24,7 @@ This Open Source project has the following sotware requirements:
 - Python3
 - MongoDB 6.0
 - Fuseki
+
 The following subsections describe the deployment of the software on a host using Ubuntu 22.04 as operating system. This installation steps could be adapted to other operating system environments.
 ### 1. Installation of Node.js v16
 We need to install specifically version 16, as this is required for the client implemented with Angular.
