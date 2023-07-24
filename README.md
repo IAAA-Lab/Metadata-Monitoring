@@ -11,12 +11,12 @@ This web portal provides a user interface that facilitates and improves the user
 For the development of the web application that supports the monitoring portal, the MEAN technology stack has been used: Angular for the Frontend, Node.js and Express for the Backend, and MongoDB for the storage of the evaluation results. As for the automatic calculation of the quality assessment measures, this has been developed in Python and the SPARQL language has been integrated to make queries on the content of the metadata of the evaluated open data portal.
 
 # Installation of the software on Ubuntu 22.04
-
-- Ubuntu 22.04
+This Open Source project has the following sotware requirements:
 - Node.js v16.x
 - Python3
 - MongoDB 6.0
 - Fuseki
+The following subsections describe the deployment of the software on a host using Ubuntu 22.04 as operating system. This installation steps could be adapted to other operating system environments.
 ## 1. Installation of Node.js v16
 We need to install specifically version 16, as this is required for the client implemented with Angular.
 First, we need to install curl if not previously installed:
