@@ -3,7 +3,7 @@
 ## Table of Contents <!-- omit in toc -->
 
 - [Introduction](#introduction)
-- [Installation](#installation of the software on Ubuntu 22.04)
+- [Installation](#installation)
 - [Execution](#execution)
 - [Credits](#credits)
 
