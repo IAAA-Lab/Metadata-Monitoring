@@ -17,7 +17,7 @@ Then, we download the specfic version of node.js and we install it:
 curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
-The version installed should be v16
+The version installed should be v16. In can be checked with the following command:
 ```
 node-v
 ```
@@ -62,8 +62,21 @@ If necessary, the service can be stopped with the following command:
 service mongod stop
 ```
 ## 4. Creation of the MongoDB database
-
-
+The MongoDB database can be administered with Studio 3T application.
+The instllation of this application is explained at https://studio3t.com/knowledge-base/articles/how-to-install-studio-3t-on-linux/ . After donwloading the installation compressed, file, we need to unzip:
+```
+tar -xvzf studio-3t-linux-x64.tar.gz
+```
+and execute the installation:
+```
+sh studio-3t-linux-x64.sh
+```
+Then, we start Studio 3T and we establish a connection with the MongoDB service (localhost, port: 27017). After having established the connection, we need to create two databases: 'results' and 'agenda'.
+Within 'results' database, we need to create the collection 'admins' with the information of two users. These two users can be created executing the following instructions through Studio 3T:
+```
+db.admins.insert({ username: "user", password: "user" })
+db.admins.insert({ username: “admin”, password: “admin” })
+```
 ## Frontend y Backend
 En caso de no utilizar un IDE que facilite la ejecución de la aplicación web, puede ejecutarse mediante una terminal accediendo a las carpetas 'backend' y 'frontend', en función de qué componente se quiere ejecutar, y para ambos casos utilizar la instrucción:
 
