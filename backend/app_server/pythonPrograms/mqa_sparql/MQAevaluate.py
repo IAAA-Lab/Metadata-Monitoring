@@ -347,7 +347,7 @@ class MQAevaluate:
         count = self.count_entity_property(entity, property)
         population = self.distributionCount
         self.print(dimension, property, count, population, 20,
-                   QR + 'DownloadUrlAvailability_rate_value', QR + 'AccessUrlStatusCode_rate',
+                   QR + 'DownloadUrlAvailability_rate_value', QR + 'DownloadUrlAvailability_rate',
                    [DCAT + 'distribution', DCT + 'downloadURL'], QR + 'DownloadUrlAvailability_points_value',
                    QR + 'AccessUrlStatusCode_points')
 
@@ -569,9 +569,9 @@ class MQAevaluate:
         self.findability_category_available()
         self.findability_spatial_available()
         self.findability_temporal_available()
-        # self.accesibility_accessURL_code_200()
-        # self.accesibility_downloadURL_available()
-        # self.accesibility_downloadURL_code_200()
+        self.accesibility_accessURL_code_200() # maybe commented/disabled for efficiency issues
+        self.accesibility_downloadURL_available()
+        self.accesibility_downloadURL_code_200() # maybe commented for efficiency issues
         self.interoperability_format_available()
         self.interoperability_mediaType_available()
         self.interoperability_format_from_vocabulary()
