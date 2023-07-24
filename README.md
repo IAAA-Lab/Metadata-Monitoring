@@ -139,3 +139,7 @@ abspath = os.path.abspath(__file__)
 dname = os.path.dirname(abspath)
 os.chdir(dname)
 ```
+# Execution of the frontend (open data monitoring web application)
+If the installation of the software worked properly, the web application is available at https://localhost:4200/evaluation.
+
+
