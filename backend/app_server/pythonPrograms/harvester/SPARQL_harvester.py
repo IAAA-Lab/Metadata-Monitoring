@@ -128,9 +128,10 @@ class SPARQL_harvester:
     def harvest(self):
         folder = create_folder(self.url)
         count = self.count_datasets()
-        print (count, ' datasets')
+        print (count, ' datasets.')
         if self.max_number_of_records is not None:
-            count = self.max_number_of_records
+            count = min(count, self.max_number_of_records)
+            print('A maximum of ', count, ' datasets will be harvested.')
         offset = 0
         i=1
         while (offset < count):
