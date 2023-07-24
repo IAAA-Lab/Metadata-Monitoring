@@ -107,7 +107,8 @@ class CKAN_harvester:
         print (count, ' datasets')
         # exit(0)
         if self.max_number_of_records is not None:
-            count = self.max_number_of_records
+            count = min(count, self.max_number_of_records)
+            print('A maximum of ', count, ' datasets will be harvested.')
         offset = 0
         i=1
         while (offset < count):
