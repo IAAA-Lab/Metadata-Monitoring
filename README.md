@@ -79,14 +79,19 @@ db.admins.insert({ username: “admin”, password: “admin” })
 ```
 If we want an enhanced security for the  login of users, we can modify 'scquema.js' (admin_schema) to use comparisons with encrypting function.
 
-## Frontend y Backend
-En caso de no utilizar un IDE que facilite la ejecución de la aplicación web, puede ejecutarse mediante una terminal accediendo a las carpetas 'backend' y 'frontend', en función de qué componente se quiere ejecutar, y para ambos casos utilizar la instrucción:
-
+## 5. Start the backend and frontend
+If we are using an IDE for the development like Webstorm, we can start directly the backend and frontend from this IDE. Otherwise, we can start them from a terminal with 'npm'. In the case of the backend, we would execute the following:
 ```
+cd backend
 npm start
 ```
-
-y detener la ejecución mediante Ctrl+C.
+In the case of the frontend, it would be similar:
+```
+cd frontend
+npm start
+```
+Then, the frontend should be accessible from a browser at http://localhost:4200/
+The execution of backend and frontend can be stopped with Ctrl+C.
 
 ## Fuseki
 Para la ejecución de un portal local SPARQL se ha utilizado Fuseki mediante Docker, por lo que para ejecutarlo, tan solo es necesario utilizar la instrucción:
