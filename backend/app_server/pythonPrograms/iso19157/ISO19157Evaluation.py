@@ -1079,26 +1079,25 @@ class ISO19157Evaluation:
         self.domain_consistency_dataset_conformsTo()
         self.domain_consistency_dataset_distribution()
         #TODO: HAbilitar metrica
-        # self.domain_consistency_dataset_license()
+        # self.domain_consistency_dataset_license() # In DCAT-AP, license is associated with distributions. In NTI, license is associated with datasets.
 
         # Domain consistency Distribution
         self.domain_consistency_distribution_identifier()
         self.domain_consistency_distribution_title()
-        #TODO: Habilitar metrica
-        # self.domain_consistency_distribution_accessURL()
+        self.domain_consistency_distribution_accessURL()
         self.domain_consistency_distribution_format()
         self.domain_consistency_distribution_byteSize()
-        # self.domain_consistency_distribution_license()
+        self.domain_consistency_distribution_license()
 
         # Temporal quality
         self.temporal_consistency()
         self.temporal_validity()
 
         # Thematic accuracy
-        # self.non_quantitative_attribute_correctness_dataset_conformsTo()
-        # self.non_quantitative_attribute_correctness_dataset_references()
-        # self.non_quantitative_attribute_correctness_distribution_accessURL()
-        # self.non_quantitative_attribute_correctness_distribution_license()
+        self.non_quantitative_attribute_correctness_dataset_conformsTo() # maybe commented/disabled for efficiency issues
+        self.non_quantitative_attribute_correctness_dataset_references() # maybe commented/disabled for efficiency issues
+        self.non_quantitative_attribute_correctness_distribution_accessURL() # maybe commented/disabled for efficiency issues
+        self.non_quantitative_attribute_correctness_distribution_license() # maybe commented/disabled for efficiency issues
 
         # Positional positional_correctness
         self.positional_correctness()
