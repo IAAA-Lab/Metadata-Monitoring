@@ -182,7 +182,7 @@ Some examples of successful execution are the following:
 
 - Endpoint: https://opendata.aragon.es/ckan (CKAN), Quality method: ISO19157, Evaluation type: Local (Note: there is a limitation of a maximum number of 500 records for the harvesting, it can be modified at CKAN_harvester.py)
 ![aragon_ckan_iso19157_local](aragon_ckan_iso19157_local.png)
-![aragon_ckan_iso19157_local_results](aragon_ckan_iso19157_local.png)
+![aragon_ckan_iso19157_local_results](aragon_ckan_iso19157_local_results.png)
 
 - Endpoint: https://opendata.aragon.es/sparql (SPARQL), Quality method: MQA, Evaluation type: Direct
 
