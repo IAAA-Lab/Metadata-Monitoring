@@ -3,7 +3,7 @@
 ## Table of Contents <!-- omit in toc -->
 
 - [Introduction](#introduction)
-- [Installation of the software on Ubuntu 22.04](#installation)
+- [Installation of the software on Ubuntu 22.04](#installation of the software on Ubuntu 22.04)
 - [Execution of the frontend](#execution of the frontend)
 - [Credits](#credits)
 
@@ -18,14 +18,14 @@ This web portal provides a user interface that facilitates and improves the user
 
 For the development of the web application that supports the monitoring portal, the MEAN technology stack has been used: Angular for the Frontend, Node.js and Express for the Backend, and MongoDB for the storage of the evaluation results. As for the automatic calculation of the quality assessment measures, this has been developed in Python and the SPARQL language has been integrated to make queries on the content of the metadata of the evaluated open data portal.
 
-# Installation of the software on Ubuntu 22.04
+## Installation of the software on Ubuntu 22.04
 This Open Source project has the following sotware requirements:
 - Node.js v16.x
 - Python3
 - MongoDB 6.0
 - Fuseki
 The following subsections describe the deployment of the software on a host using Ubuntu 22.04 as operating system. This installation steps could be adapted to other operating system environments.
-## 1. Installation of Node.js v16
+### 1. Installation of Node.js v16
 We need to install specifically version 16, as this is required for the client implemented with Angular.
 First, we need to install curl if not previously installed:
 ```
@@ -40,8 +40,9 @@ The version installed should be v16. In can be checked with the following comman
 ```
 node-v
 ```
-## 2. Installation of dependencies in the backend and front end
-First, we need to install depedencies at the backend from a terminal
+### 2. Installation of dependencies in the backend and front end
+First, we need to clone the software at 'master' brand. 
+After this, we must install depedencies at the backend from a terminal
 ```
 cd backend
 npm install
@@ -50,12 +51,12 @@ Probably, npm nodemon is also required:
 ```
 npm install nodemon --save-dev
 ```
-Second, we need to install the dependecies at the frontend:
+Then, we need to install the dependecies at the frontend:
 ```
 cd frontend
 npm install
 ```
-## 3. Installation and launch of MongoDB service
+### 3. Installation and launch of MongoDB service
 For the installation of the MongoDB database, we can follow the instructions from https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
 
 ```
@@ -80,7 +81,7 @@ If necessary, the service can be stopped with the following command:
 ```
 service mongod stop
 ```
-## 4. Creation of the MongoDB database
+### 4. Creation of the MongoDB database
 The MongoDB database can be administered with Studio 3T application.
 The instllation of this application is explained at https://studio3t.com/knowledge-base/articles/how-to-install-studio-3t-on-linux/ . After donwloading the installation compressed, file, we need to unzip:
 ```
@@ -98,7 +99,7 @@ db.admins.insert({ username: “admin”, password: “admin” })
 ```
 If we want an enhanced security for the  login of users, we can modify 'scquema.js' (admin_schema) to use comparisons with encrypting function.
 
-## 5. Start the backend and frontend
+### 5. Start the backend and frontend
 If we are using an IDE for the development like Webstorm, we can start directly the backend and frontend from this IDE. Otherwise, we can start them from a terminal with 'npm'. In the case of the backend, we would execute the following:
 ```
 cd backend
@@ -113,7 +114,7 @@ Then, the frontend should be accessible from a browser at http://localhost:4200/
 
 The execution of backend and frontend can be stopped with Ctrl+C.
 
-## 6. Intallation and launch of Fuseki
+### 6. Intallation and launch of Fuseki
 If the evaluation of an Open Data portal is performed locally with a copy of the metadata contents, we need a triple-store to save temporally the metadata and query it with SPARQL. For the deployment of this triple-store we have decided to use a Docker container with Fuseki technology. The installation and execution of the container just requires the execution of the following command:
 ```
 docker run -d -p 3030:3030 -e ADMIN_PASSWORD=pass123 stain/jena-fuseki
@@ -122,9 +123,11 @@ This will download the neccessary software (if not performed previously) and wil
 
 The first time we access the portal, we need to login as 'admin' with password 'pass123'. In case of not specifying a password with the docker command, this password is auto-generated. In case of autogeneration, we need to check the logs (using 'docker logs') or directly the output if the -d option was not used.
 
-More information at: https://hub.docker.com/r/stain/jena-fuseki/ 
+More information at: https://hub.docker.com/r/stain/jena-fuseki/
 
-## 7. Configuration of the python environment
+Last, we need to add a new dataset, which will be used for the temporal storage of metadata. This can be done through the 'management: New dataset' option. For instance, we call this dataset 'test' and use 'Persistent (TDB2) – dataset will persist across Fuseki restarts' as Dataset type.
+
+### 7. Configuration of the python environment
 We need to set up a python virtual environment for the execution of the python environment.
 
 First, we need to install the venv module of python, if not installed previously:
