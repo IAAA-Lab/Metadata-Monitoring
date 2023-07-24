@@ -1,11 +1,22 @@
-# Software requirements
+# Web portal for the monitoring of metadata quality in Government Open Data portals.
+
+The objective of this Open Sorce project is to provide a software for the deployment of a web portal for monitoring the metadata quality of open data portals based on existing methods of metadata quality.
+
+To promote transparency and citizen participation, many governments, both at the national and local levels, have
+have promoted the creation of open data initiatives to disseminate the data they work with. These initiatives are implemented through the launch of open data portals. The main element of these portals are interoperable online catalogs that facilitate the search and publication of open datasets based on the metadata describing them.
+In order to promote interoperability and to make open data easily findable, a common vocabulary should be used to define these metadata and and its content must be of high quality. Regarding the vocabulary, there is a general consensus on the use of DCAT, an RDF-based metadata schema proposed by W3C for the description of data catalogs. With regard to the evaluation of metadata quality, there are several emerging proposals, among them the MQA (Metadata Quality Assurance) methodology, developed by the European Commission for the European Data Portal, and the methodology that adapts the ISO 19157 standard for geographic information quality to the context of metadata of open data portals.
+
+This web portal provides a user interface that facilitates and improves the user experience when applying these quality assessment methods (MQA and ISO19157=, adding additional features that may be useful such as automatic monitoring of an open data portal, graphical presentation of the evaluation results, and the export of these results with the DQV vocabulary (Data Quality Vocabulary), a vocabulary based on RDF that is currently used to report on quality. 
+
+For the development of the web application that supports the monitoring portal, the MEAN technology stack has been used: Angular for the Frontend, Node.js and Express for the Backend, and MongoDB for the storage of the evaluation results. As for the automatic calculation of the quality assessment measures, this has been developed in Python and the SPARQL language has been integrated to make queries on the content of the metadata of the evaluated open data portal.
+
+# Installation of the software on Ubuntu 22.04
+
 - Ubuntu 22.04
 - Node.js v16.x
 - Python3
 - MongoDB 6.0
 - Fuseki
-
-# Installation of the software on Ubuntu 22.04
 ## 1. Installation of Node.js v16
 We need to install specifically version 16, as this is required for the client implemented with Angular.
 First, we need to install curl if not previously installed:
