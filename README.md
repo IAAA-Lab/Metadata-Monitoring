@@ -170,7 +170,7 @@ Except where otherwise noted, this content is published under a [CC BY license][
 
 Recommended attribution:
 
-> "Metadata-Monitoring: Web portal for the monitoring of metadata quality in Government Open Data portals" by Javier Nogueras-Iso (Universidad de Zaragoza), Sergio Martínez (Universidad de Zaragoza), Javier Lacasta (Universidad de Zaragoza), Manuel Antonio Ureña-Cámara (Universidad de Jaén), Francisco Javier Ariza-López (Universidad de Jaén) is licensed under CC BY 4.0. Available at
+> "Metadata-Monitoring: Web portal for the monitoring of metadata quality in Government Open Data portals" by Javier Nogueras-Iso (Universidad de Zaragoza), Sergio Martínez-Martín(Universidad de Zaragoza), Javier Lacasta (Universidad de Zaragoza), Manuel Antonio Ureña-Cámara (Universidad de Jaén), Francisco Javier Ariza-López (Universidad de Jaén) is licensed under CC BY 4.0. Available at
 > <https://github.com/javierni/Metadata-Monitoring/edit/master/README.md>
 
 [![CC BY 4.0][cc-by-image]][cc-by]
