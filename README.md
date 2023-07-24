@@ -5,7 +5,7 @@
 - MongoDB 6.0
 - Fuseki
 
-# Installation and execution on Ubuntu 22.04
+# Installation of the software on Ubuntu 22.04
 ## 1. Installation of Node.js v16
 We need to install specifically version 16, as this is required for the client implemented with Angular.
 First, we need to install curl if not previously installed:
@@ -101,19 +101,41 @@ docker run -d -p 3030:3030 -e ADMIN_PASSWORD=pass123 stain/jena-fuseki
 ```
 This will download the neccessary software (if not performed previously) and will start the Fuseki web portal at  http://localhost:3030. 
 
-The first time we access the portal, we need to login as 'admin' with passwork 'pass123'. In case of not specifying a password with the docker command, this password is auto-generated. In case of autogeneration, we need to check the logs (using 'docker logs') or directly the output if the -d option was not used.
+The first time we access the portal, we need to login as 'admin' with password 'pass123'. In case of not specifying a password with the docker command, this password is auto-generated. In case of autogeneration, we need to check the logs (using 'docker logs') or directly the output if the -d option was not used.
 
 More information at: https://hub.docker.com/r/stain/jena-fuseki/ 
 
-# Modificaciones sobre el código python
-- Se añade en las primeras lineas del main() lo siguiente para cambiar el working directory a la ubicación del propio archivo y que funcionen las rutas relativas:
+## 7. Configuration of the python environment
+We need to set up a python virtual environment for the execution of the python environment.
+
+First, we need to install the venv module of python, if not installed previously:
+```
+sudo apt install python3.10-venv
+```
+Then, we need to create a virtual environment. For instance, we call it 'my-environment':
+```
+cd backend/pythonPrograms
+python3 -m venv my-environment
+source my-environment/bin/activate
+```
+Then, we install the required libraries listed in backend/pythonPrograms/requirements.txt (this requirement.txt file is generated in an existing environment with the command 'pip freeze > requirements.txt'):
+```
+pip install -r requirements.txt
+```
+If this doesn't work may be due to the version of the setuptools. If so, you can solve this problem with the following command:
+```
+pip install "setuptools<58.0.0"
+```
+At this point, we are able to indicate the backend the location of our virtual environment at 'backend/app_server/controllers/evaluateController.js' file. By default, myPython const contains the value:
+```
+./app_server/pythonPrograms/my-environment/bin/python3
+```
+It can be modified if the virtual environment was created at a different location.
+
+Last, it must be noted that the first lines of the main() function of the python progrms modify the working direcory to the location of the current file and let the relative paths work:
 ```
 # Change the working directory to the file location
 abspath = os.path.abspath(__file__)
 dname = os.path.dirname(abspath)
 os.chdir(dname)
-```
-- Se debe indicar en el código del backend, que el python que ejecuta el fichero es el disponible en el entorno virtual, en este caso:
-```
-./app_server/pythonPrograms/my-environment/bin/python3
 ```
