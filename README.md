@@ -143,6 +143,11 @@ os.chdir(dname)
 If the installation of the software worked properly, the web application is available at https://localhost:4200/evaluation.
 
 Some examples of successful execution are the following:
-
-[datos.gob.es](http://datos.gob.es/virtuoso/sparql)http://datos.gob.es/virtuoso/sparql, SPARQL, MQA direct
+- Endpoint: http://datos.gob.es/virtuoso/sparql (SPARQL), Quality method: MQA, Evaluation type: direct
+- Endpoint: http://datos.gob.es/virtuoso/sparql (SPARQL), Quality method: ISO19157, Evaluation type: direct
+- Endpoint: http://datos.gob.es/virtuoso/sparql (SPARQL), Quality method: MQA, Evaluation type: Local (Note: there is a limitation of a maximum number of 500 records for the harvesting, it can be modified at SPARQ_harvester.py)
+- Endpoint: https://opendata.aragon.es/ckan (CKAN), Quality method: ISO19157, Evaluation type: Local (Note: there is a limitation of a maximum number of 500 records for the harvesting, it can be modified at CKAN_harvester.py)
+- Endpoint: https://opendata.aragon.es/sparql (SPARQL), Quality method: MQA, Evaluation type: Direct
+- Endpoint: https://data.europa.eu/sparql (SPARQL), Quality method: MQA, Evaluation type: Local (Note: there is a limitation of a maximum number of 500 records for the harvesting, it can be modified at SPARQ_harvester.py)
+- Endpoint: http://datos.zaragoza.es/sparql (SPARQL), Quality method: MQA, Evaluation type: Local (Note: there is a limitation of a maximum number of 500 records for the harvesting, it can be modified at SPARQ_harvester.py)
 
