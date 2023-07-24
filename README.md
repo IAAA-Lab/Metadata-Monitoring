@@ -36,15 +36,33 @@ Second, we need to install the dependecies at the frontend:
 cd frontend
 npm install
 ```
-## 3. Installation and configuration of MongoDB
-MongoDB debe estar ejecutandose para que la aplicación funcione correctamente, para esto, se puede ejecutar sobre una terminal:
+## 3. Installation and launch of MongoDB service
+For the installation of the MongoDB database, we can follow the instructions from https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/
+
+```
+sudo apt-get install gnupg curl
+
+curl -fsSL https://pgp.mongodb.com/server-6.0.asc | \
+   sudo gpg -o /usr/share/keyrings/mongodb-server-6.0.gpg \
+   --dearmor
+
+echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-6.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+
+sudo apt-get update
+
+sudo apt-get install -y mongodb-org
+```
+The MongoDB service can be started on a terminal with the following command: 
 ```
 service mongod start
 ```
-Igualmente podrá deternerse cuando sea necesario mediante:
+The service should be started at this connection URL: mongodb://localhost:27017
+If necessary, the service can be stopped with the following command:
 ```
 service mongod stop
 ```
+## 4. Creation of the MongoDB database
+
 
 ## Frontend y Backend
 En caso de no utilizar un IDE que facilite la ejecución de la aplicación web, puede ejecutarse mediante una terminal accediendo a las carpetas 'backend' y 'frontend', en función de qué componente se quiere ejecutar, y para ambos casos utilizar la instrucción:
