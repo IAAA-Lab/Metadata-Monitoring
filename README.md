@@ -3,8 +3,8 @@
 ## Table of Contents <!-- omit in toc -->
 
 - [Introduction](#introduction)
-- [Installation of the software on Ubuntu 22.04](#installation of the software on Ubuntu 22.04)
-- [Execution of the frontend](#execution of the frontend)
+- [Installation](#installation of the software on Ubuntu 22.04)
+- [Execution](#execution)
 - [Credits](#credits)
 
 ## Introduction
@@ -18,7 +18,7 @@ This web portal provides a user interface that facilitates and improves the user
 
 For the development of the web application that supports the monitoring portal, the MEAN technology stack has been used: Angular for the Frontend, Node.js and Express for the Backend, and MongoDB for the storage of the evaluation results. As for the automatic calculation of the quality assessment measures, this has been developed in Python and the SPARQL language has been integrated to make queries on the content of the metadata of the evaluated open data portal.
 
-## Installation of the software on Ubuntu 22.04
+## Installation
 This Open Source project has the following sotware requirements:
 - Node.js v16.x
 - Python3
@@ -121,7 +121,7 @@ docker run -d -p 3030:3030 -e ADMIN_PASSWORD=pass123 stain/jena-fuseki
 ```
 This will download the neccessary software (if not performed previously) and will start the Fuseki web portal at  http://localhost:3030. 
 
-The first time we access the portal, we need to login as 'admin' with password 'pass123'. In case of not specifying a password with the docker command, this password is auto-generated. In case of autogeneration, we need to check the logs (using 'docker logs') or directly the output if the -d option was not used.
+The first time we access the portal at https://localhost:3030 , we need to login as 'admin' with password 'pass123'. In case of not specifying a password with the docker command, this password is auto-generated. In case of autogeneration, we need to check the logs (using 'docker logs') or directly the output if the -d option was not used.
 
 More information at: https://hub.docker.com/r/stain/jena-fuseki/
 
@@ -161,8 +161,8 @@ abspath = os.path.abspath(__file__)
 dname = os.path.dirname(abspath)
 os.chdir(dname)
 ```
-## Execution of the frontend
-If the installation of the software worked properly, the web application is available at https://localhost:4200/evaluation.
+## Execution
+If the installation of the software worked properly, the web application (frontend) is available at https://localhost:4200/evaluation.
 
 Some examples of successful execution are the following:
 - Endpoint: http://datos.gob.es/virtuoso/sparql (SPARQL), Quality method: MQA, Evaluation type: direct
