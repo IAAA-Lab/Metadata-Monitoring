@@ -91,16 +91,19 @@ cd frontend
 npm start
 ```
 Then, the frontend should be accessible from a browser at http://localhost:4200/
+
 The execution of backend and frontend can be stopped with Ctrl+C.
 
-## Fuseki
-Para la ejecución de un portal local SPARQL se ha utilizado Fuseki mediante Docker, por lo que para ejecutarlo, tan solo es necesario utilizar la instrucción:
+## 6. Intallation and launch of Fuseki
+If the evaluation of an Open Data portal is performed locally with a copy of the metadata contents, we need a triple-store to save temporally the metadata and query it with SPARQL. For the deployment of this triple-store we have decided to use a Docker container with Fuseki technology. The installation and execution of the container just requires the execution of the following command:
 ```
 docker run -d -p 3030:3030 -e ADMIN_PASSWORD=pass123 stain/jena-fuseki
 ```
-Esto descargará (si no se había hecho previamente) e iniciará el portal web de fuseki en http://localhost:3030. La primera vez que se accede al portal tras comenzar su ejecución requiere el acceso de un usuario y contraseña. El usuario es 'admin' y en este caso, la contraseña necesaria será 'pass123'. En caso de no especificar una contraseña, se autogenera una cada vez que se ejecuta el portal, por lo que es necesario mirar los logs mediante 'docker logs' o bien directamente del output si se ha ejecutado sin la opción -d.
+This will download the neccessary software (if not performed previously) and will start the Fuseki web portal at  http://localhost:3030. 
 
-Para más información: https://hub.docker.com/r/stain/jena-fuseki/ 
+The first time we access the portal, we need to login as 'admin' with passwork 'pass123'. In case of not specifying a password with the docker command, this password is auto-generated. In case of autogeneration, we need to check the logs (using 'docker logs') or directly the output if the -d option was not used.
+
+More information at: https://hub.docker.com/r/stain/jena-fuseki/ 
 
 # Modificaciones sobre el código python
 - Se añade en las primeras lineas del main() lo siguiente para cambiar el working directory a la ubicación del propio archivo y que funcionen las rutas relativas:
