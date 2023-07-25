@@ -5,6 +5,7 @@
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [User_manual](#user_manual)
+- [References](#references)
 - [Credits](#credits)
 
 ## Introduction
@@ -179,7 +180,7 @@ In addition, the 'Export data' option allows to export the result in terms of an
 after clicking on 'Results', the application should display something similar to the following screenshot:
 ![dge_sparql_iso19157_direct_results](./images/dge_sparql_iso19157_direct_results.png)
 
-- Endpoint: http://datos.gob.es/virtuoso/sparql (SPARQL), Quality method: MQA, Evaluation type: Local (Note: there is a limitation of a maximum number of 500 records for the harvesting, it can be modified at SPARQ_harvester.py)
+- Endpoint: http://datos.gob.es/virtuoso/sparql (SPARQL), Quality method: MQA, Evaluation type: Local (Note: there is a limitation of a maximum number of 500 records for the harvesting, it can be modified at SPARQL_harvester.py)
 ![dge_sparql_mqa_local](./images/dge_sparql_mqa_local.png)
 after clicking on 'Results', the application should display something similar to the following screenshot:
 ![dge_sparql_mqa_local_results](./images/dge_sparql_mqa_local_results.png)
@@ -191,11 +192,14 @@ after clicking on 'Results', the application should display something similar to
 
 - Endpoint: https://opendata.aragon.es/sparql (SPARQL), Quality method: MQA, Evaluation type: Direct
 
-- Endpoint: https://data.europa.eu/sparql (SPARQL), Quality method: MQA, Evaluation type: Local (Note: there is a limitation of a maximum number of 500 records for the harvesting, it can be modified at SPARQ_harvester.py)
+- Endpoint: https://data.europa.eu/sparql (SPARQL), Quality method: MQA, Evaluation type: Local (Note: there is a limitation of a maximum number of 500 records for the harvesting, it can be modified at SPARQL_harvester.py)
 
-- Endpoint: http://datos.zaragoza.es/sparql (SPARQL), Quality method: MQA, Evaluation type: Local (Note: there is a limitation of a maximum number of 500 records for the harvesting, it can be modified at SPARQ_harvester.py)
+- Endpoint: http://datos.zaragoza.es/sparql (SPARQL), Quality method: MQA, Evaluation type: Local (Note: there is a limitation of a maximum number of 500 records for the harvesting, it can be modified at SPARQL_harvester.py)
 
 Finally, it must be noted that we can login as 'admin' users on the main page to schedule monitoring tasks that are repeated regularly. We can specify the frequency in terms of a number of days. 
+
+## References
+
 
 ## Credits
 
