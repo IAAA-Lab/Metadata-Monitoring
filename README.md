@@ -4,7 +4,7 @@
 
 - [Introduction](#introduction)
 - [Installation](#installation)
-- [Execution](#execution)
+- [User manual](#user manual)
 - [Credits](#credits)
 
 ## Introduction
@@ -164,7 +164,7 @@ abspath = os.path.abspath(__file__)
 dname = os.path.dirname(abspath)
 os.chdir(dname)
 ```
-## Execution
+## User manual
 If the installation of the software worked properly, the web application (frontend) is available at https://localhost:4200/evaluation.
 
 Some examples of successful execution are the following:
