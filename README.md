@@ -4,7 +4,7 @@
 
 - [Introduction](#introduction)
 - [Installation](#installation)
-- [User manual](#user manual)
+- [User manual](#user_manual)
 - [Credits](#credits)
 
 ## Introduction
