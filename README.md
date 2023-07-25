@@ -1,4 +1,4 @@
-# Metadata-Monitoring: Web portal for the monitoring of metadata quality in Government Open Data portals.
+# Metadata-Monitoring: Web portal for the monitoring of metadata quality in Open Government Data portals.
 
 ## Table of Contents <!-- omit in toc -->
 
@@ -198,7 +198,8 @@ Finally, it must be noted that we can login as 'admin' users on the main page to
 
 ## References
 
-- J. Nogueras-Iso, J. Lacasta, M.A. Ureña-Cámara, F.J. Ariza-López. [Quality of Metadata in Open Data Portals](https://doi.org/10.1109/ACCESS.2021.3073455). IEEE Access, vol. 9 p. 60364-60382, 2021.
+- J. Nogueras-Iso, J. Lacasta, M.A. Ureña-Cámara, F.J. Ariza-López, 2021. [Quality of Metadata in Open Data Portals](https://doi.org/10.1109/ACCESS.2021.3073455). IEEE Access, vol. 9 p. 60364-60382.
+- S. Martínez-Martín, J. Nogueras-Iso (supervisor), 2022. [Monitoring the quality of metadata in open data portals](https://deposita.unizar.es/record/71817). End of degree project, Faculty of Engineering and Architecture, Universidad de Zaragoza, Escuela de Ingeniería y Arquitectura, 2022
 
 ## Credits
 
@@ -208,7 +209,7 @@ Except where otherwise noted, this content is published under a [CC BY license][
 
 Recommended attribution:
 
-> "Metadata-Monitoring: Web portal for the monitoring of metadata quality in Government Open Data portals" by Javier Nogueras-Iso (Universidad de Zaragoza), Sergio Martínez-Martín (Universidad de Zaragoza), Javier Lacasta (Universidad de Zaragoza), Manuel Antonio Ureña-Cámara (Universidad de Jaén), Francisco Javier Ariza-López (Universidad de Jaén) is licensed under CC BY 4.0. Available at
+> "Metadata-Monitoring: Web portal for the monitoring of metadata quality in Open Government Data portals" by Javier Nogueras-Iso (Universidad de Zaragoza), Sergio Martínez-Martín (Universidad de Zaragoza), Javier Lacasta (Universidad de Zaragoza), Manuel Antonio Ureña-Cámara (Universidad de Jaén), Francisco Javier Ariza-López (Universidad de Jaén) is licensed under CC BY 4.0. Available at
 > <https://github.com/javierni/Metadata-Monitoring/edit/master/README.md>
 
 [![CC BY 4.0][cc-by-image]][cc-by]
