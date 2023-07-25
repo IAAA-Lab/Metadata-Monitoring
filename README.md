@@ -199,7 +199,7 @@ Finally, it must be noted that we can login as 'admin' users on the main page to
 ## References
 
 - J. Nogueras-Iso, J. Lacasta, M.A. Ureña-Cámara, F.J. Ariza-López, 2021. [Quality of Metadata in Open Data Portals](https://doi.org/10.1109/ACCESS.2021.3073455). IEEE Access, vol. 9 p. 60364-60382.
-- S. Martínez-Martín, J. Nogueras-Iso (supervisor), 2022. [Monitoring the quality of metadata in open data portals](https://deposita.unizar.es/record/71817). End of degree project, Faculty of Engineering and Architecture, Universidad de Zaragoza, Escuela de Ingeniería y Arquitectura, 2022
+- S. Martínez-Martín, J. Nogueras-Iso (supervisor), 2022. [Monitoring the quality of metadata in open data portals](https://deposita.unizar.es/record/71817). End of degree project, Faculty of Engineering and Architecture, Universidad de Zaragoza.
 
 ## Credits
 
