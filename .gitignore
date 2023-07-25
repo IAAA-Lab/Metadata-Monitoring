@@ -286,3 +286,5 @@ fabric.properties
 .idea/**/azureSettings.xml
 
 # End of https://www.toptal.com/developers/gitignore/api/angular,webstorm,node
+/backend/app_server/pythonPrograms/harvester/output/
+/backend/app_server/pythonPrograms/my-environment/
