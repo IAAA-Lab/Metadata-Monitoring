@@ -9,7 +9,7 @@
 - [Credits](#credits)
 
 ## Introduction
-The objective of this Open Sorce project is to provide a software for the deployment of a web portal for monitoring the metadata quality of open data portals based on existing methods of metadata quality.
+The objective of this Open Sorce project is to provide a software for the deployment of a web portal that monitors the metadata quality of open data portals based on existing methods of metadata quality.
 
 To promote transparency and citizen participation, many governments, both at the national and local levels, have
 have promoted the creation of open data initiatives to disseminate the data they work with. These initiatives are implemented through the launch of open data portals. The main element of these portals are interoperable online catalogs that facilitate the search and publication of open datasets based on the metadata describing them.
@@ -200,6 +200,7 @@ Finally, it must be noted that we can login as 'admin' users on the main page to
 
 ## References
 
+- J. Nogueras-Iso, J. Lacasta, M.A. Ureña-Cámara, F.J. Ariza-López. [Quality of Metadata in Open Data Portals](https://doi.org/10.1109/ACCESS.2021.3073455). IEEE Access, vol. 9 p. 60364-60382, 2021.
 
 ## Credits
 
