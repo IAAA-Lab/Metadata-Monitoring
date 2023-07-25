@@ -4,7 +4,7 @@
 
 - [Introduction](#introduction)
 - [Installation](#installation)
-- [User manual](#user_manual)
+- [User_manual](#user_manual)
 - [Credits](#credits)
 
 ## Introduction
@@ -194,6 +194,8 @@ after clicking on 'Results', the application should display something similar to
 - Endpoint: https://data.europa.eu/sparql (SPARQL), Quality method: MQA, Evaluation type: Local (Note: there is a limitation of a maximum number of 500 records for the harvesting, it can be modified at SPARQ_harvester.py)
 
 - Endpoint: http://datos.zaragoza.es/sparql (SPARQL), Quality method: MQA, Evaluation type: Local (Note: there is a limitation of a maximum number of 500 records for the harvesting, it can be modified at SPARQ_harvester.py)
+
+Finally, it must be noted that we can login as 'admin' users on the main page to schedule monitoring tasks that are repeated regularly. We can specify the frequency in terms of a number of days. 
 
 ## Credits
 
