@@ -196,6 +196,8 @@ after clicking on 'Results', the application should display something similar to
 
 Finally, it must be noted that we can login as 'admin' users on the main page to schedule monitoring tasks that are repeated regularly. We can specify the frequency in terms of a number of days. 
 
+At this link you can find a [video demonstrating the operation](./images/demo.mkv) of this software.
+
 ## References
 
 - J. Nogueras-Iso, J. Lacasta, M.A. Ureña-Cámara, F.J. Ariza-López, 2021. [Quality of Metadata in Open Data Portals](https://doi.org/10.1109/ACCESS.2021.3073455). IEEE Access, vol. 9 p. 60364-60382.
