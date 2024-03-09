@@ -41,7 +41,7 @@ The version installed should be v16. In can be checked with the following comman
 node-v
 ```
 ### 2. Installation of dependencies in the backend and front end
-First, we need to clone the software at 'master' brand. 
+First, we need to clone the software at 'master' branch. 
 After this, we must install depedencies at the backend from a terminal
 ```
 cd backend
@@ -156,7 +156,7 @@ At this point, we are able to indicate the backend the location of our virtual e
 ```
 It can be modified if the virtual environment was created at a different location.
 
-Last, it must be noted that the first lines of the main() function of the python progrms modify the working direcory to the location of the current file and let the relative paths work:
+Last, it must be noted that the first lines of the main() function of the python programs modify the working directory to the location of the current file and let the relative paths work:
 ```
 # Change the working directory to the file location
 abspath = os.path.abspath(__file__)
