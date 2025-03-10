@@ -9,7 +9,7 @@
 - [Credits](#credits)
 
 ## Introduction
-The objective of this Open Sorce project is to provide a software for the deployment of a web portal that monitors the metadata quality of open data portals based on existing methods of metadata quality.
+The objective of this Open Source project is to provide a software for the deployment of a web portal that monitors the metadata quality of open data portals based on existing methods of metadata quality.
 
 To promote transparency and citizen participation, many local and national governments have promoted the creation of open data initiatives to disseminate the data they produce. These initiatives are implemented through the launch of open data portals where the main element of these portals are interoperable online catalogs that facilitate the search and publication of open datasets based on the metadata describing them. In order to promote interoperability and to make open data easily findable there are two main requirements: the use of a common vocabulary should to define these metadata , and the assurance of the quality in metadata content. Regarding the vocabulary, there is a general consensus on the use of DCAT, an RDF-based metadata schema proposed by W3C for the description of data catalogs. With regard to the evaluation of metadata quality, there are some proposals. Two of them are the [Metadata Quality Assurance (MQA) methodology](https://data.europa.eu/mqa/methodology), developed by the European Commission for the European Data Portal, and [the methodology that adapts the ISO 19157 standard for geographic information quality to the context of metadata of open data portals](https://doi.org/10.1109/ACCESS.2021.3073455).
 
